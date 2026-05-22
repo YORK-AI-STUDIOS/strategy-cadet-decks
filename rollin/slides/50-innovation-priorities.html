@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Innovation Priorities — Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .pri .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); }
+  .pri .head .num { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: -0.02em; }
+  .pri .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1240px; }
+  .pri .head .meta { margin-left: auto; text-align: right; }
+  .pri .head .meta .eyebrow { font: var(--t-eyebrow); color: var(--fg-body); }
+  .pri .head .meta .topic { margin-top: 6px; }
+
+  .pri-intro { margin: 22px 0 20px; font: 400 15px/1.55 var(--font-sans); color: var(--fg-body); max-width: 1500px; }
+  .pri-intro strong { color: var(--fg-heading); }
+
+  .move-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; flex: 1; min-height: 0; }
+  .move-card { display: flex; flex-direction: column; padding: 20px 20px; background: #FFFFFF; border: 1px solid var(--bg-rule); border-top: 4px solid var(--mr-blue-dark); position: relative; }
+  .move-card:nth-child(4) { border-top-color: var(--mr-red); }
+  .move-card:nth-child(5) { border-top-color: var(--mr-red); }
+
+  .move-card .row-top { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 11px; padding-bottom: 11px; border-bottom: 1px solid var(--bg-rule); }
+  .move-card .phase { font: 700 11px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: 0.12em; text-transform: uppercase; }
+  .move-card:nth-child(4) .phase,
+  .move-card:nth-child(5) .phase { color: var(--mr-red); }
+  .move-card .idx { font: 800 30px/1 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.025em; }
+
+  .move-card h4 { margin: 0 0 9px; font: 700 16px/1.28 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.005em; }
+  .move-card .why { font: 400 11.5px/1.5 var(--font-sans); color: var(--fg-body); margin: 0 0 auto; }
+
+  .move-card .serves { margin-top: 12px; padding-top: 11px; border-top: 1px solid var(--bg-rule); }
+  .move-card .serves .s-lbl { font: var(--t-eyebrow); color: var(--mr-blue-dark); letter-spacing: 0.1em; margin-bottom: 6px; }
+  .move-card:nth-child(4) .serves .s-lbl,
+  .move-card:nth-child(5) .serves .s-lbl { color: var(--mr-red); }
+  .move-card .serves .s-aud { display: flex; flex-wrap: wrap; gap: 5px; }
+  .move-card .serves .a-tag { font: 700 9px/1 var(--font-sans); letter-spacing: 0.05em; text-transform: uppercase; padding: 5px 8px; background: #E2EAF4; color: var(--mr-blue-dark); border-radius: 2px; }
+  .move-card .serves .a-tag.all { background: var(--mr-blue-dark); color: #fff; }
+
+  .pri-axis { margin-top: 20px; padding-top: 14px; border-top: 1px solid var(--bg-rule); display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+  .pri-axis .tick { display: flex; align-items: center; gap: 9px; }
+  .pri-axis .tick .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--mr-blue-dark); }
+  .pri-axis .tick:nth-child(4) .dot,
+  .pri-axis .tick:nth-child(5) .dot { background: var(--mr-red); }
+  .pri-axis .tick .txt { font: 600 11px/1.3 var(--font-sans); color: var(--fg-body); letter-spacing: 0.06em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide pri" data-screen-label="50 Innovation Priorities">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 04  &middot;  Innovation &amp; Growth  &middot;  Priority moves</span></div>
+
+  <div class="sc-body-frame">
+    <div class="head">
+      <div class="num">38</div>
+      <div>
+        <h3>Five priority moves, sequenced. Build the fairness moat first, the mobility platform last.</h3>
+      </div>
+      <div class="meta">
+        <div class="eyebrow">Synthesis  &middot;  Cross-audience</div>
+        <div class="topic"><span class="sc-chip sc-chip--uncertain">Uncertain</span></div>
+      </div>
+    </div>
+
+    <div class="pri-intro">The ideation.md does not rank its concepts, so this sequence is a <strong>Strategy Cadet synthesis</strong>. It orders the five concepts by two tests: how many audiences a move serves, and how quickly it can ship. The fairness and claims moves serve all three audiences and ship fastest, so they come first. The Mobility Membership is the highest-ceiling bet but the slowest to build, so it anchors the back of the sequence.</div>
+
+    <div class="move-row">
+      <div class="move-card">
+        <div class="row-top"><span class="phase">Move 01  &middot;  Now</span><span class="idx">01</span></div>
+        <h4>Launch the Fair-Go Fairness Stack.</h4>
+        <p class="why">The defensible moat. One audited charter, landed three ways: an excess reset for Gen Z, a renewal receipt for renters, a no-denial pledge for gig drivers. Competitors cannot copy it without rewriting their own pricing.</p>
+        <div class="serves">
+          <div class="s-lbl">Serves</div>
+          <div class="s-aud"><span class="a-tag all">All three audiences</span></div>
+        </div>
+      </div>
+
+      <div class="move-card">
+        <div class="row-top"><span class="phase">Move 02  &middot;  Now</span><span class="idx">02</span></div>
+        <h4>Ship the Conversational AI Claims layer.</h4>
+        <p class="why">The product moment that proves the brand. A four-minute claim answers first-claim anxiety, convenience demand and income-protection need at once. The single highest-impact service upgrade across the portfolio.</p>
+        <div class="serves">
+          <div class="s-lbl">Serves</div>
+          <div class="s-aud"><span class="a-tag all">All three audiences</span></div>
+        </div>
+      </div>
+
+      <div class="move-card">
+        <div class="row-top"><span class="phase">Move 03  &middot;  Next</span><span class="idx">03</span></div>
+        <h4>Open the Driver Data Wallet.</h4>
+        <p class="why">The trust mechanism that breaks category lock-in. It makes the Fairness Stack visible, earns telematics opt-in, and gives gig drivers a verifiable commercial-use record. The connective tissue between the other moves.</p>
+        <div class="serves">
+          <div class="s-lbl">Serves</div>
+          <div class="s-aud"><span class="a-tag all">All three audiences</span></div>
+        </div>
+      </div>
+
+      <div class="move-card">
+        <div class="row-top"><span class="phase">Move 04  &middot;  Next</span><span class="idx">04</span></div>
+        <h4>Roll out Climate-Honest Cover.</h4>
+        <p class="why">The honesty-as-acquisition play. Pre-quote risk maps and plain-English exclusions defuse the trust collapse from claim-refusal stories. Strongest pull for renters who move and gig drivers facing event downtime.</p>
+        <div class="serves">
+          <div class="s-lbl">Serves</div>
+          <div class="s-aud"><span class="a-tag">Renters</span><span class="a-tag">Gig workers</span><span class="a-tag">First-car</span></div>
+        </div>
+      </div>
+
+      <div class="move-card">
+        <div class="row-top"><span class="phase">Move 05  &middot;  Later</span><span class="idx">05</span></div>
+        <h4>Build the Multi-Modal Mobility Membership.</h4>
+        <p class="why">The repositioning bet, from motor insurer to urban mobility insurer. Highest ceiling, slowest build: it depends on car-share, e-bike and platform partnerships. Sequence it last so the first four moves fund it.</p>
+        <div class="serves">
+          <div class="s-lbl">Serves</div>
+          <div class="s-aud"><span class="a-tag all">All three audiences</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pri-axis">
+      <div class="tick"><span class="dot"></span><span class="txt">Now  &middot;  3 to 6 months</span></div>
+      <div class="tick"><span class="dot"></span><span class="txt">Now  &middot;  3 to 6 months</span></div>
+      <div class="tick"><span class="dot"></span><span class="txt">Next  &middot;  6 to 12 months</span></div>
+      <div class="tick"><span class="dot"></span><span class="txt">Next  &middot;  6 to 12 months</span></div>
+      <div class="tick"><span class="dot"></span><span class="txt">Later  &middot;  12-plus months</span></div>
+    </div>
+
+    <div class="sc-source-line">
+      <span class="sc-source">Synthesis of ideation.md Sections 5 and 6. The ideation.md provides per-idea time horizons but no concept-level ranking; this five-move sequence and its order are a Strategy Cadet synthesis built from audience reach and ship-speed, not a verified ROLLiN&rsquo; roadmap. Confidence: Uncertain on sequencing.</span>
+      <span class="sc-source">p. 50  &middot;  Part 04  &middot;  Priority moves</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="50" data-of="80"></script>
+</body>
+</html>

@@ -34,8 +34,11 @@
 .cm .callout ul li { margin-bottom: 6px; }
 
 /* Vertical bar chart ------------------------------------------------------ */
-.cm .vbar { display: flex; align-items: flex-end; gap: 28px; flex: 1; min-height: 0; padding: 16px 0; border-bottom: 1px solid var(--bg-rule); }
-.cm .vbar .col { display: flex; flex-direction: column; align-items: center; flex: 1; }
+.cm .vbar { display: flex; align-items: stretch; gap: 28px; flex: 1; min-height: 0; padding: 16px 0; border-bottom: 1px solid var(--bg-rule); }
+/* .col must carry a definite height so the bar's percentage height resolves.
+   align-items:stretch on the parent + height:100% here gives that; justify-content
+   flex-end anchors the bar to the chart baseline so it reads as a column chart. */
+.cm .vbar .col { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; flex: 1; height: 100%; }
 .cm .vbar .col .v { font: 800 22px/1 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.025em; margin-bottom: 8px; }
 .cm .vbar .col .v.hero { color: #D9A000; }
 .cm .vbar .col .bar { width: 100%; background: var(--mr-blue-dark); }

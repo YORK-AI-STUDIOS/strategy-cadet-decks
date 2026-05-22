@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>News Detail — Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .nws .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--bg-rule); }
+  .nws .head h3 { margin: 0; font: 700 30px/1.2 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.01em; max-width: 1280px; }
+  .nws .head h3 .alt2 { color: var(--mr-blue-dark); }
+  .nws .head .meta { margin-left: auto; text-align: right; font: var(--t-eyebrow); color: var(--fg-body); }
+
+  .nws-body { margin-top: 20px; display: grid; grid-template-columns: 1fr 430px; gap: 48px; flex: 1; min-height: 0; }
+
+  /* annotated timeline */
+  .tl-title { font: 600 13px/1.3 var(--font-sans); color: var(--fg-heading); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
+  .tl-sub { font: 400 12px/1.3 var(--font-sans); color: var(--fg-muted); margin-bottom: 20px; }
+
+  .tline { position: relative; padding-left: 28px; }
+  .tline::before { content: ''; position: absolute; left: 6px; top: 4px; bottom: 4px; width: 2px; background: var(--bg-rule); }
+  .tev { position: relative; padding-bottom: 17px; }
+  .tev:last-child { padding-bottom: 0; }
+  .tev::before { content: ''; position: absolute; left: -28px; top: 3px; width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 3px solid var(--mr-blue-dark); }
+  .tev.material::before { background: var(--mr-blue-dark); }
+  .tev .when { font: 700 10.5px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: 0.06em; text-transform: uppercase; }
+  .tev .title { font: 700 14px/1.32 var(--font-sans); color: var(--fg-heading); margin-top: 4px; }
+  .tev .desc { font: 400 11.5px/1.45 var(--font-sans); color: var(--fg-body); margin-top: 4px; }
+  .tev .desc strong { color: var(--fg-heading); }
+  .tev .tag { display: inline-block; font: 700 8.5px/1 var(--font-sans); letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 7px; border-radius: 2px; margin-top: 7px; background: #E2EAF4; color: var(--mr-blue-dark); }
+  .tev .tag.most { background: var(--mr-blue-dark); color: #fff; }
+
+  .nws-side { display: flex; flex-direction: column; gap: 0; }
+  .nws-side .panel { background: #F4F7FB; border-left: 3px solid var(--mr-blue-dark); padding: 20px 22px; }
+  .nws-side .panel + .panel { margin-top: 16px; }
+  .nws-side .panel .p-lbl { font: var(--t-eyebrow); color: var(--mr-blue-dark); margin-bottom: 10px; }
+  .nws-side .panel h4 { margin: 0 0 10px; font: 700 16px/1.3 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.005em; }
+  .nws-side .panel p { margin: 0; font: 400 12px/1.5 var(--font-sans); color: var(--fg-body); }
+  .nws-side .panel p strong { color: var(--fg-heading); }
+  .nws-side .panel ul { margin: 0; padding-left: 16px; font: 400 11.5px/1.5 var(--font-sans); color: var(--fg-body); }
+  .nws-side .panel ul li { margin-bottom: 6px; }
+  .nws-side .panel ul li strong { color: var(--fg-heading); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide nws" data-screen-label="71 News Detail">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 05  &middot;  Competitive Context  &middot;  News detail</span></div>
+
+  <div class="sc-body-frame">
+    <div class="head">
+      <h3>The year&rsquo;s significant events trace one arc: <span class="alt2">a creative reset and telematics moving from feature to brand platform</span>.</h3>
+      <div class="meta">12-month event scan<br><span class="sc-chip sc-chip--verified" style="margin-top:6px;">Verified</span></div>
+    </div>
+
+    <div class="nws-body">
+      <div>
+        <div class="tl-title">Significant events of the year, newest first</div>
+        <div class="tl-sub">Filled markers denote the three most material activities of the last 90 days. n=10 tagged events, May 2025 to May 2026.</div>
+
+        <div class="tline">
+          <div class="tev material">
+            <div class="when">Jan to Feb 2026</div>
+            <div class="title">&ldquo;Safe &lsquo;n Save&rdquo; national campaign via Paper Moose</div>
+            <div class="desc">The brand&rsquo;s most recent above-the-line activation and second campaign on a new platform under a new agency. Fast-paced creative <strong>flips assumptions about young drivers</strong>, positioning safe habits as a flex. Ran on social, DOOH and audio.</div>
+            <span class="tag most">Most material  &middot;  last 90 days</span>
+          </div>
+          <div class="tev material">
+            <div class="when">Nov to Dec 2025</div>
+            <div class="title">Canstar and Mozo awards sweep</div>
+            <div class="desc">Canstar Outstanding Value retained nationally plus QLD, with NSW, VIC, TAS and SA added. Mozo Experts Choice for Exceptional Value Car and Young Driver Insurance. <strong>Third consecutive year</strong> winning both, now a credibility anchor in acquisition.</div>
+            <span class="tag most">Most material  &middot;  last 90 days</span>
+          </div>
+          <div class="tev material">
+            <div class="when">Oct 2025</div>
+            <div class="title">RAVIN AI claims-technology partnership</div>
+            <div class="desc">Vehicle damage assessment integrated into the claims workflow, claiming a <strong>50% reduction in average claim cycle times</strong>. B2B coverage landed in AI Journal, Morningstar and PR Newswire, a deliberate fintech-positioning pitch outside insurance trade press.</div>
+            <span class="tag most">Most material  &middot;  last 90 days</span>
+          </div>
+          <div class="tev">
+            <div class="when">Sep 2025</div>
+            <div class="title">The Daily Aus exclusive insurance partnership</div>
+            <div class="desc">Signed as exclusive insurance partner, extending a prior 6-month collaboration. An <strong>earned-meets-paid strategy</strong> targeting under-30s through trusted editorial. TDA&rsquo;s Adulting 101 series is curriculum-level financial literacy: brand-as-educator, not just sponsorship.</div>
+            <span class="tag">Significant event</span>
+          </div>
+          <div class="tev">
+            <div class="when">Mar 2025</div>
+            <div class="title">&ldquo;Here for the Ride&rdquo; brand platform launch</div>
+            <div class="desc">First work from Paper Moose after winning the agency-of-record pitch in 2024. A <strong>full creative reset</strong> from Bear Meets Eagle On Fire, moving the brand from &ldquo;hip hop / coupon book&rdquo; toward authentic human moments and the telematics flex.</div>
+            <span class="tag">Significant event</span>
+          </div>
+          <div class="tev">
+            <div class="when">Late 2024  &middot;  active across the window</div>
+            <div class="title">JOLT EV-charging partnership</div>
+            <div class="desc">A genuine category first. JOLT&rsquo;s first-party in-app data at the point of charging is a rare media context for insurance, <strong>no incumbent is accessing EV-owner data at this proximity</strong>. Strategically important beyond the campaign itself.</div>
+            <span class="tag">Significant event</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="nws-side">
+        <div class="panel">
+          <div class="p-lbl">Activity rhythm</div>
+          <h4>Two campaign waves, an H2 partnership cluster, awards every November.</h4>
+          <ul>
+            <li><strong>Two major campaign waves</strong> in 12 months: Mar 2025 brand platform, Jan 2026 product flight. Cadence aligns with start-of-year, back-to-uni purchase-intent windows.</li>
+            <li><strong>Partnerships cluster in H2 2025</strong>: RAVIN AI in Oct, The Daily Aus in Sep, JOLT from late 2024 into summer. H2 is the brand&rsquo;s commercial-partnership push.</li>
+            <li><strong>Awards land Nov to Dec</strong> each year. Canstar and Mozo are evergreen anchors converted into paid acquisition proof points.</li>
+            <li><strong>No Q3 2025 activity</strong> surfaced. July to August is likely a quiet window.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <div class="p-lbl">The through-line</div>
+          <h4>Telematics is no longer a feature.</h4>
+          <p>Safe &lsquo;n Save launched as a product in late 2023. By 2025 it carries a full national campaign, anchors the JOLT partnership, and its 75% discount-uptake figure is used as proof of concept. <strong>It is becoming the brand&rsquo;s primary point of differentiation.</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sc-source-line">
+      <span class="sc-source">Source: Strategy Cadet v1.2 --with-news extension, 21 May 2026. WebSearch across 10 queries, window May 2025 to May 2026. AU trade press including B&amp;T, Mi-3, Mumbrella, AdNews, Mediaweek, LBBOnline, IAG Newsroom, PR Newswire. Activity dates and counts Verified; rhythm patterns Probable, gaps may reflect search coverage. JOLT launch (Nov 2024) sits near the window boundary, included as active and heavily promoted in the window.</span>
+      <span class="sc-source">p. 71  &middot;  Part 05  &middot;  News detail</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="71" data-of="80"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tone of Voice — Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .quote .sc-body-frame { inset: 100px var(--slide-margin-x) 80px; display:flex; flex-direction: column; }
+  .quote .head { padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); display:flex; align-items:flex-start; gap: 24px; }
+  .quote .head .num { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: -0.02em; }
+  .quote .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1200px; }
+  .quote .head .meta { margin-left: auto; text-align: right; }
+  .quote .head .meta .eyebrow { font: var(--t-eyebrow); color: var(--fg-body); }
+
+  .tone-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 80px; flex: 1; margin-top: 40px; }
+
+  .tone-hero { position: relative; padding-left: 80px; }
+  .tone-hero .mark { position: absolute; left: -10px; top: -36px; font: 800 200px/1 var(--font-sans); color: var(--mr-blue-light); opacity: 0.22; }
+  .tone-hero blockquote { margin: 0; font: 400 italic 32px/1.4 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.005em; max-width: 880px; }
+  .tone-hero blockquote strong { font-weight: 700; font-style: normal; color: var(--mr-blue-dark); }
+
+  .tone-attrs { margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--bg-rule); display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .tone-attrs .a { display: flex; flex-direction: column; gap: 4px; }
+  .tone-attrs .a .v { font: 800 22px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: -0.01em; }
+  .tone-attrs .a .l { font: 400 11px/1.4 var(--font-sans); color: var(--fg-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+
+  .contrast-col { display: flex; flex-direction: column; padding-top: 24px; border-top: 3px solid var(--mr-red); }
+  .contrast-col .lbl { font: var(--t-eyebrow); color: var(--mr-red); margin-bottom: 18px; }
+  .contrast-row { display: grid; grid-template-columns: 1fr; gap: 0; }
+  .contrast-row .ex { padding: 18px 0; border-bottom: 1px solid var(--bg-rule); }
+  .contrast-row .ex:last-child { border-bottom: 0; }
+  .contrast-row .tag { font: 700 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px; }
+  .contrast-row .tag.legacy { color: var(--fg-muted); }
+  .contrast-row .tag.rollin { color: var(--mr-red); }
+  .contrast-row .line { font: 400 15px/1.5 var(--font-sans); color: var(--fg-body); font-style: italic; }
+  .contrast-row .line.rollin { color: var(--fg-heading); font-style: normal; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide quote" data-screen-label="16 Tone of Voice">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 02  ·  The Brand  ·  Tone of voice</span></div>
+
+  <div class="sc-body-frame">
+    <div class="head">
+      <div class="num">14</div>
+      <div>
+        <h3>The voice: a switched-on friend explaining insurance, not a legal department defending itself.</h3>
+      </div>
+      <div class="meta">
+        <div class="eyebrow">Brand DNA  ·  Voice</div>
+        <div class="topic" style="margin-top:6px;"><span class="sc-chip sc-chip--probable">Probable</span></div>
+      </div>
+    </div>
+
+    <div class="tone-grid">
+      <div class="tone-hero">
+        <div class="mark">&ldquo;</div>
+        <blockquote>Conversational, dry, mildly irreverent, <strong>never corporate.</strong> ROLLiN&rsquo;s writing reads like a switched-on friend explaining insurance, not a legal department defending itself. Sentences are short. Jargon is called out rather than used. Humour is allowed but never at the customer&rsquo;s expense.</blockquote>
+
+        <div class="tone-attrs">
+          <div class="a"><div class="v">Conversational</div><div class="l">Register</div></div>
+          <div class="a"><div class="v">Dry</div><div class="l">Wit</div></div>
+          <div class="a"><div class="v">Mildly irreverent</div><div class="l">Posture</div></div>
+          <div class="a"><div class="v">Never corporate</div><div class="l">Boundary</div></div>
+        </div>
+      </div>
+
+      <div class="contrast-col">
+        <div class="lbl">What insurers say vs. what ROLLiN&rsquo; would say</div>
+        <div class="contrast-row">
+          <div class="ex">
+            <div class="tag legacy">What insurers say</div>
+            <div class="line">&ldquo;Subject to the terms, conditions, exclusions, and definitions set out in the Product Disclosure Statement, your policy may provide cover for accidental loss or damage to your insured vehicle.&rdquo;</div>
+          </div>
+          <div class="ex">
+            <div class="tag rollin">What ROLLiN&rsquo; would say</div>
+            <div class="line rollin">&ldquo;If you prang it, we sort it. Here&rsquo;s exactly what counts as &lsquo;prang&rsquo; and what doesn&rsquo;t, in three lines.&rdquo;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sc-source-line">
+      <span class="sc-source">Source: Brand DNA synthesis, ROLLiN&rsquo; Insurance, Section 5 Brand Personality, prompt 11. Contrast example is illustrative synthesis, not a verbatim ROLLiN&rsquo; tagline. PROBABLE.</span>
+      <span class="sc-source">p. 16  ·  Part 02  ·  Tone of voice</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="16" data-of="80"></script>
+</body>
+</html>
