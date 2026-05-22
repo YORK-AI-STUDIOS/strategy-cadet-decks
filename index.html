@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
   <title>Strategy Cadet</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
   <style>
     :root { color-scheme: dark; }
     * { box-sizing: border-box; }
@@ -16,8 +13,8 @@
       min-height: 100vh;
       background: #1a1a1a;
       color: #d8d4cc;
-      font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
-      font-size: 18px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 16px;
       line-height: 1.55;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
@@ -29,7 +26,6 @@
       text-align: center;
     }
     .eyebrow {
-      font-family: 'EB Garamond', Georgia, serif;
       font-size: 12px;
       letter-spacing: 0.32em;
       color: #8a8680;
@@ -37,13 +33,12 @@
       margin: 0 0 28px;
     }
     h1.title {
-      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 48px;
       font-weight: 700;
-      font-size: 56px;
-      line-height: 1.05;
+      line-height: 1.1;
       color: #f0eae0;
       margin: 0 0 22px;
-      letter-spacing: -0.005em;
+      letter-spacing: -0.015em;
     }
     .title-rule {
       width: 56px;
@@ -57,12 +52,12 @@
       margin: 0 0 28px;
     }
     .def .hw-line {
-      font-size: 18px;
+      font-size: 16px;
       color: #d8d4cc;
       margin: 0 0 10px;
     }
     .def .hw-line .hw {
-      font-weight: 600;
+      font-weight: 700;
       color: #f0eae0;
     }
     .def .hw-line .pron {
@@ -77,8 +72,8 @@
     }
     .def p {
       margin: 0;
-      font-size: 18px;
-      line-height: 1.55;
+      font-size: 16px;
+      line-height: 1.6;
       color: #d8d4cc;
     }
     .def p em { font-style: italic; color: #e6e0d4; }
@@ -88,15 +83,33 @@
       margin: 28px 0;
     }
     .tagline {
-      font-size: 15px;
+      font-size: 14px;
       color: #9a9590;
       font-style: italic;
       margin: 32px 0 0;
     }
-    .decks-nav {
+    .hosting-note {
       margin: 72px 0 0;
       padding-top: 28px;
       border-top: 1px solid #2a2722;
+      text-align: center;
+    }
+    .hosting-note .hosting-tag {
+      font-size: 12px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #6a6660;
+      margin: 0 0 16px;
+    }
+    .hosting-note p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #9a9590;
+      margin: 0 auto;
+      max-width: 480px;
+    }
+    .decks-nav {
+      margin: 44px 0 0;
       text-align: center;
     }
     .decks-nav .decks-label {
@@ -118,7 +131,7 @@
     .decks-nav a {
       color: #c8c2b6;
       text-decoration: none;
-      font-size: 15px;
+      font-size: 14px;
       border-bottom: 1px solid #4a4641;
       padding-bottom: 2px;
       transition: color 0.15s, border-color 0.15s;
@@ -129,7 +142,7 @@
     }
     @media (max-width: 520px) {
       main.entry { padding: 64px 24px 48px; }
-      h1.title { font-size: 42px; }
+      h1.title { font-size: 36px; }
     }
   </style>
 </head>
@@ -147,7 +160,7 @@
   <style>
   #pw-gate{position:fixed;inset:0;z-index:99999;background:#1a1a1a;display:flex;align-items:center;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;}
   #pw-gate .pw-box{text-align:center;padding:48px;max-width:380px;width:100%;box-sizing:border-box;}
-  #pw-gate .pw-logo{color:#f0eae0;font-size:24px;font-weight:700;letter-spacing:-0.01em;margin-bottom:8px;font-family:'Playfair Display',Georgia,serif;}
+  #pw-gate .pw-logo{color:#f0eae0;font-size:24px;font-weight:700;letter-spacing:-0.01em;margin-bottom:8px;}
   #pw-gate .pw-sub{color:#8a8680;font-size:14px;margin-bottom:28px;}
   #pw-gate input{width:100%;box-sizing:border-box;padding:12px 14px;border-radius:8px;border:1px solid #3a3631;background:#252220;color:#f0eae0;font-size:15px;outline:none;}
   #pw-gate input:focus{border-color:#9a9590;}
@@ -212,6 +225,11 @@
     <hr class="entry-rule">
 
     <div class="tagline">Does the grind. Hands you the brief. You make the call.</div>
+
+    <div class="hosting-note">
+      <div class="hosting-tag">Deck hosting &middot; testing phase</div>
+      <p>This site hosts Strategy Cadet HTML presentations for collaborator review during the testing phase.</p>
+    </div>
 
     <nav class="decks-nav">
       <div class="decks-label">Available Decks</div>
