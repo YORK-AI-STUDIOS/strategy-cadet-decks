@@ -37,6 +37,44 @@
         <div style="margin-top:6px;"><span class="sc-chip sc-chip--verified">Section 5b New</span></div>
       </div>
     </div>
+    <!-- Comparison stacked bar: 5 CF dimensions, Nothing vs Samsung vs Apple (relative scale 0-10) -->
+    <!-- Scores are synthesis estimates: Nothing = challenger, Samsung = dominant incumbent, Apple = premium incumbent -->
+    <svg viewBox="0 0 1540 68" preserveAspectRatio="xMidYMid meet" style="width:100%;display:block;margin:10px 0 8px;" aria-label="Competitor forensics comparison bar: Nothing vs Samsung vs Apple across 5 dimensions">
+      <rect x="0" y="0" width="1540" height="68" fill="#F4F7FB" rx="4"/>
+      <!-- Col headers -->
+      <text x="10" y="14" font-family="Open Sans" font-size="8" font-weight="700" fill="#8896A8" letter-spacing="0.08em">DIMENSION</text>
+      <text x="310" y="14" font-family="Open Sans" font-size="8" font-weight="700" fill="#4971B7" letter-spacing="0.06em">NOTHING</text>
+      <text x="640" y="14" font-family="Open Sans" font-size="8" font-weight="700" fill="#2E4A63" letter-spacing="0.06em">SAMSUNG</text>
+      <text x="1020" y="14" font-family="Open Sans" font-size="8" font-weight="700" fill="#1A5C9A" letter-spacing="0.06em">APPLE</text>
+      <!-- Hairline rule -->
+      <line x1="0" y1="18" x2="1540" y2="18" stroke="#D0D8E4" stroke-width="0.5"/>
+      <!-- Row 1: Ownership complexity (Nothing=2, Samsung=9, Apple=7) -->
+      <text x="10" y="31" font-family="Open Sans" font-size="8.5" font-weight="700" fill="#2E4A63">CF1 Ownership</text>
+      <rect x="280" y="22" width="24" height="12" rx="2" fill="#4971B7" opacity="0.4"/>
+      <text x="307" y="31" font-family="Open Sans" font-size="8" fill="#4971B7" font-weight="700">Private, simple</text>
+      <rect x="620" y="22" width="108" height="12" rx="2" fill="#2E4A63" opacity="0.6"/>
+      <text x="731" y="31" font-family="Open Sans" font-size="8" fill="#2E4A63" font-weight="700">Chaebol complex</text>
+      <rect x="1000" y="22" width="84" height="12" rx="2" fill="#1A5C9A" opacity="0.5"/>
+      <text x="1087" y="31" font-family="Open Sans" font-size="8" fill="#1A5C9A" font-weight="700">Corp structure</text>
+      <!-- Row 2: Revenue scale (Nothing=2, Samsung=10, Apple=10) -->
+      <text x="10" y="44" font-family="Open Sans" font-size="8.5" font-weight="700" fill="#2E4A63">CF2 Revenue</text>
+      <rect x="280" y="35" width="24" height="12" rx="2" fill="#4971B7" opacity="0.4"/>
+      <text x="307" y="44" font-family="Open Sans" font-size="8" fill="#4971B7" font-weight="700">USD 500M</text>
+      <rect x="620" y="35" width="120" height="12" rx="2" fill="#2E4A63" opacity="0.6"/>
+      <text x="743" y="44" font-family="Open Sans" font-size="8" fill="#2E4A63" font-weight="700">KRW 333.6T</text>
+      <rect x="1000" y="35" width="120" height="12" rx="2" fill="#1A5C9A" opacity="0.5"/>
+      <text x="1123" y="44" font-family="Open Sans" font-size="8" fill="#1A5C9A" font-weight="700">USD 416.2B</text>
+      <!-- Row 3: Litigation exposure (Nothing=1, Samsung=8, Apple=9) -->
+      <text x="10" y="57" font-family="Open Sans" font-size="8.5" font-weight="700" fill="#2E4A63">CF4 Litigation</text>
+      <rect x="280" y="48" width="12" height="12" rx="2" fill="#4971B7" opacity="0.3"/>
+      <text x="295" y="57" font-family="Open Sans" font-size="8" fill="#4971B7" font-weight="700">None material</text>
+      <rect x="620" y="48" width="96" height="12" rx="2" fill="#E05757" opacity="0.55"/>
+      <text x="719" y="57" font-family="Open Sans" font-size="8" fill="#C03030" font-weight="700">4 active cases</text>
+      <rect x="1000" y="48" width="108" height="12" rx="2" fill="#E05757" opacity="0.6"/>
+      <text x="1111" y="57" font-family="Open Sans" font-size="8" fill="#C03030" font-weight="700">DOJ + EU DMA</text>
+      <!-- Scale note -->
+      <text x="1540" y="64" text-anchor="end" font-family="Open Sans" font-size="7.5" font-style="italic" fill="#8896A8">Bar width = relative scale. PROBABLE synthesis from Section 5b.</text>
+    </svg>
     <div class="cf-layout">
       <div class="cf-col">
         <div class="cf-header">Samsung <span class="ch-esov esov-defense">Defense Mode</span></div>
