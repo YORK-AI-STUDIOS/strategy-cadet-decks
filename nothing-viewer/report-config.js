@@ -28,7 +28,7 @@ const REPORT = {
 // =============================================================================
 // slideData
 // =============================================================================
-// One entry per slide, 91 total. The viewer's renderSlide() reads src and
+// One entry per slide, 90 total. The viewer's renderSlide() reads src and
 // renders an iframe;  suppresses the slide's own logos and footer.
 //
 // title is used in the slide counter and any future deep-link UI; it doesn't
@@ -123,8 +123,7 @@ const slideData = [
   { num: 87, src: 'slides/87-citations-5.html',                     title: 'Citations 5, refs 249-308' },
   { num: 88, src: 'slides/88-honest-limitations.html',              title: 'Honest limitations' },
   { num: 89, src: 'slides/89-brand-opportunities-summary.html',     title: 'Brand opportunities summary' },
-  { num: 90, src: 'slides/90-closing-divider.html',                 title: 'Closing divider' },
-  { num: 91, src: 'slides/91-back-cover.html',                      title: 'Back cover' },
+  { num: 90, src: 'slides/90-back-cover.html',                      title: 'Back cover' },
 ];
 
 // =============================================================================
@@ -250,7 +249,6 @@ const indexData = [
   { title: '12 - Closing', subs: [
     { label: 'Honest limitations', slide: 88 },
     { label: 'Brand opportunities summary', slide: 89 },
-    { label: 'Closing divider', slide: 90 },
-    { label: 'Back cover', slide: 91 },
+    { label: 'Back cover', slide: 90 },
   ]},
 ];
