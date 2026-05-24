@@ -9,11 +9,11 @@
   .oppsum .head { display:flex; align-items:flex-start; gap: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--bg-rule); }
   .oppsum .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1300px; }
   .oppsum .head .meta { margin-left: auto; text-align: right; font: var(--t-eyebrow); color: var(--fg-body); white-space: nowrap; }
-  .opp-body { margin-top: 12px; display: grid; grid-template-columns: 1fr 360px; gap: 20px; flex: 1; min-height: 0; }
+  .opp-body { margin-top: 12px; display: grid; grid-template-columns: minmax(0, 880px) 460px; gap: 32px; flex: 1; min-height: 0; align-items: start; justify-content: start; }
 
   /* Legend */
   .quad-legend { display: flex; gap: 14px; margin-bottom: 8px; align-items: center; }
-  .ql-item { display: flex; align-items: center; gap: 5px; font: 400 10px/1 var(--font-sans); color: var(--fg-body); }
+  .ql-item { display: flex; align-items: center; gap: 5px; font: 400 12px/1 var(--font-sans); color: var(--fg-body); }
   .ql-dot { width: 10px; height: 10px; border-radius: 50%; }
 
   /* Right panel */
@@ -21,7 +21,7 @@
   .opp-card { padding: 7px 10px; background: #F4F7FB; display: flex; align-items: flex-start; gap: 8px; }
   .oc-num { font: 800 14px/1 var(--font-sans); color: var(--mr-blue-dark); flex-shrink: 0; min-width: 20px; }
   .oc-body { flex: 1; }
-  .oc-title { font: 700 10px/1.2 var(--font-sans); color: var(--fg-heading); margin-bottom: 2px; }
+  .oc-title { font: 700 12px/1.2 var(--font-sans); color: var(--fg-heading); margin-bottom: 2px; }
   .oc-conf { font: 700 7.5px/1 var(--font-sans); letter-spacing: 0.06em; text-transform: uppercase; }
   .ts-chip { display: inline-block; font: 700 7.5px/1 var(--font-sans); letter-spacing: 0.05em; text-transform: uppercase; padding: 2px 6px; margin-right: 4px; border-radius: 2px; }
   .ts-chip.t1 { background: #1A7A4A; color: #fff; }
@@ -168,7 +168,7 @@
 
       <!-- RIGHT: Summary cards -->
       <div class="opp-cards">
-        <div style="font: 700 9px/1 var(--font-sans); letter-spacing:0.12em; text-transform:uppercase; color:var(--mr-blue-dark); padding-bottom:6px; border-bottom:2px solid var(--mr-blue-dark); margin-bottom:4px;">12 opportunities -- summary</div>
+        <div style="font: 700 11px/1 var(--font-sans); letter-spacing:0.12em; text-transform:uppercase; color:var(--mr-blue-dark); padding-bottom:6px; border-bottom:2px solid var(--mr-blue-dark); margin-bottom:4px;">12 opportunities -- summary</div>
 
         <div class="opp-card"><div class="oc-num">01</div><div class="oc-body"><div class="oc-title"><span class="ts-chip t1">T1</span>Glyph Content Studio: Creator Kit</div><div class="oc-conf" style="color:#1A7A4A;">PROBABLE</div></div></div>
         <div class="opp-card"><div class="oc-num">02</div><div class="oc-body"><div class="oc-title"><span class="ts-chip t1">T1</span>ProductReview.com.au Listing: Create Today</div><div class="oc-conf" style="color:#1A7A4A;">PROBABLE -- zero cost, 30 min</div></div></div>
@@ -183,7 +183,7 @@
         <div class="opp-card"><div class="oc-num">11</div><div class="oc-body"><div class="oc-title"><span class="ts-chip t3">T3</span>Nothing Reclaim: Transparent Trade-In Circular Loop</div><div class="oc-conf" style="color:var(--mr-blue-dark);">PROBABLE</div></div></div>
         <div class="opp-card"><div class="oc-num">12</div><div class="oc-body"><div class="oc-title"><span class="ts-chip t3">T3</span>AI Interaction Layer: Glyph Meets On-Device Intelligence</div><div class="oc-conf" style="color:#8896A8;">HYPOTHESISED</div></div></div>
 
-        <div style="margin-top:6px; padding:8px 10px; background:#EEF2F7; font:400 italic 9px/1.4 var(--font-sans); color:var(--fg-body);">These are analyst-generated options for the strategist's consideration. Evidence base in Section 12. The strategist decides which to pursue and in what sequence.</div>
+        <div style="margin-top:6px; padding:8px 10px; background:#EEF2F7; font:400 italic 11px/1.4 var(--font-sans); color:var(--fg-body);">These are analyst-generated options for the strategist's consideration. Evidence base in Section 12. The strategist decides which to pursue and in what sequence.</div>
       </div>
     </div>
 

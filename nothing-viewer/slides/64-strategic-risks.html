@@ -9,7 +9,7 @@
   .srisk .head { display:flex; align-items:flex-start; gap: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--bg-rule); }
   .srisk .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1300px; }
   .srisk .head .meta { margin-left: auto; text-align: right; font: var(--t-eyebrow); color: var(--fg-body); white-space: nowrap; }
-  .srisk-body { margin-top: 12px; display: grid; grid-template-columns: 1fr 380px; gap: 20px; flex: 1; min-height: 0; }
+  .srisk-body { margin-top: 12px; display: grid; grid-template-columns: minmax(0, 880px) 480px; gap: 32px; flex: 1; min-height: 0; align-items: start; justify-content: start; }
 
   /* Risk detail cards */
   .risk-list { display: flex; flex-direction: column; gap: 7px; }
@@ -21,7 +21,7 @@
   .rc-sev.high { color: #EF434E; }
   .rc-sev.medium { color: #856404; }
   .rc-sev.low { color: #8896A8; }
-  .rc-title { font: 700 11px/1.2 var(--font-sans); color: var(--fg-heading); margin-bottom: 3px; }
+  .rc-title { font: 700 13px/1.2 var(--font-sans); color: var(--fg-heading); margin-bottom: 3px; }
   .rc-body { font: 400 9.5px/1.4 var(--font-sans); color: var(--fg-body); }
   .rc-mit { font: 400 9.5px/1.4 var(--font-sans); color: var(--fg-body); border-top: 1px solid var(--bg-rule); padding-top: 4px; margin-top: 4px; }
   .rc-mit strong { color: var(--mr-blue-dark); }
@@ -43,7 +43,7 @@
     <div class="srisk-body">
       <!-- LEFT: HEAT MAP SVG -->
       <div>
-        <div style="font: 700 9px/1 var(--font-sans); letter-spacing:0.12em; text-transform:uppercase; color:var(--mr-blue-dark); padding-bottom:6px; border-bottom:2px solid var(--mr-blue-dark); margin-bottom:10px;">Risk heat map -- Likelihood x Impact</div>
+        <div style="font: 700 11px/1 var(--font-sans); letter-spacing:0.12em; text-transform:uppercase; color:var(--mr-blue-dark); padding-bottom:6px; border-bottom:2px solid var(--mr-blue-dark); margin-bottom:10px;">Risk heat map -- Likelihood x Impact</div>
         <svg viewBox="0 0 680 490" preserveAspectRatio="xMidYMid meet" style="width:100%; display:block;" aria-label="Risk likelihood impact heat map">
           <!-- Grid layout:
                X axis: Likelihood (Low/Med/High) cols at x=80, 80+180=260, 260+180=440, 440+180=620
@@ -164,41 +164,41 @@
 
       <!-- RIGHT: Risk summary cards -->
       <div class="risk-list">
-        <div style="font: 700 9px/1 var(--font-sans); letter-spacing:0.12em; text-transform:uppercase; color:var(--mr-blue-dark); padding-bottom:6px; border-bottom:2px solid var(--mr-blue-dark); margin-bottom:6px;">Risk register</div>
+        <div style="font: 700 11px/1 var(--font-sans); letter-spacing:0.12em; text-transform:uppercase; color:var(--mr-blue-dark); padding-bottom:6px; border-bottom:2px solid var(--mr-blue-dark); margin-bottom:6px;">Risk register</div>
         <div class="risk-card high">
           <div class="rc-sev high">R1  ·  HIGH  ·  Competitive</div>
           <div class="rc-title">Oppo AU SoS Acceleration (14.3% to 15.5% in 3 months)</div>
-          <div class="rc-body">Oppo gaining share without a launch spike. If it reaches 17%, Nothing's mid-tier positioning is under direct pressure. <span class="sc-chip sc-chip--verified" style="font-size:9px;">Verified SoS</span></div>
+          <div class="rc-body">Oppo gaining share without a launch spike. If it reaches 17%, Nothing's mid-tier positioning is under direct pressure. <span class="sc-chip sc-chip--verified" style="font-size:11px;">Verified SoS</span></div>
           <div class="rc-mit"><strong>Mitigation:</strong> Kill-Switch 2 at 17% threshold. Head-to-head design content for Audience 2.</div>
         </div>
         <div class="risk-card high">
           <div class="rc-sev high">R2  ·  HIGH  ·  Brand Reputation</div>
           <div class="rc-title">Trustpilot 2.5/5 Rating (587 reviews)</div>
-          <div class="rc-body">Product quality averages 3.8/5 in specialist press. The customer service gap can undo brand investment faster than content can repair. <span class="sc-chip sc-chip--probable" style="font-size:9px;">Probable</span></div>
+          <div class="rc-body">Product quality averages 3.8/5 in specialist press. The customer service gap can undo brand investment faster than content can repair. <span class="sc-chip sc-chip--probable" style="font-size:11px;">Probable</span></div>
           <div class="rc-mit"><strong>Mitigation:</strong> Warranty Escalation Transparency initiative. DM-based warranty response commitment.</div>
         </div>
         <div class="risk-card medium">
           <div class="rc-sev medium">R3  ·  MEDIUM  ·  Competitive</div>
           <div class="rc-title">Google Pixel Remains in Expansion Mode AU</div>
-          <div class="rc-body">Pixel 15.9% SoS (4.4x Nothing), still spending to grow. Deceleration (15.9% to 13.9%) is not confirmed as permanent. <span class="sc-chip sc-chip--verified" style="font-size:9px;">Verified SoS</span></div>
+          <div class="rc-body">Pixel 15.9% SoS (4.4x Nothing), still spending to grow. Deceleration (15.9% to 13.9%) is not confirmed as permanent. <span class="sc-chip sc-chip--verified" style="font-size:11px;">Verified SoS</span></div>
           <div class="rc-mit"><strong>Mitigation:</strong> Always-on Pixel comparison content intercepts defectors at research stage.</div>
         </div>
         <div class="risk-card medium">
           <div class="rc-sev medium">R4  ·  MEDIUM  ·  Strategic</div>
           <div class="rc-title">AI-Native Device Timeline Dependency</div>
-          <div class="rc-body">USD 200M Series C directed at AI-first device. If launch is delayed, Tier 3 roadmap highest-impact initiative is de-risked. <span class="sc-chip sc-chip--probable" style="font-size:9px;">Probable</span></div>
+          <div class="rc-body">USD 200M Series C directed at AI-first device. If launch is delayed, Tier 3 roadmap highest-impact initiative is de-risked. <span class="sc-chip sc-chip--probable" style="font-size:11px;">Probable</span></div>
           <div class="rc-mit"><strong>Mitigation:</strong> Two parallel Tier 3 initiatives proceed independently. Kill-switch pauses, not kills.</div>
         </div>
         <div class="risk-card low">
           <div class="rc-sev low">R5  ·  LOWER  ·  Operational</div>
           <div class="rc-title">Facebook Dual-Page Attribution Risk</div>
-          <div class="rc-body">Two live page IDs found. Low urgency now; material if paid Meta scales. <span class="sc-chip sc-chip--verified" style="font-size:9px;">Verified</span></div>
+          <div class="rc-body">Two live page IDs found. Low urgency now; material if paid Meta scales. <span class="sc-chip sc-chip--verified" style="font-size:11px;">Verified</span></div>
           <div class="rc-mit"><strong>Mitigation:</strong> Consolidate under page ID 724644021637509 before any paid Meta scale-up.</div>
         </div>
         <div class="risk-card low">
           <div class="rc-sev low">R6  ·  LOWER  ·  Brand Visibility</div>
           <div class="rc-title">No ProductReview.com.au Listing</div>
-          <div class="rc-body">Missing presence on AU's primary consumer trust platform. Pixel, Samsung, Oppo all have listings. <span class="sc-chip sc-chip--probable" style="font-size:9px;">Probable</span></div>
+          <div class="rc-body">Missing presence on AU's primary consumer trust platform. Pixel, Samsung, Oppo all have listings. <span class="sc-chip sc-chip--probable" style="font-size:11px;">Probable</span></div>
           <div class="rc-mit"><strong>Mitigation:</strong> Create listing. Under 30 minutes, zero cost, high trust signal for Audience 3.</div>
         </div>
       </div>

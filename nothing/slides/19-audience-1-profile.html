@@ -11,27 +11,27 @@
   .std .head .meta { margin-left: auto; text-align: right; }
   .aud-layout { margin-top: 16px; display: grid; grid-template-columns: 340px 1fr; gap: 44px; flex: 1; min-height: 0; overflow: hidden; }
   .aud-badge { padding: 20px 22px; border-top: 4px solid var(--mr-blue-dark); background: #F4F7FB; margin-bottom: 18px; }
-  .aud-badge .ab-num { font: 700 9px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 8px; }
+  .aud-badge .ab-num { font: 700 11px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 8px; }
   .aud-badge .ab-name { font: 800 17px/1.2 var(--font-sans); color: var(--fg-heading); }
-  .aud-badge .ab-age { font: 400 13px/1 var(--font-sans); color: var(--fg-body); margin-top: 6px; }
+  .aud-badge .ab-age { font: 400 15px/1 var(--font-sans); color: var(--fg-body); margin-top: 6px; }
   .aud-left { display: flex; flex-direction: column; gap: 0; }
   .aud-block { padding: 11px 0; border-bottom: 1px solid var(--bg-rule); }
-  .aud-block .ab-lbl { font: 700 9px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 5px; }
+  .aud-block .ab-lbl { font: 700 11px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 5px; }
   .aud-block p { margin: 0; font: 400 12.5px/1.45 var(--font-sans); color: var(--fg-body); }
   .aud-block p strong { color: var(--fg-heading); }
   .aud-right { display: flex; flex-direction: column; gap: 0; }
   .driver-table { width: 100%; border-collapse: collapse; }
   .driver-table thead tr { border-bottom: 2px solid var(--mr-blue-dark); }
-  .driver-table th { font: 700 10px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--mr-blue-dark); padding: 0 8px 8px 0; text-align: left; }
+  .driver-table th { font: 700 12px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--mr-blue-dark); padding: 0 8px 8px 0; text-align: left; }
   .driver-table tbody tr { border-bottom: 1px solid var(--bg-rule); }
   .driver-table tbody tr:nth-child(even) { background: #F5F7FA; }
-  .driver-table td { padding: 9px 8px 9px 0; font: 400 12px/1.4 var(--font-sans); color: var(--fg-body); vertical-align: top; }
+  .driver-table td { padding: 9px 8px 9px 0; font: 400 14px/1.4 var(--font-sans); color: var(--fg-body); vertical-align: top; }
   .driver-table td:first-child { font-weight: 600; color: var(--fg-heading); }
   .score-bar { display: inline-flex; gap: 3px; align-items: center; }
   .score-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--mr-blue-dark); }
   .score-dot.empty { background: #E5EAF0; }
   .cep-list { list-style: none; padding: 0; margin: 10px 0 0; display: flex; flex-direction: column; gap: 6px; }
-  .cep-list li { font: 400 12px/1.4 var(--font-sans); color: var(--fg-body); padding-left: 14px; position: relative; }
+  .cep-list li { font: 400 14px/1.4 var(--font-sans); color: var(--fg-body); padding-left: 14px; position: relative; }
   .cep-list li::before { content: ""; position: absolute; left: 0; top: 7px; width: 5px; height: 5px; border-radius: 50%; background: var(--mr-blue-dark); }
   .cep-list li strong { color: var(--fg-heading); }
 </style>
@@ -92,7 +92,7 @@
         </div>
       </div>
       <div class="aud-right">
-        <div style="font: 700 10px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: 0.12em; text-transform: uppercase; padding-bottom: 8px; border-bottom: 2px solid var(--mr-blue-dark); margin-bottom: 4px;">Purchase drivers (1-5 score)</div>
+        <div style="font: 700 12px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: 0.12em; text-transform: uppercase; padding-bottom: 8px; border-bottom: 2px solid var(--mr-blue-dark); margin-bottom: 4px;">Purchase drivers (1-5 score)</div>
         <table class="driver-table">
           <thead><tr><th>Driver</th><th>Score</th><th>Rationale</th></tr></thead>
           <tbody>
