@@ -9,8 +9,19 @@
 //
 // On a gradient slide, mark the section as <section class="sc-slide gradient">.
 // CSS in slide-base.css handles the white/blue logo swap and white footer text.
+//
+// Embed mode: append ?chrome=off to the slide URL to suppress chrome injection
+// entirely. Used when the slide is rendered inside a viewer chassis that
+// provides its own topbar/footer (logos, page count, copyright). Default is
+// chrome-on so standalone direct-open of a slide keeps the mandatory chrome.
 (function () {
+  function chromeSuppressed() {
+    try {
+      return new URLSearchParams(window.location.search).get('chrome') === 'off';
+    } catch (e) { return false; }
+  }
   function inject() {
+    if (chromeSuppressed()) return;
     var slide = document.querySelector('.sc-slide');
     if (!slide) return;
     if (slide.dataset.chromeInjected === 'true') return;
