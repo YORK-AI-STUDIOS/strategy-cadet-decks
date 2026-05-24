@@ -39,9 +39,15 @@
   /* ---------------------------------------------------------------------------
      3. CONFIDENCE CHIPS  (data-quality flag on every synthesis claim)
      --------------------------------------------------------------------------- */
-  --chip-verified-bg:   #00D084;   --chip-verified-fg:   #FFFFFF;
-  --chip-probable-bg:   #FCB900;   --chip-probable-fg:   #1A1A1A;
-  --chip-uncertain-bg:  #EF434E;   --chip-uncertain-fg:  #FFFFFF;
+  /* 4-tier confidence system locked 2026-05-24. Red retired from chips —
+     reserved for crisis flags + forbidden callouts only. */
+  --chip-verified-bg:     #00D084;   --chip-verified-fg:     #FFFFFF;  /* externally confirmed */
+  --chip-probable-bg:     #FCB900;   --chip-probable-fg:     #1A1A1A;  /* externally sourced, partial */
+  --chip-estimated-bg:    #E68A2D;   --chip-estimated-fg:    #FFFFFF;  /* numeric estimate from available data */
+  --chip-hypothesised-bg: #6B7E96;   --chip-hypothesised-fg: #FFFFFF;  /* AI synthesis, working hypothesis */
+  /* Legacy alias — UNCERTAIN repointed to HYPOTHESISED slate during slide migration.
+     Retire this alias after the audit lands. Do not introduce new UNCERTAIN usage. */
+  --chip-uncertain-bg:    #6B7E96;   --chip-uncertain-fg:    #FFFFFF;
 
   /* ---------------------------------------------------------------------------
      4. CHART SERIES PALETTE  (locked order)
@@ -69,11 +75,14 @@
   --t-h3:          600 28px/1.25   var(--font-sans);  /* slide title */
   --t-h3-finding:  700 28px/1.25   var(--font-sans);  /* declarative finding-title */
   --t-h4:          600 18px/1.35   var(--font-sans);  /* panel / column heads */
-  --t-eyebrow:     600 11px/1.3    var(--font-sans);  /* section eyebrow, ALL CAPS */
-  --t-body:        400 14px/1.45   var(--font-sans);  /* paragraph body */
-  --t-body-tight:  400 13px/1.4    var(--font-sans);  /* dense bullets, tables */
-  --t-caption:     400 10px/1.35   var(--font-sans);  /* unit, caption */
-  --t-source:      400 italic 12px/1.4 var(--font-sans);  /* source line — bumped to 12px slide-px per design feedback v2 */
+  /* Body text bumped +2px slide-px on 2026-05-24 per Stuart's review of Run J Mk2 v3.
+     Headings (display, h1, kpi, section, h2, h3, h4) left untouched per instruction
+     "increase all the other fonts by 2 point except for main headings and titles". */
+  --t-eyebrow:     600 13px/1.3    var(--font-sans);  /* section eyebrow, ALL CAPS (was 11) */
+  --t-body:        400 16px/1.45   var(--font-sans);  /* paragraph body (was 14) */
+  --t-body-tight:  400 15px/1.4    var(--font-sans);  /* dense bullets, tables (was 13) */
+  --t-caption:     400 12px/1.35   var(--font-sans);  /* unit, caption (was 10) */
+  --t-source:      400 italic 14px/1.4 var(--font-sans);  /* source line (was 12) */
   --t-page-num:    400 9px/1       var(--font-sans);  /* page numbering */
   --t-copy:        400 8px/1       var(--font-sans);  /* © line */
 
@@ -137,6 +146,9 @@
   text-transform: uppercase;
   vertical-align: 1px;
 }
-.sc-chip--verified  { background: var(--chip-verified-bg);  color: var(--chip-verified-fg); }
-.sc-chip--probable  { background: var(--chip-probable-bg);  color: var(--chip-probable-fg); }
-.sc-chip--uncertain { background: var(--chip-uncertain-bg); color: var(--chip-uncertain-fg); }
+.sc-chip--verified      { background: var(--chip-verified-bg);      color: var(--chip-verified-fg); }
+.sc-chip--probable      { background: var(--chip-probable-bg);      color: var(--chip-probable-fg); }
+.sc-chip--estimated     { background: var(--chip-estimated-bg);     color: var(--chip-estimated-fg); }
+.sc-chip--hypothesised  { background: var(--chip-hypothesised-bg);  color: var(--chip-hypothesised-fg); }
+/* Legacy class — repoints to HYPOTHESISED slate. Migrate existing usage during slide audit. */
+.sc-chip--uncertain     { background: var(--chip-hypothesised-bg);  color: var(--chip-hypothesised-fg); }
