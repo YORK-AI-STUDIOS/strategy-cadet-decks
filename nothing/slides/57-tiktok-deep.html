@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>TikTok Deep Dive, Strategy Cadet</title>
 <link rel="stylesheet" href="slide-base.css">
+<link rel="stylesheet" href="chart-styles.css">
 <style>
   .std .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); }
   .std .head .num { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); }
@@ -47,7 +48,7 @@
   <div class="sc-body-frame">
     <div class="head">
       <div class="num">57</div>
-      <div><h3>Strategic finding: TikTok has a bimodal viral pattern. Organic ceiling is 30,000-200,000 plays. Engineered outliers (format-optimised + amplified) reach 3-12.9M plays. The durability-test format is the single highest-leverage content mechanic. [VERIFIED Apify pull]</h3></div>
+      <div><h3>Strategic finding: TikTok has a bimodal viral pattern. Organic ceiling is 30,000-200,000 plays. Engineered outliers (format-optimised + amplified) reach 3-12.9M plays. The durability-test format is the single highest-leverage content mechanic. [VERIFIED cross-platform pull]</h3></div>
       <div class="meta">
         <div style="font: var(--t-eyebrow); color: var(--fg-body);">Social Performance  ·  TikTok Deep</div>
         <div style="margin-top:6px;"><span class="sc-chip sc-chip--verified">Verified 250 posts</span></div>
@@ -88,42 +89,32 @@
       </div>
       <div style="display:flex; flex-direction:column; gap:12px;">
         <div class="content-themes">
-          <div class="ct-lbl">Top 5 Content Themes (250 posts)</div>
-          <div class="theme-row">
-            <div class="theme-n">93</div>
-            <div>
-              <div class="theme-name">Product launch and product hero</div>
-              <div class="theme-desc">Phone 3a, Phone 4a Pro, Headphone (a), Ear series. Dominant content pillar. Representative: "Meet Phone (3a) Series. First hands-on experience with NEO Gamma."</div>
+          <div class="ct-lbl">Top 5 Content Themes (250 posts) - post count</div>
+          <div class="cm" style="margin-bottom: 4px;">
+            <div class="hbar-rows" style="gap: 8px;">
+              <div class="hbar-row" style="grid-template-columns: 180px 1fr 50px;">
+                <div class="name" style="font-size:11px;">Product launch / hero</div>
+                <div class="wrap" style="height:20px;"><div class="bar hero" style="width:100%; height:20px;"><span class="dl inside" style="font-size:11px;">93</span></div></div>
+              </div>
+              <div class="hbar-row" style="grid-template-columns: 180px 1fr 50px;">
+                <div class="name" style="font-size:11px;">Durability + proof tests</div>
+                <div class="wrap" style="height:20px;"><div class="bar" style="width:33%; height:20px;"><span class="dl inside" style="font-size:11px;">31</span></div></div>
+              </div>
+              <div class="hbar-row" style="grid-template-columns: 180px 1fr 50px;">
+                <div class="name" style="font-size:11px;">Brand irreverence</div>
+                <div class="wrap" style="height:20px;"><div class="bar alt" style="width:26%; height:20px;"><span class="dl inside" style="font-size:11px;">24</span></div></div>
+              </div>
+              <div class="hbar-row" style="grid-template-columns: 180px 1fr 50px;">
+                <div class="name" style="font-size:11px;">Design + aesthetic</div>
+                <div class="wrap" style="height:20px;"><div class="bar muted" style="width:20%; height:20px;"><span class="dl inside" style="font-size:11px;">19</span></div></div>
+              </div>
+              <div class="hbar-row" style="grid-template-columns: 180px 1fr 50px;">
+                <div class="name" style="font-size:11px;">Talent + influencer</div>
+                <div class="wrap" style="height:20px;"><div class="bar muted" style="width:8%; height:20px;"><span class="dl" style="font-size:11px;">7</span></div></div>
+              </div>
             </div>
           </div>
-          <div class="theme-row">
-            <div class="theme-n">31</div>
-            <div>
-              <div class="theme-name">Durability and proof tests</div>
-              <div class="theme-desc">Water resistance, USB stress, drop tests. Drives disproportionate engagement. Phone (3) USB test: 8.9M plays. Highest-leverage format in the dataset.</div>
-            </div>
-          </div>
-          <div class="theme-row">
-            <div class="theme-n">24</div>
-            <div>
-              <div class="theme-name">Brand personality and cultural irreverence</div>
-              <div class="theme-desc">"Throwing rival tech out the window", competitor jabs, absurdist humour. Anchors brand distinctiveness in a parity category.</div>
-            </div>
-          </div>
-          <div class="theme-row">
-            <div class="theme-n">19</div>
-            <div>
-              <div class="theme-name">Design and aesthetic identity</div>
-              <div class="theme-desc">NEO Gamma, Glyph Matrix, transparent design language, 3D/physics simulation. Three posts feature Blender/Cinema4D animation.</div>
-            </div>
-          </div>
-          <div class="theme-row" style="border-bottom:none;">
-            <div class="theme-n">7</div>
-            <div>
-              <div class="theme-name">Talent and influencer integration</div>
-              <div class="theme-desc">Charli XCX (global brand ambassador + shareholder), MILLI, creator collaborations. Sustained multi-channel activation, not a one-off sponsorship. Top post: "We're feeling @MILLI" at 12,900,000 plays.</div>
-            </div>
-          </div>
+          <div style="padding-top: 5px; border-top: 1px solid var(--bg-rule); margin-top: 4px;"><span style="font: 400 italic 10px/1.4 var(--font-sans); color: var(--fg-muted);">Source: cross-platform TikTok scrape, 250 posts pulled 2026-05-24. Durability format (31 posts) drives disproportionate plays: 8.9M on USB test, 12.9M on MILLI collab.</span></div>
         </div>
         <div class="top-posts">
           <div style="font: 700 9px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); padding-bottom: 8px; border-bottom: 2px solid var(--mr-blue-dark);">Top Performing Posts (in 250-post set)</div>
@@ -146,13 +137,13 @@
       </div>
     </div>
     <div class="sc-source-line">
-      <span class="sc-source">Sources: Social Performance Extension v2.1, TikTok. All data VERIFIED via clockworks/free-tiktok-scraper (Apify), 250 posts pulled 2026-05-24. Bimodal distribution pattern: VERIFIED computed from play-count distribution. Category ER benchmark (2-4% at 1-2M followers): PROBABLE (industry benchmark range, not a sourced report figure). Content theme counts from post-level dataset analysis.</span>
+      <span class="sc-source">Sources: Social Performance Extension, TikTok. All data VERIFIED via cross-platform TikTok scrape, 250 posts pulled 2026-05-24. Bimodal distribution pattern: VERIFIED computed from play-count distribution. Category ER benchmark (2-4% at 1-2M followers): PROBABLE (industry benchmark range, not a sourced report figure). Content theme counts from post-level dataset analysis.</span>
       <span class="sc-source">p. 57  ·  Part 09  ·  TikTok deep dive</span>
     </div>
   </div>
 </section>
 </div>
 <script src="_scale.js"></script>
-<script src="_chrome.js" data-page="57" data-of="88"></script>
+<script src="_chrome.js" data-page="57" data-of="90"></script>
 </body>
 </html>

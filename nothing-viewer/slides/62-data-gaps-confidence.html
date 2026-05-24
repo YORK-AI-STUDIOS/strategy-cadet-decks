@@ -15,11 +15,11 @@
   .cs-box { padding: 10px; text-align: center; }
   .cs-box.verified { background: #E8F4EC; border-top: 3px solid #1A7A4A; }
   .cs-box.probable { background: #EEF2F7; border-top: 3px solid var(--mr-blue-dark); }
-  .cs-box.uncertain { background: #FFF5F5; border-top: 3px solid #8896A8; }
+  .cs-box.hypothesised { background: #FFF5F5; border-top: 3px solid #8896A8; }
   .cs-val { font: 800 22px/1 var(--font-sans); }
   .cs-val.verified { color: #1A7A4A; }
   .cs-val.probable { color: var(--mr-blue-dark); }
-  .cs-val.uncertain { color: #8896A8; }
+  .cs-val.hypothesised { color: #8896A8; }
   .cs-lbl { font: 400 9px/1.3 var(--font-sans); color: var(--fg-body); margin-top: 4px; }
   .gap-hd { font: 700 9px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); padding-bottom: 7px; border-bottom: 2px solid var(--mr-blue-dark); }
   .gap-item { padding: 8px 10px; border-left: 3px solid #EF434E; background: #FFF5F5; }
@@ -41,7 +41,7 @@
   <div class="sc-body-frame">
     <div class="head">
       <div class="num">62</div>
-      <div><h3>Phase 3 cross-reference pass: 70 claims extracted, 48 cross-referenced via Perplexity Sonar. Result: 32 VERIFIED, 7 UNCERTAIN, 3 FLAGGED. Three high-priority data gaps remain open: AU DTC revenue baseline, CMF AU distribution status, and AU smartphone sub-category sizing. [VERIFIED Phase 3 output]</h3></div>
+      <div><h3>Phase 3 cross-reference pass: 70 claims extracted, 48 cross-referenced via Perplexity Sonar. Result: 32 VERIFIED, 7 HYPOTHESISED, 3 FLAGGED. Three high-priority data gaps remain open: AU DTC revenue baseline, CMF AU distribution status, and AU smartphone sub-category sizing. [VERIFIED Phase 3 output]</h3></div>
       <div class="meta">
         <div style="font: var(--t-eyebrow); color: var(--fg-body);">Appendix  ·  Data Gaps</div>
         <div style="margin-top:6px;"><span class="sc-chip sc-chip--verified">Phase 3 verified</span></div>
@@ -51,8 +51,8 @@
       <div class="gaps-col">
         <div class="conf-summary">
           <div class="cs-box verified"><div class="cs-val verified">32</div><div class="cs-lbl">Claims VERIFIED via Phase 3 cross-reference</div></div>
-          <div class="cs-box probable"><div class="cs-val probable">7</div><div class="cs-lbl">Claims returned UNCERTAIN after cross-reference</div></div>
-          <div class="cs-box uncertain"><div class="cs-val uncertain">3</div><div class="cs-lbl">Claims FLAGGED for correction or verification</div></div>
+          <div class="cs-box probable"><div class="cs-val probable">7</div><div class="cs-lbl">Claims returned HYPOTHESISED after cross-reference</div></div>
+          <div class="cs-box hypothesised"><div class="cs-val hypothesised">3</div><div class="cs-lbl">Claims FLAGGED for correction or verification</div></div>
         </div>
         <div class="gap-hd">Phase 3 Flagged Items (Priority Corrections)</div>
         <div class="flagged-item">
@@ -68,13 +68,13 @@
         <div class="flagged-item">
           <div class="fi-lbl">F3  ·  MEDIUM  ·  PENDING</div>
           <div class="fi-title">Samsung FY2025 net profit</div>
-          <div class="fi-text">Revenue and operating profit VERIFIED. Net profit figure (KRW 45.2T) pending full-year Samsung IR PDF confirmation. Mark as UNCERTAIN if presenting to a financial audience before confirmation.</div>
+          <div class="fi-text">Revenue and operating profit VERIFIED. Net profit figure (KRW 45.2T) pending full-year Samsung IR PDF confirmation. Mark as HYPOTHESISED if presenting to a financial audience before confirmation.</div>
         </div>
         <div class="gap-hd" style="margin-top:6px;">Confidence Tag Distribution (Full Report)</div>
         <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:8px;">
           <div style="padding:8px; background:#E8F4EC; text-align:center; border-top:3px solid #1A7A4A;"><div style="font:800 18px/1 var(--font-sans); color:#1A7A4A;">VERIFIED</div><div style="font:400 9px/1.3 var(--font-sans); color:var(--fg-body); margin-top:4px;">Live API data, sourced figures, cross-referenced claims. Web research with citations.</div></div>
           <div style="padding:8px; background:#EEF2F7; text-align:center; border-top:3px solid var(--mr-blue-dark);"><div style="font:800 18px/1 var(--font-sans); color:var(--mr-blue-dark);">PROBABLE</div><div style="font:400 9px/1.3 var(--font-sans); color:var(--fg-body); margin-top:4px;">Well-evidenced LLM synthesis. Cross-referenced against multiple consistent sources but not live-verified.</div></div>
-          <div style="padding:8px; background:#FFF5F5; text-align:center; border-top:3px solid #8896A8;"><div style="font:800 18px/1 var(--font-sans); color:#8896A8;">UNCERTAIN</div><div style="font:400 9px/1.3 var(--font-sans); color:var(--fg-body); margin-top:4px;">LLM inference, no primary source. Directional only. Should not be cited directly to a client without further research.</div></div>
+          <div style="padding:8px; background:#F0F3F6; text-align:center; border-top:3px solid #6B7E96;"><div style="font:800 18px/1 var(--font-sans); color:#6B7E96;">HYPOTHESISED</div><div style="font:400 9px/1.3 var(--font-sans); color:var(--fg-body); margin-top:4px;">LLM inference, no primary source. Directional only. Should not be cited directly to a client without further research.</div></div>
         </div>
       </div>
       <div class="gaps-col">
@@ -87,7 +87,7 @@
         <div class="gap-item">
           <div class="gi-lbl">Gap 2  ·  High Priority</div>
           <div class="gi-title">CMF by Nothing AU Distribution Status</div>
-          <div class="gi-path">CMF AU market entry status is UNCERTAIN. <strong>Upgrade path:</strong> Nothing AU commercial team confirms distribution agreement status by Day 60 gate. Without confirmation, the Tier 2 CMF initiative reverts to Nothing Phone (2a) BNPL strategy.</div>
+          <div class="gi-path">CMF AU market entry status is HYPOTHESISED. <strong>Upgrade path:</strong> Nothing AU commercial team confirms distribution agreement status by Day 60 gate. Without confirmation, the Tier 2 CMF initiative reverts to Nothing Phone (2a) BNPL strategy.</div>
         </div>
         <div class="gap-item">
           <div class="gi-lbl">Gap 3  ·  Medium Priority</div>
@@ -97,7 +97,7 @@
         <div class="gap-item">
           <div class="gi-lbl">Gap 4  ·  Medium Priority</div>
           <div class="gi-title">Instagram Post-Level Engagement Data</div>
-          <div class="gi-path">Instagram profile-level data only captured in v2.1. Post-level engagement data requires apify/instagram-scraper (paid per item). <strong>Upgrade path:</strong> v2.2 upgrade enables per-post ER for Instagram, which is the primary channel for Audience 1. Budget: approximately USD 20-50 per full scrape depending on post volume.</div>
+          <div class="gi-path">Instagram profile-level data only captured in this run. Post-level engagement data requires cross-platform Instagram post-level scraper. <strong>Upgrade path:</strong> v2 social extension upgrade enables per-post ER for Instagram, which is the primary channel for Audience 1. Budget: approximately USD 20-50 per full scrape depending on post volume.</div>
         </div>
         <div class="gap-item">
           <div class="gi-lbl">Gap 5  ·  Lower Priority</div>
@@ -112,13 +112,13 @@
       </div>
     </div>
     <div class="sc-source-line">
-      <span class="sc-source">Sources: Phase 3 cross-reference pass outputs, Strategy Cadet v2.3 Run J Mk2. 70 claims extracted, 48 cross-referenced via Perplexity Sonar (22 already grounded in Phase 2 pre-fetch sources). Cross-reference log at /tmp/brand-discovery-nothing-technology-crosscheck-log.md (operator-only). Phase 3 flagged items F1-F3 as documented above.</span>
+      <span class="sc-source">Sources: Phase 3 cross-reference pass outputs, Strategy Cadet Run J Mk2. 70 claims extracted, 48 cross-referenced via Perplexity Sonar (22 already grounded in Phase 2 pre-fetch sources). Cross-reference log at /tmp/brand-discovery-nothing-technology-crosscheck-log.md (operator-only). Phase 3 flagged items F1-F3 as documented above.</span>
       <span class="sc-source">p. 62  ·  Appendix  ·  Data gaps and confidence</span>
     </div>
   </div>
 </section>
 </div>
 <script src="_scale.js"></script>
-<script src="_chrome.js" data-page="62" data-of="88"></script>
+<script src="_chrome.js" data-page="62" data-of="90"></script>
 </body>
 </html>

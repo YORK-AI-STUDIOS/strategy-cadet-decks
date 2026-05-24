@@ -50,15 +50,15 @@
             <tr><th>Section</th><th style="width:70px; text-align:right;">Citations</th></tr>
           </thead>
           <tbody>
-            <tr><td class="section-name">5b. Competitor Forensics (Agent A2, v2.3)</td><td class="count">127</td></tr>
+            <tr><td class="section-name">5b. Competitor Forensics (Competitor Forensics Extension)</td><td class="count">127</td></tr>
             <tr><td class="section-name">PR and News Extension (34 stories, Story Index)</td><td class="count">63</td></tr>
-            <tr><td class="section-name">5c. Brand Corporate Forensics (Agent A, Section 8)</td><td class="count">54</td></tr>
-            <tr><td class="section-name">Social Performance (v2.1 live data)</td><td class="count">31</td></tr>
+            <tr><td class="section-name">5c. Brand Corporate Forensics (Section 8)</td><td class="count">54</td></tr>
+            <tr><td class="section-name">Social Performance (live data)</td><td class="count">31</td></tr>
             <tr><td class="section-name">GEO Tracking (Per-Question Breakdown)</td><td class="count">26</td></tr>
             <tr><td class="section-name">9. ESOV Analysis</td><td class="count">20</td></tr>
             <tr><td class="section-name">Citation Index (All Audiences)</td><td class="count">21</td></tr>
             <tr><td class="section-name">8. Market Size Estimate</td><td class="count">15</td></tr>
-            <tr><td class="section-name">Brand vs Activation Analysis (v2.2)</td><td class="count">7</td></tr>
+            <tr><td class="section-name">Brand vs Activation Analysis (v2 social extension)</td><td class="count">7</td></tr>
             <tr><td class="section-name">Audience 3: Budget-Conscious Gen Z Experimenters</td><td class="count">9</td></tr>
             <tr><td class="section-name">Audience 2: Anti-Mainstream Gadget Upgraders</td><td class="count">7</td></tr>
             <tr><td class="section-name">Audience 1: Tech-Forward Urban Creatives</td><td class="count">7</td></tr>
@@ -79,16 +79,16 @@
             <tr><th>Agent / Extension</th><th>Method</th><th style="width:80px; text-align:right;">Queries</th></tr>
           </thead>
           <tbody>
-            <tr><td class="section-name">Agent A (Company and Market)</td><td>Web research + Perplexity Sonar grounding (Market Size, Industry Drivers, per-competitor ESOV)</td><td class="count">~40</td></tr>
-            <tr><td class="section-name">Agent A2 (Competitor Forensics v2.3)</td><td>5 forensic queries per competitor x 6 competitors. 30 Perplexity Sonar queries in 3 parallel batches of 10</td><td class="count">30</td></tr>
-            <tr><td class="section-name">Agent B (Brand DNA + Strategy)</td><td>LLM generation from brand context. Light web research for brand claims.</td><td class="count">~5</td></tr>
-            <tr><td class="section-name">Agent C (Target Audiences)</td><td>Web research per audience. Perplexity Sonar grounding on Cultural Signals.</td><td class="count">~15</td></tr>
-            <tr><td class="section-name">Agent D (Ideation)</td><td>LLM-mostly with light web research on innovation precedents.</td><td class="count">~5</td></tr>
-            <tr><td class="section-name">Agent E (Business Planning v2.0)</td><td>Goal-driven plan with 3-check goal sanity-check via Perplexity Sonar (pytrends SoS data VERIFIED).</td><td class="count">~10</td></tr>
-            <tr><td class="section-name">Agent F (Marketing Plans v1.0)</td><td>7-section tactical plan per audience. Social performance data inputs from Extension v2.1-v2.2.</td><td class="count">~5</td></tr>
-            <tr><td class="section-name">Phase 3 Cross-Reference</td><td>70 claims extracted. 48 cross-referenced via Perplexity Sonar. 32 VERIFIED, 7 UNCERTAIN, 3 FLAGGED.</td><td class="count">48</td></tr>
+            <tr><td class="section-name">Phase 1: Company and Market</td><td>Web research + Perplexity Sonar grounding (Market Size, Industry Drivers, per-competitor ESOV)</td><td class="count">~40</td></tr>
+            <tr><td class="section-name">Phase 1b: Competitor Forensics</td><td>5 forensic queries per competitor x 6 competitors. 30 Perplexity Sonar queries in 3 parallel batches of 10</td><td class="count">30</td></tr>
+            <tr><td class="section-name">Phase 2: Brand DNA and Strategy</td><td>LLM generation from brand context. Light web research for brand claims.</td><td class="count">~5</td></tr>
+            <tr><td class="section-name">Phase 2: Target Audiences</td><td>Web research per audience. Perplexity Sonar grounding on Cultural Signals.</td><td class="count">~15</td></tr>
+            <tr><td class="section-name">Phase 2: Ideation</td><td>LLM-mostly with light web research on innovation precedents.</td><td class="count">~5</td></tr>
+            <tr><td class="section-name">Phase 3: Business Planning</td><td>Goal-driven plan with 3-check goal sanity-check via Perplexity Sonar (Google Trends SoS data VERIFIED).</td><td class="count">~10</td></tr>
+            <tr><td class="section-name">Phase 3: Marketing Plans</td><td>7-section tactical plan per audience. Social performance data inputs from Extension-v2 social extension.</td><td class="count">~5</td></tr>
+            <tr><td class="section-name">Phase 3 Cross-Reference</td><td>70 claims extracted. 48 cross-referenced via Perplexity Sonar. 32 VERIFIED, 7 HYPOTHESISED, 3 FLAGGED.</td><td class="count">48</td></tr>
             <tr><td class="section-name">GEO Extension (--with-geo)</td><td>Perplexity Sonar 41-question GEO scorecard. AU geographic targeting.</td><td class="count">41</td></tr>
-            <tr><td class="section-name">Social Performance (--with-social-perf)</td><td>Live Apify API pulls: TikTok 250 posts, Instagram profile, Facebook Ads Library 20 ads, YouTube Data API v3 top 20.</td><td class="count">Live APIs</td></tr>
+            <tr><td class="section-name">Social Performance (--with-social-perf)</td><td>Live cross-platform API pulls: TikTok 250 posts, Instagram profile, Facebook Ads Library 20 ads, YouTube Data API v3 top 20.</td><td class="count">Live APIs</td></tr>
             <tr><td class="section-name">PR / News Extension (--with-news)</td><td>34 stories across 12-month window. 11 AU-press primary sources.</td><td class="count">~34</td></tr>
             <tr><td class="section-name">Reviews Extension (--with-reviews)</td><td>Trustpilot (bot-blocked, aggregate recovered via Scamadviser), GSMArena, specialist press, Reddit (blocked).</td><td class="count">~10</td></tr>
           </tbody>
@@ -96,13 +96,13 @@
       </div>
     </div>
     <div class="sc-source-line">
-      <span class="sc-source">Sources: Methodology section (Section 20), Strategy Cadet v2.3, Run J Mk2, 2026-05-24. Citation counts computed post-assembly by scripts/citations_to_footnotes.py. Unique source count: 308. Raw citation count: 423. Agent breakdown per orchestration log.</span>
+      <span class="sc-source">Sources: Methodology section (Section 20), Strategy Cadet, Run J Mk2, 2026-05-24. Citation counts computed post-assembly by scripts/citations_to_footnotes.py. Unique source count: 308. Raw citation count: 423. Agent breakdown per orchestration log.</span>
       <span class="sc-source">p. 63  ·  Appendix  ·  Source coverage</span>
     </div>
   </div>
 </section>
 </div>
 <script src="_scale.js"></script>
-<script src="_chrome.js" data-page="63" data-of="88"></script>
+<script src="_chrome.js" data-page="63" data-of="90"></script>
 </body>
 </html>

@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>Market Size, Strategy Cadet</title>
 <link rel="stylesheet" href="slide-base.css">
+<link rel="stylesheet" href="chart-styles.css">
 <style>
   .std .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); }
   .std .head .num { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); }
@@ -97,8 +98,31 @@
             </tr>
           </tbody>
         </table>
-        <div style="margin-top: 12px; padding: 12px 14px; border-left: 3px solid var(--fg-muted); background: #F5F7FA;">
-          <p style="margin:0; font: 400 italic 11px/1.4 var(--font-sans); color: var(--fg-muted);">Note: The two AU estimates (IMARC USD 28.2B vs Grand View USD 47.4B) reflect differing scope definitions. IMARC is the lower, more conservative estimate and is the recommended reference for brand-level analysis. No AU-specific smartphone sub-category figure was returned; global smartphone share (51.2%) is the best available proxy.</p>
+        <div style="margin-top: 14px;">
+          <div style="font: 700 10px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">Market size comparison (USD, 2025)</div>
+          <div class="cm" style="font-family: var(--font-sans);">
+            <div class="hbar-rows">
+              <div class="hbar-row">
+                <div class="name">AU Consumer Electronics<span class="sub">IMARC Group [169]</span></div>
+                <div class="wrap"><div class="bar" style="width:6%"><span class="dl">USD 28.2B</span></div></div>
+              </div>
+              <div class="hbar-row">
+                <div class="name">AU Consumer Electronics<span class="sub">Grand View Research [174]</span></div>
+                <div class="wrap"><div class="bar alt" style="width:10%"><span class="dl">USD 47.4B</span></div></div>
+              </div>
+              <div class="hbar-row">
+                <div class="name">Global Consumer Electronics<span class="sub">Fortune Business Insights [179]</span></div>
+                <div class="wrap"><div class="bar muted" style="width:70%"><span class="dl">USD 865B</span></div></div>
+              </div>
+              <div class="hbar-row">
+                <div class="name">Global CE (high estimate)<span class="sub">MMR Statistics [178]</span></div>
+                <div class="wrap"><div class="bar muted" style="width:100%"><span class="dl">USD 1,234B</span></div></div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 8px; padding-top: 6px; border-top: 1px solid var(--bg-rule);">
+            <p style="margin:0; font: 400 italic 11px/1.4 var(--font-sans); color: var(--fg-muted);">Source: IMARC Group [169], Grand View Research [173][174], Fortune Business Insights [179], MMR Statistics [178]. AU estimates reflect differing scope definitions. IMARC (USD 28.2B) is the conservative reference for brand-level analysis.</p>
+          </div>
         </div>
       </div>
       <div class="ms-sidebar">
@@ -113,7 +137,7 @@
           <div class="kpi-sub">Of global consumer electronics. Nothing's primary category.</div>
         </div>
         <div class="ms-note">
-          <p><strong>Nothing's position:</strong> Nothing holds an estimated sub-1% AU unit market share, competing in the AUD 400-1,509 smartphone segment. The brand does not publish AU-specific share data. <span class="sc-chip sc-chip--uncertain">Uncertain</span></p>
+          <p><strong>Nothing's position:</strong> Nothing holds an estimated sub-1% AU unit market share, competing in the AUD 400-1,509 smartphone segment. The brand does not publish AU-specific share data. <span class="sc-chip sc-chip--hypothesised">HYPOTHESISED</span></p>
         </div>
       </div>
     </div>
@@ -125,6 +149,6 @@
 </section>
 </div>
 <script src="_scale.js"></script>
-<script src="_chrome.js" data-page="6" data-of="88"></script>
+<script src="_chrome.js" data-page="06" data-of="90"></script>
 </body>
 </html>

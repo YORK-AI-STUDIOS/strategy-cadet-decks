@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>Platform Reach, Strategy Cadet</title>
 <link rel="stylesheet" href="slide-base.css">
+<link rel="stylesheet" href="chart-styles.css">
 <style>
   .std .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); }
   .std .head .num { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); }
@@ -31,11 +32,33 @@
   <div class="sc-body-frame">
     <div class="head">
       <div class="num">56</div>
-      <div><h3>4-platform reach: 1.72M Instagram, 1.2M TikTok, 1.29M YouTube, 96K Facebook. All VERIFIED via live Apify and YouTube Data API pull 2026-05-24. Facebook page consolidation flag: two live page IDs, only one active in Ads Library. Low urgency but worth a clean-up recommendation. [VERIFIED]</h3></div>
+      <div><h3>4-platform reach: 1.72M Instagram, 1.2M TikTok, 1.29M YouTube, 96K Facebook. All VERIFIED via cross-platform scrape and YouTube Data API pull 2026-05-24. Facebook page consolidation flag: two live page IDs, only one active in Ads Library. Low urgency but worth a clean-up recommendation. [VERIFIED]</h3></div>
       <div class="meta">
         <div style="font: var(--t-eyebrow); color: var(--fg-body);">Social Performance  ·  Platform Reach</div>
         <div style="margin-top:6px;"><span class="sc-chip sc-chip--verified">Verified live data</span></div>
       </div>
+    </div>
+    <div class="cm" style="margin-top: 14px; margin-bottom: 14px;">
+      <div style="font: 700 10px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">Follower / subscriber count by platform</div>
+      <div class="hbar-rows">
+        <div class="hbar-row">
+          <div class="name">Instagram<span class="sub">@nothing</span></div>
+          <div class="wrap"><div class="bar hero" style="width:100%"><span class="dl inside">1,723,008</span></div></div>
+        </div>
+        <div class="hbar-row">
+          <div class="name">YouTube<span class="sub">@nothingtechnology</span></div>
+          <div class="wrap"><div class="bar" style="width:75%"><span class="dl inside">1,290,000</span></div></div>
+        </div>
+        <div class="hbar-row">
+          <div class="name">TikTok<span class="sub">@nothing</span></div>
+          <div class="wrap"><div class="bar alt" style="width:70%"><span class="dl inside">1,200,000</span></div></div>
+        </div>
+        <div class="hbar-row">
+          <div class="name">Facebook<span class="sub">Page ID 724644021637509</span></div>
+          <div class="wrap"><div class="bar muted" style="width:6%"><span class="dl">~96,000</span></div></div>
+        </div>
+      </div>
+      <div style="margin-top: 6px; padding-top: 5px; border-top: 1px solid var(--bg-rule);"><span style="font: 400 italic 11px/1.4 var(--font-sans); color: var(--fg-muted);">Source: cross-platform live pull, YouTube Data API v3. All figures VERIFIED 2026-05-24.</span></div>
     </div>
     <div class="reach-grid">
       <div class="reach-card">
@@ -45,7 +68,7 @@
         <div class="rc-stats">
           <div class="rc-stat"><span class="rc-stat-lbl">Highlight reels</span><span class="rc-stat-val">11</span></div>
           <div class="rc-stat"><span class="rc-stat-lbl">IGTV videos</span><span class="rc-stat-val">15</span></div>
-          <div class="rc-stat"><span class="rc-stat-lbl">Post-level ER</span><span class="rc-stat-val">v2.2 upgrade req.</span></div>
+          <div class="rc-stat"><span class="rc-stat-lbl">Post-level ER</span><span class="rc-stat-val">data not available</span></div>
           <div class="rc-stat"><span class="rc-stat-lbl">Category</span><span class="rc-stat-val">Business (undisclosed)</span></div>
         </div>
       </div>
@@ -85,16 +108,16 @@
     </div>
     <div class="flag-block">
       <div class="flag-lbl">Facebook Page Consolidation Flag</div>
-      <div class="flag-text">Two live Facebook page IDs exist for Nothing Technology: 724644021637509 (active, 96K likes, 12 confirmed ads) and 61575820731538 (0 ads, 0 disclosed followers). Fragmented page presence can affect pixel data, audience matching, and ad delivery optimisation. Recommend consolidating under the primary page ID. Low urgency, but worth a clean-up request to the client before any AU paid Meta investment. <span class="conf-v">VERIFIED Apify pull 2026-05-24</span></div>
+      <div class="flag-text">Two live Facebook page IDs exist for Nothing Technology: 724644021637509 (active, 96K likes, 12 confirmed ads) and 61575820731538 (0 ads, 0 disclosed followers). Fragmented page presence can affect pixel data, audience matching, and ad delivery optimisation. Recommend consolidating under the primary page ID. Low urgency, but worth a clean-up request to the client before any AU paid Meta investment. <span class="conf-v">VERIFIED cross-platform pull 2026-05-24</span></div>
     </div>
     <div class="sc-source-line">
-      <span class="sc-source">Sources: Social Performance Extension, v2.1. Instagram: VERIFIED Apify apify/instagram-profile-scraper. TikTok: VERIFIED clockworks/free-tiktok-scraper (250 posts pulled 2026-05-24). YouTube: VERIFIED YouTube Data API v3 live pull 2026-05-24. Facebook: VERIFIED curious_coder/facebook-ads-library-scraper (keyword fallback, page ID 724644021637509 confirmed).</span>
+      <span class="sc-source">Sources: Social Performance Extension. Instagram: VERIFIED cross-platform profile scrape. TikTok: VERIFIED cross-platform TikTok scrape (250 posts pulled 2026-05-24). YouTube: VERIFIED YouTube Data API v3 live pull 2026-05-24. Facebook: VERIFIED cross-platform Ads Library scrape (keyword fallback, page ID 724644021637509 confirmed).</span>
       <span class="sc-source">p. 56  ·  Part 09  ·  Platform reach</span>
     </div>
   </div>
 </section>
 </div>
 <script src="_scale.js"></script>
-<script src="_chrome.js" data-page="56" data-of="88"></script>
+<script src="_chrome.js" data-page="56" data-of="90"></script>
 </body>
 </html>
