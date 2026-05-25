@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kill-Switches, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+ .ks-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 14px; }
+ .ks-card { background: #F4F7FB; border-left: 4px solid var(--mr-blue-dark); padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; }
+ .ks-card.amber { border-left-color: #8A6030; }
+ .ks-card.red { border-left-color: #8A2020; }
+ .ks-id { font: 700 10px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); }
+ .ks-card.amber .ks-id { color: #8A6030; }
+ .ks-card.red .ks-id { color: #8A2020; }
+ .ks-name { font: 700 var(--t-caption)/1.2 var(--font-sans); color: var(--fg-heading); }
+ .ks-trigger { font: 400 11px/1.4 var(--font-sans); color: var(--fg-body); }
+ .ks-trigger strong { font-weight: 700; }
+ .ks-pivot { margin-top: 4px; padding: 6px 8px; background: rgba(46,74,99,0.07); font: 400 10px/1.3 var(--font-sans); color: var(--fg-muted); }
+ .ks-pivot strong { font-weight: 600; color: var(--fg-heading); }
+ .ks-bottom { grid-column: 1 / -1; padding: 10px 14px; background: #EEF2F7; display: flex; gap: 24px; align-items: center; }
+ .ks-bottom-note { font: 400 11px/1.4 var(--font-sans); color: var(--fg-body); flex: 1; }
+ .ks-bottom-note strong { font-weight: 700; color: var(--fg-heading); }
+ .ks-macro { display: flex; flex-direction: column; gap: 4px; }
+ .ks-macro-item { font: 400 10px/1.3 var(--font-sans); color: var(--fg-muted); padding: 3px 8px; background: #fff; border-left: 3px solid #8A2020; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide" data-screen-label="43 Kill-Switches">
+ <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 06 · Brand Strategy · Kill-Switches (Section 7), 6 named triggers, each tied to a real metric from the KPI tree</span></div>
+ <h2 class="sc-h2">Every kill-switch names a metric, an escalation path, a rationale and a pivot option. No vague escape hatches. <span class="sc-chip sc-chip--probable">Probable</span></h2>
+
+ <div class="ks-grid">
+
+ <div class="ks-card">
+ <div class="ks-id">KS-1 · Le1</div>
+ <div class="ks-name">Scheduled-Outcome Contract Uptake Fails</div>
+ <div class="ks-trigger"><strong>Trigger:</strong> Le1 below 4 contracts in pipeline by Day 30, or below 10 by Day 90. <strong>Escalation:</strong> BD Lead to MD inside 48 hours. Off-cycle Modular Momentum Standup convened to diagnose buyer-side rejection of schedule-default clause structure or pricing premium.</div>
+ <div class="ks-pivot"><strong>Pivot:</strong> Reframe as a softer "Schedule Confidence Statement" without legal default clauses. Rerun with two friendly counterparties before reactivating Le1 targets.</div>
+ </div>
+
+ <div class="ks-card amber">
+ <div class="ks-id">KS-2 · Le2</div>
+ <div class="ks-name">Wellbeing Specification Stalls at Assurer Stage</div>
+ <div class="ks-trigger"><strong>Trigger:</strong> Le2 below 2 assurer sign-offs by Day 45, or full Specification not published by Day 90. <strong>Escalation:</strong> Programme Lead to MD inside one week. Searipple Village programme reviewed for whether the operating laboratory is providing the evidence assurers need. Risk is real: acoustic and lighting assurance is a small specialist market in AU.</div>
+ <div class="ks-pivot"><strong>Pivot:</strong> Convert from open standard to Fleetwood-proprietary published methodology. Continue seeking assurers, accepting lower-credibility positioning.</div>
+ </div>
+
+ <div class="ks-card red">
+ <div class="ks-id">KS-3 · Le6 · Regulatory</div>
+ <div class="ks-name">AASB S2 Disclosure Timeline Slips</div>
+ <div class="ks-trigger"><strong>Trigger:</strong> Le6 below 60% disclosure readiness by Day 90, or below 90% by Day 150. <strong>Escalation:</strong> CFO to MD and Audit Committee inside 72 hours. This is a regulatory event, not just a marketing miss. Remedy time on emissions data is months, not weeks.</div>
+ <div class="ks-pivot"><strong>Note:</strong> A missed FY26 baseline disclosure inverts the brand opportunity into a brand risk. The kill-switch trips early by design.</div>
+ </div>
+
+ <div class="ks-card">
+ <div class="ks-id">KS-4 · Le4</div>
+ <div class="ks-name">Defence-Segment BD Does Not Materialise</div>
+ <div class="ks-trigger"><strong>Trigger:</strong> Le4 below 2 briefings by Day 90, or below 4 by Day 150. <strong>Escalation:</strong> BD Lead to MD inside one week. T2.3 is the foundation for Tier 3 defence-modular conversion in a later quarter; if briefings cannot be secured, the defence subsegment is not winnable inside the plan window.</div>
+ <div class="ks-pivot"><strong>Pivot:</strong> Redeploy resourcing to T3.1 (Decommission-and-Redeploy) or to accelerating the Carbon Ledger partnership. The kill-switch kills T2.3's claim on this plan's resource envelope, not the defence opportunity itself.</div>
+ </div>
+
+ <div class="ks-card amber">
+ <div class="ks-id">KS-5 · L3</div>
+ <div class="ks-name">Pilbara Community Solutions Occupancy Softens</div>
+ <div class="ks-trigger"><strong>Trigger:</strong> L3 Searipple occupancy below 84% for two consecutive months, or below 80% in any single month. <strong>Escalation:</strong> Community Solutions GM to MD inside 48 hours. L3 is the cash engine that funds the rest of the plan; named as FY25 earnings uplift driver. A material decline forces Tier 2 or Tier 3 scope reduction.</div>
+ <div class="ks-pivot"><strong>Pivot:</strong> Defer T3.1 and T3.2 by one quarter. Concentrate resourcing on T2.1 plus T2.2 to protect the category-leadership narrative.</div>
+ </div>
+
+ <div class="ks-card red">
+ <div class="ks-id">KS-6 · Macro</div>
+ <div class="ks-name">Macroeconomic Shock Breaks Category Trajectory</div>
+ <div class="ks-trigger"><strong>Trigger (any one of three):</strong> RBA cash rate above 4.85% for two consecutive monthly reviews; iron ore below US$80/tonne for two consecutive monthly reviews; a named Tier 1 contractor publicly suspending modular workforce-accommodation tendering. <strong>Escalation:</strong> MD to Board Strategy subcommittee inside one week; full plan reconsidered at next Quarterly Goal-Level Review.</div>
+ <div class="ks-pivot"><strong>Note:</strong> Section 4 baseline is 4.10% RBA with 4.35% probable. The kill-switch is deliberately conservative: a continued push against a broken macro burns capital.</div>
+ </div>
+
+ <div class="ks-bottom">
+ <div class="ks-bottom-note"><strong>Design principle:</strong> Every kill-switch references a metric that already appears in the KPI tree (Section 3). No invented escape hatches. The six kill-switches cover: demand-side rejection (KS-1), capability-supply risk (KS-2), regulatory risk (KS-3), government-access risk (KS-4), revenue-base risk (KS-5), and macro risk (KS-6). The kill-switches do not kill the goal; they kill a specific initiative's claim on the plan's resource envelope.</div>
+ <div class="ks-macro">
+ <div class="ks-macro-item">RBA baseline: 4.10% (4.35% PROBABLE)</div>
+ <div class="ks-macro-item">Iron ore KS threshold: US$80/t</div>
+ <div class="ks-macro-item">Searipple occupancy KS floor: 84% sustained</div>
+ </div>
+ </div>
+
+ </div>
+
+ <div class="sc-source-line"><span class="sc-source">p. 43 · Part 06 · Source: Business Planning Section 7 (Kill-Switches); KPI tree Le1, Le2, Le4, Le6, L3 cross-referenced Section 3; Searipple Village L3 occupancy [2][83]; AASB S2 Group 1 regulatory obligation [2] p.26; RBA cash rate Section 4; iron ore price Section 4</span></div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="43" data-of="81"></script>
+</body>
+</html>

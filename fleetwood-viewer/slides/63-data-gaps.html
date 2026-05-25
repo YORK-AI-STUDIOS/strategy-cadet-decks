@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Data Gaps and Confidence Register, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .gaps-layout { margin-top: 14px; display: grid; grid-template-columns: minmax(0, 880px) 340px; gap: 24px; align-items: start; }
+
+  .chart-title { font: 700 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 5px; }
+
+  .gap-table { width: 100%; border-collapse: collapse; }
+  .gap-table th { font: 700 9px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; padding: 7px 10px; background: var(--mr-blue-dark); color: rgba(255,255,255,0.8); text-align: left; }
+  .gap-table td { font: 400 var(--t-caption)/1.35 var(--font-sans); color: var(--fg-body); padding: 6px 10px; border-bottom: 1px solid #E8EEF6; vertical-align: top; }
+  .gap-table tr:last-child td { border-bottom: none; }
+  .gap-table tr:nth-child(even) td { background: #F8FAFB; }
+  .sev-high { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; padding: 2px 5px; border-radius: 2px; background: #FCE4D6; color: #8B3310; white-space: nowrap; }
+  .sev-med { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; padding: 2px 5px; border-radius: 2px; background: #FFF3CD; color: #7A5000; white-space: nowrap; }
+  .sev-low { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; padding: 2px 5px; border-radius: 2px; background: #EEF2F7; color: #2E4A63; white-space: nowrap; }
+
+  .panel-hd { font: 700 10px/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--mr-blue-dark); border-bottom: 2px solid var(--mr-blue-dark); padding-bottom: 5px; margin-bottom: 8px; }
+  .upgrade-card { padding: 8px 10px; background: #F4F7FB; border-left: 3px solid var(--mr-blue-dark); margin-bottom: 6px; }
+  .uc-label { font: 700 9px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 3px; }
+  .uc-text { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide" data-screen-label="63 Data Gaps and Confidence Register">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 09 · Appendix · Data Gaps and Confidence Register</span></div>
+  <h2 class="sc-h2">Twelve named data gaps, three severity tiers, four upgrade paths. Transparency on what is VERIFIED, what is ESTIMATED, and what is HYPOTHESISED. The strategist should not proceed on HIGH-severity gaps without independent verification.</h2>
+
+  <div class="gaps-layout">
+
+    <!-- LEFT: donut chart + gap table -->
+    <div>
+      <div class="chart-title">Confidence chip distribution across full deck (368 total chips)</div>
+
+      <!--
+        REAL COUNTS: VERIFIED=84, PROBABLE=170, ESTIMATED=21, HYPOTHESISED=93. Total=368.
+        Percentages: V=22.8%, P=46.2%, E=5.7%, H=25.3%
+        Donut: r=80, cx=140, cy=110. Circumference = 2*PI*80 = 502.7
+        V: 22.8% = 114.6px dash. Starts at -90deg (top).
+        P: 46.2% = 232.2px dash. Starts after V: 22.8% = 82.1deg offset from -90 = -7.9deg = rotate(-90+82.1=-7.9 => rotate by (22.8/100)*360-90 = 82.1-90 = -7.9? No.
+        rotate = -90 + cumulative_pct * 3.6
+        V start: rotate(-90). V end at: -90 + 22.8*3.6 = -90+82.1 = -7.9deg
+        P start: rotate(-7.9). P end at: -7.9 + 46.2*3.6 = -7.9+166.3 = 158.4deg
+        E start: rotate(158.4). E end at: 158.4 + 5.7*3.6 = 158.4+20.5 = 178.9deg
+        H start: rotate(178.9).
+      -->
+
+      <svg viewBox="0 0 820 240" preserveAspectRatio="xMidYMid meet" aria-label="Confidence chip distribution donut chart" style="width:100%; max-height:235px; display:block;">
+
+        <!-- VERIFIED arc: 22.8%, 114.6px of 502.7 -->
+        <circle cx="140" cy="120" r="80" stroke="#00D084" stroke-width="48" fill="none"
+                stroke-dasharray="114.6 388.1"
+                transform="rotate(-90 140 120)" stroke-linecap="butt"/>
+
+        <!-- PROBABLE arc: 46.2%, 232.2px. rotate(-7.9) -->
+        <circle cx="140" cy="120" r="80" stroke="#FCB900" stroke-width="48" fill="none"
+                stroke-dasharray="232.2 270.5"
+                transform="rotate(-7.9 140 120)" stroke-linecap="butt"/>
+
+        <!-- ESTIMATED arc: 5.7%, 28.7px. rotate(158.4) -->
+        <circle cx="140" cy="120" r="80" stroke="#E68A2D" stroke-width="48" fill="none"
+                stroke-dasharray="28.7 474.0"
+                transform="rotate(158.4 140 120)" stroke-linecap="butt"/>
+
+        <!-- HYPOTHESISED arc: 25.3%, 127.2px. rotate(178.9) -->
+        <circle cx="140" cy="120" r="80" stroke="#6B7E96" stroke-width="48" fill="none"
+                stroke-dasharray="127.2 375.5"
+                transform="rotate(178.9 140 120)" stroke-linecap="butt"/>
+
+        <!-- Centre text -->
+        <text x="140" y="112" text-anchor="middle" font-family="Open Sans" font-size="28" font-weight="800" fill="#2E4A63" letter-spacing="-1">368</text>
+        <text x="140" y="127" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#9AA3AD" letter-spacing="1.5" font-weight="600">TOTAL</text>
+        <text x="140" y="139" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#9AA3AD" letter-spacing="1" font-weight="600">CHIPS</text>
+
+        <!-- Legend: right of donut -->
+        <rect x="290" y="30" width="14" height="14" rx="2" fill="#00D084"/>
+        <text x="310" y="42" font-family="Open Sans" font-size="11" font-weight="700" fill="#00D084">VERIFIED</text>
+        <text x="310" y="55" font-family="Open Sans" font-size="10" fill="#2E4A63">84 chips  ·  22.8%</text>
+        <text x="310" y="67" font-family="Open Sans" font-size="9" fill="#6B7E96">Cross-referenced to 2+ primary sources</text>
+
+        <rect x="290" y="82" width="14" height="14" rx="2" fill="#FCB900"/>
+        <text x="310" y="94" font-family="Open Sans" font-size="11" font-weight="700" fill="#C56A00">PROBABLE</text>
+        <text x="310" y="107" font-family="Open Sans" font-size="10" fill="#2E4A63">170 chips  ·  46.2%</text>
+        <text x="310" y="119" font-family="Open Sans" font-size="9" fill="#6B7E96">Single source or strong directional evidence</text>
+
+        <rect x="290" y="134" width="14" height="14" rx="2" fill="#E68A2D"/>
+        <text x="310" y="146" font-family="Open Sans" font-size="11" font-weight="700" fill="#E68A2D">ESTIMATED</text>
+        <text x="310" y="159" font-family="Open Sans" font-size="10" fill="#2E4A63">21 chips  ·  5.7%</text>
+        <text x="310" y="171" font-family="Open Sans" font-size="9" fill="#6B7E96">Numeric estimate computed from available data</text>
+
+        <rect x="290" y="186" width="14" height="14" rx="2" fill="#6B7E96"/>
+        <text x="310" y="198" font-family="Open Sans" font-size="11" font-weight="700" fill="#6B7E96">HYPOTHESISED</text>
+        <text x="310" y="211" font-family="Open Sans" font-size="10" fill="#2E4A63">93 chips  ·  25.3%</text>
+        <text x="310" y="223" font-family="Open Sans" font-size="9" fill="#6B7E96">AI synthesis, working hypothesis from signals</text>
+
+        <!-- Hairline rule above source -->
+        <line x1="290" y1="232" x2="820" y2="232" stroke="#E8EEF6" stroke-width="1"/>
+      </svg>
+
+      <div style="margin-top:4px; padding-top:4px; border-top:1px solid var(--bg-rule);">
+        <p style="margin:0; font:400 italic var(--t-caption)/1.4 var(--font-sans); color:var(--fg-muted);">Source: chip counts aggregated across all 81 slides. VERIFIED=84, PROBABLE=170, ESTIMATED=21, HYPOTHESISED=93. Total=368. Chip routing: numeric estimate with stated assumptions = ESTIMATED; qualitative AI synthesis = HYPOTHESISED.</p>
+      </div>
+    </div>
+
+    <!-- RIGHT: gap table + upgrade paths -->
+    <div>
+      <div class="panel-hd">Priority data gaps (4 HIGH severity)</div>
+      <table class="gap-table">
+        <thead>
+          <tr><th>Gap</th><th>Sev.</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fleetwood actual revenue share in AU modular market (ESTIMATED from public financials)</td>
+            <td><span class="sev-high">High</span></td>
+          </tr>
+          <tr>
+            <td>Share of Search baseline, Glimpse/Google Trends extension not run</td>
+            <td><span class="sev-high">High</span></td>
+          </tr>
+          <tr>
+            <td>Coromal/Windsor current brand ownership (Apollo acquisition 2018, scope unconfirmed)</td>
+            <td><span class="sev-high">High</span></td>
+          </tr>
+          <tr>
+            <td>Tier 1 Modular Tender Win Rate baseline (~22% is HYPOTHESISED, no verified source)</td>
+            <td><span class="sev-high">High</span></td>
+          </tr>
+          <tr>
+            <td>Social media platform performance data (--with-social-perf extension not run)</td>
+            <td><span class="sev-med">Med</span></td>
+          </tr>
+          <tr>
+            <td>Fleetwood patent and IP register (IP Australia returned zero; may be subsidiary-held)</td>
+            <td><span class="sev-med">Med</span></td>
+          </tr>
+          <tr>
+            <td>Searipple Village FY25 closeout occupancy (forecast 80%, actual not confirmed)</td>
+            <td><span class="sev-med">Med</span></td>
+          </tr>
+          <tr>
+            <td>Roy Morgan mortgage stress figure (Oct 2023, may be stale post-RBA rate moves)</td>
+            <td><span class="sev-low">Low</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="margin-top:10px;">
+        <div class="panel-hd">Upgrade paths (4 named)</div>
+        <div class="upgrade-card">
+          <div class="uc-label">Path 1: Run SoS extension</div>
+          <div class="uc-text">Glimpse plus Google Trends against five competitors. Closes HIGH gaps 1 and 2. Free tool, one hour.</div>
+        </div>
+        <div class="upgrade-card">
+          <div class="uc-label">Path 2: Run social performance extension</div>
+          <div class="uc-text">Closes all MEDIUM social-data gaps. Required before finalising channel budget allocations.</div>
+        </div>
+        <div class="upgrade-card">
+          <div class="uc-label">Path 3: Validate Coromal/Windsor segment scope</div>
+          <div class="uc-text">FY25 Annual Report plus ASIC ABN lookup. Closes HIGH gap 3. Must precede any Audience 3 positioning commitment.</div>
+        </div>
+        <div class="upgrade-card">
+          <div class="uc-label">Path 4: Establish tender win rate baseline (week 1)</div>
+          <div class="uc-text">Internal tender register cross-referenced to AusTender. Closes HIGH gap 4. Required before the 180-day plan goes live.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="sc-source-line"><span class="sc-source">p. 63 · Part 09 · Data gaps identified across Modules 01-06 outputs and GEO/News/Reviews extensions. Severity: HIGH = gap materially affects a primary recommendation; MEDIUM = reduces confidence in a secondary finding; LOW = informational, does not alter recommendations. Chip counts: VERIFIED=84, PROBABLE=170, ESTIMATED=21, HYPOTHESISED=93.</span></div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="63" data-of="81"></script>
+</body>
+</html>

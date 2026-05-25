@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Data Sources and Confidence Rating Key, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+ .ds-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 14px; }
+ .panel-hd { font: 700 10px/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--mr-blue-dark); border-bottom: 2px solid var(--mr-blue-dark); padding-bottom: 5px; margin-bottom: 8px; }
+ .conf-tier { padding: 12px 14px; margin-bottom: 8px; display: grid; grid-template-columns: 120px 1fr; gap: 12px; align-items: start; }
+ .conf-tier.v { background: #E6F4EC; }
+ .conf-tier.p { background: #FFF8EE; }
+ .conf-tier.e { background: #FFF0E6; }
+ .conf-tier.h { background: #EEF2F7; }
+ .ct-chip { }
+ .ct-body { }
+ .ct-title { font: 700 11px/1.2 var(--font-sans); color: var(--fg-heading); margin-bottom: 4px; }
+ .ct-def { font: 400 10.5px/1.4 var(--font-sans); color: var(--fg-body); margin-bottom: 4px; }
+ .ct-examples { font: 400 10px/1.35 var(--font-sans); color: var(--fg-muted); }
+ .ct-usage { font: 700 10px/1.2 var(--font-sans); color: var(--fg-muted); margin-top: 3px; }
+ .source-cat { margin-bottom: 8px; }
+ .sc-hd { font: 700 9px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 8px; background: #EEF2F7; color: var(--mr-blue-dark); margin-bottom: 4px; }
+ .sc-items { }
+ .sc-item { padding: 5px 8px; border-bottom: 1px solid #EEF2F7; display: flex; justify-content: space-between; align-items: baseline; }
+ .sc-item:last-child { border-bottom: none; }
+ .sc-name { font: 400 10.5px/1.3 var(--font-sans); color: var(--fg-body); }
+ .sc-conf { font: 600 9px/1 var(--font-sans); color: var(--fg-muted); }
+ .limitations-box { margin-top: 10px; padding: 10px 14px; background: #FDF0F0; border-left: 4px solid #8A2020; }
+ .lb-label { font: 700 9px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: #8A2020; margin-bottom: 5px; }
+ .lb-item { font: 400 10.5px/1.4 var(--font-sans); color: var(--fg-body); padding: 3px 0; border-bottom: 1px solid rgba(138,32,32,0.1); }
+ .lb-item:last-child { border-bottom: none; }
+ .phase3-note { margin-top: 8px; padding: 10px 14px; background: #E6F4EC; border-left: 4px solid #3A6B4A; }
+ .p3n-label { font: 700 9px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: #3A6B4A; margin-bottom: 5px; }
+ .p3n-body { font: 400 10.5px/1.4 var(--font-sans); color: var(--fg-body); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide" data-screen-label="80 Data Sources and Confidence Rating Key">
+ <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Extended Analysis · Data Sources and Confidence Rating Key, Complete Reference</span></div>
+ <h2 class="sc-h2">Four-tier confidence system used consistently across all 81 slides. Every claim in this deck carries a chip. VERIFIED means two or more independent primary sources. HYPOTHESISED means strategist provocation only, do not treat as a finding. Read before acting.</h2>
+
+ <div class="ds-layout">
+
+ <div>
+ <div class="panel-hd">Confidence rating system, four tiers</div>
+
+ <div class="conf-tier v">
+ <div class="ct-chip"><span class="sc-chip sc-chip--verified">Verified</span></div>
+ <div class="ct-body">
+ <div class="ct-title">VERIFIED, Cross-referenced to two or more independent primary sources</div>
+ <div class="ct-def">ASX filings, government announcements, audited accounts, direct web-search confirmation against a named source URL. Phase 3 cross-reference has validated the claim against at least one external primary source separate from the agent's discovery output.</div>
+ <div class="ct-examples">Examples in this deck: Fleetwood FY25 financials [2][3], EY Australia auditor (Fiona Drummond, Perth) [2], Jayco AU entity disambiguation [73][74], Apollo RV acquisition 2018 [160][161], RBA cash rate [112][113].</div>
+ <div class="ct-usage">Usage: safe to use in a client recommendation. Cite the numbered source when presenting.</div>
+ </div>
+ </div>
+
+ <div class="conf-tier p">
+ <div class="ct-chip"><span class="sc-chip sc-chip--probable">Probable</span></div>
+ <div class="ct-body">
+ <div class="ct-title">PROBABLE, Supported by multiple secondary sources or strong directional evidence</div>
+ <div class="ct-def">Interpreted from editorial, analyst reports, industry body data or multiple secondary press sources. Treated as a working assumption. No Phase 3 cross-reference conflict was raised. Single-source claims elevated to PROBABLE when the source is authoritative (government body, listed-company filing, industry association).</div>
+ <div class="ct-examples">Examples: ESOV classifications (editorial evidence), construction labour shortage projections, Pilbara capex pipeline, Brand DNA synthesis nodes, audience cultural signals.</div>
+ <div class="ct-usage">Usage: safe to use as a working assumption. Flag to client as "directional, awaiting validation" if challenged.</div>
+ </div>
+ </div>
+
+ <div class="conf-tier e">
+ <div class="ct-chip"><span class="sc-chip sc-chip--estimated">Estimated</span></div>
+ <div class="ct-body">
+ <div class="ct-title">ESTIMATED, Calculated or modelled from available data</div>
+ <div class="ct-def">Figure carries a derivation assumption. Typically: market share derived from revenue vs TAM, SoS derived from editorial presence vs competitor set, tender win rate derived from disclosed project wins vs known market. Must be replaced with actual data when available. The derivation method is stated at point of use.</div>
+ <div class="ct-examples">Examples: Fleetwood 3.5% modular market share (FY25 revenue vs Mordor TAM), SoS estimates (editorial evidence, SoS extension not run), Tier 1 tender win rate baseline 22% (working assumption).</div>
+ <div class="ct-usage">Usage: use for directional sizing only. Do NOT use in a financial model or investor presentation without replacing with verified data first.</div>
+ </div>
+ </div>
+
+ <div class="conf-tier h">
+ <div class="ct-chip"><span class="sc-chip sc-chip--hypothesised">Hypothesised</span></div>
+ <div class="ct-body">
+ <div class="ct-title">HYPOTHESISED, Strategist provocation from thin evidence</div>
+ <div class="ct-def">Extrapolation or provocation from limited evidence. Designed to prompt strategist inquiry, not to replace it. Requires active testing or validation before use in a client recommendation. Do not treat as a finding. Marks the outer boundary of analytical reach in this report.</div>
+ <div class="ct-examples">Examples: Brand DNA personality synthesis, value proposition hypotheses, Pillar 3 and 4 strategic arguments, Decommission-and-Redeploy Asset Platform feasibility, Searipple Permanent Town Pivot.</div>
+ <div class="ct-usage">Usage: discuss with client as a hypothesis to test. Never present as a finding. Always pair with a validation action from the 180-day plan.</div>
+ </div>
+ </div>
+ </div>
+
+ <div>
+ <div class="panel-hd">Source categories by reliability tier</div>
+
+ <div class="source-cat">
+ <div class="sc-hd">Primary sources (highest reliability)</div>
+ <div class="sc-items">
+ <div class="sc-item"><span class="sc-name">ASX filings and annual reports</span><span class="sc-conf">VERIFIED</span></div>
+ <div class="sc-item"><span class="sc-name">Federal Budget announcements and government policy documents</span><span class="sc-conf">VERIFIED</span></div>
+ <div class="sc-item"><span class="sc-name">Regulatory body publications (ACCC, ASIC, ABS)</span><span class="sc-conf">VERIFIED</span></div>
+ <div class="sc-item"><span class="sc-name">Modern Slavery Register statements</span><span class="sc-conf">VERIFIED</span></div>
+ <div class="sc-item"><span class="sc-name">IP Australia patent and trademark search results</span><span class="sc-conf">VERIFIED</span></div>
+ <div class="sc-item"><span class="sc-name">NZX exchange announcements (THL)</span><span class="sc-conf">VERIFIED</span></div>
+ </div>
+ </div>
+
+ <div class="source-cat">
+ <div class="sc-hd">Secondary sources (directional reliability)</div>
+ <div class="sc-items">
+ <div class="sc-item"><span class="sc-name">Mordor Intelligence, Research and Markets, IBISWorld market reports</span><span class="sc-conf">PROBABLE</span></div>
+ <div class="sc-item"><span class="sc-name">Caravan Industry Association of Australia data</span><span class="sc-conf">PROBABLE</span></div>
+ <div class="sc-item"><span class="sc-name">Industry body publications (Property Council, PrefabAUS)</span><span class="sc-conf">PROBABLE</span></div>
+ <div class="sc-item"><span class="sc-name">Trade and business press (AFR, Australian Mining, Architecture and Design)</span><span class="sc-conf">PROBABLE</span></div>
+ <div class="sc-item"><span class="sc-name">Retain Media RV Market Brand Consideration Reports</span><span class="sc-conf">PROBABLE</span></div>
+ <div class="sc-item"><span class="sc-name">Competitor corporate websites and brochures</span><span class="sc-conf">PROBABLE</span></div>
+ </div>
+ </div>
+
+ <div class="source-cat">
+ <div class="sc-hd">Derived or modelled (use with caution)</div>
+ <div class="sc-items">
+ <div class="sc-item"><span class="sc-name">Share of Search estimates (editorial evidence, no Glimpse data)</span><span class="sc-conf">ESTIMATED</span></div>
+ <div class="sc-item"><span class="sc-name">Market share calculations (revenue vs TAM)</span><span class="sc-conf">ESTIMATED</span></div>
+ <div class="sc-item"><span class="sc-name">Tender win rate baseline (working assumption, not registered data)</span><span class="sc-conf">ESTIMATED</span></div>
+ <div class="sc-item"><span class="sc-name">Review platform sentiment (Seek, Indeed, TripAdvisor, ProductReview)</span><span class="sc-conf">ESTIMATED</span></div>
+ </div>
+ </div>
+
+ <div class="source-cat">
+ <div class="sc-hd">Synthesis and provocation (strategist validation required)</div>
+ <div class="sc-items">
+ <div class="sc-item"><span class="sc-name">Brand DNA personality and purpose synthesis</span><span class="sc-conf">HYPOTHESISED</span></div>
+ <div class="sc-item"><span class="sc-name">Value proposition hypotheses</span><span class="sc-conf">HYPOTHESISED</span></div>
+ <div class="sc-item"><span class="sc-name">Innovation Builder outputs (Deloitte Ten Types)</span><span class="sc-conf">HYPOTHESISED</span></div>
+ <div class="sc-item"><span class="sc-name">Strategy pillars 3 and 4</span><span class="sc-conf">HYPOTHESISED</span></div>
+ <div class="sc-item"><span class="sc-name">Per-audience marketing plan channel mix and budget</span><span class="sc-conf">HYPOTHESISED</span></div>
+ </div>
+ </div>
+
+ <div class="limitations-box">
+ <div class="lb-label">Known data limitations in this report</div>
+ <div class="lb-item">Share of Search extension (Glimpse + Google Trends) not run. All SoS figures are editorial estimates. Run before committing to KPI Le6 target.</div>
+ <div class="lb-item">Social performance extension not run. Channel mix recommendations grounded in Cultural Signals only, not platform engagement data.</div>
+ <div class="lb-item">Coromal/Windsor current brand ownership requires verification against FY25 Annual Report before any Audience 3 positioning commitment.</div>
+ <div class="lb-item">Roy Morgan mortgage stress figure (1.6M households) is from October 2023. May be stale given subsequent RBA rate movements.</div>
+ <div class="lb-item">Fleetwood IP portfolio shows zero patents on IP Australia search. Requires legal team confirmation before asserting IP gap externally.</div>
+ </div>
+
+ <div class="phase3-note">
+ <div class="p3n-label">Phase 3 cross-reference: one correction applied before build</div>
+ <div class="p3n-body">Phase 3 identified and corrected one factual discrepancy before this deck was built. The discovery source named PwC as Fleetwood's auditor; Phase 3 cross-reference confirmed the actual auditor is <strong>Ernst and Young Australia</strong>, signing partner <strong>Fiona Drummond</strong>, Perth. Source: Fleetwood FY25 Annual Report [2]. Correction applied to the source report. No other Phase 3 flags remained unresolved at build date. <span class="sc-chip sc-chip--verified">Verified</span></div>
+ </div>
+ </div>
+
+ </div>
+
+ <div class="sc-source-line"><span class="sc-source">p. 80 · Extended Analysis · Confidence rating system applied consistently across all 81 slides in this deck. Every claim carries a chip: VERIFIED (green), PROBABLE (amber), ESTIMATED (warm orange), or HYPOTHESISED (cool slate). The strategist should treat HYPOTHESISED claims as hypotheses to test, not findings to present. See data gaps register (p. 63) for the 12 named gaps and 4 upgrade paths.</span></div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="80" data-of="81"></script>
+</body>
+</html>

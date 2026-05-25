@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Value Proposition Hypotheses, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+ .vp-layout { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 14px; }
+ .vp-card { padding: 14px 16px; border-top: 4px solid; background: #F4F7FB; display: flex; flex-direction: column; gap: 8px; }
+ .vp-card.vp1 { border-top-color: var(--mr-blue-dark); }
+ .vp-card.vp2 { border-top-color: #3A6B4A; }
+ .vp-card.vp3 { border-top-color: #8A6030; }
+ .vp-eyebrow { font: 700 9px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg-muted); }
+ .vp-name { font: 700 14px/1.2 var(--font-sans); color: var(--fg-heading); }
+ .vp-tagline { font: 400 11.5px/1.4 var(--font-sans); color: var(--fg-body); padding: 8px 10px; background: rgba(0,0,0,0.03); border-left: 3px solid; }
+ .vp1 .vp-tagline { border-left-color: var(--mr-blue-dark); }
+ .vp2 .vp-tagline { border-left-color: #3A6B4A; }
+ .vp3 .vp-tagline { border-left-color: #8A6030; }
+ .vp-body { font: 400 10.5px/1.4 var(--font-sans); color: var(--fg-body); }
+ .vp-problems { margin-top: 4px; }
+ .vp-problems-hd { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg-muted); margin-bottom: 4px; }
+ .prob-tag { font: 600 10px/1.2 var(--font-sans); padding: 3px 7px; border-radius: 2px; display: inline-block; margin: 2px 2px 2px 0; }
+ .pt-blue { background: #EEF2F7; color: var(--mr-blue-dark); }
+ .pt-green { background: #E6F4EC; color: #2A5E3A; }
+ .pt-amber { background: #FFF3CD; color: #7A5000; }
+ .vp-risk { padding: 7px 10px; background: #FDF0F0; border-left: 3px solid #8A2020; margin-top: 4px; font: 400 10px/1.35 var(--font-sans); color: #8A2020; }
+ .vp-risk strong { font-weight: 700; }
+ .vp-audience { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; padding: 2px 6px; border-radius: 2px; display: inline-block; }
+ .aud-a1 { background: #EEF2F7; color: var(--mr-blue-dark); }
+ .aud-a2 { background: #E6F4EC; color: #2A5E3A; }
+ .aud-a3 { background: #FFF3CD; color: #7A5000; }
+ .vp-bottom-bar { grid-column: 1 / -1; padding: 9px 14px; background: var(--mr-blue-dark); display: flex; gap: 20px; align-items: center; margin-top: 4px; }
+ .vbb-stat { text-align: center; flex-shrink: 0; }
+ .vbb-num { font: 700 20px/1 var(--font-sans); color: #fff; }
+ .vbb-label { font: 400 9px/1.2 var(--font-sans); color: rgba(255,255,255,0.6); margin-top: 2px; }
+ .vbb-text { font: 400 11px/1.4 var(--font-sans); color: rgba(255,255,255,0.85); flex: 1; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide" data-screen-label="70 Value Proposition Hypotheses">
+ <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 10 · Extended Analysis · Value Proposition Hypotheses, Three Named Propositions (Section 11)</span></div>
+ <h2 class="sc-h2">Three named value proposition hypotheses, each explicitly linked to Customer Problem themes. These are working hypotheses for strategist validation, not finalised propositions. All rated PROBABLE. The strategist must stress-test each with real buyers before committing budget. <span class="sc-chip sc-chip--probable">Probable</span></h2>
+
+ <div class="vp-layout">
+
+ <div class="vp-card vp1">
+ <div class="vp-eyebrow">Value Proposition 1 of 3 · Modular B2B</div>
+ <div class="vp-name">The Scheduled-Outcome Guarantee</div>
+ <span class="vp-audience aud-a1">Audience 1 + Audience 2</span>
+ <div class="vp-tagline">Fleetwood does not sell beds, panels or modules. It sells a contractually-defended date on a project director's calendar, with the village standing, commissioned and occupied by a named day.</div>
+ <div class="vp-body">Concretely: baked-in factory slot allocation, transport convoy commitments, on-site commissioning crews and a schedule-default clause converting to financial credit rather than legal argument. The product is the date. Inside resources, it is sold to the project director who has personally committed to FID-plus-eighteen-months; inside public sector, to the procurement lead who needs a ribbon-cut before the next election.</div>
+ <div class="vp-problems">
+ <div class="vp-problems-hd">Addresses customer problems</div>
+ <span class="prob-tag pt-blue">P1: Schedule slippage as career risk</span>
+ <span class="prob-tag pt-blue">P3: Retention erosion</span>
+ </div>
+ <div class="vp-risk"><strong>Risk:</strong> Requires underwriting through factory throughput discipline and contingent transport capacity. Operational commitment as much as a marketing line. Confidence on feasibility is PROBABLE, not VERIFIED. FY25 Annual Report does not yet describe schedule-defended contracting at this level of explicitness. <span class="sc-chip sc-chip--probable">Probable</span></div>
+ </div>
+
+ <div class="vp-card vp2">
+ <div class="vp-eyebrow">Value Proposition 2 of 3 · Modular B2B</div>
+ <div class="vp-name">The Workforce Wellbeing Specification</div>
+ <span class="vp-audience aud-a1">Audience 1 + Audience 2 (indirect)</span>
+ <div class="vp-tagline">Fleetwood becomes the AU modular vendor that defines the workforce-wellbeing performance specification for the category, published as an open standard rather than a proprietary feature set.</div>
+ <div class="vp-body">The Workforce Wellbeing Specification covers room acoustics, privacy, lighting circadian alignment, dining-and-laundry queue design, recreation amenity ratios, connectivity baselines and decompression-layout principles. Each room type is rated against the specification, with third-party assurance. The Searipple Village at Karratha (1,300 rooms) provides the operating laboratory and case study. The same audit infrastructure can carry embodied-carbon evidence, bridging into the AASB S2 obligation landing FY26.</div>
+ <div class="vp-problems">
+ <div class="vp-problems-hd">Addresses customer problems</div>
+ <span class="prob-tag pt-blue">P3: Retention erosion</span>
+ <span class="prob-tag pt-blue">P4: Psychosocial-safety regulatory drift</span>
+ <span class="prob-tag pt-green">P2: Probity-defensibility (indirect)</span>
+ </div>
+ <div class="vp-risk"><strong>Risk:</strong> Competitors with deeper balance sheets (Ausco via Algeco global parent) could co-opt the specification once published. First-mover positioning still accrues to Fleetwood, but window is finite. Requires specialist assurer engagement (acoustic, lighting, occupational-psychology) before T1.2 launch. <span class="sc-chip sc-chip--probable">Probable</span></div>
+ </div>
+
+ <div class="vp-card vp3">
+ <div class="vp-eyebrow">Value Proposition 3 of 3 · RV Consumer</div>
+ <div class="vp-name">The Australian Built-For-Life Promise (Coromal and Windsor only)</div>
+ <span class="vp-audience aud-a3">Audience 3: Grey Nomad Buyers</span>
+ <div class="vp-tagline">Convert "Australian-made" from a heritage claim into a structural lifetime-of-ownership promise. Coromal and Windsor cannot win on Jayco's scale or Chinese imports' price, but can win on what happens between year three and year fifteen of ownership.</div>
+ <div class="vp-body">The "Built For Life" bundle: published 20-year structural and chassis warranty, guaranteed national service-and-repair network with named regional partners, a documented trip-typology guide matching van spec to how the buyer actually intends to travel, and a published resale-value floor underwritten by a Fleetwood buy-back option at agreed depreciation curves. Each component individually exists elsewhere in adjacent industries (e.g., premium European automotive), but no AU caravan brand currently bundles them.</div>
+ <div class="vp-problems">
+ <div class="vp-problems-hd">Addresses customer problems</div>
+ <span class="prob-tag pt-amber">P5: Bifurcating caravan market</span>
+ <span class="prob-tag pt-amber">P6: Off-grid capability mismatch</span>
+ <span class="prob-tag pt-amber">P7: Post-purchase fade</span>
+ </div>
+ <div class="vp-risk"><strong>Risk:</strong> Requires Fleetwood to absorb genuine financial exposure (the buy-back floor) rather than only rhetorical commitment. FY25 Annual Report shows RV Solutions in segment decline, which limits balance-sheet appetite. The proposition still converts segment smallness from a weakness into a feature: small enough to actually honour individual customer relationships. <span class="sc-chip sc-chip--probable">Probable</span></div>
+ </div>
+
+ <div class="vp-bottom-bar">
+ <div class="vbb-stat"><div class="vbb-num">3</div><div class="vbb-label">Propositions</div></div>
+ <div class="vbb-stat"><div class="vbb-num">7</div><div class="vbb-label">Problems addressed</div></div>
+ <div class="vbb-stat"><div class="vbb-num">3</div><div class="vbb-label">Audiences activated</div></div>
+ <div class="vbb-text">These are strategist hypotheses, not finalised propositions. Each must be validated with real buyers before budget is committed. The Scheduled-Outcome Guarantee and Workforce Wellbeing Specification address the 83% industrial side; Built For Life addresses the 17% consumer side. Together they cover the full two-voltage Fleetwood portfolio with distinct, non-cannibalising promises.</div>
+ </div>
+
+ </div>
+
+ <div class="sc-source-line"><span class="sc-source">p. 70 · Part 10 · Source: Section 11 Value Proposition. Three propositions generated from Customer Problem cross-reference, Audience purchase-driver analysis, Cultural Signals, and Industry Driver mapping. All PROBABLE. Strategist validation required before committing to external messaging.</span></div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="70" data-of="81"></script>
+</body>
+</html>

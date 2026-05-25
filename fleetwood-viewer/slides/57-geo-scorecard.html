@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>GEO Scorecard, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+ .geo-layout { display: grid; grid-template-columns: 1fr 360px; gap: 18px; margin-top: 14px; align-items: start; }
+ .geo-table-wrap { }
+ .geo-hd { display: grid; grid-template-columns: 40px 1fr 110px 1fr; gap: 0; margin-bottom: 2px; }
+ .geo-hd-cell { font: 700 9px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; padding: 6px 10px; background: var(--mr-blue-dark); color: rgba(255,255,255,0.8); }
+ .geo-row { display: grid; grid-template-columns: 40px 1fr 110px 1fr; gap: 0; border-bottom: 1px solid #E8EEF6; }
+ .geo-row:last-child { border-bottom: none; }
+ .geo-q { font: 700 11px/1 var(--font-sans); color: var(--mr-blue-dark); padding: 8px 10px; background: #F8FAFB; display: flex; align-items: center; }
+ .geo-query { font: 400 11px/1.4 var(--font-sans); color: var(--fg-body); padding: 8px 10px; }
+ .geo-status { padding: 8px 10px; display: flex; align-items: center; }
+ .status-badge { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 7px; border-radius: 2px; }
+ .s-primary { background: #2E4A63; color: #fff; }
+ .s-absent { background: #FCE4D6; color: #8B3310; }
+ .geo-competitors { font: 400 10px/1.4 var(--font-sans); color: var(--fg-muted); padding: 8px 10px; }
+ .geo-side { display: flex; flex-direction: column; gap: 10px; }
+ .geo-summary-box { padding: 14px 16px; background: var(--mr-blue-dark); }
+ .gs-label { font: 700 10px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 8px; }
+ .gs-score { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+ .gs-item { text-align: center; padding: 8px; background: rgba(255,255,255,0.1); }
+ .gs-num { font: 700 28px/1 var(--font-sans); color: #fff; }
+ .gs-sub { font: 400 10px/1.3 var(--font-sans); color: rgba(255,255,255,0.6); margin-top: 3px; }
+ .gs-finding { font: 400 12px/1.5 var(--font-sans); color: rgba(255,255,255,0.85); }
+ .geo-insight { padding: 12px 14px; background: #FFF3CD; border-left: 4px solid #8A6030; }
+ .gi-label { font: 700 10px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: #8A6030; margin-bottom: 5px; }
+ .gi-text { font: 400 11px/1.45 var(--font-sans); color: var(--fg-body); }
+ .geo-recs { padding: 12px 14px; background: #F4F7FB; border-left: 4px solid var(--mr-blue-dark); }
+ .gr-label { font: 700 10px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 6px; }
+ .gr-item { font: 400 11px/1.4 var(--font-sans); color: var(--fg-body); padding: 4px 0; border-bottom: 1px solid #E8EEF6; }
+ .gr-item:last-child { border-bottom: none; }
+ .gr-num { font: 700 11px/1 var(--font-sans); color: var(--mr-blue-dark); margin-right: 6px; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide" data-screen-label="57 GEO Scorecard">
+ <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 08 · GEO and Digital Intelligence · GEO Scorecard: AI Search Visibility (8-question scan, 2026-05-25)</span></div>
+ <h2 class="sc-h2">Fleetwood scores VISIBLE-PRIMARY only when its name or a named-sector account is in the prompt. Every unprompted "best of category" query returns ABSENT. The brand has recall without recommendation. <span class="sc-chip sc-chip--verified">Verified</span></h2>
+
+ <div class="geo-layout">
+
+ <div class="geo-table-wrap">
+ <div class="geo-hd">
+ <div class="geo-hd-cell">Q</div>
+ <div class="geo-hd-cell">Query</div>
+ <div class="geo-hd-cell">Fleetwood status</div>
+ <div class="geo-hd-cell">Top competitors surfaced by AI</div>
+ </div>
+ <div class="geo-row">
+ <div class="geo-q">Q1</div>
+ <div class="geo-query">Best modular building companies Australia 2026 workforce accommodation</div>
+ <div class="geo-status"><span class="status-badge s-absent">Absent</span></div>
+ <div class="geo-competitors">Ausco, Modscape, EcoPrestige, Aruva, Black Diamond. Ausco named first with "over 60 years experience", same heritage claim Fleetwood could make.</div>
+ </div>
+ <div class="geo-row">
+ <div class="geo-q">Q2</div>
+ <div class="geo-query">Best prefab modular construction companies Australia commercial infrastructure</div>
+ <div class="geo-status"><span class="status-badge s-absent">Absent</span></div>
+ <div class="geo-competitors">Modscape ("600+ projects"), Prebuilt, Arkit, Lendlease. Fleetwood's defence, NDIS, schools track record is invisible.</div>
+ </div>
+ <div class="geo-row">
+ <div class="geo-q">Q3</div>
+ <div class="geo-query">Best Australian made caravan brands 2026</div>
+ <div class="geo-status"><span class="status-badge s-absent">Absent</span></div>
+ <div class="geo-competitors">Crusader (2025 Manufacturer of the Year), Jayco, Retreat, Option RV, Lotus. Coromal and Windsor unmentioned, divested to Apollo 2018.</div>
+ </div>
+ <div class="geo-row">
+ <div class="geo-q">Q4</div>
+ <div class="geo-query">Coromal Windsor caravan review Australia 2026</div>
+ <div class="geo-status"><span class="status-badge s-primary">Visible Primary</span></div>
+ <div class="geo-competitors">Brand-name query. Mixed sentiment. Apollo acquisition means LLMs will increasingly attribute Coromal/Windsor to Apollo, not Fleetwood. <span class="sc-chip sc-chip--hypothesised">Hypothesised</span></div>
+ </div>
+ <div class="geo-row">
+ <div class="geo-q">Q5</div>
+ <div class="geo-query">Mining workforce accommodation suppliers Australia top companies</div>
+ <div class="geo-status"><span class="status-badge s-primary">Visible Primary</span></div>
+ <div class="geo-competitors">Ausco called "the market leader" outright. Civeo owns the Bowen Basin five-village footprint. Fleetwood named third with "transformed from caravan parts manufacturer" framing, a backhanded compliment that locks in legacy identity.</div>
+ </div>
+ <div class="geo-row">
+ <div class="geo-q">Q6</div>
+ <div class="geo-query">Fleetwood Limited ASX FWD modular building review</div>
+ <div class="geo-status"><span class="status-badge s-primary">Visible Primary</span></div>
+ <div class="geo-competitors">Brand-name query. Investor narrative dominates (Bruce Nicholson, "Build Transform Grow", dividend reinstatement). Customer-facing narrative is thin.</div>
+ </div>
+ <div class="geo-row">
+ <div class="geo-q">Q7</div>
+ <div class="geo-query">Alternatives to Jayco caravans Australia best competitors</div>
+ <div class="geo-status"><span class="status-badge s-absent">Absent</span></div>
+ <div class="geo-competitors">Retreat, Kedron, New Age, Wonderland, Crusader, Vision RV, Lotus. Highest-intent purchase question in caravan category, zero Coromal/Windsor mention.</div>
+ </div>
+ <div class="geo-row">
+ <div class="geo-q">Q8</div>
+ <div class="geo-query">Defence force modular accommodation contractors Australia</div>
+ <div class="geo-status"><span class="status-badge s-primary">Visible Primary</span></div>
+ <div class="geo-competitors">SHAPE, Downer Defence, Built, DHA. Fleetwood named first: "well-designed modular defence buildings designed for maximum efficiency." Strongest single GEO asset uncovered.</div>
+ </div>
+ </div>
+
+ <div class="geo-side">
+ <div class="geo-summary-box">
+ <div class="gs-label">Overall GEO Score</div>
+ <div class="gs-score">
+ <div class="gs-item">
+ <div class="gs-num">4/8</div>
+ <div class="gs-sub">VISIBLE-PRIMARY</div>
+ </div>
+ <div class="gs-item">
+ <div class="gs-num">4/8</div>
+ <div class="gs-sub">ABSENT</div>
+ </div>
+ </div>
+ <div class="gs-finding">0/8 VISIBLE-SECONDARY. 0/8 VISIBLE-BURIED. Every PRIMARY hit is a query that either names Fleetwood or names a sector where Fleetwood holds a named contract. Every ABSENT is an unprompted "best of category" listicle. <span class="sc-chip sc-chip--verified">Verified</span></div>
+ </div>
+
+ <div class="geo-insight">
+ <div class="gi-label">The "Recall Without Recommendation" Trap</div>
+ <div class="gi-text">AI assistants know who Fleetwood is when asked, but never volunteer Fleetwood when asked who is good. The brand's AI footprint is defensive, not generative. Ausco, Modscape, Crusader, and Jayco own the unprompted answer slots. This is the single most actionable insight from the scan. <span class="sc-chip sc-chip--verified">Verified</span></div>
+ </div>
+
+ <div class="geo-recs">
+ <div class="gr-label">3 Recommended GEO Fixes</div>
+ <div class="gr-item"><span class="gr-num">1.</span>Commission a "Top 10 Australian Modular Workforce Accommodation Providers 2026" listicle PR push targeting publications LLMs index heavily (Mining Digital, Australian Mining, prefabAUS, Architecture and Design). Estimated AUD 15-30K.</div>
+ <div class="gr-item"><span class="gr-num">2.</span>Publish 4-6 customer case studies per year as Fleetwood-hosted long-form content optimised for AI grounding (H2 headings, named outcomes, dates, dollar values, defence/education sector tags). The defence Q8 PRIMARY win came from exactly this structure.</div>
+ <div class="gr-item"><span class="gr-num">3.</span>Decide and disclose the Coromal/Windsor ownership story publicly within 90 days. The AI-visible record has both Apollo and Fleetwood claimed as parent, which re-anchors Fleetwood as "the caravan company that pivoted" in perpetuity.</div>
+ </div>
+ </div>
+
+ </div>
+
+ <div class="sc-source-line"><span class="sc-source">p. 57 · Part 08 · Source: Strategy Cadet GEO Tracking extension (--with-geo), 8-question scan, 2026-05-25. Method: Google AI Overview surface plus indexed listicles, forums, review sites. Free directional read. True GEO benchmarking requires paid API access to each AI engine. Citations [132]-[158].</span></div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="57" data-of="81"></script>
+</body>
+</html>

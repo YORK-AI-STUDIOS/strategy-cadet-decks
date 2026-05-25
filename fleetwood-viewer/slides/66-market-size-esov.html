@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Market Size Estimate and ESOV Positioning Matrix, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+ .ms-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 14px; }
+ .panel-hd { font: 700 10px/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--mr-blue-dark); border-bottom: 2px solid var(--mr-blue-dark); padding-bottom: 5px; margin-bottom: 8px; }
+ .mkt-table { width: 100%; border-collapse: collapse; font: 400 10.5px/1.3 var(--font-sans); }
+ .mkt-table th { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 8px; background: var(--mr-blue-dark); color: rgba(255,255,255,0.8); text-align: left; }
+ .mkt-table td { padding: 6px 8px; border-bottom: 1px solid #E8EEF6; color: var(--fg-body); vertical-align: top; }
+ .mkt-table tr:last-child td { border-bottom: none; }
+ .mkt-table tr:nth-child(even) td { background: #F8FAFB; }
+ .mkt-primary td { border-left: 3px solid var(--mr-blue-dark); }
+ .mkt-anchor { font-weight: 700; color: var(--mr-blue-dark); }
+ .synth-box { padding: 10px 14px; background: #EEF2F7; border-left: 4px solid var(--mr-blue-dark); margin-top: 10px; font: 400 11px/1.4 var(--font-sans); color: var(--fg-body); }
+ .synth-box strong { font-weight: 700; }
+ .esov-row { display: grid; grid-template-columns: 130px 1fr 100px 100px; gap: 8px; padding: 8px 0; border-bottom: 1px solid #E8EEF6; align-items: center; }
+ .esov-row:last-child { border-bottom: none; }
+ .esov-name { font: 600 11px/1.2 var(--font-sans); color: var(--fg-heading); }
+ .esov-bar-wrap { height: 10px; background: #E8EEF6; border-radius: 2px; }
+ .esov-bar { height: 10px; border-radius: 2px; }
+ .bar-fl { background: var(--mr-blue-dark); }
+ .bar-au { background: #2E5F8A; }
+ .bar-hk { background: #3A6B4A; }
+ .bar-ms { background: #7A5A1A; }
+ .bar-dc { background: #6B7E96; }
+ .bar-jy { background: #8A3A6B; }
+ .bar-th { background: #5A6B8A; }
+ .esov-share { font: 700 11px/1 var(--font-sans); color: var(--fg-heading); text-align: right; }
+ .esov-badge { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; padding: 2px 5px; border-radius: 2px; display: inline-block; white-space: nowrap; }
+ .eb-defense { background: #FFF3CD; color: #7A5000; }
+ .eb-expansion { background: #E6F4EC; color: #2A5E3A; }
+ .eb-under { background: #FCE4D6; color: #8B3310; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide" data-screen-label="66 Market Size Estimate and ESOV Positioning Matrix">
+ <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 10 · Extended Analysis · Market Size Estimate and ESOV Positioning Matrix (Sections 8 and 9)</span></div>
+ <h2 class="sc-h2">Australian prefabricated buildings market: AUD 14.44 billion (2025), growing at 6.2% CAGR. Fleetwood's estimated 3.5% share sits against approximately 3.5% Share of Search, a structural voice vacuum in both directions. <span class="sc-chip sc-chip--estimated">Estimated</span></h2>
+
+ <div class="ms-layout">
+
+ <div>
+ <div class="panel-hd">Market size estimates across sources</div>
+ <table class="mkt-table">
+ <thead>
+ <tr><th>Scope</th><th>Size</th><th>CAGR</th><th>Source</th></tr>
+ </thead>
+ <tbody>
+ <tr class="mkt-primary">
+ <td><span class="mkt-anchor">AU Prefabricated Buildings (strategist anchor)</span></td>
+ <td>AUD 14.44B</td>
+ <td>6.2% to 2034</td>
+ <td>Research and Markets [119]</td>
+ </tr>
+ <tr>
+ <td>AU Prefabricated Construction (narrow USD)</td>
+ <td>USD 8.35B</td>
+ <td>7.88% to 2031</td>
+ <td>Mordor Intelligence [40]</td>
+ </tr>
+ <tr>
+ <td>AU Prefab Construction (broad composite)</td>
+ <td>AUD 17.1B</td>
+ <td>~8% to 2029</td>
+ <td>The Good Builder [120]</td>
+ </tr>
+ <tr>
+ <td>AU Prefabricated Wooden Building Mfg</td>
+ <td>AUD 640M</td>
+ <td>3.4% (2019-24)</td>
+ <td>IBISWorld [121]</td>
+ </tr>
+ <tr class="mkt-primary">
+ <td><span class="mkt-anchor">AU Recreational Vehicle Market</span></td>
+ <td>AUD 18.19B valuation</td>
+ <td>Declining near-term</td>
+ <td>Mordor Intelligence [28]</td>
+ </tr>
+ <tr>
+ <td>AU RV production (units, 2024)</td>
+ <td>25,185 units</td>
+ <td>-20% YoY</td>
+ <td>CIAA State of Industry 2025 [110]</td>
+ </tr>
+ <tr>
+ <td>Global Modular Construction Market</td>
+ <td>USD 175.15B</td>
+ <td>High single-digit</td>
+ <td>Modscape [123]</td>
+ </tr>
+ </tbody>
+ </table>
+
+ <div class="synth-box">
+ <strong>Strategist anchor:</strong> AUD 14.44 billion total Australian prefabricated buildings market, 2025, growing approximately 6.2% CAGR. Fleetwood FY25 revenue AUD 505.2M against this TAM implies approximately <strong>3.5% market share</strong> (Building Solutions and Community Solutions combined). On RV: Coromal and Windsor hold low single-digit percentage of the Australian-made caravan segment, well behind Jayco's 37% category leadership. The unit data (25,185 RVs annually, down 20%) is the more reliable signal than analyst valuation figures. <span class="sc-chip sc-chip--estimated">Estimated</span>
+ </div>
+ </div>
+
+ <div>
+ <div class="panel-hd">ESOV Positioning, 7-entity comparison matrix</div>
+
+ <div class="esov-row">
+ <div class="esov-name">Fleetwood (modular)</div>
+ <div class="esov-bar-wrap"><div class="esov-bar bar-fl" style="width:3.5%"></div></div>
+ <div class="esov-share">~3.5% SoS</div>
+ <div><span class="esov-badge eb-under">Defense/Under</span></div>
+ </div>
+ <div class="esov-row">
+ <div class="esov-name">Ausco Modular</div>
+ <div class="esov-bar-wrap"><div class="esov-bar bar-au" style="width:35%"></div></div>
+ <div class="esov-share">~35% SoS</div>
+ <div><span class="esov-badge eb-defense">Defense</span></div>
+ </div>
+ <div class="esov-row">
+ <div class="esov-name">Hickory Group</div>
+ <div class="esov-bar-wrap"><div class="esov-bar bar-hk" style="width:20%"></div></div>
+ <div class="esov-share">~20% SoS</div>
+ <div><span class="esov-badge eb-expansion">Expansion</span></div>
+ </div>
+ <div class="esov-row">
+ <div class="esov-name">Modscape</div>
+ <div class="esov-bar-wrap"><div class="esov-bar bar-ms" style="width:18%"></div></div>
+ <div class="esov-share">~18% SoS</div>
+ <div><span class="esov-badge eb-expansion">Expansion</span></div>
+ </div>
+ <div class="esov-row">
+ <div class="esov-name">Decmil / Macmahon</div>
+ <div class="esov-bar-wrap"><div class="esov-bar bar-dc" style="width:8%"></div></div>
+ <div class="esov-share">~8% SoS</div>
+ <div><span class="esov-badge eb-under">Under-Indexed</span></div>
+ </div>
+ <div class="esov-row">
+ <div class="esov-name">Jayco Corporation</div>
+ <div class="esov-bar-wrap"><div class="esov-bar bar-jy" style="width:40%"></div></div>
+ <div class="esov-share">~37% share</div>
+ <div><span class="esov-badge eb-defense">Defense</span></div>
+ </div>
+ <div class="esov-row">
+ <div class="esov-name">Tourism Holdings (THL)</div>
+ <div class="esov-bar-wrap"><div class="esov-bar bar-th" style="width:15%"></div></div>
+ <div class="esov-share">Portfolio</div>
+ <div><span class="esov-badge eb-defense">Defense</span></div>
+ </div>
+
+ <div class="synth-box" style="margin-top:10px;">
+ <strong>Consolidated ESOV read:</strong> Only Hickory and Modscape exhibit genuine Expansion Mode signatures. Ausco, Jayco and THL defend incumbent positions. Fleetwood and Decmil are Under-Indexed. Strategist coinage: <strong>"The Modular Voice Vacuum."</strong> The Australian modular category has no above-the-line brand presence at scale. The first credible category-leadership voice wins a disproportionate share-of-mind premium. Fleetwood, despite its 60-year history and ASX listing, is not currently in that race. <span class="sc-chip sc-chip--estimated">Estimated</span>
+ </div>
+ </div>
+
+ </div>
+
+ <div class="sc-source-line"><span class="sc-source">p. 66 · Part 10 · Source: Section 8 Market Size Estimate; Section 9 ESOV Analysis. Market share figure ESTIMATED from FY25 Annual Report revenue [2] vs Mordor Intelligence TAM [40]. ESOV postures classified using Binet and Field ESOV methodology; all SoS percentages ESTIMATED from editorial evidence (SoS extension not run).</span></div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="66" data-of="81"></script>
+</body>
+</html>

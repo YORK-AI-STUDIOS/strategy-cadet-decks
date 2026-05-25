@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Audience 1 Profile, Resources and Defence, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+ .aud-layout { display: grid; grid-template-columns: 260px minmax(0,1fr) 300px; gap: 28px; margin-top: 14px; align-items: start; }
+
+ /* Persona silhouette panel */
+ .persona-panel { background: var(--mr-blue-dark); padding: 0; display: flex; flex-direction: column; align-items: center; }
+ .persona-svg-wrap { padding: 24px 20px 0; width: 100%; display: flex; justify-content: center; }
+ .persona-stats { padding: 16px; width: 100%; box-sizing: border-box; }
+ .ps-pill { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,0.15); }
+ .ps-pill:last-child { border-bottom: none; }
+ .ps-label { font: 400 10px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+ .ps-val { font: 700 11px/1.2 var(--font-sans); color: var(--fg-on-dark); text-align: right; max-width: 130px; }
+
+ /* Profile grid */
+ .profile-grid { display: flex; flex-direction: column; gap: 0; }
+ .pg-row { display: grid; grid-template-columns: 140px 1fr; gap: 10px; padding: 8px 0; border-bottom: 1px solid #E8EEF6; align-items: start; }
+ .pg-label { font: 700 var(--t-caption)/1.2 var(--font-sans); color: var(--mr-blue-dark); }
+ .pg-val { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); }
+
+ /* Driver scores */
+ .drivers-panel { display: flex; flex-direction: column; gap: 10px; }
+ .driver-hd { font: 700 11px/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--mr-blue-dark); border-bottom: 2px solid var(--mr-blue-dark); padding-bottom: 6px; margin-bottom: 6px; }
+ .driver-row { display: flex; flex-direction: column; gap: 3px; }
+ .dr-label { font: 600 11px/1.2 var(--font-sans); color: var(--fg-heading); }
+ .dr-bar-track { height: 7px; background: #EEF2F7; border-radius: 2px; }
+ .dr-bar-fill { height: 100%; border-radius: 2px; background: var(--mr-blue-dark); }
+ .dr-score { font: 700 11px/1 var(--font-sans); color: var(--mr-blue-dark); text-align: right; }
+
+ .cep-list { margin-top: 14px; }
+ .cep-hd { font: 700 11px/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--mr-blue-dark); border-bottom: 2px solid var(--mr-blue-dark); padding-bottom: 6px; margin-bottom: 8px; }
+ .cep-item { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); padding: 5px 0; border-bottom: 1px solid #E8EEF6; }
+ .cep-item strong { color: var(--fg-heading); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide" data-screen-label="18 Audience 1 Profile, Resources and Defence">
+ <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 03 · Audiences · Audience 1 of 3</span></div>
+ <h2 class="sc-h2">Resources and Defence Workforce Accommodation Procurers, aged 40-60, mission-critical buyers.</h2>
+
+ <div class="aud-layout">
+
+ <!-- Silhouette persona panel -->
+ <div class="persona-panel">
+ <div class="persona-svg-wrap">
+ <svg width="160" height="200" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg" aria-label="Male professional silhouette representing resources and defence procurement persona">
+ <!-- Hard hat -->
+ <ellipse cx="80" cy="44" rx="36" ry="8" fill="rgba(255,255,255,0.25)"/>
+ <rect x="44" y="36" width="72" height="10" rx="3" fill="rgba(255,255,255,0.22)"/>
+ <!-- Head -->
+ <circle cx="80" cy="62" r="22" fill="rgba(255,255,255,0.30)"/>
+ <!-- Shoulders / body, worker build -->
+ <path d="M36 110 Q40 90 58 85 L80 92 L102 85 Q120 90 124 110 L124 160 L36 160 Z" fill="rgba(255,255,255,0.20)"/>
+ <!-- Hi-vis vest lines -->
+ <line x1="56" y1="100" x2="56" y2="150" stroke="rgba(255,255,255,0.35)" stroke-width="2"/>
+ <line x1="104" y1="100" x2="104" y2="150" stroke="rgba(255,255,255,0.35)" stroke-width="2"/>
+ <line x1="36" y1="125" x2="124" y2="125" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+ <!-- Clipboard/tablet -->
+ <rect x="85" y="105" width="28" height="36" rx="2" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.40)" stroke-width="1.5"/>
+ <line x1="89" y1="115" x2="109" y2="115" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+ <line x1="89" y1="121" x2="109" y2="121" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+ <line x1="89" y1="127" x2="105" y2="127" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+ <!-- Arms -->
+ <path d="M36 110 L26 148" stroke="rgba(255,255,255,0.20)" stroke-width="14" stroke-linecap="round" fill="none"/>
+ <path d="M124 110 L134 148" stroke="rgba(255,255,255,0.20)" stroke-width="14" stroke-linecap="round" fill="none"/>
+ <!-- Legs -->
+ <rect x="50" y="160" width="24" height="32" rx="4" fill="rgba(255,255,255,0.15)"/>
+ <rect x="86" y="160" width="24" height="32" rx="4" fill="rgba(255,255,255,0.15)"/>
+ </svg>
+ </div>
+ <div class="persona-stats">
+ <div class="ps-pill"><span class="ps-label">Age</span><span class="ps-val">40-60 (peak authority 45-55)</span></div>
+ <div class="ps-pill"><span class="ps-label">Gender</span><span class="ps-val">~75-80% male [12]</span></div>
+ <div class="ps-pill"><span class="ps-label">Income</span><span class="ps-val">AUD 180K-350K+</span></div>
+ <div class="ps-pill"><span class="ps-label">Education</span><span class="ps-val">Tertiary, engineering / QS / MBA</span></div>
+ <div class="ps-pill"><span class="ps-label">Location</span><span class="ps-val">Perth, Brisbane, Darwin, Adelaide</span></div>
+ <div class="ps-pill"><span class="ps-label">Context</span><span class="ps-val">Schedule-driven, HSE-led, FIFO/DIDO</span></div>
+ <div class="ps-pill"><span class="ps-label">Confidence</span><span class="ps-val"><span class="sc-chip sc-chip--probable">Probable</span></span></div>
+ </div>
+ </div>
+
+ <!-- Profile detail -->
+ <div class="profile-grid">
+ <div class="pg-row"><div class="pg-label">Employer type</div><div class="pg-val">Tier 1 contractors (CIMIC, John Holland, Multiplex, Laing O'Rourke), miners (BHP, Rio Tinto, Fortescue, Woodside), Department of Defence estate group</div></div>
+ <div class="pg-row"><div class="pg-label">Role titles</div><div class="pg-val">Project Director, Supply-Chain Manager, Accommodation Services Lead, Procurement Category Manager</div></div>
+ <div class="pg-row"><div class="pg-label">Living arrangements</div><div class="pg-val">Family home in capital-city (Perth, Brisbane, Sydney) with secondary on-site room during rotations. Predominantly mortgaged or owned home.</div></div>
+ <div class="pg-row"><div class="pg-label">Key values</div><div class="pg-val">Safety-first identity, mission and national-capability pride (critical minerals, defence sovereignty [14]), reliability over novelty, mental-health literate after a decade of FIFO wellbeing reporting</div></div>
+ <div class="pg-row"><div class="pg-label">Decision context</div><div class="pg-val">Industrial, compliance-heavy, lives by procurement gates, HSE incident logs, and shutdown calendars. Punishes vendors who miss schedule.</div></div>
+ <div class="pg-row"><div class="pg-label">Key geography</div><div class="pg-val">Pilbara, Galilee Basin, Surat Basin, Tiwi Islands, Henderson, Christmas Creek for project deployments</div></div>
+ <div class="pg-row"><div class="pg-label">Headline finding</div><div class="pg-val">Accommodation is now judged as workforce-retention infrastructure, not a capex line. Total-cost-of-ownership and retention impact beats pure unit price [15]. <span class="sc-chip sc-chip--probable">Probable</span></div></div>
+ </div>
+
+ <!-- Purchase drivers + CEPs -->
+ <div class="drivers-panel">
+ <div class="driver-hd">Purchase Drivers (1-5)</div>
+ <div class="driver-row">
+ <div style="display:flex; justify-content:space-between;"><span class="dr-label">Product Quality</span><span class="dr-score">5 / 5</span></div>
+ <div class="dr-bar-track"><div class="dr-bar-fill" style="width:100%"></div></div>
+ </div>
+ <div class="driver-row">
+ <div style="display:flex; justify-content:space-between;"><span class="dr-label">Trust and Impact</span><span class="dr-score">5 / 5</span></div>
+ <div class="dr-bar-track"><div class="dr-bar-fill" style="width:100%"></div></div>
+ </div>
+ <div class="driver-row">
+ <div style="display:flex; justify-content:space-between;"><span class="dr-label">Customer Service</span><span class="dr-score">5 / 5</span></div>
+ <div class="dr-bar-track"><div class="dr-bar-fill" style="width:100%"></div></div>
+ </div>
+ <div class="driver-row">
+ <div style="display:flex; justify-content:space-between;"><span class="dr-label">Innovation</span><span class="dr-score">4 / 5</span></div>
+ <div class="dr-bar-track"><div class="dr-bar-fill" style="width:80%"></div></div>
+ </div>
+ <div class="driver-row">
+ <div style="display:flex; justify-content:space-between;"><span class="dr-label">Price / Cost of Ownership</span><span class="dr-score">4 / 5</span></div>
+ <div class="dr-bar-track"><div class="dr-bar-fill" style="width:80%"></div></div>
+ </div>
+ <div class="driver-row">
+ <div style="display:flex; justify-content:space-between;"><span class="dr-label">Brand Image</span><span class="dr-score">3 / 5</span></div>
+ <div class="dr-bar-track"><div class="dr-bar-fill" style="width:60%"></div></div>
+ </div>
+
+ <div class="cep-list">
+ <div class="cep-hd">Category Entry Points</div>
+ <div class="cep-item"><strong>New Project FID Trigger</strong>, Board approves FID, 18 months to stand up a 1,200-bed Pilbara village</div>
+ <div class="cep-item"><strong>Shutdown Surge</strong>, 400 extra beds needed in ten weeks for major maintenance shutdown</div>
+ <div class="cep-item"><strong>Retention Crisis Response</strong>, turnover at 38%, camp named in exit interviews</div>
+ <div class="cep-item"><strong>ESG Audit Pressure</strong>, TCFD disclosures need a credible accommodation-sustainability story</div>
+ <div class="cep-item"><strong>Defence Estate Refresh</strong>, Henderson or Tindal needs new permanent accommodation under the Defence Strategic Review</div>
+ <div class="cep-item"><strong>Decommission and Redeploy</strong>, project winding down, can units be relocated or sold into social housing</div>
+ </div>
+ </div>
+
+ </div>
+
+ <div class="sc-source-line"><span class="sc-source">p. 18 · Part 03 · Source: Audience 1 profile; AusIMM 2024 diversity data [12]; Australian resources salary data [13]; Workforce wellbeing research [15]</span></div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="18" data-of="81"></script>
+</body>
+</html>

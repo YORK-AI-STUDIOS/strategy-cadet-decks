@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Competitor Forensics 5b, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+ .forensics-layout { display: grid; grid-template-columns: 1fr 340px; gap: 20px; margin-top: 14px; align-items: start; }
+ .forensics-table-wrap { overflow-x: auto; }
+ .forensics-table { width: 100%; border-collapse: collapse; font: 400 11px/1.3 var(--font-sans); }
+ .forensics-table th { font: 700 10px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--fg-muted); background: #EEF2F7; padding: 8px 10px; text-align: left; border-bottom: 2px solid #D0D8E4; }
+ .forensics-table th.hd-comp { background: var(--mr-blue-dark); color: rgba(255,255,255,0.8); width: 140px; }
+ .forensics-table td { padding: 7px 10px; border-bottom: 1px solid #E8EEF6; vertical-align: top; color: var(--fg-body); }
+ .forensics-table tr:last-child td { border-bottom: none; }
+ .comp-name-cell { font: 700 11px/1.2 var(--font-sans); color: var(--fg-heading); }
+ .comp-mode { display: inline-block; font: 600 9px/1 var(--font-sans); letter-spacing: 0.08em; padding: 2px 5px; border-radius: 2px; margin-top: 3px; }
+ .mode-d { background: #E8F0F8; color: #2E4A63; }
+ .mode-e { background: #E6F4EC; color: #2A5E3A; }
+ .mode-u { background: #FFF3CD; color: #7A5000; }
+ .finding-col { display: flex; flex-direction: column; gap: 12px; }
+ .finding-card { padding: 12px 14px; background: #F4F7FB; border-left: 4px solid var(--mr-blue-dark); }
+ .finding-label { font: 700 10px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 5px; }
+ .finding-body { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); }
+ .finding-card.amber { border-left-color: #C8860A; }
+ .finding-card.amber .finding-label { color: #C8860A; }
+ .finding-card.dark { background: var(--mr-blue-dark); border-left-color: rgba(255,255,255,0.3); }
+ .finding-card.dark .finding-label { color: rgba(255,255,255,0.6); }
+ .finding-card.dark .finding-body { color: rgba(255,255,255,0.88); }
+ .cell-verified { color: #1E5C35; font-weight: 600; }
+ .cell-probable { color: #7A5000; font-weight: 600; }
+ .cell-estimated { color: #6A4000; font-weight: 600; }
+ .cell-hyp { color: #555E6B; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide" data-screen-label="34 Section 5b Competitor Forensics">
+ <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 05 · Competitive · Section 5b, Competitor Forensics (Module 01b, 30 queries, 6 competitors)</span></div>
+ <h2 class="sc-h2">Five forensic dimensions across six competitors: ownership, financials, ESG, litigation, and strategic differentiation. Cost: AUD 0.39, 30 queries, zero failures.</h2>
+
+ <div class="forensics-layout">
+ <div class="forensics-table-wrap">
+ <table class="forensics-table">
+ <thead>
+ <tr>
+ <th class="hd-comp">Competitor / ESOV</th>
+ <th>Ownership</th>
+ <th>Revenue (latest)</th>
+ <th>ESG ratings</th>
+ <th>Litigation (3yr)</th>
+ <th>Moat / differentiator</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td><div class="comp-name-cell">Ausco Modular</div><span class="comp-mode mode-d">Defense</span></td>
+ <td>BCP V Modular Services / Modulaire (Algeco). ABN 13 150 795 547. <span class="cell-verified">VERIFIED</span></td>
+ <td>AUD 525.1M, 2024. 623 employees. <span class="cell-probable">PROBABLE</span></td>
+ <td>No standalone ratings. Group ESG via Modulaire ESGS 2023. <span class="cell-probable">PROBABLE</span></td>
+ <td>None substantiated 3yr. Fair Work EBA (2010-13) out of scope. <span class="cell-probable">PROBABLE</span></td>
+ <td>Scale + integration. ~14,000 hire buildings, 4 factories. Stayover brand vs Searipple.</td>
+ </tr>
+ <tr>
+ <td><div class="comp-name-cell">Hickory Group</div><span class="comp-mode mode-e">Expansion</span></td>
+ <td>Argyrou family, private. Richmond, VIC. No public parent. <span class="cell-probable">PROBABLE</span></td>
+ <td>AUD 335M (PitchBook) to AUD 1.0B (Growjo). Flagged conflict, do not cite. <span class="cell-estimated">ESTIMATED</span></td>
+ <td>No public ratings. Private, not required to disclose. <span class="cell-probable">PROBABLE</span></td>
+ <td>None substantiated. US entity searches discounted. <span class="cell-probable">PROBABLE</span></td>
+ <td>Patented system. 9-storey prefab, 10-day Perth housing, Ace Hotel Sydney.</td>
+ </tr>
+ <tr>
+ <td><div class="comp-name-cell">Modscape</div><span class="comp-mode mode-e">Expansion</span></td>
+ <td>Modscape Holdings Pty Ltd. ABN 31 617 645 182. Jan Gyrn CEO. Essendon Fields, VIC. <span class="cell-verified">VERIFIED</span></td>
+ <td>~AUD 31M, 107 employees. <span class="cell-estimated">ESTIMATED</span></td>
+ <td>No public ratings. No standalone sustainability report found. <span class="cell-probable">PROBABLE</span></td>
+ <td>None substantiated. <span class="cell-probable">PROBABLE</span></td>
+ <td>Modbotics robotic line (AU first). Dual Smart Building Awards 2025.</td>
+ </tr>
+ <tr>
+ <td><div class="comp-name-cell">Decmil (Macmahon)</div><span class="comp-mode mode-u">Under-Indexed</span></td>
+ <td>Macmahon Holdings ASX: MAH. Acq. Aug 2024, AUD 0.30/share (~AUD 127M EV). Delisted. <span class="cell-verified">VERIFIED</span></td>
+ <td>Last standalone FY2023: AUD 489M revenue, AUD 1.8M net loss. <span class="cell-verified">VERIFIED</span></td>
+ <td>Rolls into Macmahon ASX sustainability reporting post-acquisition. <span class="cell-probable">PROBABLE</span></td>
+ <td>None substantiated. <span class="cell-probable">PROBABLE</span></td>
+ <td>Civil-plus-accommodation integrated bid. Macmahon balance sheet.</td>
+ </tr>
+ <tr>
+ <td><div class="comp-name-cell">Jayco Corp (AU)</div><span class="comp-mode mode-d">Defense</span></td>
+ <td>Family-owned private AU entity. Jayco Holdings Pty Ltd ABN 72 600 274 057. No relation to US Jayco/Thor. <span class="cell-verified">VERIFIED</span></td>
+ <td>~1,100+ employees (AU). Revenue not disclosed. <span class="cell-probable">PROBABLE</span></td>
+ <td>No public ratings. Modern slavery statement likely but not surfaced. <span class="cell-probable">PROBABLE</span></td>
+ <td>ACCC v Jayco (No 2) [2021] FCA 453. AUD 75K penalty, misleading consumer-guarantee representation. <span class="cell-verified">VERIFIED</span></td>
+ <td>37% AU-made segment share. Dealer density + community sponsorship.</td>
+ </tr>
+ <tr>
+ <td><div class="comp-name-cell">Tourism Holdings (THL)</div><span class="comp-mode mode-d">Defense</span></td>
+ <td>NZX/ASX: THL. Public, dispersed shareholders. Apollo merger Nov 2022. <span class="cell-verified">VERIFIED</span></td>
+ <td>FY25 revenue NZD 937.0M. Underlying NPAT NZD 28.7M (-45% YoY). 2,602 employees. <span class="cell-verified">VERIFIED</span></td>
+ <td>thlsustainability.com. FY23 annual sustainability report confirmed. No MSCI/Sustainalytics public rating. <span class="cell-probable">PROBABLE</span></td>
+ <td>None substantiated 3yr. Apollo merger Commerce Commission review (2022) is merger-control, not enforcement. <span class="cell-probable">PROBABLE</span></td>
+ <td>65%+ DTC digital bookings. Maui, Britz, Apollo, Winnebago AU licence, Action Manufacturing.</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+
+ <div class="finding-col">
+ <div class="finding-card">
+ <div class="finding-label">Key forensic pattern</div>
+ <div class="finding-body">Zero verified patent portfolios across all six competitors. The category is moated by manufacturing scale, dealer density, brand and integration depth, not patentable invention. <span class="sc-chip sc-chip--probable">Probable</span></div>
+ </div>
+ <div class="finding-card amber">
+ <div class="finding-label">Same-name entity trap</div>
+ <div class="finding-body">Perplexity conflated AU Jayco Corporation with US Jayco Inc. (Thor Industries). All US-Jayco data discarded. This is a documented cross-jurisdictional risk pattern in AI-assisted competitor research. <span class="sc-chip sc-chip--verified">Verified</span></div>
+ </div>
+ <div class="finding-card">
+ <div class="finding-label">Hickory revenue conflict</div>
+ <div class="finding-body">PitchBook reports AUD 335M; Growjo reports AUD 1.0B. Discrepancy likely reflects entity-scope difference (construction arm vs full group). Do not cite either figure without primary-source check. <span class="sc-chip sc-chip--estimated">Estimated</span></div>
+ </div>
+ <div class="finding-card dark">
+ <div class="finding-label">Strategist provocation</div>
+ <div class="finding-body">The Two-Cylinder Disadvantage (Fleetwood alone spans industrial and consumer cylinders) is the most useful single lens. Every other competitor operates in only one cylinder and benefits from a single-market mental model. <span class="sc-chip sc-chip--hypothesised">Hypothesised</span></div>
+ </div>
+ </div>
+ </div>
+
+ <div class="sc-source-line"><span class="sc-source">p. 34 · Part 05 · Source: Section 5b Competitor Forensics; 30 Perplexity queries, 30/30 ok=True; cross-checked against Section 5 company profiles; ACCC enforcement register [96]; ASIC enforcement outcomes [97]</span></div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="34" data-of="81"></script>
+</body>
+</html>

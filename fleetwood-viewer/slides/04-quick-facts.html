@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Quick Facts, Fleetwood Limited, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+ .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 20px; }
+ .kpi-tile { background: #F4F7FB; border-top: 4px solid var(--mr-blue-dark); padding: 20px 22px 18px; display: flex; flex-direction: column; gap: 8px; }
+ .kpi-tile.dark { background: var(--mr-blue-dark); border-top-color: #FCB900; }
+ .kpi-eyebrow { font: 700 11px/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--mr-blue-dark); }
+ .kpi-tile.dark .kpi-eyebrow { color: rgba(255,255,255,0.65); }
+ .kpi-val { font: 800 48px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: -0.02em; }
+ .kpi-tile.dark .kpi-val { color: #FCB900; }
+ .kpi-label { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); }
+ .kpi-tile.dark .kpi-label { color: rgba(255,255,255,0.82); }
+ .kpi-chip { margin-top: 6px; align-self: flex-start; }
+
+ .facts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+ .fact-block { background: #fff; border: 1px solid var(--bg-rule); padding: 18px 20px; }
+ .fact-block .fb-lbl { font: 700 var(--t-eyebrow)/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 8px; }
+ .fact-block .fb-val { font: 600 var(--t-body)/1.4 var(--font-sans); color: var(--fg-heading); }
+ .fact-block .fb-note { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); margin-top: 4px; }
+
+ .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 20px; align-items: start; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide" data-screen-label="04 Quick Facts">
+ <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 01 · The Market · Quick Facts</span></div>
+ <h2 class="sc-h2">Fleetwood at a glance.</h2>
+
+ <div class="kpi-grid">
+ <div class="kpi-tile dark">
+ <div class="kpi-eyebrow">FY25 Revenue</div>
+ <div class="kpi-val">$505M</div>
+ <div class="kpi-label">AUD, up +20.3% year on year. Building Solutions + Community Solutions drive 83% of group revenue.</div>
+ <div class="kpi-chip"><span class="sc-chip sc-chip--verified">Verified</span></div>
+ </div>
+ <div class="kpi-tile">
+ <div class="kpi-eyebrow">NPAT Growth</div>
+ <div class="kpi-val">+284%</div>
+ <div class="kpi-label">Net profit after tax AUD 14.6M in FY25 vs AUD 3.8M in FY24. Driven by Searipple Village, Karratha.</div>
+ <div class="kpi-chip"><span class="sc-chip sc-chip--verified">Verified</span></div>
+ </div>
+ <div class="kpi-tile">
+ <div class="kpi-eyebrow">Founded</div>
+ <div class="kpi-val">1964</div>
+ <div class="kpi-label">60+ years of continuous Australian factory-built shelter. ASX-listed since 1987 under ticker FWD.</div>
+ <div class="kpi-chip"><span class="sc-chip sc-chip--verified">Verified</span></div>
+ </div>
+ <div class="kpi-tile">
+ <div class="kpi-eyebrow">Order Book</div>
+ <div class="kpi-val">$115M</div>
+ <div class="kpi-label">Committed pipeline as at 30 June 2025. Provides forward revenue visibility into FY26 modular cycle.</div>
+ <div class="kpi-chip"><span class="sc-chip sc-chip--verified">Verified</span></div>
+ </div>
+ </div>
+
+ <div class="two-col">
+ <div>
+ <div class="facts-grid">
+ <div class="fact-block">
+ <div class="fb-lbl">HQ</div>
+ <div class="fb-val">Level 8, 383 Kent Street, Sydney NSW 2000</div>
+ <div class="fb-note">Operations: WA Pilbara, Perth, Victoria. Manufacturing nationally distributed.</div>
+ </div>
+ <div class="fact-block">
+ <div class="fb-lbl">ABN</div>
+ <div class="fb-val">69 009 205 261</div>
+ <div class="fb-note">Surfaced via IBISWorld and MarketScreener. <span class="sc-chip sc-chip--probable">Probable</span></div>
+ </div>
+ <div class="fact-block">
+ <div class="fb-lbl">Employees</div>
+ <div class="fb-val">650+</div>
+ <div class="fb-note">FY25 Annual Report p.4. Includes manufacturing, operations, village management.</div>
+ </div>
+ <div class="fact-block">
+ <div class="fb-lbl">Auditor</div>
+ <div class="fb-val">Ernst &amp; Young Australia</div>
+ <div class="fb-note">Signing partner Fiona Drummond, Perth. FY25 + HY25. Phase 3 verified. [2]</div>
+ </div>
+ </div>
+ </div>
+ <div>
+ <div class="fact-block" style="margin-bottom:14px;">
+ <div class="fb-lbl">Three Operating Segments</div>
+ <div class="fb-val" style="margin-bottom:8px;">Building Solutions</div>
+ <div class="fb-note">Modular and prefabricated buildings: education, defence, healthcare, resources. Largest revenue segment.</div>
+ <div class="fb-val" style="margin-top:10px; margin-bottom:8px;">Community Solutions</div>
+ <div class="fb-note">Workforce accommodation villages. Searipple Village (1,300+ rooms, Karratha WA). Major FY25 earnings driver.</div>
+ <div class="fb-val" style="margin-top:10px; margin-bottom:8px;">RV Solutions</div>
+ <div class="fb-note">Coromal and Windsor caravan brands. Revenue down ~6% FY25 vs category decline of 20%.</div>
+ </div>
+ <div class="fact-block">
+ <div class="fb-lbl">Tagline</div>
+ <div class="fb-val">"Make a positive difference wherever Australians live, work and explore."</div>
+ <div class="fb-note"><span class="sc-chip sc-chip--verified">Verified</span> Appears in corporate communications. The "live, work, explore" architecture maps exactly to the three segments.</div>
+ </div>
+ </div>
+ </div>
+
+ <div class="sc-source-line"><span class="sc-source">p. 04 · Part 01 · Source: FY25 Annual Report [2]; ASX listing [7]; Simply Wall St [6]</span></div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="04" data-of="81"></script>
+</body>
+</html>

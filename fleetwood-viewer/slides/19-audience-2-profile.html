@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Audience 2 Profile, Public-Sector Modular, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+ .aud-layout { display: grid; grid-template-columns: 260px minmax(0,1fr) 300px; gap: 28px; margin-top: 14px; align-items: start; }
+ .persona-panel { background: #2E5F8A; padding: 0; display: flex; flex-direction: column; align-items: center; }
+ .persona-svg-wrap { padding: 24px 20px 0; width: 100%; display: flex; justify-content: center; }
+ .persona-stats { padding: 16px; width: 100%; box-sizing: border-box; }
+ .ps-pill { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,0.15); }
+ .ps-pill:last-child { border-bottom: none; }
+ .ps-label { font: 400 10px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+ .ps-val { font: 700 11px/1.2 var(--font-sans); color: var(--fg-on-dark); text-align: right; max-width: 130px; }
+ .profile-grid { display: flex; flex-direction: column; gap: 0; }
+ .pg-row { display: grid; grid-template-columns: 140px 1fr; gap: 10px; padding: 8px 0; border-bottom: 1px solid #E8EEF6; align-items: start; }
+ .pg-label { font: 700 var(--t-caption)/1.2 var(--font-sans); color: #2E5F8A; }
+ .pg-val { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); }
+ .drivers-panel { display: flex; flex-direction: column; gap: 10px; }
+ .driver-hd { font: 700 11px/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: #2E5F8A; border-bottom: 2px solid #2E5F8A; padding-bottom: 6px; margin-bottom: 6px; }
+ .driver-row { display: flex; flex-direction: column; gap: 3px; }
+ .dr-label { font: 600 11px/1.2 var(--font-sans); color: var(--fg-heading); }
+ .dr-bar-track { height: 7px; background: #EEF2F7; border-radius: 2px; }
+ .dr-bar-fill { height: 100%; border-radius: 2px; background: #2E5F8A; }
+ .dr-score { font: 700 11px/1 var(--font-sans); color: #2E5F8A; text-align: right; }
+ .cep-list { margin-top: 14px; }
+ .cep-hd { font: 700 11px/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: #2E5F8A; border-bottom: 2px solid #2E5F8A; padding-bottom: 6px; margin-bottom: 8px; }
+ .cep-item { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); padding: 5px 0; border-bottom: 1px solid #E8EEF6; }
+ .cep-item strong { color: var(--fg-heading); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide" data-screen-label="19 Audience 2 Profile, Public-Sector Modular">
+ <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 03 · Audiences · Audience 2 of 3</span></div>
+ <h2 class="sc-h2">Public-Sector Modular Infrastructure Buyers, aged 35-55, mission-driven procurers.</h2>
+
+ <div class="aud-layout">
+
+ <!-- Silhouette persona panel -->
+ <div class="persona-panel">
+ <div class="persona-svg-wrap">
+ <svg width="160" height="200" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg" aria-label="Female professional silhouette representing public-sector procurement persona">
+ <!-- Head -->
+ <circle cx="80" cy="58" r="22" fill="rgba(255,255,255,0.30)"/>
+ <!-- Hair suggestion -->
+ <path d="M58 50 Q60 34 80 36 Q100 34 102 50" fill="rgba(255,255,255,0.18)" stroke="none"/>
+ <!-- Business jacket / shoulders -->
+ <path d="M38 112 Q42 90 60 84 L80 90 L100 84 Q118 90 122 112 L122 162 L38 162 Z" fill="rgba(255,255,255,0.20)"/>
+ <!-- Lapels -->
+ <path d="M68 90 L72 110 L80 100 L88 110 L92 90" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+ <!-- Lanyard / ID badge -->
+ <line x1="80" y1="90" x2="80" y2="118" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+ <rect x="72" y="118" width="16" height="12" rx="2" fill="rgba(255,255,255,0.22)" stroke="rgba(255,255,255,0.45)" stroke-width="1"/>
+ <!-- Document / folder held -->
+ <rect x="94" y="108" width="24" height="32" rx="2" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.38)" stroke-width="1.5"/>
+ <line x1="98" y1="117" x2="114" y2="117" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+ <line x1="98" y1="123" x2="114" y2="123" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+ <line x1="98" y1="129" x2="110" y2="129" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+ <!-- Arms -->
+ <path d="M38 112 L28 150" stroke="rgba(255,255,255,0.20)" stroke-width="14" stroke-linecap="round" fill="none"/>
+ <path d="M122 112 L132 150" stroke="rgba(255,255,255,0.20)" stroke-width="14" stroke-linecap="round" fill="none"/>
+ <!-- Legs / skirt -->
+ <path d="M50 162 L44 192 L68 192 L80 175 L92 192 L116 192 L110 162 Z" fill="rgba(255,255,255,0.15)"/>
+ </svg>
+ </div>
+ <div class="persona-stats">
+ <div class="ps-pill"><span class="ps-label">Age</span><span class="ps-val">35-55 (peak authority 40-50)</span></div>
+ <div class="ps-pill"><span class="ps-label">Gender</span><span class="ps-val">Balanced, slight female skew [18]</span></div>
+ <div class="ps-pill"><span class="ps-label">Income</span><span class="ps-val">AUD 130K-220K (EL1-EL2 / SES-feeder)</span></div>
+ <div class="ps-pill"><span class="ps-label">Education</span><span class="ps-val">Architecture, construction mgmt, MPA</span></div>
+ <div class="ps-pill"><span class="ps-label">Location</span><span class="ps-val">State capital CBDs, Sydney / Melbourne / Brisbane / Perth</span></div>
+ <div class="ps-pill"><span class="ps-label">Context</span><span class="ps-val">Audit-heavy, politically-exposed, probity-driven</span></div>
+ <div class="ps-pill"><span class="ps-label">Confidence</span><span class="ps-val"><span class="sc-chip sc-chip--probable">Probable</span></span></div>
+ </div>
+ </div>
+
+ <!-- Profile detail -->
+ <div class="profile-grid">
+ <div class="pg-row"><div class="pg-label">Employer type</div><div class="pg-val">State government departments (public works, education, housing, health), Catholic and independent education systems, Commonwealth agencies, emergency management bodies</div></div>
+ <div class="pg-row"><div class="pg-label">Role titles</div><div class="pg-val">Facility Manager, State Infrastructure Procurement Lead, Education Department Building-Asset Manager, Social-Housing Project Director</div></div>
+ <div class="pg-row"><div class="pg-label">Living arrangements</div><div class="pg-val">Owner-occupier family home, typically middle-ring suburb of capital city. Predominantly partnered, often dual-income professional household.</div></div>
+ <div class="pg-row"><div class="pg-label">Key values</div><div class="pg-val">Public-good orientation, risk-averse on probity and reputation, increasingly fluent in net-zero and Modern Methods of Construction language, treats housing-crisis equity as personal mission [20]</div></div>
+ <div class="pg-row"><div class="pg-label">Decision context</div><div class="pg-val">Lives by procurement panels, ministerial briefings, AusTender, and probity reviews. Cannot specify a vendor without a paper trail that survives an Auditor-General review or Senate Estimates question.</div></div>
+ <div class="pg-row"><div class="pg-label">Political driver</div><div class="pg-val">Delivers policy outcomes inside political cycles. The product these buyers actually want is a school classroom or 50-unit social-housing block that opens before the next election. <span class="sc-chip sc-chip--hypothesised">Hypothesised</span></div></div>
+ <div class="pg-row"><div class="pg-label">Headline finding</div><div class="pg-val">Pre-screens vendors on disclosure packs before formal tender. Advertising is structurally discounted by public-sector probity rules; spend migrates to evidence libraries and panel listings. <span class="sc-chip sc-chip--probable">Probable</span></div></div>
+ </div>
+
+ <!-- Purchase drivers + CEPs -->
+ <div class="drivers-panel">
+ <div class="driver-hd">Purchase Drivers (1-5)</div>
+ <div class="driver-row">
+ <div style="display:flex; justify-content:space-between;"><span class="dr-label">Product Quality</span><span class="dr-score">5 / 5</span></div>
+ <div class="dr-bar-track"><div class="dr-bar-fill" style="width:100%"></div></div>
+ </div>
+ <div class="driver-row">
+ <div style="display:flex; justify-content:space-between;"><span class="dr-label">Trust and Impact</span><span class="dr-score">5 / 5</span></div>
+ <div class="dr-bar-track"><div class="dr-bar-fill" style="width:100%"></div></div>
+ </div>
+ <div class="driver-row">
+ <div style="display:flex; justify-content:space-between;"><span class="dr-label">Customer Service</span><span class="dr-score">5 / 5</span></div>
+ <div class="dr-bar-track"><div class="dr-bar-fill" style="width:100%"></div></div>
+ </div>
+ <div class="driver-row">
+ <div style="display:flex; justify-content:space-between;"><span class="dr-label">Innovation</span><span class="dr-score">4 / 5</span></div>
+ <div class="dr-bar-track"><div class="dr-bar-fill" style="width:80%"></div></div>
+ </div>
+ <div class="driver-row">
+ <div style="display:flex; justify-content:space-between;"><span class="dr-label">Price / Cost of Ownership</span><span class="dr-score">4 / 5</span></div>
+ <div class="dr-bar-track"><div class="dr-bar-fill" style="width:80%"></div></div>
+ </div>
+ <div class="driver-row">
+ <div style="display:flex; justify-content:space-between;"><span class="dr-label">Brand Image</span><span class="dr-score">3 / 5</span></div>
+ <div class="dr-bar-track"><div class="dr-bar-fill" style="width:60%"></div></div>
+ </div>
+
+ <div class="cep-list">
+ <div class="cep-hd">Category Entry Points</div>
+ <div class="cep-item"><strong>Election-Cycle Ribbon Cut</strong>, minister promised 50 classrooms before the next election, need modular delivery inside 18 months</div>
+ <div class="cep-item"><strong>Housing Supply Target Push</strong>, National Housing Accord target, traditional build cannot get there</div>
+ <div class="cep-item"><strong>Disaster Recovery Mobilisation</strong>, floods or fires, need temporary classrooms and clinics in weeks</div>
+ <div class="cep-item"><strong>Net-Zero Estate Refresh</strong>, whole-of-government net-zero plan requires lower embodied-carbon new builds</div>
+ <div class="cep-item"><strong>Remote School or Clinic</strong>, six hours from nearest regional centre, modular is the only realistic pathway</div>
+ <div class="cep-item"><strong>Panel Refresh Tender</strong>, state modular panel up for re-tender, short-listing for next four-year period</div>
+ </div>
+ </div>
+
+ </div>
+
+ <div class="sc-source-line"><span class="sc-source">p. 19 · Part 03 · Source: Audience 2 profile; APS workforce data [18]; APSC remuneration report 2024 [19]; AU modular construction market data [20]; Housing supply research [21][22][23]</span></div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="19" data-of="81"></script>
+</body>
+</html>

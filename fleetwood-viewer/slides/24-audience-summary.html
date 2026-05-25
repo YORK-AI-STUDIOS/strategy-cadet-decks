@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Audience Summary, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+ .sum-table-wrap { margin-top: 18px; overflow-x: auto; }
+ .sum-table { width: 100%; border-collapse: collapse; font: 400 var(--t-caption)/1.4 var(--font-sans); }
+ .sum-table th { font: 700 10px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg-muted); background: #EEF2F7; padding: 9px 12px; text-align: left; border-bottom: 2px solid #D0D8E4; }
+ .sum-table th.aud-col { background: var(--mr-blue-dark); color: rgba(255,255,255,0.8); }
+ .sum-table td { padding: 8px 12px; border-bottom: 1px solid #E8EEF6; vertical-align: top; color: var(--fg-body); }
+ .sum-table tr:last-child td { border-bottom: none; }
+ .dim-label { font: 700 var(--t-caption)/1.2 var(--font-sans); color: var(--fg-heading); }
+ .aud-header { display: flex; align-items: center; gap: 8px; }
+ .aud-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+ .dot-a1 { background: #2E4A63; }
+ .dot-a2 { background: #2E5F8A; }
+ .dot-a3 { background: #3A6B4A; }
+ .score-bar-cell { display: flex; align-items: center; gap: 6px; }
+ .mini-bar { width: 60px; height: 6px; background: #EEF2F7; border-radius: 2px; }
+ .mini-fill { height: 100%; border-radius: 2px; }
+ .fill-a1 { background: #2E4A63; }
+ .fill-a2 { background: #2E5F8A; }
+ .fill-a3 { background: #3A6B4A; }
+ .score-num { font: 700 10px/1 var(--font-sans); min-width: 22px; }
+ .headline-row { display: flex; gap: 16px; margin-bottom: 14px; }
+ .hl-card { flex: 1; padding: 10px 14px; border-left: 4px solid; }
+ .hl-card.a1 { background: rgba(46,74,99,0.06); border-color: #2E4A63; }
+ .hl-card.a2 { background: rgba(46,95,138,0.06); border-color: #2E5F8A; }
+ .hl-card.a3 { background: rgba(58,107,74,0.06); border-color: #3A6B4A; }
+ .hl-label { font: 700 10px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 5px; }
+ .hl-label.a1 { color: #2E4A63; }
+ .hl-label.a2 { color: #2E5F8A; }
+ .hl-label.a3 { color: #3A6B4A; }
+ .hl-body { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide" data-screen-label="24 Audience Summary">
+ <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 03 · Audiences · Summary across all three audiences</span></div>
+ <h2 class="sc-h2">Three radically different decision worlds sharing one driver: reduced friction and de-risked schedule beats novelty in every cell.</h2>
+
+ <div class="headline-row">
+ <div class="hl-card a1">
+ <div class="hl-label a1">Audience 1, Resources &amp; Defence</div>
+ <div class="hl-body">Accommodation as workforce-retention infrastructure. Pays for schedule certainty and psychosocial-safety credentials. Punishes price-only vendors. <span class="sc-chip sc-chip--probable">Probable</span></div>
+ </div>
+ <div class="hl-card a2">
+ <div class="hl-label a2">Audience 2, Public-Sector Modular</div>
+ <div class="hl-body">Modular as policy-delivery infrastructure. Needs a ribbon-cuttable building inside the political cycle. Pre-screens vendors on probity evidence before tender. <span class="sc-chip sc-chip--probable">Probable</span></div>
+ </div>
+ <div class="hl-card a3">
+ <div class="hl-label a3">Audience 3, Grey Nomad Caravan</div>
+ <div class="hl-body">Caravan as identity vehicle for self-authored retirement. Pays premiums for Australian provenance, dealer support network, and resale value. <span class="sc-chip sc-chip--hypothesised">Hypothesised</span></div>
+ </div>
+ </div>
+
+ <div class="sum-table-wrap">
+ <table class="sum-table">
+ <thead>
+ <tr>
+ <th style="width:170px;">Dimension</th>
+ <th class="aud-col" style="width:31%;"><div class="aud-header"><span class="aud-dot dot-a1"></span>Audience 1, Resources &amp; Defence (40-60)</div></th>
+ <th class="aud-col" style="width:31%;"><div class="aud-header"><span class="aud-dot dot-a2"></span>Audience 2, Public-Sector Modular (35-55)</div></th>
+ <th class="aud-col" style="width:31%;"><div class="aud-header"><span class="aud-dot dot-a3"></span>Audience 3, Grey Nomad Caravan (55-75)</div></th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td><span class="dim-label">Decision context</span></td>
+ <td>FID-to-first-pour window, HSE audits, roster commitments. Schedule slippage is a career event. [13][15]</td>
+ <td>AusTender, panel listings, ministerial briefings, probity reviews. Vendor chosen inside a political cycle. [20][21]</td>
+ <td>9-18 month research via forums, YouTube reviews, dealer visits. Partner-led purchase. [27][28]</td>
+ </tr>
+ <tr>
+ <td><span class="dim-label">Primary purchase driver</span></td>
+ <td>
+ <div class="score-bar-cell"><span class="mini-bar"><span class="mini-fill fill-a1" style="width:100%"></span></span><span class="score-num">5/5</span> Product Quality</div>
+ <div class="score-bar-cell" style="margin-top:4px;"><span class="mini-bar"><span class="mini-fill fill-a1" style="width:100%"></span></span><span class="score-num">5/5</span> Customer Service</div>
+ </td>
+ <td>
+ <div class="score-bar-cell"><span class="mini-bar"><span class="mini-fill fill-a2" style="width:100%"></span></span><span class="score-num">5/5</span> Product Quality</div>
+ <div class="score-bar-cell" style="margin-top:4px;"><span class="mini-bar"><span class="mini-fill fill-a2" style="width:100%"></span></span><span class="score-num">5/5</span> Trust &amp; Impact</div>
+ </td>
+ <td>
+ <div class="score-bar-cell"><span class="mini-bar"><span class="mini-fill fill-a3" style="width:100%"></span></span><span class="score-num">5/5</span> Product Quality</div>
+ <div class="score-bar-cell" style="margin-top:4px;"><span class="mini-bar"><span class="mini-fill fill-a3" style="width:80%"></span></span><span class="score-num">4/5</span> Price / TCO</div>
+ </td>
+ </tr>
+ <tr>
+ <td><span class="dim-label">Top 2 CEPs</span></td>
+ <td>New Project FID Trigger; Retention Crisis Response</td>
+ <td>Election-Cycle Ribbon Cut; Housing Supply Target Push</td>
+ <td>Retirement Date Approaching; Partner-Led First Van</td>
+ </tr>
+ <tr>
+ <td><span class="dim-label">Channel priority</span></td>
+ <td>LinkedIn (account-targeted); Trade press / AFR; Industry conferences (Austmine, ADM)</td>
+ <td>Panel and pre-qual platforms (AusTender, ICN, Local Buy); State procurement networks; Trade press</td>
+ <td>Dealer floor and test-drive events; Grey nomad forums and YouTube; Caravan shows</td>
+ </tr>
+ <tr>
+ <td><span class="dim-label">Fleetwood activation</span></td>
+ <td>Scheduled-Outcome Contract + Workforce Wellbeing Specification. Reference site: Searipple Village (1,300 rooms, Karratha). <span class="sc-chip sc-chip--probable">Probable</span></td>
+ <td>AASB S2 disclosure readiness as brand asset. Panel-listing footprint as demand-generation. <span class="sc-chip sc-chip--probable">Probable</span></td>
+ <td>Built-For-Life Bundle (20-yr warranty, trip-typology guide, resale floor). Dealer-accreditation programme. <span class="sc-chip sc-chip--probable">Probable</span></td>
+ </tr>
+ <tr>
+ <td><span class="dim-label">Strategic frame</span></td>
+ <td>Accommodation as workforce-retention infrastructure, not capex</td>
+ <td>Modular as politically-investable building, not construction method</td>
+ <td>Caravan as equity-funded wealth deployment, not discretionary purchase <span class="sc-chip sc-chip--hypothesised">Hypothesised</span></td>
+ </tr>
+ <tr>
+ <td><span class="dim-label">Discovery confidence</span></td>
+ <td><span class="sc-chip sc-chip--probable">Probable</span>, richly profiled, Cultural Signals confirmed</td>
+ <td><span class="sc-chip sc-chip--probable">Probable</span>, richly profiled, Federal policy tailwind verified</td>
+ <td><span class="sc-chip sc-chip--probable">Probable</span>, richly profiled; equity-adventure frame is Hypothesised</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+
+ <div class="sc-source-line"><span class="sc-source">p. 24 · Part 03 · Source: audience synthesis; headline findings [3]; purchase-driver cross-audience comparison [13][15][20][21][27][28]; Caravan Industry Association State of Industry 2025 [110]</span></div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="24" data-of="81"></script>
+</body>
+</html>

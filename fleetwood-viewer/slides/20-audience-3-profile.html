@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Audience 3 Profile, Grey Nomad Caravan, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+ .aud-layout { display: grid; grid-template-columns: 260px minmax(0,1fr) 300px; gap: 28px; margin-top: 14px; align-items: start; }
+ .persona-panel { background: #3A6B4A; padding: 0; display: flex; flex-direction: column; align-items: center; }
+ .persona-svg-wrap { padding: 24px 20px 0; width: 100%; display: flex; justify-content: center; }
+ .persona-stats { padding: 16px; width: 100%; box-sizing: border-box; }
+ .ps-pill { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,0.15); }
+ .ps-pill:last-child { border-bottom: none; }
+ .ps-label { font: 400 10px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+ .ps-val { font: 700 11px/1.2 var(--font-sans); color: var(--fg-on-dark); text-align: right; max-width: 130px; }
+ .profile-grid { display: flex; flex-direction: column; gap: 0; }
+ .pg-row { display: grid; grid-template-columns: 140px 1fr; gap: 10px; padding: 8px 0; border-bottom: 1px solid #E8EEF6; align-items: start; }
+ .pg-label { font: 700 var(--t-caption)/1.2 var(--font-sans); color: #3A6B4A; }
+ .pg-val { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); }
+ .drivers-panel { display: flex; flex-direction: column; gap: 10px; }
+ .driver-hd { font: 700 11px/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: #3A6B4A; border-bottom: 2px solid #3A6B4A; padding-bottom: 6px; margin-bottom: 6px; }
+ .driver-row { display: flex; flex-direction: column; gap: 3px; }
+ .dr-label { font: 600 11px/1.2 var(--font-sans); color: var(--fg-heading); }
+ .dr-bar-track { height: 7px; background: #EEF2F7; border-radius: 2px; }
+ .dr-bar-fill { height: 100%; border-radius: 2px; background: #3A6B4A; }
+ .dr-score { font: 700 11px/1 var(--font-sans); color: #3A6B4A; text-align: right; }
+ .cep-list { margin-top: 14px; }
+ .cep-hd { font: 700 11px/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: #3A6B4A; border-bottom: 2px solid #3A6B4A; padding-bottom: 6px; margin-bottom: 8px; }
+ .cep-item { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); padding: 5px 0; border-bottom: 1px solid #E8EEF6; }
+ .cep-item strong { color: var(--fg-heading); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide" data-screen-label="20 Audience 3 Profile, Grey Nomad Caravan">
+ <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 03 · Audiences · Audience 3 of 3</span></div>
+ <h2 class="sc-h2">Australian Pre-Retiree and Grey Nomad Caravan Buyers, aged 55-75, freedom-seeking travellers.</h2>
+
+ <div class="aud-layout">
+
+ <!-- Silhouette persona panel -->
+ <div class="persona-panel">
+ <div class="persona-svg-wrap">
+ <svg width="160" height="200" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg" aria-label="Couple silhouette representing grey nomad caravan buyer persona">
+ <!-- Person 1 (left, male) -->
+ <circle cx="56" cy="60" r="18" fill="rgba(255,255,255,0.28)"/>
+ <!-- Hat brim -->
+ <ellipse cx="56" cy="44" rx="22" ry="5" fill="rgba(255,255,255,0.20)"/>
+ <rect x="48" y="39" width="16" height="8" rx="2" fill="rgba(255,255,255,0.18)"/>
+ <!-- Body left -->
+ <path d="M28 105 Q32 86 48 80 L56 86 L64 80 Q78 86 80 105 L80 155 L28 155 Z" fill="rgba(255,255,255,0.18)"/>
+ <!-- Arm left holding hand -->
+ <path d="M28 105 L20 140" stroke="rgba(255,255,255,0.18)" stroke-width="12" stroke-linecap="round" fill="none"/>
+ <path d="M80 105 L88 130" stroke="rgba(255,255,255,0.18)" stroke-width="12" stroke-linecap="round" fill="none"/>
+ <!-- Legs left -->
+ <rect x="34" y="155" width="16" height="28" rx="3" fill="rgba(255,255,255,0.14)"/>
+ <rect x="54" y="155" width="16" height="28" rx="3" fill="rgba(255,255,255,0.14)"/>
+
+ <!-- Person 2 (right, female) -->
+ <circle cx="104" cy="60" r="18" fill="rgba(255,255,255,0.28)"/>
+ <!-- Hair -->
+ <path d="M86 54 Q88 40 104 42 Q120 40 122 54" fill="rgba(255,255,255,0.16)"/>
+ <!-- Body right -->
+ <path d="M82 105 Q86 86 100 80 L104 86 L108 80 Q122 86 126 105 L126 155 L82 155 Z" fill="rgba(255,255,255,0.18)"/>
+ <!-- Arm right -->
+ <path d="M126 105 L134 140" stroke="rgba(255,255,255,0.18)" stroke-width="12" stroke-linecap="round" fill="none"/>
+ <!-- Holding hands in middle -->
+ <circle cx="84" cy="128" r="6" fill="rgba(255,255,255,0.22)"/>
+ <!-- Legs right -->
+ <rect x="88" y="155" width="14" height="28" rx="3" fill="rgba(255,255,255,0.14)"/>
+ <rect x="106" y="155" width="14" height="28" rx="3" fill="rgba(255,255,255,0.14)"/>
+ <!-- Caravan suggestion below -->
+ <rect x="22" y="185" width="116" height="14" rx="3" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.30)" stroke-width="1"/>
+ <circle cx="38" cy="199" r="5" fill="rgba(255,255,255,0.25)"/>
+ <circle cx="122" cy="199" r="5" fill="rgba(255,255,255,0.25)"/>
+ </svg>
+ </div>
+ <div class="persona-stats">
+ <div class="ps-pill"><span class="ps-label">Age</span><span class="ps-val">55-75 (pre-retiree cluster 50-59)</span></div>
+ <div class="ps-pill"><span class="ps-label">Gender</span><span class="ps-val">Couple decision; male towing, female floorplan [24]</span></div>
+ <div class="ps-pill"><span class="ps-label">Income</span><span class="ps-val">AUD 90K-180K drawdown; pre-retiree AUD 150K-300K HH</span></div>
+ <div class="ps-pill"><span class="ps-label">Education</span><span class="ps-val">Mixed, tertiary or trade-qualified</span></div>
+ <div class="ps-pill"><span class="ps-label">Location</span><span class="ps-val">Coastal / outer-suburb; Sunshine Coast, Mandurah, Hervey Bay, Port Macquarie</span></div>
+ <div class="ps-pill"><span class="ps-label">Context</span><span class="ps-val">Time-rich, identity in transition, 9-18 month purchase research cycle</span></div>
+ <div class="ps-pill"><span class="ps-label">Confidence</span><span class="ps-val"><span class="sc-chip sc-chip--estimated">Estimated</span></span></div>
+ </div>
+ </div>
+
+ <!-- Profile detail -->
+ <div class="profile-grid">
+ <div class="pg-row"><div class="pg-label">Purchase type</div><div class="pg-val">Coromal and Windsor caravans. High-ticket purchase AUD 60,000 to 150,000+. Often financed. Depreciation, insurance, resale value all evaluated alongside purchase price. [25]</div></div>
+ <div class="pg-row"><div class="pg-label">Home ownership</div><div class="pg-val">Very high, typically outright ownership with significant equity. Some downsizing to free up capital for caravan and travel budget. The caravan purchase is a wealth-deployment decision, not discretionary consumer goods. <span class="sc-chip sc-chip--hypothesised">Hypothesised</span></div></div>
+ <div class="pg-row"><div class="pg-label">Touring patterns</div><div class="pg-val">The Big Lap, coastal snowbird migration (escape Melbourne or Sydney winter northward), inland discovery. Seasonal flows north in winter. Multi-month trips. Some travel with grandchildren. [27][29]</div></div>
+ <div class="pg-row"><div class="pg-label">Key values</div><div class="pg-val">Freedom and autonomy (rejecting fixed packaged holidays), comfortable adventure not deprivation, pride in Australian-made, health-aware with increasing weight on towing safety and ease of setup as buyers age [28][30]</div></div>
+ <div class="pg-row"><div class="pg-label">Information channels</div><div class="pg-val">Unmoderated owner forums and YouTube long-form reviews dominate the 9-18 month research cycle. Forum sentiment on warranty and dealer service shapes next-van decisions far more than brand-controlled media. <span class="sc-chip sc-chip--hypothesised">Hypothesised</span></div></div>
+ <div class="pg-row"><div class="pg-label">Solo-female segment</div><div class="pg-val">Growing solo-female grey nomad segment after widowhood or divorce. Increasingly significant and under-served by existing marketing. [26] <span class="sc-chip sc-chip--probable">Probable</span></div></div>
+ <div class="pg-row"><div class="pg-label">Headline finding</div><div class="pg-val">Squeezed middle: Coromal and Windsor sit between Jayco's 37% market-share dominance and lower-priced Chinese imports. The buyer needs a credible reason to spend AUD 16,000 extra over an equivalent import. "Australian-made" alone is now table stakes. <span class="sc-chip sc-chip--probable">Probable</span></div></div>
+ </div>
+
+ <!-- Purchase drivers + CEPs -->
+ <div class="drivers-panel">
+ <div class="driver-hd">Purchase Drivers (1-5)</div>
+ <div class="driver-row">
+ <div style="display:flex; justify-content:space-between;"><span class="dr-label">Product Quality</span><span class="dr-score">5 / 5</span></div>
+ <div class="dr-bar-track"><div class="dr-bar-fill" style="width:100%"></div></div>
+ </div>
+ <div class="driver-row">
+ <div style="display:flex; justify-content:space-between;"><span class="dr-label">Customer Service</span><span class="dr-score">5 / 5</span></div>
+ <div class="dr-bar-track"><div class="dr-bar-fill" style="width:100%"></div></div>
+ </div>
+ <div class="driver-row">
+ <div style="display:flex; justify-content:space-between;"><span class="dr-label">Trust and Impact</span><span class="dr-score">4 / 5</span></div>
+ <div class="dr-bar-track"><div class="dr-bar-fill" style="width:80%"></div></div>
+ </div>
+ <div class="driver-row">
+ <div style="display:flex; justify-content:space-between;"><span class="dr-label">Brand Image</span><span class="dr-score">4 / 5</span></div>
+ <div class="dr-bar-track"><div class="dr-bar-fill" style="width:80%"></div></div>
+ </div>
+ <div class="driver-row">
+ <div style="display:flex; justify-content:space-between;"><span class="dr-label">Price / Cost of Ownership</span><span class="dr-score">4 / 5</span></div>
+ <div class="dr-bar-track"><div class="dr-bar-fill" style="width:80%"></div></div>
+ </div>
+ <div class="driver-row">
+ <div style="display:flex; justify-content:space-between;"><span class="dr-label">Innovation</span><span class="dr-score">3 / 5</span></div>
+ <div class="dr-bar-track"><div class="dr-bar-fill" style="width:60%"></div></div>
+ </div>
+
+ <div class="cep-list">
+ <div class="cep-hd">Category Entry Points</div>
+ <div class="cep-item"><strong>Retirement Date Set</strong>, retirement date on calendar, caravan is next big purchase</div>
+ <div class="cep-item"><strong>Big Lap Bucket-List Trigger</strong>, "we always said we would do the Lap, and we are finally going to do it next winter"</div>
+ <div class="cep-item"><strong>Coastal Snowbird Migration</strong>, want a setup that lets us spend three months north every year</div>
+ <div class="cep-item"><strong>Grandchildren in Tow</strong>, grandkids old enough to take on the road, need layout that sleeps them [27]</div>
+ <div class="cep-item"><strong>Equity Release Decision</strong>, just downsized the family home, proceeds going into the van</div>
+ <div class="cep-item"><strong>Health-Wake-Up Moment</strong>, health scare, cannot wait forever, time to buy and start travelling</div>
+ </div>
+ </div>
+
+ </div>
+
+ <div class="sc-source-line"><span class="sc-source">p. 20 · Part 03 · Source: Audience 3 profile; Caravan Industry Association research [24]; ABS Retirement Intentions 2022-23 [25]; Solo-female nomad data [26]; Multi-generational travel [27]; Grey nomad lifestyle [28][29][30]</span></div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="20" data-of="81"></script>
+</body>
+</html>

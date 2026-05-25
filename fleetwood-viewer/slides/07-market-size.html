@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Market Size Estimates, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<link rel="stylesheet" href="chart-styles.css">
+<style>
+  .ms-layout { margin-top: 18px; display: grid; grid-template-columns: minmax(0, 880px) 340px; gap: 32px; align-items: start; }
+
+  .ms-chart-hd { font: 700 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 6px; }
+  .ms-chart-sub { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); margin-bottom: 10px; }
+
+  .ms-sidebar { display: flex; flex-direction: column; gap: 14px; }
+  .ms-kpi { padding: 14px 16px; background: #F4F7FB; border-top: 3px solid var(--mr-blue-dark); }
+  .ms-kpi .kpi-lbl { font: 700 10px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 7px; }
+  .ms-kpi .kpi-val { font: 800 26px/1 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.02em; }
+  .ms-kpi .kpi-sub { font: 400 var(--t-caption)/1.3 var(--font-sans); color: var(--fg-body); margin-top: 5px; }
+  .ms-note { padding: 12px 14px; border-left: 3px solid var(--mr-blue-dark); background: #F4F7FB; }
+  .ms-note p { margin: 0; font: 400 var(--t-caption)/1.45 var(--font-sans); color: var(--fg-body); }
+  .ms-note strong { color: var(--fg-heading); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide" data-screen-label="07 Market Size Estimates">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 01 · The Market · Market Size Estimates</span></div>
+  <h2 class="sc-h2">Two large markets, one with structural tailwind, one in cyclical contraction.</h2>
+
+  <div class="ms-layout">
+    <div>
+      <div class="ms-chart-hd">Market size comparison, AU Modular + Prefab and RV, 2025</div>
+      <div class="ms-chart-sub">Horizontal bars proportional to reported or estimated 2025 market value. Sources vary in scope definition. All modular/prefab figures refer to Australian market only unless labelled Global.</div>
+
+      <!-- SVG Horizontal Bar Chart -->
+      <svg viewBox="0 0 820 380" preserveAspectRatio="xMidYMid meet" aria-label="Market size horizontal bar chart" style="width:100%; max-height:370px; display:block;">
+        <!-- Background grid lines -->
+        <line x1="180" y1="10" x2="180" y2="350" stroke="#E8EEF6" stroke-width="1"/>
+        <line x1="340" y1="10" x2="340" y2="350" stroke="#E8EEF6" stroke-width="1"/>
+        <line x1="500" y1="10" x2="500" y2="350" stroke="#E8EEF6" stroke-width="1"/>
+        <line x1="660" y1="10" x2="660" y2="350" stroke="#E8EEF6" stroke-width="1"/>
+        <line x1="820" y1="10" x2="820" y2="350" stroke="#E8EEF6" stroke-width="1"/>
+
+        <!-- Section label: AU Modular/Prefab -->
+        <text x="4" y="28" font-family="Open Sans" font-size="9" font-weight="700" fill="#2E4A63" letter-spacing="0.12em" text-transform="uppercase">AU MODULAR / PREFAB</text>
+
+        <!-- Bar 1: AUD 14.44B (anchor, 100% of 16B scale = 800px track from x=180) -->
+        <!-- Scale: max 200B (global), bars proportional. For legibility split AU vs Global. AU max 20B. -->
+        <!-- AU bars: scale max = 20B, track width = 640px (180 to 820). 1B = 32px -->
+        <!-- Row 1: 14.44B = 462px -->
+        <rect x="180" y="38" width="462" height="30" fill="#2E4A63" rx="2"/>
+        <text x="649" y="58" font-family="Open Sans" font-size="10" font-weight="700" fill="#2E4A63">AUD 14.44B · 6.2% CAGR to 2034</text>
+        <text x="4" y="48" font-family="Open Sans" font-size="9" fill="#2E4A63" font-weight="600">Prefab Buildings</text>
+        <text x="4" y="60" font-family="Open Sans" font-size="8" fill="#6B7E96">R&amp;M 2025 anchor [119]</text>
+
+        <!-- Row 2: 17.1B = 547px, opacity -->
+        <rect x="180" y="80" width="547" height="30" fill="#2E4A63" rx="2" opacity="0.7"/>
+        <text x="734" y="100" font-family="Open Sans" font-size="10" font-weight="700" fill="#2E4A63">AUD 17.1B · 8% CAGR</text>
+        <text x="4" y="90" font-family="Open Sans" font-size="9" fill="#2E4A63" font-weight="600">Prefab, broader scope</text>
+        <text x="4" y="102" font-family="Open Sans" font-size="8" fill="#6B7E96">Good Builder 2024 [120]</text>
+
+        <!-- Row 3: USD 8.35B ~= AUD 12.9B at ~1.54 = 413px, opacity 0.5 -->
+        <rect x="180" y="122" width="413" height="30" fill="#2E4A63" rx="2" opacity="0.5"/>
+        <text x="600" y="142" font-family="Open Sans" font-size="10" font-weight="700" fill="#2E4A63">USD 8.35B · 7.88% CAGR</text>
+        <text x="4" y="132" font-family="Open Sans" font-size="9" fill="#2E4A63" font-weight="600">Prefab Buildings (AU)</text>
+        <text x="4" y="144" font-family="Open Sans" font-size="8" fill="#6B7E96">Mordor Intelligence [40]</text>
+
+        <!-- Section divider -->
+        <line x1="0" y1="168" x2="820" y2="168" stroke="#E8EEF6" stroke-width="1"/>
+
+        <!-- Section label: AU RV -->
+        <text x="4" y="186" font-family="Open Sans" font-size="9" font-weight="700" fill="#3A6A9A" letter-spacing="0.12em">AU RECREATIONAL VEHICLES</text>
+
+        <!-- Row 4: AUD 18.19B RV = 582px -->
+        <rect x="180" y="196" width="582" height="30" fill="#5A9BD5" rx="2"/>
+        <text x="769" y="216" font-family="Open Sans" font-size="10" font-weight="700" fill="#3A6A9A">AUD 18.19B</text>
+        <text x="4" y="206" font-family="Open Sans" font-size="9" fill="#3A6A9A" font-weight="600">AU RV Market 2025</text>
+        <text x="4" y="218" font-family="Open Sans" font-size="8" fill="#6B7E96">Mordor Intelligence [28]</text>
+
+        <!-- Row 5: 25,185 units (unit bar, smaller context) -->
+        <rect x="180" y="238" width="144" height="30" fill="#5A9BD5" rx="2" opacity="0.6"/>
+        <text x="331" y="258" font-family="Open Sans" font-size="10" font-weight="700" fill="#3A6A9A">25,185 units · -20% YoY</text>
+        <text x="4" y="248" font-family="Open Sans" font-size="9" fill="#3A6A9A" font-weight="600">AU RV Units Mfg, 2024</text>
+        <text x="4" y="260" font-family="Open Sans" font-size="8" fill="#6B7E96">Caravan Ind. Assoc. [110]</text>
+
+        <!-- Section divider -->
+        <line x1="0" y1="284" x2="820" y2="284" stroke="#E8EEF6" stroke-width="1"/>
+
+        <!-- Section label: Global context -->
+        <text x="4" y="302" font-family="Open Sans" font-size="9" font-weight="700" fill="#1B3A5C" letter-spacing="0.12em">GLOBAL MODULAR (CONTEXT)</text>
+
+        <!-- Row 6: USD 175.15B global. Scale: 200B max, 640px. 175.15B = 560px -->
+        <rect x="180" y="312" width="560" height="30" fill="#1B3A5C" rx="2" opacity="0.8"/>
+        <text x="747" y="332" font-family="Open Sans" font-size="10" font-weight="700" fill="#1B3A5C">USD 175.15B projected</text>
+        <text x="4" y="322" font-family="Open Sans" font-size="9" fill="#1B3A5C" font-weight="600">Global Modular Const.</text>
+        <text x="4" y="334" font-family="Open Sans" font-size="8" fill="#6B7E96">Modscape citing [123]</text>
+
+        <!-- X-axis scale label (relative to AU 20B max) -->
+        <text x="180" y="364" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#9AA3AD">0</text>
+        <text x="372" y="364" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#9AA3AD">6B</text>
+        <text x="564" y="364" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#9AA3AD">12B</text>
+        <text x="756" y="364" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#9AA3AD">18B+ (AU scale)</text>
+      </svg>
+
+      <div style="margin-top:6px; padding-top:6px; border-top:1px solid var(--bg-rule);">
+        <p style="margin:0; font:400 italic var(--t-caption)/1.4 var(--font-sans); color:var(--fg-muted);">Source: Research and Markets [119]; Mordor Intelligence [40][28]; The Good Builder [120]; Caravan Industry Association [110]; Modscape citing global market [123]; FY25 Annual Report [2]. AU bars scaled to 20B AU max; global row scaled separately for context.</p>
+      </div>
+    </div>
+
+    <div class="ms-sidebar">
+      <div class="ms-kpi">
+        <div class="kpi-lbl">Fleetwood Market Share</div>
+        <div class="kpi-val">~3.5%</div>
+        <div class="kpi-sub">FY25 revenue AUD 505.2M against AU prefab TAM ~AUD 14.4B implies ~3.5% modular share. Well below the 50% defence-mode threshold. <span class="sc-chip sc-chip--estimated">Estimated</span></div>
+      </div>
+      <div class="ms-kpi" style="border-top-color:#5A9BD5;">
+        <div class="kpi-lbl" style="color:#3A6A9A;">RV Segment Position</div>
+        <div class="kpi-val">Low single digit %</div>
+        <div class="kpi-sub">Coromal and Windsor combined hold a low single-digit share of the AU-made caravan segment, well behind Jayco's 37% category dominance. <span class="sc-chip sc-chip--estimated">Estimated</span> Against Caravan Industry Association unit data [110].</div>
+      </div>
+      <div class="ms-note">
+        <p><strong>Strategist note:</strong> Three credible sources report AUD 8.35B to AUD 17.1B for the same category. Variance reflects different definitions of "prefabricated". Use AUD 14.44B as the defensible anchor for boardroom use. <span class="sc-chip sc-chip--probable">Probable</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc-source-line"><span class="sc-source">p. 07 · Part 01 · Source: Research and Markets [119]; Mordor Intelligence [40][28]; The Good Builder [120]; Caravan Industry Association [110]; Modscape citing global market [123]; FY25 Annual Report [2]</span></div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="07" data-of="81"></script>
+</body>
+</html>

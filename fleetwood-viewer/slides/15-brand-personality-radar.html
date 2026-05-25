@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Brand Personality Radar, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+ .radar-layout { display: grid; grid-template-columns: minmax(0, 600px) 1fr; gap: 48px; margin-top: 18px; align-items: start; }
+ .radar-wrap { position: relative; }
+ .radar-legend { margin-top: 18px; display: flex; gap: 24px; flex-wrap: wrap; align-items: center; }
+ .rl-item { display: flex; align-items: center; gap: 8px; font: 400 var(--t-caption)/1 var(--font-sans); color: var(--fg-body); }
+ .rl-dot { width: 12px; height: 12px; border-radius: 50%; }
+ .rl-dot.fwd { background: var(--mr-blue-dark); }
+ .rl-dot.cat { background: #B0BEC5; }
+ .dimension-list { display: flex; flex-direction: column; gap: 14px; }
+ .dim-row { display: grid; grid-template-columns: 130px 1fr; gap: 12px; align-items: start; padding: 10px 0; border-bottom: 1px solid #E8EEF6; }
+ .dim-name { font: 700 var(--t-caption)/1.2 var(--font-sans); color: var(--mr-blue-dark); }
+ .dim-score-bar { height: 8px; background: #EEF2F7; border-radius: 2px; margin-bottom: 6px; position: relative; }
+ .dim-fill { height: 100%; border-radius: 2px; background: var(--mr-blue-dark); }
+ .dim-body { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); }
+ .source-note { font: 400 italic var(--t-caption)/1.4 var(--font-sans); color: var(--fg-muted); margin-top: 14px; padding-top: 10px; border-top: 1px solid #E8EEF6; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide" data-screen-label="15 Brand Personality Radar">
+ <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 02 · Brand · Brand Personality, Aaker Five Dimensions</span></div>
+ <h2 class="sc-h2">Sincerity and competence dominant. Excitement and sophistication the strategic gaps.</h2>
+
+ <div class="radar-layout">
+ <!-- SVG Radar Chart -->
+ <div class="radar-wrap">
+ <svg viewBox="0 0 560 460" xmlns="http://www.w3.org/2000/svg" width="560" height="460" role="img" aria-label="Aaker brand personality radar chart showing Fleetwood scores across five dimensions">
+ <defs>
+ <style>
+ .ax-label { font: 600 13px/1.2 'Open Sans', sans-serif; fill: #2E4A63; }
+ .ax-sub { font: 400 11px/1.2 'Open Sans', sans-serif; fill: #6B7E96; }
+ .grid-line { stroke: #D0D8E4; stroke-width: 1; fill: none; }
+ .fwd-poly { fill: rgba(26,76,130,0.18); stroke: #1A4C82; stroke-width: 2.5; }
+ .cat-poly { fill: rgba(176,190,197,0.12); stroke: #90A4AE; stroke-width: 1.5; stroke-dasharray: 5,4; }
+ .axis-line { stroke: #C5D0DE; stroke-width: 1; }
+ .score-label { font: 700 12px/1 'Open Sans', sans-serif; fill: #1A4C82; }
+ .cat-score { font: 400 11px/1 'Open Sans', sans-serif; fill: #90A4AE; }
+ </style>
+ </defs>
+
+ <!-- Centre point -->
+ <g transform="translate(280,230)">
+ <!-- Grid rings at 20%, 40%, 60%, 80%, 100% -->
+ <!-- Pentagon grid lines, 5 axes at 72° apart, starting top (270°) -->
+ <!-- Axes: Sincerity(top), Excitement(top-right), Competence(bottom-right), Sophistication(bottom-left), Ruggedness(top-left) -->
+ <!-- r=160 = 100%, points at each ring fraction -->
+
+ <!-- r=32 (20%) -->
+ <polygon points="0,-32 30.4,-9.9 18.8,25.9 -18.8,25.9 -30.4,-9.9" class="grid-line"/>
+ <!-- r=64 (40%) -->
+ <polygon points="0,-64 60.8,-19.8 37.6,51.8 -37.6,51.8 -60.8,-19.8" class="grid-line"/>
+ <!-- r=96 (60%) -->
+ <polygon points="0,-96 91.2,-29.7 56.4,77.7 -56.4,77.7 -91.2,-29.7" class="grid-line"/>
+ <!-- r=128 (80%) -->
+ <polygon points="0,-128 121.6,-39.6 75.2,103.6 -75.2,103.6 -121.6,-39.6" class="grid-line"/>
+ <!-- r=160 (100%) -->
+ <polygon points="0,-160 152,-49.5 94,129.5 -94,129.5 -152,-49.5" class="grid-line"/>
+
+ <!-- Axis lines -->
+ <line x1="0" y1="0" x2="0" y2="-160" class="axis-line"/>
+ <line x1="0" y1="0" x2="152" y2="-49.5" class="axis-line"/>
+ <line x1="0" y1="0" x2="94" y2="129.5" class="axis-line"/>
+ <line x1="0" y1="0" x2="-94" y2="129.5" class="axis-line"/>
+ <line x1="0" y1="0" x2="-152" y2="-49.5" class="axis-line"/>
+
+ <!-- Category average polygon (50%/40%/45%/35%/55%) -->
+ <polygon points="0,-80 60.8,-19.8 42.3,58.3 -56.4,77.7 -83.6,-27.2" class="cat-poly"/>
+
+ <!-- Fleetwood polygon: Sincerity 85%, Excitement 30%, Competence 80%, Sophistication 28%, Ruggedness 78% -->
+ <!-- Sincerity: 85% × 160 = 136 → (0,-136) -->
+ <!-- Excitement: 30% × 160 = 48 → angle 72° from top = (45.6,-14.8) -->
+ <!-- Competence: 80% × 160 = 128 → angle 144° from top = (75.2,103.6) -->
+ <!-- Sophistication: 28% × 160 = 44.8 → angle 216° → (-42.5,91.8) but mirrored → (-26.3,36.3) -->
+ <!-- angle 216° = sin216=-0.588, cos216=-0.809 → (-26.3,36.3) at r=44.8 -->
+ <!-- Ruggedness: 78% × 160 = 124.8 → angle 288° → (-118.7,-38.5) -->
+ <!-- Let me recalculate properly: angles from top (270° in std), step 72° -->
+ <!-- Axis 0 (top): angle=90° std → (0,-1) unit → Sincerity -->
+ <!-- Axis 1 (upper-right): angle=90-72=18° → sin18=0.309, cos18=0.951 → unit (0.309, -0.951) → at r=48: (14.8,-45.6) -->
+ <!-- Axis 2 (lower-right): angle=90-144=-54° → sin(-54)=-0.809, cos(-54)=0.588 → unit(-0.809,0.588) WRONG -->
+ <!-- Standard SVG: y down. Top axis: (0,-r). Rotate clockwise 72° each step. -->
+ <!-- sin/cos for rotation clockwise from top: pt = (r*sin(angle), -r*cos(angle)) -->
+ <!-- Axis 0: 0° → (0, -160) → Sincerity -->
+ <!-- Axis 1: 72° → (152.1, -49.5) → Excitement -->
+ <!-- Axis 2: 144° → (94, 129.5) → Competence -->
+ <!-- Axis 3: 216° → (-94, 129.5) → Sophistication -->
+ <!-- Axis 4: 288° → (-152.1, -49.5) → Ruggedness -->
+
+ <!-- Fleetwood: Sincerity 85%=136, Excitement 30%=48, Competence 80%=128, Sophistication 28%=44.8, Ruggedness 78%=124.8 -->
+ <!-- Axis 0 (0°): (0, -136) -->
+ <!-- Axis 1 (72°): (48*sin72, -48*cos72) = (45.6, -14.8) -->
+ <!-- Axis 2 (144°): (128*sin144, -128*cos144) = (75.2, 103.6), wait 128*sin144=128*0.5878=75.2, 128*cos144=128*(-0.809)=-103.6 so y=103.6 -->
+ <!-- Axis 3 (216°): (44.8*sin216, -44.8*cos216) = (44.8*(-0.5878), -44.8*(-0.809)) = (-26.3, 36.2) -->
+ <!-- Axis 4 (288°): (124.8*sin288, -124.8*cos288) = (124.8*(-0.9511), -124.8*(0.309)) = (-118.7, -38.6) -->
+ <polygon points="0,-136 45.6,-14.8 75.2,103.6 -26.3,36.2 -118.7,-38.6" class="fwd-poly"/>
+
+ <!-- Score labels on Fleetwood polygon vertices -->
+ <text x="6" y="-142" class="score-label">85%</text>
+ <text x="50" y="-18" class="score-label">30%</text>
+ <text x="78" y="115" class="score-label">80%</text>
+ <text x="-55" y="42" class="score-label">28%</text>
+ <text x="-148" y="-44" class="score-label">78%</text>
+
+ <!-- Axis labels -->
+ <text x="0" y="-172" text-anchor="middle" class="ax-label">Sincerity</text>
+ <text x="0" y="-159" dy="14" text-anchor="middle" class="ax-sub">Honest, wholesome, genuine</text>
+
+ <text x="170" y="-56" text-anchor="start" class="ax-label">Excitement</text>
+ <text x="170" y="-43" text-anchor="start" class="ax-sub">Daring, spirited, imaginative</text>
+
+ <text x="106" y="150" text-anchor="start" class="ax-label">Competence</text>
+ <text x="106" y="163" text-anchor="start" class="ax-sub">Reliable, responsible, expert</text>
+
+ <text x="-108" y="150" text-anchor="end" class="ax-label">Sophistication</text>
+ <text x="-108" y="163" text-anchor="end" class="ax-sub">Upper-class, charming</text>
+
+ <text x="-170" y="-56" text-anchor="end" class="ax-label">Ruggedness</text>
+ <text x="-170" y="-43" text-anchor="end" class="ax-sub">Outdoorsy, tough, strong</text>
+
+ <!-- Ring labels at 20%, 40%, 60%, 80% -->
+ <text x="4" y="-30" class="cat-score">20%</text>
+ <text x="4" y="-62" class="cat-score">40%</text>
+ <text x="4" y="-94" class="cat-score">60%</text>
+ <text x="4" y="-126" class="cat-score">80%</text>
+ </g>
+ </svg>
+
+ <div class="radar-legend">
+ <div class="rl-item"><div class="rl-dot fwd"></div> Fleetwood (assessed)</div>
+ <div class="rl-item"><div class="rl-dot cat"></div> Category average (AU industrial + RV, estimated)</div>
+ <span class="sc-chip sc-chip--hypothesised">Hypothesised</span>
+ </div>
+ </div>
+
+ <!-- Dimension breakdown -->
+ <div class="dimension-list">
+ <div class="dim-row">
+ <div>
+ <div class="dim-name">Sincerity</div>
+ <div class="dim-score-bar"><div class="dim-fill" style="width:85%"></div></div>
+ </div>
+ <div class="dim-body">Honest, wholesome, genuine. Fleetwood's sixty-year track record and refusal to overclaim earn a high sincerity rating. The foreman voice is structurally sincere. <span class="sc-chip sc-chip--hypothesised">Hypothesised</span></div>
+ </div>
+ <div class="dim-row">
+ <div>
+ <div class="dim-name">Competence</div>
+ <div class="dim-score-bar"><div class="dim-fill" style="width:80%"></div></div>
+ </div>
+ <div class="dim-body">Reliable, responsible, expert. Engineering-led communication and a B2B procurement focus produce strong competence signals. Tender-win record and Searipple Village operationalise it. <span class="sc-chip sc-chip--hypothesised">Hypothesised</span></div>
+ </div>
+ <div class="dim-row">
+ <div>
+ <div class="dim-name">Ruggedness</div>
+ <div class="dim-score-bar"><div class="dim-fill" style="width:78%"></div></div>
+ </div>
+ <div class="dim-body">Outdoorsy, tough, Australian conditions. Both a Pilbara workforce village and a Coromal caravan on the Tanami must survive corrugations and heat. Ruggedness is structural to both product lines. <span class="sc-chip sc-chip--probable">Probable</span></div>
+ </div>
+ <div class="dim-row">
+ <div>
+ <div class="dim-name">Excitement</div>
+ <div class="dim-score-bar"><div class="dim-fill" style="width:30%"></div></div>
+ </div>
+ <div class="dim-body">Daring, spirited, imaginative. Low by design. The brand does not behave like a consumer brand even on the consumer side. This is the gap that under-serves capital markets and younger talent. <span class="sc-chip sc-chip--hypothesised">Hypothesised</span></div>
+ </div>
+ <div class="dim-row">
+ <div>
+ <div class="dim-name">Sophistication</div>
+ <div class="dim-score-bar"><div class="dim-fill" style="width:28%"></div></div>
+ </div>
+ <div class="dim-body">Upper-class, charming, glamorous. Very low. Fleetwood deliberately avoids glamour positioning. Correct for B2B and resources procurement. A risk on consumer caravans versus Jayco's aspirational styling. <span class="sc-chip sc-chip--hypothesised">Hypothesised</span></div>
+ </div>
+ </div>
+ </div>
+
+ <div class="sc-source-line"><span class="sc-source">p. 15 · Part 02 · Source: Aaker (1997) brand personality framework applied to Brand DNA prompts 9-11. Scores are analyst-assessed, not survey-derived. Category average is estimated from publicly available competitor brand communications. All scores HYPOTHESISED.</span></div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="15" data-of="81"></script>
+</body>
+</html>

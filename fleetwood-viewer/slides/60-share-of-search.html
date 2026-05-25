@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Share of Search, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .sos-layout { margin-top: 14px; display: grid; grid-template-columns: minmax(0, 880px) 360px; gap: 28px; align-items: start; }
+
+  .chart-title { font: 700 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 5px; }
+  .chart-sub { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); margin-bottom: 8px; }
+
+  .sos-note { padding: 9px 12px; background: #FFF3CD; border-left: 4px solid #8A6030; margin-bottom: 10px; font: 400 var(--t-caption)/1.45 var(--font-sans); color: #7A5000; }
+  .sos-note strong { font-weight: 700; }
+
+  .findings-col { display: flex; flex-direction: column; gap: 9px; }
+  .finding-card { padding: 10px 12px; background: #F4F7FB; border-left: 4px solid var(--mr-blue-dark); }
+  .finding-card.green { border-left-color: #3A6B4A; }
+  .finding-card.amber { border-left-color: #8A6030; }
+  .fc-label { font: 700 10px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 4px; }
+  .finding-card.green .fc-label { color: #3A6B4A; }
+  .finding-card.amber .fc-label { color: #8A6030; }
+  .fc-text { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide" data-screen-label="60 Share of Search Analysis">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 08 · GEO and Digital Intelligence · Share of Search Analysis, Modular Category (Section 6)</span></div>
+  <h2 class="sc-h2">Share of Search extension not run in this engagement. ESOV classifications rest on editorial evidence only. Fleetwood estimated at approximately 3.5% SoS in the modular category. The Modular Voice Vacuum remains the central strategic finding. <span class="sc-chip sc-chip--estimated">Estimated</span></h2>
+
+  <div class="sos-layout">
+
+    <!-- LEFT: Paired-bar trend SVG -->
+    <div>
+      <div class="sos-note">
+        <strong>Data limitation (Note 1, confirmed):</strong> The Share of Search Glimpse/Google Trends extension was not run in this engagement. All ESOV classifications and estimated SoS figures are derived from editorial evidence, trade-press presence, GEO scan results, and competitive intelligence. They are marked ESTIMATED. Run the SoS extension before committing to budget allocations referencing these figures. KPI Le6: +200 bps SoS gain by Day 180; baseline must be established in week 1. <span class="sc-chip sc-chip--estimated">Estimated</span>
+      </div>
+
+      <div class="chart-title">Estimated SoS snapshot (modular construction category) + 3-month vs 12-month window comparison</div>
+      <div class="chart-sub">Left bar = estimated 12-month average SoS. Right bar (lighter) = estimated 3-month recent window. Paired comparison shows trajectory direction. All figures ESTIMATED from editorial evidence.</div>
+
+      <svg viewBox="0 0 820 300" preserveAspectRatio="xMidYMid meet" aria-label="Share of Search paired bar trend chart" style="width:100%; max-height:295px; display:block;">
+
+        <!-- Y axis label -->
+        <text x="16" y="155" text-anchor="middle" font-family="Open Sans" font-size="10" fill="#6B7E96" font-weight="600" transform="rotate(-90 16 155)">Estimated SoS (%)</text>
+
+        <!-- Axis baseline -->
+        <line x1="60" y1="260" x2="800" y2="260" stroke="#9AA3AD" stroke-width="1.5"/>
+        <line x1="60" y1="260" x2="60" y2="20" stroke="#9AA3AD" stroke-width="1.5"/>
+
+        <!-- Y grid + ticks. Scale: 0-40%. Track height: 260-20=240px. 10%=60px -->
+        <line x1="60" y1="200" x2="800" y2="200" stroke="#EEF2F7" stroke-width="1" stroke-dasharray="4,4"/>
+        <line x1="60" y1="140" x2="800" y2="140" stroke="#EEF2F7" stroke-width="1" stroke-dasharray="4,4"/>
+        <line x1="60" y1="80" x2="800" y2="80" stroke="#EEF2F7" stroke-width="1" stroke-dasharray="4,4"/>
+        <line x1="60" y1="20" x2="800" y2="20" stroke="#EEF2F7" stroke-width="1" stroke-dasharray="4,4"/>
+
+        <text x="52" y="263" text-anchor="end" font-family="Open Sans" font-size="9" fill="#9AA3AD">0%</text>
+        <text x="52" y="203" text-anchor="end" font-family="Open Sans" font-size="9" fill="#9AA3AD">10%</text>
+        <text x="52" y="143" text-anchor="end" font-family="Open Sans" font-size="9" fill="#9AA3AD">20%</text>
+        <text x="52" y="83" text-anchor="end" font-family="Open Sans" font-size="9" fill="#9AA3AD">30%</text>
+        <text x="52" y="23" text-anchor="end" font-family="Open Sans" font-size="9" fill="#9AA3AD">40%</text>
+
+        <!-- BRAND GROUPS. 5 brands + others. Each group = 2 bars (12mo + 3mo) + gap.
+             Track: 60 to 800 = 740px. 6 groups. Group width = ~100px. Bar width = 36px. Gap between bars in group = 6px. Gap between groups = 20px.
+             Group positions: Ausco x=80, Hickory x=200, Modscape x=320, Fleetwood x=440, Decmil x=560, Others x=680
+        -->
+
+        <!-- Bar height formula: y_top = 260 - (pct/40)*240; height = (pct/40)*240 -->
+
+        <!-- AUSCO: 12mo=35%, 3mo=33% -->
+        <!-- 12mo bar: h=210, y=50 -->
+        <rect x="78" y="50" width="36" height="210" rx="2" fill="#2E5F8A" opacity="0.9"/>
+        <text x="96" y="46" text-anchor="middle" font-family="Open Sans" font-size="9" font-weight="700" fill="#2E5F8A">35%</text>
+        <!-- 3mo bar: h=198, y=62 -->
+        <rect x="120" y="62" width="36" height="198" rx="2" fill="#2E5F8A" opacity="0.45"/>
+        <text x="138" y="58" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#2E5F8A">33%</text>
+        <text x="107" y="278" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#2E4A63" font-weight="600">Ausco</text>
+
+        <!-- HICKORY: 12mo=20%, 3mo=21% (growing) -->
+        <rect x="198" y="140" width="36" height="120" rx="2" fill="#3A6B4A" opacity="0.9"/>
+        <text x="216" y="136" text-anchor="middle" font-family="Open Sans" font-size="9" font-weight="700" fill="#3A6B4A">20%</text>
+        <rect x="240" y="134" width="36" height="126" rx="2" fill="#3A6B4A" opacity="0.45"/>
+        <text x="258" y="130" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#3A6B4A">21%</text>
+        <text x="227" y="278" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#2E4A63" font-weight="600">Hickory</text>
+
+        <!-- MODSCAPE: 12mo=18%, 3mo=19% (growing) -->
+        <rect x="318" y="152" width="36" height="108" rx="2" fill="#5A7A4A" opacity="0.9"/>
+        <text x="336" y="148" text-anchor="middle" font-family="Open Sans" font-size="9" font-weight="700" fill="#5A7A4A">18%</text>
+        <rect x="360" y="146" width="36" height="114" rx="2" fill="#5A7A4A" opacity="0.45"/>
+        <text x="378" y="142" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#5A7A4A">19%</text>
+        <text x="347" y="278" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#2E4A63" font-weight="600">Modscape</text>
+
+        <!-- FLEETWOOD: 12mo=3.5%, 3mo=3.5% (flat). HIGHLIGHTED -->
+        <!-- h = (3.5/40)*240 = 21px -->
+        <rect x="438" y="239" width="36" height="21" rx="2" fill="var(--mr-blue-dark)" stroke="#FCB900" stroke-width="2"/>
+        <text x="456" y="235" text-anchor="middle" font-family="Open Sans" font-size="9" font-weight="700" fill="var(--mr-blue-dark)">~3.5%</text>
+        <rect x="480" y="239" width="36" height="21" rx="2" fill="var(--mr-blue-dark)" opacity="0.45"/>
+        <text x="498" y="235" text-anchor="middle" font-family="Open Sans" font-size="9" fill="var(--mr-blue-dark)">~3.5%</text>
+        <text x="467" y="278" text-anchor="middle" font-family="Open Sans" font-size="9" fill="var(--mr-blue-dark)" font-weight="700">Fleetwood</text>
+        <!-- ESOV gap annotation -->
+        <line x1="456" y1="238" x2="456" y2="155" stroke="#FCB900" stroke-width="1.5" stroke-dasharray="3,3"/>
+        <text x="470" y="190" font-family="Open Sans" font-size="8" fill="#8A6000" font-weight="700">ESOV gap</text>
+
+        <!-- DECMIL: 12mo=8%, 3mo=7% (shrinking) -->
+        <rect x="558" y="212" width="36" height="48" rx="2" fill="#6B7E96" opacity="0.9"/>
+        <text x="576" y="208" text-anchor="middle" font-family="Open Sans" font-size="9" font-weight="700" fill="#6B7E96">8%</text>
+        <rect x="600" y="218" width="36" height="42" rx="2" fill="#6B7E96" opacity="0.45"/>
+        <text x="618" y="214" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#6B7E96">7%</text>
+        <text x="587" y="278" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#2E4A63" font-weight="600">Decmil</text>
+
+        <!-- OTHERS: 15.5% -->
+        <rect x="678" y="167" width="36" height="93" rx="2" fill="#C8D4E0" opacity="0.9"/>
+        <text x="696" y="163" text-anchor="middle" font-family="Open Sans" font-size="9" font-weight="700" fill="#6B7E96">15.5%</text>
+        <rect x="720" y="173" width="36" height="87" rx="2" fill="#C8D4E0" opacity="0.45"/>
+        <text x="738" y="169" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#6B7E96">15%</text>
+        <text x="707" y="278" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#6B7E96">Others</text>
+
+        <!-- Legend -->
+        <rect x="80" y="290" width="14" height="10" rx="2" fill="#2E4A63" opacity="0.9"/>
+        <text x="100" y="299" font-family="Open Sans" font-size="9" fill="#2E4A63" font-weight="600">12-month avg</text>
+        <rect x="220" y="290" width="14" height="10" rx="2" fill="#2E4A63" opacity="0.4"/>
+        <text x="240" y="299" font-family="Open Sans" font-size="9" fill="#6B7E96">3-month window</text>
+        <text x="400" y="299" font-family="Open Sans" font-size="9" fill="#8A6000" font-weight="700">All figures ESTIMATED from editorial evidence</text>
+      </svg>
+
+      <div style="margin-top:6px; padding-top:6px; border-top:1px solid var(--bg-rule);">
+        <p style="margin:0; font:400 italic var(--t-caption)/1.4 var(--font-sans); color:var(--fg-muted);">Source: Section 6 ESOV analysis; Section 3 KPI Le6 (+200 bps SoS target); GEO Scorecard p.57 (Fleetwood ABSENT from unprompted category queries). All SoS figures ESTIMATED from editorial evidence. Run Glimpse plus Google Trends against fleetwood.com.au, ausco.com.au, hickory.com.au, modscape.com, decmil.com.au before committing to KPI baselines.</p>
+      </div>
+    </div>
+
+    <!-- RIGHT: findings panel -->
+    <div class="findings-col">
+      <div class="finding-card">
+        <div class="fc-label">The Modular Voice Vacuum</div>
+        <div class="fc-text">Fleetwood's revenue share (~14-18% estimated) materially exceeds its estimated SoS (~3.5%). The brand is radically under-voicing relative to its operational scale. Ausco, Hickory and Modscape are all voicing above their revenue share. This is the single largest brand opportunity in the category. <span class="sc-chip sc-chip--estimated">Estimated</span></div>
+      </div>
+      <div class="finding-card green">
+        <div class="fc-label">ESOV classification: Defense Mode</div>
+        <div class="fc-text">Fleetwood's ESOV position is Defense Mode: holding revenue share without corresponding voice share. The ESOV gap creates headroom for aggressive voice investment without competitors having material response time. Competitors are in Expansion Mode or Bid Room Mode, not positioned to match a step-change in Fleetwood thought-leadership output. <span class="sc-chip sc-chip--estimated">Estimated</span></div>
+      </div>
+      <div class="finding-card amber">
+        <div class="fc-label">RV category: Under-Indexed</div>
+        <div class="fc-text">Fleetwood's RV Solutions segment carries zero independent SoS in current caravan-brand category queries (see GEO Scorecard p.57). Coromal and Windsor now sit inside Apollo's brand universe for search purposes. The RV segment's SoS is effectively nil from a Fleetwood corporate brand standpoint. <span class="sc-chip sc-chip--estimated">Estimated</span></div>
+      </div>
+      <div class="finding-card">
+        <div class="fc-label">KPI target (Le6)</div>
+        <div class="fc-text">KPI Le6: +200 basis points SoS over baseline by Day 180. On the estimated ~3.5% baseline, +200 bps = approximately 5.5% target. Given the Voice Vacuum, this is achievable with consistent trade-press thought leadership, case-study publication, and conference presence. The constraint is editorial discipline, not media spend. <span class="sc-chip sc-chip--estimated">Estimated</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="sc-source-line"><span class="sc-source">p. 60 · Part 08 · Source: Section 6 ESOV analysis; Section 3 KPI Le6 (+200 bps SoS target); GEO Scorecard p.57 (Fleetwood ABSENT from unprompted category queries). All SoS figures ESTIMATED from editorial evidence. SoS extension (Glimpse + Google Trends) not run in this engagement, run before committing to KPI baselines.</span></div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="60" data-of="81"></script>
+</body>
+</html>

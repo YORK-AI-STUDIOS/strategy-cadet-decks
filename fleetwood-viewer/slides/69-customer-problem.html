@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Customer Problem Framework, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+ .cp-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 14px; }
+ .panel-hd { font: 700 10px/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--mr-blue-dark); border-bottom: 2px solid var(--mr-blue-dark); padding-bottom: 5px; margin-bottom: 8px; }
+ .cp-card { padding: 10px 13px; margin-bottom: 7px; border-left: 3px solid; background: #F4F7FB; }
+ .cp-card.b2b { border-left-color: var(--mr-blue-dark); }
+ .cp-card.rv { border-left-color: #3A6B4A; }
+ .cp-num { font: 700 9px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--fg-muted); margin-bottom: 3px; }
+ .cp-title { font: 700 11.5px/1.2 var(--font-sans); color: var(--fg-heading); margin-bottom: 5px; }
+ .cp-body { font: 400 10.5px/1.4 var(--font-sans); color: var(--fg-body); }
+ .cp-example { font: 400 10px/1.35 var(--font-sans); color: var(--fg-muted); font-style: italic; margin-top: 4px; padding-left: 8px; border-left: 2px solid #C8D4E0; }
+ .cp-audience { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; padding: 2px 5px; border-radius: 2px; display: inline-block; margin-top: 4px; }
+ .aud-a1 { background: #EEF2F7; color: var(--mr-blue-dark); }
+ .aud-a2 { background: #E6F4EC; color: #2A5E3A; }
+ .aud-a3 { background: #FFF3CD; color: #7A5000; }
+ .aud-both { background: #F4E8FF; color: #5A2080; }
+ .cp-summary-bar { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; margin-top: 4px; }
+ .csb-item { padding: 10px 12px; background: var(--mr-blue-dark); text-align: center; }
+ .csb-num { font: 700 22px/1 var(--font-sans); color: #fff; }
+ .csb-label { font: 400 10px/1.2 var(--font-sans); color: rgba(255,255,255,0.65); margin-top: 3px; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide" data-screen-label="69 Customer Problem Framework">
+ <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 10 · Extended Analysis · Customer Problem Framework, Seven Named Problems (Section 10)</span></div>
+ <h2 class="sc-h2">Seven distinct named customer problems spanning the modular B2B and RV consumer worlds. Each is framed in the language the buyer would use. The four B2B problems are commercially urgent; the three RV problems are emotionally loaded. <span class="sc-chip sc-chip--probable">Probable</span></h2>
+
+ <div class="cp-layout">
+
+ <div>
+ <div class="panel-hd">B2B problems (modular, 4 of 7)</div>
+
+ <div class="cp-card b2b">
+ <div class="cp-num">Problem 1 of 7</div>
+ <div class="cp-title">Schedule Slippage as Career Risk, Not Commercial Inconvenience</div>
+ <div class="cp-body">Inside Tier 1 contractors and state public-works departments, accommodation delivery slippage is now a career-defining event. A project director who fails to stand up a 1,200-bed village inside the FID-to-first-pour window has personally cost an iron ore expansion months of production.</div>
+ <div class="cp-example">"A Pilbara expansion approved at FID in February needs 1,200 beds operational by the following dry season, any vendor who cannot commit in writing is non-responsive."</div>
+ <span class="cp-audience aud-a1">Audience 1: Resources and Defence</span>
+ </div>
+
+ <div class="cp-card b2b">
+ <div class="cp-num">Problem 2 of 7</div>
+ <div class="cp-title">Probity-Defensibility as the Silent Disqualifier</div>
+ <div class="cp-body">Public-sector modular buyers live inside AusTender, panel arrangements and ministerial briefings. They cannot specify a vendor who lacks the paper trail to survive an Auditor-General review, even if the product is superior. The procurement officer who picks the wrong vendor wears that decision for five years of their career.</div>
+ <div class="cp-example">"A state housing authority needs 800 dwellings in 18 months, the decisive factor between two vendors is which one already sits on the Local Buy panel."</div>
+ <span class="cp-audience aud-a2">Audience 2: Public-Sector Modular</span>
+ </div>
+
+ <div class="cp-card b2b">
+ <div class="cp-num">Problem 3 of 7</div>
+ <div class="cp-title">Retention Erosion at AUD 200,000-Plus Salary Bands</div>
+ <div class="cp-body">Australian resources operators pay record salaries to keep experienced workers on roster. Village amenity is now a retention lever. A workforce costing AUD 500,000 per head per year to replace is worth insuring through premium accommodation.</div>
+ <div class="cp-example">"A coal operator hit 38% rotation turnover, exit interviews consistently named the camp, and the next RFP added a wellbeing-amenity weighting."</div>
+ <span class="cp-audience aud-a1">Audience 1: Resources and Defence</span>
+ </div>
+
+ <div class="cp-card b2b">
+ <div class="cp-num">Problem 4 of 7</div>
+ <div class="cp-title">Psychosocial-Safety Regulatory Drift Outpacing Vendor Product Roadmaps</div>
+ <div class="cp-body">AU WHS regulation now imposes explicit psychosocial-safety duty-of-care on operators. Workforce accommodation procurers must specify rooms and layouts that defend against fatigue, isolation and acoustic stress, but most modular vendor product literature still leads with "modern, comfortable rooms" rather than evidenced wellbeing performance.</div>
+ <div class="cp-example">"An LNG operator after a mental-health incident needs a camp where every room passes an acoustic and privacy audit, with an evidence pack the regulator will accept."</div>
+ <span class="cp-audience aud-a1">Audience 1: Resources and Defence</span>
+ </div>
+ </div>
+
+ <div>
+ <div class="panel-hd">RV / consumer problems (3 of 7)</div>
+
+ <div class="cp-card rv">
+ <div class="cp-num">Problem 5 of 7</div>
+ <div class="cp-title">The Bifurcating Caravan Market Squeezing the Middle</div>
+ <div class="cp-body">The Australian caravan category is splitting into a premium-domestic tier (Jayco at 37% of Australian-made share) and a value-import tier (Chinese-built entry product). Coromal and Windsor sit in the squeezed middle, with neither the scale of Jayco nor the price of imports. "Australian-made" alone has become table stakes rather than a differentiator.</div>
+ <div class="cp-example">"A 62-year-old Perth pre-retiree comparing a AUD 78,000 Coromal against a AUD 62,000 Chinese-built equivalent wants a credible reason to spend the extra AUD 16,000."</div>
+ <span class="cp-audience aud-a3">Audience 3: Grey Nomad Caravan Buyers</span>
+ </div>
+
+ <div class="cp-card rv">
+ <div class="cp-num">Problem 6 of 7</div>
+ <div class="cp-title">Off-Grid Capability Mismatched to Actual Touring Patterns</div>
+ <div class="cp-body">Grey nomad buyers are increasingly off-grid focused but most marketing leads with maximum-spec lithium-solar systems that are over-engineered for typical touring use. The deeper problem is that buyers cannot easily benchmark "what level of off-grid is right for the way we actually want to travel." The category competes on spec-sheet headlines instead of trip-typology guidance.</div>
+ <div class="cp-example">"A recently-retired couple planning three two-month trips per year between caravan parks does not need a 600Ah lithium system, they need a framework matching power and water to their actual trip archetypes."</div>
+ <span class="cp-audience aud-a3">Audience 3: Grey Nomad Caravan Buyers</span>
+ </div>
+
+ <div class="cp-card rv">
+ <div class="cp-num">Problem 7 of 7</div>
+ <div class="cp-title">The Post-Purchase Fade in Dealer Service Network Reliability</div>
+ <div class="cp-body">The most consistent RV customer complaint is not the van itself, it is what happens after the purchase: warranty claims, dealer responsiveness on the road and mid-trip service availability in regional Australia. The forums that grey nomads actually read socialise warranty horror stories and those stories shape brand consideration far more than gloss campaigns.</div>
+ <div class="cp-example">"A Big-Lap couple needs a chassis weld repair in Mount Isa, the brand whose dealer can get them moving inside 72 hours wins the next-van decision and the recommendation to three forum readers."</div>
+ <span class="cp-audience aud-a3">Audience 3: Grey Nomad Caravan Buyers</span>
+ </div>
+
+ <div class="cp-summary-bar">
+ <div class="csb-item"><div class="csb-num">7</div><div class="csb-label">Named problems</div></div>
+ <div class="csb-item"><div class="csb-num">4</div><div class="csb-label">B2B (modular)</div></div>
+ <div class="csb-item"><div class="csb-num">3</div><div class="csb-label">Consumer (RV)</div></div>
+ <div class="csb-item"><div class="csb-num">3</div><div class="csb-label">Value props mapped</div></div>
+ </div>
+ </div>
+
+ </div>
+
+ <div class="sc-source-line"><span class="sc-source">p. 69 · Part 10 · Source: Section 10 Customer Problem. Seven problems identified from Cultural Signals, industry-driver analysis (Section 6), and WHS regulatory trend research. All problems PROBABLE, framed as working hypotheses for the strategist to validate with real buyers before committing to the value proposition slides (p. 70).</span></div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="69" data-of="81"></script>
+</body>
+</html>

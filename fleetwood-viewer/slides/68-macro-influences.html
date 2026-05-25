@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Macroeconomic Influences, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+ .macro-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 14px; }
+ .panel-hd { font: 700 10px/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--mr-blue-dark); border-bottom: 2px solid var(--mr-blue-dark); padding-bottom: 5px; margin-bottom: 8px; }
+ .macro-card { padding: 14px 16px; margin-bottom: 10px; border-left: 4px solid var(--mr-blue-dark); background: #F4F7FB; }
+ .macro-card.negative { border-left-color: #8A2020; background: #FDF0F0; }
+ .macro-card.positive { border-left-color: #3A6B4A; background: #F0F7F2; }
+ .macro-card.split { border-left-color: #8A6030; background: #FFF8EE; }
+ .mc-label { font: 700 9px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
+ .mc-label.neg { color: #8A2020; }
+ .mc-label.pos { color: #3A6B4A; }
+ .mc-label.split { color: #8A6030; }
+ .mc-title { font: 700 12px/1.2 var(--font-sans); color: var(--fg-heading); margin-bottom: 5px; }
+ .mc-body { font: 400 11px/1.4 var(--font-sans); color: var(--fg-body); }
+ .mc-impact { margin-top: 7px; display: flex; gap: 8px; flex-wrap: wrap; }
+ .impact-chip { font: 600 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 7px; border-radius: 2px; }
+ .ic-tailwind { background: #E6F4EC; color: #2A5E3A; }
+ .ic-headwind { background: #FCE4D6; color: #8B3310; }
+ .ic-neutral { background: #EEF2F7; color: var(--mr-blue-dark); }
+ .mc-source { font: 400 9.5px/1 var(--font-sans); color: var(--fg-muted); margin-top: 4px; }
+ .synth-panel { margin-top: 4px; padding: 12px 16px; background: var(--mr-blue-dark); }
+ .sp-label { font: 700 10px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 6px; }
+ .sp-text { font: 400 12px/1.45 var(--font-sans); color: rgba(255,255,255,0.9); }
+ .sp-coinage { font: 700 12px/1.2 var(--font-sans); color: #fff; margin-top: 6px; }
+ .tension-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+ .tension-side { padding: 10px 12px; }
+ .tension-side.industrial { background: #EEF2F7; border-top: 3px solid var(--mr-blue-dark); }
+ .tension-side.consumer { background: #FDF0F0; border-top: 3px solid #8A2020; }
+ .ts-label { font: 700 10px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
+ .ts-label.ind { color: var(--mr-blue-dark); }
+ .ts-label.con { color: #8A2020; }
+ .ts-items { list-style: none; padding: 0; margin: 0; }
+ .ts-items li { font: 400 10.5px/1.4 var(--font-sans); color: var(--fg-body); padding: 2px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+ .ts-items li:last-child { border-bottom: none; }
+ .ts-items li::before { content: "+"; font-weight: 700; margin-right: 4px; color: #3A6B4A; }
+ .ts-items.neg li::before { content: "-"; color: #8A2020; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide" data-screen-label="68 Macroeconomic Influences">
+ <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 10 · Extended Analysis · Macroeconomic Influences, Four Named Factors (Section 7)</span></div>
+ <h2 class="sc-h2">Four macro factors with AU-specific impact on Fleetwood's two-voltage portfolio. Resources and construction conditions favour the 83% industrial side; consumer rate-and-affordability conditions punish the 17% RV side. The Reverse-Tide Portfolio. <span class="sc-chip sc-chip--verified">Verified</span></h2>
+
+ <div class="macro-layout">
+
+ <div>
+ <div class="panel-hd">Four macro factors</div>
+
+ <div class="macro-card negative">
+ <div class="mc-label neg">Factor 1 · Consumer headwind</div>
+ <div class="mc-title">Elevated RBA Cash Rate (4.10%, May 2026)</div>
+ <div class="mc-body">Higher rates compress consumer discretionary spending, directly suppressing big-ticket RV purchases. Coromal and Windsor caravans typically range from AUD 50,000 to AUD 90,000, financed for most buyers. Average mortgage repayments are rising AUD 90 to AUD 150 per month per 25bp hike. Mortgage stress projected to affect up to 1.6 million households (Roy Morgan, Oct 2023). The rate environment is the primary downward pressure on RV Solutions and a secondary moderator on modular residential demand.</div>
+ <div class="mc-impact">
+ <span class="impact-chip ic-headwind">RV Solutions, headwind</span>
+ <span class="impact-chip ic-neutral">Modular residential, secondary</span>
+ </div>
+ <div class="mc-source">Source: Tora Finance RBA decision [112]; Australian Property Update [113]</div>
+ </div>
+
+ <div class="macro-card split">
+ <div class="mc-label split">Factor 2 · Structural tailwind for modular, headwind for consumers</div>
+ <div class="mc-title">National Housing Supply Crisis (10,000+ units annual shortfall)</div>
+ <div class="mc-body">Structural undersupply pulls political and capital allocation toward modular construction as a faster-throughput response. New dwelling construction across major states remains depressed relative to population growth, even as Federal funding ramps up. For Fleetwood Building Solutions the macro is a tailwind; for any consumer-facing brand including Coromal and Windsor, it is a headwind on disposable income and consumer confidence.</div>
+ <div class="mc-impact">
+ <span class="impact-chip ic-tailwind">Building Solutions, tailwind</span>
+ <span class="impact-chip ic-headwind">Consumer brands, headwind</span>
+ </div>
+ <div class="mc-source">Source: houseSEEKER Housing Supply Crisis 2025 [114]; AHURI [115]</div>
+ </div>
+ </div>
+
+ <div>
+ <div class="panel-hd">Four macro factors (continued)</div>
+
+ <div class="macro-card split">
+ <div class="mc-label split">Factor 3 · Moderating but still elevated</div>
+ <div class="mc-title">Construction Input Cost Inflation</div>
+ <div class="mc-body">Construction activity is "expected to be pretty hard through 2026" per industry analysis, with both materials cost and labour cost still well above the pre-pandemic baseline. Modular factory-line economics provide partial protection against on-site labour cost spikes, which is one of the strongest current arguments for the category. Margin pressure remains, but the modular advantage relative to site-built is widening as site wages continue to rise.</div>
+ <div class="mc-impact">
+ <span class="impact-chip ic-tailwind">Modular, competitive advantage</span>
+ <span class="impact-chip ic-neutral">Site-built, margin pressure</span>
+ </div>
+ <div class="mc-source">Source: Property Council Costs surge [106]; The Times Australia 2026 [116]</div>
+ </div>
+
+ <div class="macro-card positive">
+ <div class="mc-label pos">Factor 4 · Industrial tailwind</div>
+ <div class="mc-title">Iron Ore Price Resilience Supporting Pilbara Capex Cycle</div>
+ <div class="mc-body">Despite forecasts of windfall fade, iron ore export volumes are projected to grow into 2026. Tier 1 producers (BHP, Rio Tinto, Fortescue) are committing fresh capex to extend mine lives. BHP committed USD 2B in throughput infrastructure; Rio Tinto approved AUD 294M for Rhodes Ridge feasibility. This sustains demand for Pilbara workforce villages and is the direct macro underwriting Fleetwood's Community Solutions FY25 earnings uplift (+284% NPAT). <span class="sc-chip sc-chip--verified">Verified</span></div>
+ <div class="mc-impact">
+ <span class="impact-chip ic-tailwind">Community Solutions, direct tailwind</span>
+ </div>
+ <div class="mc-source">Source: Mining Weekly [117]; Farmonaut Australian Iron Ore 2026 [118]</div>
+ </div>
+
+ <div class="tension-grid">
+ <div class="tension-side industrial">
+ <div class="ts-label ind">Industrial side (83%), tailwinds</div>
+ <ul class="ts-items">
+ <li>Federal modular mandate AUD 54M direct</li>
+ <li>Construction labour shortage 300,000 by 2027</li>
+ <li>Pilbara capex cycle BHP + Rio Tinto</li>
+ <li>NCC 2025 compliance advantage</li>
+ </ul>
+ </div>
+ <div class="tension-side consumer">
+ <div class="ts-label con">Consumer side (17%), headwinds</div>
+ <ul class="ts-items neg">
+ <li>RBA cash rate 4.10%</li>
+ <li>RV units down 20% category-wide 2024</li>
+ <li>Import price pressure on mid-market</li>
+ <li>Mortgage stress 1.6M households</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+
+ </div>
+
+ <div class="synth-panel">
+ <div class="sp-label">Strategic synthesis</div>
+ <div class="sp-text">The Australian macro environment in 2026 is structurally bifurcating Fleetwood's portfolio. Resources and construction conditions favour the 83% industrial side; consumer rate-and-affordability conditions punish the 17% RV side.</div>
+ <div class="sp-coinage">Strategist coinage: "The Reverse-Tide Portfolio." Two tides moving in opposite directions inside one balance sheet. <span class="sc-chip sc-chip--probable">Probable</span></div>
+ </div>
+
+ <div class="sc-source-line"><span class="sc-source">p. 68 · Part 10 · Source: Section 7 Macroeconomic Influences. Four factors identified. RBA rate data VERIFIED (public record). Housing supply figures PROBABLE (AHURI, houseSEEKER). Construction cost data PROBABLE (Property Council). Iron ore projections VERIFIED (Farmonaut, Mining Weekly). Roy Morgan mortgage stress figure from October 2023, may be stale; see data gaps register [63].</span></div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="68" data-of="81"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Industry Drivers and Barriers, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+ .drivers-layout { display: grid; grid-template-columns: minmax(0, 780px) 1fr; gap: 40px; margin-top: 18px; align-items: start; }
+
+ /* Hex wheel */
+ .hex-wheel { position: relative; width: 720px; height: 480px; }
+
+ /* Driver cards */
+ .driver-list { display: flex; flex-direction: column; gap: 14px; }
+ .driver-card { padding: 14px 16px; border-left: 4px solid; display: flex; flex-direction: column; gap: 5px; }
+ .driver-card.tailwind { border-color: #00D084; background: #F2FBF6; }
+ .driver-card.headwind { border-color: #E68A2D; background: #FFF6EB; }
+ .dc-type { font: 700 11px/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; }
+ .driver-card.tailwind .dc-type { color: #00A86B; }
+ .driver-card.headwind .dc-type { color: #C0681A; }
+ .dc-title { font: 700 var(--t-body)/1.2 var(--font-sans); color: var(--fg-heading); }
+ .dc-body { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide" data-screen-label="05 Industry Drivers and Barriers">
+ <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 01 · The Market · Industry Drivers and Barriers</span></div>
+ <h2 class="sc-h2">Six forces shaping Fleetwood's two operating environments.</h2>
+
+ <div class="drivers-layout">
+ <div>
+ <!-- Hexagonal driver wheel SVG -->
+ <svg viewBox="0 0 720 480" xmlns="http://www.w3.org/2000/svg" width="720" height="480">
+ <defs>
+ <!-- Flat-top hex path helper: cx,cy, r=90 -->
+ <!-- Flat-top hex: points offset by 30deg from pointy-top -->
+ </defs>
+ <!-- Centre label -->
+ <text x="360" y="228" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="13" font-weight="700" fill="#2E4A63" letter-spacing="1">FLEETWOOD</text>
+ <text x="360" y="246" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" fill="#5A9BD5" letter-spacing="1">TWO VOLTAGES</text>
+
+ <!-- Centre hex -->
+ <polygon points="360,175 437,218 437,302 360,345 283,302 283,218" fill="#E8EEF6" stroke="#4971B7" stroke-width="2"/>
+
+ <!-- DRIVER 1 top, Federal Policy -->
+ <polygon points="360,85 437,128 437,212 360,255 283,212 283,128" fill="#E8F7F0" stroke="#00D084" stroke-width="2" transform="translate(0,-90)"/>
+ <text x="360" y="102" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" font-weight="700" fill="#00A86B">TAILWIND</text>
+ <text x="360" y="116" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">Federal</text>
+ <text x="360" y="130" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">Modular</text>
+ <text x="360" y="144" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">Mandate</text>
+ <text x="360" y="160" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="9" fill="#3D7A5A">AUD 54M direct</text>
+
+ <!-- DRIVER 2 top-right, Labour shortage -->
+ <polygon points="360,85 437,128 437,212 360,255 283,212 283,128" fill="#E8F7F0" stroke="#00D084" stroke-width="2" transform="translate(156,-45)"/>
+ <text x="516" y="112" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" font-weight="700" fill="#00A86B">TAILWIND</text>
+ <text x="516" y="126" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">Labour</text>
+ <text x="516" y="140" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">Shortage</text>
+ <text x="516" y="156" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="9" fill="#3D7A5A">300K gap by 2027</text>
+
+ <!-- DRIVER 3 bottom-right, Pilbara cycle -->
+ <polygon points="360,85 437,128 437,212 360,255 283,212 283,128" fill="#E8F7F0" stroke="#00D084" stroke-width="2" transform="translate(156,45)"/>
+ <text x="516" y="202" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" font-weight="700" fill="#00A86B">TAILWIND</text>
+ <text x="516" y="216" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">Pilbara</text>
+ <text x="516" y="230" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">Capex Cycle</text>
+ <text x="516" y="246" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="9" fill="#3D7A5A">993Mt forecast FY26</text>
+
+ <!-- DRIVER 4 bottom, NCC 2025 -->
+ <polygon points="360,85 437,128 437,212 360,255 283,212 283,128" fill="#E8F7F0" stroke="#00D084" stroke-width="2" transform="translate(0,90)"/>
+ <text x="360" y="372" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" font-weight="700" fill="#00A86B">TAILWIND</text>
+ <text x="360" y="386" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">NCC 2025</text>
+ <text x="360" y="400" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">Compliance</text>
+ <text x="360" y="416" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="9" fill="#3D7A5A">Modular wins on audit</text>
+
+ <!-- HEADWIND 5 bottom-left, RV demand contraction -->
+ <polygon points="360,85 437,128 437,212 360,255 283,212 283,128" fill="#FFF3E8" stroke="#E68A2D" stroke-width="2" transform="translate(-156,45)"/>
+ <text x="204" y="202" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" font-weight="700" fill="#C0681A">HEADWIND</text>
+ <text x="204" y="216" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">RV Demand</text>
+ <text x="204" y="230" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">Contraction</text>
+ <text x="204" y="246" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="9" fill="#C0681A">-20% units 2024</text>
+
+ <!-- HEADWIND 6 top-left, Import competition -->
+ <polygon points="360,85 437,128 437,212 360,255 283,212 283,128" fill="#FFF3E8" stroke="#E68A2D" stroke-width="2" transform="translate(-156,-45)"/>
+ <text x="204" y="112" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" font-weight="700" fill="#C0681A">HEADWIND</text>
+ <text x="204" y="126" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">Import</text>
+ <text x="204" y="140" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">Competition</text>
+ <text x="204" y="156" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="9" fill="#C0681A">Middle RV squeezed</text>
+
+ <!-- Centre label -->
+ <polygon points="360,175 437,218 437,302 360,345 283,302 283,218" fill="#E8EEF6" stroke="#4971B7" stroke-width="2.5"/>
+ <text x="360" y="252" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="12" font-weight="800" fill="#2E4A63">FLEETWOOD</text>
+ <text x="360" y="270" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" fill="#5A9BD5">TWO VOLTAGES</text>
+ <text x="360" y="288" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="9" fill="#4971B7">83% industrial</text>
+ <text x="360" y="302" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="9" fill="#4971B7">17% consumer</text>
+ </svg>
+ <div class="sc-source-line"><span class="sc-source">Source: Build Australia [105]; Property Council [106]; Farmonaut [107][108]; The Good Builder [109]; Caravan Industry Association [110]; FY25 Annual Report [2]</span></div>
+ </div>
+
+ <div class="driver-list">
+ <div class="driver-card tailwind">
+ <div class="dc-type">Tailwind · Modular</div>
+ <div class="dc-title">Federal Modular Mandate</div>
+ <div class="dc-body">AUD 54M direct + AUD 120M National Productivity Fund committed in 2025-26 Budget to accelerate prefabricated and modular homes uptake. Most significant Federal policy tailwind the AU modular sector has ever received. [105] <span class="sc-chip sc-chip--verified">Verified</span></div>
+ </div>
+ <div class="driver-card tailwind">
+ <div class="dc-type">Tailwind · Modular</div>
+ <div class="dc-title">Severe Construction Labour Shortage</div>
+ <div class="dc-body">300,000 worker gap projected by 2027. Factory modular substitutes capital for site labour, compressing schedules and protecting margins against wage inflation. [106] <span class="sc-chip sc-chip--verified">Verified</span></div>
+ </div>
+ <div class="driver-card tailwind">
+ <div class="dc-type">Tailwind · Community Solutions</div>
+ <div class="dc-title">Pilbara Iron Ore Capex Cycle</div>
+ <div class="dc-body">Production forecast 993.4Mt in FY26. BHP US$2B infrastructure commitment; Rio Tinto AUD 294M for Rhodes Ridge. Every fresh expansion requires new or refurbished workforce villages. Searipple Village named as FY25 Community Solutions earnings driver. [107][108] <span class="sc-chip sc-chip--verified">Verified</span></div>
+ </div>
+ <div class="driver-card tailwind">
+ <div class="dc-type">Tailwind · Modular</div>
+ <div class="dc-title">NCC 2025 Compliance Advantage</div>
+ <div class="dc-body">Tighter energy-performance, embodied-carbon disclosure, and accessibility standards. Factory modular is structurally better placed to meet these requirements. Reframes modular from "faster and cheaper" to "compliant and auditable." [109] <span class="sc-chip sc-chip--probable">Probable</span></div>
+ </div>
+ <div class="driver-card headwind">
+ <div class="dc-type">Headwind · RV Solutions</div>
+ <div class="dc-title">Caravan Demand Contraction</div>
+ <div class="dc-body">25,185 RVs manufactured in 2024, down 20% year on year. Cost-of-living pressure and elevated interest rates suppressing big-ticket consumer discretionary spending. Fleetwood RV down ~6% but beating category. [110][111] <span class="sc-chip sc-chip--verified">Verified</span></div>
+ </div>
+ <div class="driver-card headwind">
+ <div class="dc-type">Headwind · RV Solutions</div>
+ <div class="dc-title">Import Competition vs Australian-Made Premium</div>
+ <div class="dc-body">Chinese-manufactured caravans pressuring entry-level pricing. Category bifurcating into premium-domestic and value-import with the middle squeezed. Coromal and Windsor sit in the contested middle, the most vulnerable position. [110] <span class="sc-chip sc-chip--probable">Probable</span></div>
+ </div>
+ </div>
+ </div>
+
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="05" data-of="81"></script>
+</body>
+</html>

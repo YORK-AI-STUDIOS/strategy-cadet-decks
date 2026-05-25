@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Source Coverage Summary, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .src-layout { margin-top: 14px; display: grid; grid-template-columns: minmax(0, 880px) 340px; gap: 24px; align-items: start; }
+
+  .chart-title { font: 700 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 5px; }
+
+  .panel-hd { font: 700 10px/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--mr-blue-dark); border-bottom: 2px solid var(--mr-blue-dark); padding-bottom: 5px; margin-bottom: 8px; }
+
+  .agent-row { display: grid; grid-template-columns: 76px 1fr 52px 90px; gap: 8px; padding: 6px 0; border-bottom: 1px solid #E8EEF6; align-items: start; }
+  .agent-row:last-child { border-bottom: none; }
+  .agent-id { font: 700 var(--t-caption)/1 var(--font-sans); color: var(--mr-blue-dark); padding-top: 1px; }
+  .agent-desc { font: 400 var(--t-caption)/1.35 var(--font-sans); color: var(--fg-body); }
+  .agent-cites { font: 700 var(--t-caption)/1 var(--font-sans); color: var(--fg-heading); text-align: right; padding-top: 1px; }
+  .agent-conf { font: 400 10px/1.2 var(--font-sans); color: var(--fg-muted); text-align: right; }
+
+  .src-stat-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 12px; }
+  .stat-item { padding: 10px 12px; background: var(--mr-blue-dark); text-align: center; }
+  .stat-num { font: 700 22px/1 var(--font-sans); color: #fff; }
+  .stat-label { font: 400 9px/1.2 var(--font-sans); color: rgba(255,255,255,0.65); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.06em; }
+
+  .phase3-box { padding: 10px 12px; background: #E6F4EC; border-left: 4px solid #3A6B4A; margin-top: 8px; }
+  .p3-label { font: 700 9px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: #3A6B4A; margin-bottom: 4px; }
+  .p3-text { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide" data-screen-label="64 Source Coverage Summary">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 09 · Appendix · Source Coverage Summary</span></div>
+  <h2 class="sc-h2">Six specialist agents, seven extension modules, approximately 191 numbered citations, three discovery phases. Phase 3 cross-reference resolved one critical auditor correction (PwC to Ernst and Young Australia) before this deck was built.</h2>
+
+  <div class="src-layout">
+
+    <!-- LEFT: pie chart + agent summary -->
+    <div>
+      <div class="chart-title">Source-type breakdown, 191 citations across 7 categories</div>
+
+      <!--
+        Source categories estimated from existing slide content:
+        1. ASX filings / annual reports: ~25 (13.1%)
+        2. Government / regulatory: ~28 (14.7%)
+        3. Market research / industry reports: ~22 (11.5%)
+        4. Trade and business press: ~45 (23.6%)
+        5. Review / employer platforms: ~18 (9.4%)
+        6. Competitor public disclosures: ~41 (21.5%)
+        7. Corporate registry / legal: ~12 (6.3%)
+        Total = 191
+
+        Pie SVG: cx=140, cy=120, r=90. Circumference = 2*PI*90 = 565.5
+        Using stroke-dasharray on circles with cumulative rotation.
+
+        Segment sizes in px (565.5 total):
+        1. ASX: 13.1% = 74.1px. rotate(-90)
+        2. Gov: 14.7% = 83.1px. cumulative after 1: -90+13.1*3.6=-90+47.2=-42.8 -> rotate(-42.8)
+        3. MktRes: 11.5% = 65.0px. cumul: -42.8+14.7*3.6=-42.8+52.9=10.1 -> rotate(10.1)
+        4. Trade: 23.6% = 133.5px. cumul: 10.1+11.5*3.6=10.1+41.4=51.5 -> rotate(51.5)
+        5. Reviews: 9.4% = 53.2px. cumul: 51.5+23.6*3.6=51.5+85.0=136.5 -> rotate(136.5)
+        6. Competitor: 21.5% = 121.6px. cumul: 136.5+9.4*3.6=136.5+33.8=170.3 -> rotate(170.3)
+        7. Registry: 6.3% = 35.6px. cumul: 170.3+21.5*3.6=170.3+77.4=247.7 -> rotate(247.7)
+      -->
+
+      <svg viewBox="0 0 820 260" preserveAspectRatio="xMidYMid meet" aria-label="Source type pie chart" style="width:100%; max-height:255px; display:block;">
+
+        <!-- Segment 1: ASX filings (dark blue) -->
+        <circle cx="140" cy="130" r="90" stroke="#1B3A5C" stroke-width="52" fill="none"
+                stroke-dasharray="74.1 491.4" transform="rotate(-90 140 130)" stroke-linecap="butt"/>
+
+        <!-- Segment 2: Government/regulatory (mid blue) -->
+        <circle cx="140" cy="130" r="90" stroke="#2E5F8A" stroke-width="52" fill="none"
+                stroke-dasharray="83.1 482.4" transform="rotate(-42.8 140 130)" stroke-linecap="butt"/>
+
+        <!-- Segment 3: Market research (steel blue) -->
+        <circle cx="140" cy="130" r="90" stroke="#4971B7" stroke-width="52" fill="none"
+                stroke-dasharray="65.0 500.5" transform="rotate(10.1 140 130)" stroke-linecap="butt"/>
+
+        <!-- Segment 4: Trade press (amber) -->
+        <circle cx="140" cy="130" r="90" stroke="#C56A00" stroke-width="52" fill="none"
+                stroke-dasharray="133.5 432.0" transform="rotate(51.5 140 130)" stroke-linecap="butt"/>
+
+        <!-- Segment 5: Reviews/employer (slate) -->
+        <circle cx="140" cy="130" r="90" stroke="#6B7E96" stroke-width="52" fill="none"
+                stroke-dasharray="53.2 512.3" transform="rotate(136.5 140 130)" stroke-linecap="butt"/>
+
+        <!-- Segment 6: Competitor disclosures (green) -->
+        <circle cx="140" cy="130" r="90" stroke="#3A6B4A" stroke-width="52" fill="none"
+                stroke-dasharray="121.6 443.9" transform="rotate(170.3 140 130)" stroke-linecap="butt"/>
+
+        <!-- Segment 7: Corporate registry (light slate) -->
+        <circle cx="140" cy="130" r="90" stroke="#8A9AAE" stroke-width="52" fill="none"
+                stroke-dasharray="35.6 529.9" transform="rotate(247.7 140 130)" stroke-linecap="butt"/>
+
+        <!-- Centre text -->
+        <text x="140" y="124" text-anchor="middle" font-family="Open Sans" font-size="26" font-weight="800" fill="#2E4A63" letter-spacing="-1">191</text>
+        <text x="140" y="139" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#9AA3AD" letter-spacing="1.5" font-weight="600">CITATIONS</text>
+
+        <!-- Legend: right of chart, two columns -->
+        <!-- Col 1 -->
+        <rect x="290" y="18" width="12" height="12" rx="2" fill="#1B3A5C"/>
+        <text x="307" y="28" font-family="Open Sans" font-size="10" font-weight="700" fill="#1B3A5C">ASX filings + annual reports</text>
+        <text x="307" y="40" font-family="Open Sans" font-size="9" fill="#6B7E96">~25 citations  ·  13.1%  ·  [2][162]-[180]</text>
+
+        <rect x="290" y="52" width="12" height="12" rx="2" fill="#2E5F8A"/>
+        <text x="307" y="62" font-family="Open Sans" font-size="10" font-weight="700" fill="#2E5F8A">Government + regulatory</text>
+        <text x="307" y="74" font-family="Open Sans" font-size="9" fill="#6B7E96">~28 citations  ·  14.7%  ·  [18]-[25][105][106]</text>
+
+        <rect x="290" y="86" width="12" height="12" rx="2" fill="#4971B7"/>
+        <text x="307" y="96" font-family="Open Sans" font-size="10" font-weight="700" fill="#4971B7">Market research + industry reports</text>
+        <text x="307" y="108" font-family="Open Sans" font-size="9" fill="#6B7E96">~22 citations  ·  11.5%  ·  [24][26]-[30][40]</text>
+
+        <rect x="290" y="120" width="12" height="12" rx="2" fill="#C56A00"/>
+        <text x="307" y="130" font-family="Open Sans" font-size="10" font-weight="700" fill="#C56A00">Trade + business press</text>
+        <text x="307" y="142" font-family="Open Sans" font-size="9" fill="#6B7E96">~45 citations  ·  23.6%  ·  [133]-[145]</text>
+
+        <rect x="290" y="154" width="12" height="12" rx="2" fill="#6B7E96"/>
+        <text x="307" y="164" font-family="Open Sans" font-size="10" font-weight="700" fill="#6B7E96">Review + employer platforms</text>
+        <text x="307" y="176" font-family="Open Sans" font-size="9" fill="#6B7E96">~18 citations  ·  9.4%  ·  [182]-[190]</text>
+
+        <rect x="290" y="188" width="12" height="12" rx="2" fill="#3A6B4A"/>
+        <text x="307" y="198" font-family="Open Sans" font-size="10" font-weight="700" fill="#3A6B4A">Competitor public disclosures</text>
+        <text x="307" y="210" font-family="Open Sans" font-size="9" fill="#6B7E96">~41 citations  ·  21.5%  ·  [60]-[100]</text>
+
+        <rect x="290" y="222" width="12" height="12" rx="2" fill="#8A9AAE"/>
+        <text x="307" y="232" font-family="Open Sans" font-size="10" font-weight="700" fill="#8A9AAE">Corporate registry + legal</text>
+        <text x="307" y="244" font-family="Open Sans" font-size="9" fill="#6B7E96">~12 citations  ·  6.3%  ·  [Section 8]</text>
+      </svg>
+
+      <div style="margin-top:6px; padding-top:6px; border-top:1px solid var(--bg-rule);">
+        <p style="margin:0; font:400 italic var(--t-caption)/1.4 var(--font-sans); color:var(--fg-muted);">Source registry compiled across all modules and extensions, 2026-05-25. Citation counts approximate; source report carries numbered footnotes [1]-[191+]. Full citation list in Citations appendix (pp. 73-75).</p>
+      </div>
+    </div>
+
+    <!-- RIGHT: agent summary + phase 3 box -->
+    <div>
+      <div class="src-stat-grid">
+        <div class="stat-item"><div class="stat-num">~191</div><div class="stat-label">Numbered citations</div></div>
+        <div class="stat-item"><div class="stat-num">6</div><div class="stat-label">Specialist agents</div></div>
+        <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">Discovery phases</div></div>
+      </div>
+
+      <div class="panel-hd">Agent output summary</div>
+      <div class="agent-row">
+        <div class="agent-id">Module 01</div>
+        <div class="agent-desc">Industry Intelligence: market sizing, macroeconomic influences, industry drivers, ESOV, competitor profiles, corporate forensics</div>
+        <div class="agent-cites">~80</div>
+        <div class="agent-conf">VERIFIED / PROBABLE</div>
+      </div>
+      <div class="agent-row">
+        <div class="agent-id">Module 02</div>
+        <div class="agent-desc">Brand Intelligence: Brand DNA (15 nodes), messaging themes, brand personality, purpose and mission</div>
+        <div class="agent-cites">~20</div>
+        <div class="agent-conf">PROBABLE</div>
+      </div>
+      <div class="agent-row">
+        <div class="agent-id">Module 03</div>
+        <div class="agent-desc">Audience Intelligence: three audience profiles, cultural signals, purchase drivers, CEPs (7 per audience)</div>
+        <div class="agent-cites">~30</div>
+        <div class="agent-conf">PROBABLE / HYPOTHESISED</div>
+      </div>
+      <div class="agent-row">
+        <div class="agent-id">Module 04</div>
+        <div class="agent-desc">Brand Strategy: emerging business trends, Innovation Builder (3 audiences), 10 brand opportunities, 4 strategy pillars, 5 actions</div>
+        <div class="agent-cites">~15</div>
+        <div class="agent-conf">PROBABLE / HYPOTHESISED</div>
+      </div>
+      <div class="agent-row">
+        <div class="agent-id">Module 05</div>
+        <div class="agent-desc">Business Planning: strategic goal, sanity check, KPI tree, 9 initiatives, 180-day roadmap, operating cadence, 6 kill-switches</div>
+        <div class="agent-cites">~10</div>
+        <div class="agent-conf">PROBABLE / ESTIMATED</div>
+      </div>
+      <div class="agent-row">
+        <div class="agent-id">Module 06</div>
+        <div class="agent-desc">Per-Audience Marketing Plans: three complete plans, channel mix, messaging, creative direction, budget allocation and measurement</div>
+        <div class="agent-cites">~5</div>
+        <div class="agent-conf">HYPOTHESISED</div>
+      </div>
+      <div class="agent-row">
+        <div class="agent-id">Extensions</div>
+        <div class="agent-desc">GEO Tracking, News and PR, Reviews Aggregation, Competitive Context Addendum</div>
+        <div class="agent-cites">~30</div>
+        <div class="agent-conf">VERIFIED / PROBABLE</div>
+      </div>
+
+      <div class="phase3-box">
+        <div class="p3-label">Phase 3 cross-reference finding (resolved)</div>
+        <div class="p3-text">Phase 3 flagged a critical discrepancy: the discovery source named PwC as Fleetwood's auditor. Phase 3 cross-reference against Fleetwood FY25 Annual Report [2] confirmed the actual auditor is <strong>Ernst and Young Australia</strong>, signing partner <strong>Fiona Drummond</strong>, Perth. The correction was applied to the source report before this deck was built. This is one of two structural moats Strategy Cadet has over generic brand-intelligence tools. <span class="sc-chip sc-chip--verified">Verified</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="sc-source-line"><span class="sc-source">p. 64 · Part 09 · Source registry compiled across all agents and extensions, 2026-05-25. Exact citation counts are approximate; the source report carries numbered footnotes [1]-[191+] throughout. The Phase 3 cross-reference log is held separately. Full citation list appears in the Citations appendix (pp. 73-75).</span></div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="64" data-of="81"></script>
+</body>
+</html>
