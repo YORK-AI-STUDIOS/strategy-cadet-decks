@@ -21,6 +21,9 @@ html, body { margin: 0; padding: 0; background: #1a1f2b; font-family: 'Open Sans
 .sc-slide { position: absolute; top: 0; left: 0; width: 1920px; height: 1080px; transform-origin: 0 0; overflow: hidden; }
 /* CANVAS-FILL-FIX 2026-05-25 23:18 AEST: original .ig + .title-slide had no width/height (relied on deck-stage). Force them to fill the slide canvas. */
 .sc-slide .ig, .sc-slide .title-slide { width: 1920px !important; height: 1080px !important; }
+/* OVERFLOW-FIX 2026-05-25 23:24 AEST: original .ig has overflow:hidden which was fine in deck-stage but clips bottom content (.p0-band black bar + .ig-foot york studios row) in our wrapper. Allow overflow so the bottom band renders. The outer .sc-slide still clips at 1080. */
+.sc-slide .ig { overflow: visible !important; }
+.sc-slide .title-slide { overflow: visible !important; }
 
 
   :root {
