@@ -1,237 +1,1054 @@
 <!DOCTYPE html>
 <!--
 =============================================================================
-Slide 02 (combined deck) — StratCadet Overview, What it delivers (8 chapters)
-Infographic page 2 of 4, rebuilt as Cadet-native HTML slide.
-White background, MR-blue accents kept (page 1 carries the grey gradient).
+Slide 02 (combined deck) — StratCadet Overview infographic page 2 of 4
+Rebuilt from the ORIGINAL print HTML (Strategy Cadet Infographic-print.html)
+per Stuart visual review 2026-05-25 23:03 AEST.
+Confidence chips updated to new palette (PROBABLE teal, ESTIMATED purple).
+Page 1 gradient overridden to charcoal per Stuart 22:54 AEST.
 =============================================================================
 -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>StratCadet Overview, What it delivers, Strategy Cadet</title>
-<link rel="stylesheet" href="slide-base.css">
-<link rel="stylesheet" href="palette-fleetwood.css">
+<title>02 StratCadet Overview What it delivers, Strategy Cadet</title>
+<link rel="stylesheet" href="colors_and_type.css">
 <style>
-  .chapt .sc-body-frame { display: flex; flex-direction: column; height: 100%; padding-top: 4px; }
-  .chapt .head h2 { margin: 0; font: 800 48px/1.1 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.015em; max-width: 1500px; }
-  .chapt .head h2 .alt { color: #4971B7; }
-  .chapt .head .sub { margin-top: 12px; font: 400 17px/1.45 var(--font-sans); color: var(--fg-body); max-width: 1300px; }
+/* Base slide canvas — chassis-compatible 1920×1080 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #1a1f2b; font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+.sc-stage { position: fixed; inset: 0; overflow: hidden; background: #1a1f2b; }
+.sc-slide { position: absolute; top: 0; left: 0; width: 1920px; height: 1080px; transform-origin: 0 0; overflow: hidden; }
 
-  .chapt .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin: 28px 0; padding: 20px 0; border-top: 1px solid var(--bg-rule); border-bottom: 1px solid var(--bg-rule); }
-  .chapt .hs { display: flex; align-items: baseline; gap: 14px; }
-  .chapt .hs .v { font: 800 36px/1 var(--font-sans); color: #4971B7; letter-spacing: -0.02em; }
-  .chapt .hs .l {
-    font: 700 11px/1.3 var(--font-sans);
-    color: var(--fg-body);
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
+
+  :root {
+    --cf-verified-bg:    #00D084;
+    --cf-verified-tint:  #E4FAF1;
+    --cf-probable-bg:    #3B8FA1;
+    --cf-probable-tint:  #EBF4F7;
+    --cf-estimated-bg:   #7B5EA8;
+    --cf-estimated-tint: #F1ECF8;
+    --cf-hypoth-bg:      #6B7E96;
+    --cf-hypoth-tint:    #ECF0F5;
+
+    --ink:               #15181F;
+    --bg-pale:           #F4F7FB;
+    --bg-cool:           #EEF3F9;
   }
 
-  .chapt .grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 14px; flex: 1; min-height: 0; }
-  .chapt .card {
-    background: #F4F7FB;
-    border-top: 4px solid #4971B7;
-    padding: 14px 16px;
+  html, body { background: #14181F; margin: 0; }
+  deck-stage { background: #14181F; }
+  deck-stage section { background: #14181F; }
+
+  /* ============================================================
+     PAGE FRAME
+     ============================================================ */
+  .ig {
+    background: #FFFFFF;
+    color: var(--fg-heading);
+    font-family: var(--font-sans);
+    padding: 64px 88px 96px;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
   }
-  .chapt .card.gold   { border-top-color: #FCB900; }
-  .chapt .card.green  { border-top-color: #00D084; }
-  .chapt .card.purple { border-top-color: #7B5EA8; }
-  .chapt .card.teal   { border-top-color: #3B8FA1; }
-  .chapt .card.orange { border-top-color: #E68A2D; }
-  .chapt .card.slate  { border-top-color: #6B7E96; }
+  .ig-cadet-mark {
+    position: absolute;
+    top: 36px;
+    right: 88px;
+    height: 52px;
+  }
+  .ig-cadet-mark img { height: 100%; width: auto; display: block; }
 
-  .chapt .card .top-row { display: flex; justify-content: space-between; align-items: center; }
-  .chapt .card .ch-num {
-    font: 700 12px/1 var(--font-sans);
+  .ig-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font: 600 14px/1 var(--font-sans);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--fg-body);
+  }
+  .ig-eyebrow .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--mr-blue-dark); }
+  .ig-eyebrow .sep { color: #C8CFD8; }
+  .ig-eyebrow .accent { color: var(--mr-blue-dark); }
+
+  .ig-foot {
+    position: absolute;
+    bottom: 32px;
+    left: 88px;
+    right: 88px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font: 400 12px/1 var(--font-sans);
+    color: var(--fg-muted);
+    letter-spacing: 0.04em;
+  }
+  .ig-foot .york { height: 22px; }
+  .ig-foot .right { display: flex; gap: 28px; align-items: center; }
+
+  /* ============================================================
+     PAGE 1 — WHAT THE REPORT DELIVERS
+     8 deliverable chapters as a visual grid
+     ============================================================ */
+  .p0-hero {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .p0-hero .accent-bar { width: 80px; height: 6px; background: var(--mr-blue-dark); }
+  .p0-hero h1 {
+    margin: 0;
+    font: 800 60px/1.02 var(--font-sans);
+    letter-spacing: -0.022em;
+    color: var(--fg-heading);
+    text-wrap: balance;
+    max-width: 1620px;
+  }
+  .p0-hero h1 .em { color: var(--mr-blue-dark); }
+  .p0-hero .lede {
+    font: 400 18px/1.45 var(--font-sans);
+    color: var(--fg-body);
+    max-width: 1200px;
+    text-wrap: pretty;
+  }
+  .p0-hero .topstats {
+    margin-top: 6px;
+    display: flex;
+    gap: 36px;
+    align-items: baseline;
+    border-top: 2px solid var(--fg-heading);
+    border-bottom: 1px solid var(--bg-rule);
+    padding: 14px 0;
+  }
+  .p0-hero .topstats .ts { display: flex; align-items: baseline; gap: 12px; }
+  .p0-hero .topstats .ts .v {
+    font: 800 36px/1 var(--font-sans);
+    color: var(--mr-blue-dark);
+    letter-spacing: -0.024em;
+  }
+  .p0-hero .topstats .ts .l {
+    font: 700 11px/1.2 var(--font-sans);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--fg-body);
+  }
+  .p0-hero .topstats .sep {
+    width: 1px; height: 36px;
+    background: var(--bg-rule);
+  }
+
+  /* 8-section grid: 4×2 */
+  .chapters {
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: min-content;
+    column-gap: 14px;
+    row-gap: 36px;
+  }
+  .chap {
+    background: var(--bg-pale);
+    padding: 12px 18px 14px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    overflow: hidden;
+  }
+  .chap::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 5px;
+    background: var(--chap-accent, var(--mr-blue-dark));
+  }
+  .chap .chap-ic {
+    position: absolute;
+    top: 18px;
+    right: 14px;
+    width: 100px;
+    height: 100px;
+    color: var(--chap-accent, var(--mr-blue-dark));
+    z-index: 0;
+    opacity: 0.92;
+  }
+  .chap .chap-ic svg { width: 100%; height: 100%; display: block; }
+  .chap .head-row {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-top: 4px;
+    padding-right: 110px;
+    position: relative;
+    z-index: 1;
+  }
+  .chap .num {
+    font: 800 13px/1 var(--font-sans);
+    letter-spacing: 0.18em;
+    color: var(--chap-accent, var(--mr-blue-dark));
+  }
+  .chap .pill {
+    font: 700 10px/1 var(--font-sans);
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--fg-muted);
+    margin-left: auto;
   }
-  .chapt .card .ch-cat {
-    font: 700 12px/1 var(--font-sans);
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: #4971B7;
+  .chap .stat-row {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-top: 2px;
+    padding-right: 110px;
+    position: relative;
+    z-index: 1;
   }
-  .chapt .card.gold .ch-cat { color: #C56A00; }
-  .chapt .card.green .ch-cat { color: #008F58; }
-  .chapt .card.purple .ch-cat { color: #5E4080; }
-  .chapt .card.teal .ch-cat { color: #1E6F80; }
-  .chapt .card.orange .ch-cat { color: #B5651A; }
-  .chapt .card.slate .ch-cat { color: #4A5566; }
-
-  .chapt .card .big-num { font: 800 36px/1 var(--font-sans); color: #4971B7; letter-spacing: -0.02em; }
-  .chapt .card.gold .big-num { color: #C56A00; }
-  .chapt .card.green .big-num { color: #008F58; }
-  .chapt .card.purple .big-num { color: #5E4080; }
-  .chapt .card.teal .big-num { color: #1E6F80; }
-  .chapt .card.orange .big-num { color: #B5651A; }
-  .chapt .card.slate .big-num { color: #4A5566; }
-
-  .chapt .card .num-sub {
-    font: 700 10px/1.2 var(--font-sans);
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--fg-body);
+  .chap .stat {
+    font: 800 44px/1 var(--font-sans);
+    letter-spacing: -0.028em;
+    color: var(--chap-accent, var(--mr-blue-dark));
+    flex-shrink: 0;
   }
-  .chapt .card .ch-title {
-    font: 700 16px/1.25 var(--font-sans);
+  .chap .stat .sup {
+    font: 800 20px/1 var(--font-sans);
+    vertical-align: 18px;
+    letter-spacing: 0;
+  }
+  .chap .stat-meta {
+    display: flex; flex-direction: column; gap: 2px;
+  }
+  .chap .stat-meta .title {
+    font: 800 20px/1.15 var(--font-sans);
     color: var(--fg-heading);
+    letter-spacing: -0.012em;
+    text-wrap: balance;
     margin-top: 2px;
   }
-  .chapt .card ul {
-    margin: 6px 0 0;
-    padding-left: 16px;
-    list-style: none;
+  .chap .stat-meta .label {
+    font: 700 10px/1 var(--font-sans);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--chap-accent, var(--mr-blue-dark));
   }
-  .chapt .card ul li {
+  .chap .bullets {
+    margin: 4px 0 0;
+    padding: 6px 0 0;
+    border-top: 1px solid var(--bg-rule);
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
     position: relative;
-    font: 400 12px/1.5 var(--font-sans);
-    color: var(--fg-body);
-    margin-bottom: 2px;
+    z-index: 1;
   }
-  .chapt .card ul li::before {
+  .chap .bullets li {
+    list-style: none;
+    font: 400 12px/1.35 var(--font-sans);
+    color: var(--fg-body);
+    padding-left: 12px;
+    position: relative;
+  }
+  .chap .bullets li::before {
     content: '';
     position: absolute;
-    left: -12px;
-    top: 7px;
-    width: 4px;
-    height: 4px;
-    background: #4971B7;
+    left: 0; top: 7px;
+    width: 5px; height: 5px;
+    background: var(--chap-accent, var(--mr-blue-dark));
   }
-  .chapt .card.gold ul li::before { background: #C56A00; }
-  .chapt .card.green ul li::before { background: #008F58; }
-  .chapt .card.purple ul li::before { background: #5E4080; }
-  .chapt .card.teal ul li::before { background: #1E6F80; }
-  .chapt .card.orange ul li::before { background: #B5651A; }
-  .chapt .card.slate ul li::before { background: #4A5566; }
+  /* Per-chapter accent colours, cycling through the palette */
+  .chap.c1 { --chap-accent: var(--mr-blue-dark); }
+  .chap.c2 { --chap-accent: var(--mr-blue-light); }
+  .chap.c3 { --chap-accent: var(--series-tertiary); }
+  .chap.c4 { --chap-accent: #00875A; }
+  .chap.c5 { --chap-accent: var(--mr-blue-dark); }
+  .chap.c6 { --chap-accent: var(--mr-blue-light); }
+  .chap.c7 { --chap-accent: var(--series-tertiary); }
+  .chap.c8 { --chap-accent: #B57400; }
 
-  .chapt .footer-band {
-    background: #1A1A1A;
+  /* Closing band on page 1 */
+  .p0-band {
+    margin-top: 120px;
+    background: var(--ink);
     color: #fff;
-    padding: 14px 20px;
+    padding: 16px 32px;
+    display: flex; align-items: center; gap: 24px;
+  }
+  .p0-band .lead {
+    font: 800 22px/1.15 var(--font-sans);
+    color: #3B8FA1;
+    letter-spacing: -0.008em;
+    flex-shrink: 0;
+    max-width: 440px;
+  }
+  .p0-band .pipe {
+    width: 1px; height: 36px;
+    background: rgba(255,255,255,0.25);
+    flex-shrink: 0;
+  }
+  .p0-band .body {
+    font: 400 14px/1.4 var(--font-sans);
+    color: rgba(255,255,255,0.85);
+    padding-right: 200px;
+  }
+  .p0-band .body strong { color: #fff; font-weight: 700; }
+
+  /* ============================================================
+     PAGE 2 — THE ENGINE
+     Big hero stat + six data layers + closing band
+     ============================================================ */
+
+  /* Hero: monumental headline left, gigantic numeric badge right */
+  .p1-hero {
     margin-top: 18px;
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 56px;
+    align-items: stretch;
+  }
+  .p1-hero .left { display: flex; flex-direction: column; gap: 18px; padding-top: 12px; }
+  .p1-hero .left .accent-bar { width: 80px; height: 6px; background: var(--mr-blue-dark); }
+  .p1-hero .left h1 {
+    margin: 0;
+    font: 800 76px/1.0 var(--font-sans);
+    letter-spacing: -0.022em;
+    color: var(--fg-heading);
+    text-wrap: balance;
+  }
+  .p1-hero .left h1 .em { color: var(--mr-blue-dark); }
+  .p1-hero .left .lede {
+    font: 400 20px/1.45 var(--font-sans);
+    color: var(--fg-body);
+    max-width: 720px;
+    text-wrap: pretty;
+  }
+  .p1-hero .left .lede strong { color: var(--fg-heading); font-weight: 700; }
+
+  .p1-hero .right {
+    background: var(--mr-blue-dark);
+    color: #fff;
+    padding: 32px 36px 36px;
+    display: flex; flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+  .p1-hero .right::before {
+    content: '';
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+  }
+  .p1-hero .right .agent-ic {
+    position: absolute;
+    top: 26px;
+    right: 30px;
+    width: 110px;
+    height: 110px;
+    z-index: 1;
+  }
+  .p1-hero .right .agent-ic svg { width: 100%; height: 100%; display: block; }
+  .p1-hero .right .badge {
+    font: 700 12px/1 var(--font-sans);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #3B8FA1;
+    margin-bottom: 6px;
+  }
+  .p1-hero .right .head {
+    font: 800 36px/1.08 var(--font-sans);
+    letter-spacing: -0.018em;
+    margin-bottom: 22px;
+    max-width: 460px;
+    text-wrap: balance;
+  }
+  .p1-hero .right .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-top: 1px solid rgba(255,255,255,0.22);
+  }
+  .p1-hero .right .gx {
+    padding: 16px 18px 16px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.22);
+    display: flex; align-items: baseline; gap: 14px;
+  }
+  .p1-hero .right .gx:nth-child(2n) { padding-left: 18px; border-left: 1px solid rgba(255,255,255,0.22); padding-right: 0; }
+  .p1-hero .right .gx:nth-child(n+3) { border-bottom: none; }
+  .p1-hero .right .gx .v {
+    font: 800 56px/1 var(--font-sans);
+    letter-spacing: -0.028em;
+    color: #fff;
+    min-width: 110px;
+  }
+  .p1-hero .right .gx .v .sub { font: 700 22px/1 var(--font-sans); color: #3B8FA1; letter-spacing: 0; }
+  .p1-hero .right .gx .meta { display: flex; flex-direction: column; gap: 3px; }
+  .p1-hero .right .gx .meta .l {
+    font: 700 11px/1 var(--font-sans);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #3B8FA1;
+  }
+  .p1-hero .right .gx .meta .d {
+    font: 400 13px/1.3 var(--font-sans);
+    color: rgba(255,255,255,0.85);
+  }
+
+  /* Section heading */
+  .p1-sec-hd {
     display: flex;
-    gap: 24px;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--fg-heading);
+    padding-bottom: 12px;
+    margin: 36px 0 24px;
+  }
+  .p1-sec-hd .title {
+    font: 800 22px/1 var(--font-sans);
+    letter-spacing: -0.005em;
+    color: var(--fg-heading);
+  }
+  .p1-sec-hd .meta {
+    font: 400 14px/1 var(--font-sans);
+    color: var(--fg-muted);
+    letter-spacing: 0.04em;
+  }
+
+  /* Six data layers grid */
+  .layers {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+  }
+  .layer {
+    background: var(--bg-pale);
+    padding: 20px 20px 20px;
+    border-top: 4px solid var(--mr-blue-dark);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 200px;
+  }
+  .layer:nth-child(2) { border-top-color: var(--mr-blue-light); }
+  .layer:nth-child(3) { border-top-color: var(--series-tertiary); }
+  .layer:nth-child(4) { border-top-color: var(--mr-blue-dark); }
+  .layer:nth-child(5) { border-top-color: var(--mr-blue-light); }
+  .layer:nth-child(6) { border-top-color: var(--series-tertiary); }
+  .layer .ic {
+    width: 52px; height: 52px;
+    color: var(--mr-blue-dark);
+    flex-shrink: 0;
+  }
+  .layer .ic svg { width: 100%; height: 100%; display: block; }
+  .layer .num {
+    font: 700 10px/1 var(--font-sans);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--mr-blue-dark);
+  }
+  .layer .name {
+    font: 800 22px/1.18 var(--font-sans);
+    color: var(--fg-heading);
+    letter-spacing: -0.012em;
+    text-wrap: balance;
+  }
+  .layer .sources {
+    margin-top: auto;
+    font: 400 12px/1.4 var(--font-sans);
+    color: var(--fg-body);
+    border-top: 1px solid var(--bg-rule);
+    padding-top: 8px;
+  }
+
+  /* Closing band */
+  .p1-band {
+    margin-top: 24px;
+    background: var(--ink);
+    color: #fff;
+    padding: 18px 32px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 32px;
     align-items: center;
   }
-  .chapt .footer-band .fb-hd {
-    font: 800 16px/1.2 var(--font-sans);
-    color: #FCB900;
-    white-space: nowrap;
+  .p1-band .lead {
+    font: 800 24px/1.15 var(--font-sans);
+    color: #3B8FA1;
+    letter-spacing: -0.008em;
+    max-width: 480px;
+    text-wrap: balance;
   }
-  .chapt .footer-band .fb-body {
-    font: 400 13px/1.4 var(--font-sans);
-    color: rgba(255,255,255,0.88);
+  .p1-band .body {
+    font: 400 14px/1.45 var(--font-sans);
+    color: rgba(255,255,255,0.85);
+    max-width: 900px;
+    padding-right: 180px;
   }
-  .chapt .footer-band .fb-body strong { color: #fff; font-weight: 700; }
+  .p1-band .body strong { color: #fff; font-weight: 700; }
+
+  /* ============================================================
+     PAGE 2 — WHAT SETS IT APART
+     Two moats + four confidence tiers
+     ============================================================ */
+
+  .p2-hero {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .p2-hero .accent-bar { width: 80px; height: 6px; background: var(--mr-blue-dark); }
+  .p2-hero h1 {
+    margin: 0;
+    font: 800 62px/1.0 var(--font-sans);
+    letter-spacing: -0.022em;
+    color: var(--fg-heading);
+    text-wrap: balance;
+    max-width: 1600px;
+  }
+  .p2-hero h1 .em { color: var(--mr-blue-dark); }
+  .p2-hero .lede {
+    font: 400 18px/1.45 var(--font-sans);
+    color: var(--fg-body);
+    max-width: 1200px;
+    text-wrap: pretty;
+  }
+
+  /* Moats block — two billboard cards side by side */
+  .moats2 {
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .moat2 {
+    background: var(--bg-pale);
+    padding: 22px 26px 22px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .moat2.m1 { border-top: 6px solid var(--mr-blue-dark); }
+  .moat2.m2 { border-top: 6px solid var(--cf-verified-bg); background: #EAFAF1; }
+  .moat2 .top {
+    display: flex; align-items: center; gap: 14px;
+    font: 700 12px/1 var(--font-sans);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--mr-blue-dark);
+  }
+  .moat2.m2 .top { color: #02875A; }
+  .moat2 .top .n {
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    background: var(--mr-blue-dark);
+    color: #fff;
+    font: 800 16px/1 var(--font-sans);
+    letter-spacing: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .moat2.m2 .top .n { background: #02875A; }
+  .moat2 h3 {
+    margin: 0;
+    font: 800 26px/1.12 var(--font-sans);
+    color: var(--fg-heading);
+    letter-spacing: -0.012em;
+    text-wrap: balance;
+  }
+  .moat2 .desc {
+    font: 400 13px/1.45 var(--font-sans);
+    color: var(--fg-body);
+    max-width: 740px;
+  }
+
+  /* Moat 1 — three sanity tests */
+  .tests {
+    margin-top: 4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+  .test {
+    background: #FFFFFF;
+    padding: 14px 14px 14px;
+    border-left: 3px solid var(--mr-blue-dark);
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .test .n {
+    font: 700 10px/1 var(--font-sans);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--mr-blue-dark);
+  }
+  .test .name {
+    font: 800 15px/1.2 var(--font-sans);
+    color: var(--fg-heading);
+    letter-spacing: -0.005em;
+  }
+  .test .q {
+    font: 400 12px/1.4 var(--font-sans);
+    color: var(--fg-body);
+  }
+
+  /* Moat 2 — caught-example panel */
+  .caught {
+    margin-top: 4px;
+    background: #FFFFFF;
+    padding: 16px 18px;
+    border-left: 3px solid #02875A;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .caught .lbl {
+    font: 700 10px/1 var(--font-sans);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #02875A;
+  }
+  .caught .example {
+    font: italic 400 15px/1.4 var(--font-sans);
+    color: var(--fg-heading);
+  }
+  .caught .resolve {
+    display: flex; align-items: center; gap: 8px;
+    font: 700 12px/1 var(--font-sans);
+    color: #02875A;
+    letter-spacing: 0.04em;
+  }
+  .caught .resolve .tick {
+    width: 18px; height: 18px;
+    background: #02875A;
+    color: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font: 800 12px/1 var(--font-sans);
+  }
+
+  /* Confidence — full-width section */
+  .p2-cf-hd {
+    margin-top: 24px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--fg-heading);
+    display: flex; align-items: baseline; justify-content: space-between;
+  }
+  .p2-cf-hd .title {
+    font: 800 22px/1 var(--font-sans);
+    color: var(--fg-heading);
+    letter-spacing: -0.005em;
+  }
+  .p2-cf-hd .meta {
+    font: 400 14px/1 var(--font-sans);
+    color: var(--fg-muted);
+    letter-spacing: 0.04em;
+  }
+
+  .cf4 {
+    margin-top: 14px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+  .cf4 .card {
+    background: var(--card-bg);
+    padding: 16px 18px 18px;
+    display: flex; flex-direction: column;
+    gap: 6px;
+    min-height: 140px;
+    position: relative;
+  }
+  .cf4 .card .chip-row { display: flex; align-items: center; gap: 12px; }
+  .cf4 .card .chip {
+    display: inline-flex;
+    align-items: center;
+    height: 68px;
+    padding: 0 22px;
+    background: var(--card-accent);
+    color: #FFFFFF;
+    font: 800 40px/1 var(--font-sans);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 2px;
+  }
+  .cf4 .card.p .chip { color: #1A1A1A; }
+  .cf4 .card .strength {
+    font: 700 11px/1 var(--font-sans);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--fg-muted);
+    margin-left: auto;
+  }
+  .cf4 .card h4 {
+    margin: 0;
+    font: 800 17px/1.2 var(--font-sans);
+    color: var(--fg-heading);
+    letter-spacing: -0.005em;
+    text-wrap: balance;
+  }
+  .cf4 .card p {
+    margin: 0;
+    font: 400 12px/1.45 var(--font-sans);
+    color: var(--fg-body);
+    text-wrap: pretty;
+  }
+  .cf4 .card.v { --card-bg: var(--cf-verified-tint); --card-accent: var(--cf-verified-bg); }
+  .cf4 .card.p { --card-bg: var(--cf-probable-tint); --card-accent: var(--cf-probable-bg); }
+  .cf4 .card.e { --card-bg: var(--cf-estimated-tint); --card-accent: var(--cf-estimated-bg); }
+  .cf4 .card.h { --card-bg: var(--cf-hypoth-tint); --card-accent: var(--cf-hypoth-bg); }
+
+  /* Closing band */
+  .p2-band {
+    margin-top: 18px;
+    background: var(--ink);
+    color: #fff;
+    padding: 16px 32px;
+    display: flex; align-items: center; gap: 24px;
+  }
+  .p2-band .lead {
+    font: 800 20px/1.15 var(--font-sans);
+    color: #3B8FA1;
+    letter-spacing: -0.005em;
+    flex-shrink: 0;
+  }
+  .p2-band .body {
+    font: 400 14px/1.4 var(--font-sans);
+    color: rgba(255,255,255,0.85);
+    padding-right: 180px;
+  }
+  .p2-band .body strong { color: #fff; font-weight: 700; }
+  .p2-band .pipe {
+    width: 1px; height: 36px;
+    background: rgba(255,255,255,0.25);
+    flex-shrink: 0;
+  }
+
+  /* ============================================================
+     PAGE 0 — TITLE PAGE (cover)
+     Blue gradient, big white logo, dictionary-style definitions
+     ============================================================ */
+  .title-slide {
+    background: linear-gradient(135deg, #5A9BD5 0%, #4971B7 100%);
+    color: #fff;
+    padding: 56px 88px 64px;
+    display: grid;
+    grid-template-columns: 720px 1fr;
+    grid-template-rows: auto 1fr auto;
+    column-gap: 64px;
+    row-gap: 0;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 1920px;
+    height: 1080px;
+  }
+  /* Decorative blob top-right */
+  .title-slide::before {
+    content: '';
+    position: absolute;
+    top: -260px; right: -200px;
+    width: 700px; height: 700px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+    z-index: 0;
+  }
+  .title-slide::after {
+    content: '';
+    position: absolute;
+    bottom: -300px; left: -180px;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+    z-index: 0;
+  }
+  .title-slide > * { position: relative; z-index: 1; }
+
+  .title-eyebrow-row {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font: 600 14px/1 var(--font-sans);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.72);
+  }
+  .title-eyebrow-row .dot { width: 8px; height: 8px; border-radius: 50%; background: #3B8FA1; }
+  .title-eyebrow-row .sep { color: rgba(255,255,255,0.32); }
+  .title-eyebrow-row .accent { color: #fff; }
+
+  .title-logo-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+  }
+  .title-logo-block .mascot {
+    width: 600px;
+    height: 600px;
+    object-fit: contain;
+    display: block;
+    margin-left: -40px;
+  }
+
+  .title-defs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 28px;
+    padding-top: 28px;
+  }
+  .t-def {
+    border-top: 1px solid rgba(255,255,255,0.32);
+    padding-top: 14px;
+  }
+  .t-def.featured {
+    border-top: 3px solid #3B8FA1;
+    padding-top: 14px;
+  }
+  .t-def .word {
+    font: 800 44px/1 var(--font-sans);
+    letter-spacing: -0.015em;
+    color: #fff;
+    margin: 0 0 8px;
+  }
+  .t-def.featured .word { color: #3B8FA1; }
+  .t-def .word .syl {
+    color: rgba(255,255,255,0.55);
+    font-weight: 400;
+    margin: 0 2px;
+  }
+  .t-def.featured .word .syl { color: rgba(252,185,0,0.55); }
+  .t-def .meta {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 8px;
+    font: 400 16px/1 var(--font-sans);
+  }
+  .t-def .meta .pron {
+    color: rgba(255,255,255,0.85);
+    font-family: 'Open Sans', serif;
+    letter-spacing: 0.02em;
+  }
+  .t-def .meta .pos {
+    color: rgba(255,255,255,0.6);
+    font-style: italic;
+  }
+  .t-def .body {
+    font: 400 16px/1.45 var(--font-sans);
+    color: rgba(255,255,255,0.92);
+    max-width: 720px;
+    text-wrap: pretty;
+  }
+
+  .title-bottom-row {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.22);
+    margin-top: 24px;
+  }
+  .title-tagline {
+    font: 800 38px/1.08 var(--font-sans);
+    color: #3B8FA1;
+    letter-spacing: -0.014em;
+    max-width: 820px;
+    text-wrap: balance;
+  }
+  .title-attrib {
+    text-align: right;
+    font: 400 14px/1.5 var(--font-sans);
+    color: rgba(255,255,255,0.7);
+  }
+  .title-attrib .org { color: #fff; font-weight: 700; font-size: 16px; display: block; margin-bottom: 2px; letter-spacing: 0.02em; }
+  .title-attrib .meta-line { letter-spacing: 0.04em; }
+
+  /* Foot for the title page */
+  .title-slide .ig-foot {
+    bottom: 24px;
+    color: rgba(255,255,255,0.62);
+  }
+
+  deck-stage::part(rail) { display: none; }
+
+
+
 </style>
 </head>
 <body>
 <div class="sc-stage">
-<section class="sc-slide chapt" data-screen-label="02 StratCadet Overview What it delivers">
-  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Strategy Cadet  ·  What it delivers  ·  One report. Every angle of the brief.</span></div>
-  <div class="sc-body-frame">
-
-    <div class="head">
-      <h2>From brand DNA to media plan. <span class="alt">One report. Every angle the strategist needs.</span></h2>
-      <div class="sub">A complete brand discovery package. Every chapter sourced, confidence-tagged, and ready to brief.</div>
+<div class="sc-slide">
+<section class="ig">
+        <div class="ig-eyebrow">
+      <span class="dot"></span>
+      <span class="accent">Strategy Cadet</span>
+      <span class="sep">·</span>
+      <span>What it delivers</span>
+      <span class="sep">·</span>
+      <span>One report. Every angle of the brief.</span>
     </div>
 
-    <div class="hero-stats">
-      <div class="hs"><span class="v">8</span><span class="l">Chapters<br>per report</span></div>
-      <div class="hs"><span class="v">40k+</span><span class="l">Words of<br>strategic intelligence</span></div>
-      <div class="hs"><span class="v">300+</span><span class="l">Cited sources,<br>every claim footnoted</span></div>
-      <div class="hs"><span class="v">80+</span><span class="l">Boardroom-ready<br>dossier</span></div>
+    <div class="p0-hero">
+      <div class="accent-bar"></div>
+      <h1>From brand DNA to media plan. <span class="em">One report. Every angle the strategist needs.</span></h1>
+      <div class="lede">A complete brand discovery package. Every chapter sourced, confidence-tagged, and ready to brief.</div>
+      <div class="topstats">
+        <div class="ts"><span class="v">8</span><span class="l">Chapters<br>per report</span></div>
+        <div class="sep"></div>
+        <div class="ts"><span class="v">40k+</span><span class="l">Words of<br>strategic intelligence</span></div>
+        <div class="sep"></div>
+        <div class="ts"><span class="v">300+</span><span class="l">Cited sources,<br>every claim footnoted</span></div>
+        <div class="sep"></div>
+        <div class="ts"><span class="v">80+</span><span class="l">Boardroom-ready<br>dossier</span></div>
+      </div>
     </div>
 
-    <div class="grid">
-      <div class="card">
-        <div class="top-row"><span class="ch-num">01</span><span class="ch-cat">Brand</span></div>
-        <div class="big-num">16 <span class="num-sub">DIMENSIONS</span></div>
-        <div class="ch-title">Brand DNA, top to bottom.</div>
-        <ul>
+    <div class="chapters">
+      <!-- 01 BRAND -->
+      <div class="chap c1">
+        <div class="chap-ic"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4c0 10 20 10 20 18s-20 8-20 18"></path><path d="M32 4c0 10-20 10-20 18s20 8 20 18"></path><path d="M14 12h16"></path><path d="M14 22h16"></path><path d="M14 32h16"></path></svg></div>
+        <div class="head-row"><span class="num">01</span><span class="pill">Brand</span></div>
+        <div class="stat-row">
+          <div class="stat">16</div>
+          <div class="stat-meta">
+            <div class="label">Dimensions</div>
+            <div class="title">Brand DNA, top to bottom.</div>
+          </div>
+        </div>
+        <ul class="bullets">
           <li>Three messaging themes</li>
           <li>Voice and personality profile</li>
           <li>Founder story and origin</li>
         </ul>
       </div>
 
-      <div class="card teal">
-        <div class="top-row"><span class="ch-num">02</span><span class="ch-cat">Audiences</span></div>
-        <div class="big-num">3 <span class="num-sub">NAMED AUDIENCES</span></div>
-        <div class="ch-title">Profiles a creative can actually brief.</div>
-        <ul>
+      <!-- 02 AUDIENCES -->
+      <div class="chap c2">
+        <div class="chap-ic"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="22" cy="12" r="5"></circle><circle cx="10" cy="16" r="4"></circle><circle cx="34" cy="16" r="4"></circle><path d="M13 36c0-5 4-9 9-9s9 4 9 9"></path><path d="M3 35c0-4 3-7 7-7"></path><path d="M41 35c0-4-3-7-7-7"></path></svg></div>
+        <div class="head-row"><span class="num">02</span><span class="pill">Audiences</span></div>
+        <div class="stat-row">
+          <div class="stat">3</div>
+          <div class="stat-meta">
+            <div class="label">Named audiences</div>
+            <div class="title">Profiles a creative can actually brief.</div>
+          </div>
+        </div>
+        <ul class="bullets">
           <li>Psychographic profile</li>
           <li>Cultural signals, purchase drivers</li>
           <li>Category entry points</li>
         </ul>
       </div>
 
-      <div class="card green">
-        <div class="top-row"><span class="ch-num">03</span><span class="ch-cat">Competitors</span></div>
-        <div class="big-num">6 <span class="num-sub">PROFILED IN DEPTH</span></div>
-        <div class="ch-title">Competitor forensics, not just logos.</div>
-        <ul>
+      <!-- 03 COMPETITORS -->
+      <div class="chap c3">
+        <div class="chap-ic"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="22" cy="22" r="16"></circle><circle cx="22" cy="22" r="10"></circle><circle cx="22" cy="22" r="4" fill="currentColor"></circle><path d="M22 2v8"></path><path d="M38 14L30 22"></path></svg></div>
+        <div class="head-row"><span class="num">03</span><span class="pill">Competitors</span></div>
+        <div class="stat-row">
+          <div class="stat">6</div>
+          <div class="stat-meta">
+            <div class="label">Profiled in depth</div>
+            <div class="title">Competitor forensics, not just logos.</div>
+          </div>
+        </div>
+        <ul class="bullets">
           <li>Ownership, financials, ESG</li>
           <li>Litigation history</li>
           <li>Side-by-side positioning matrix</li>
         </ul>
       </div>
 
-      <div class="card gold">
-        <div class="top-row"><span class="ch-num">04</span><span class="ch-cat">Market</span></div>
-        <div class="big-num">6-8 <span class="num-sub">EMERGING TRENDS</span></div>
-        <div class="ch-title">Sized, dated, and pressure-tested.</div>
-        <ul>
+      <!-- 04 MARKET -->
+      <div class="chap c4">
+        <div class="chap-ic"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 38h36"></path><rect x="7" y="24" width="6" height="14"></rect><rect x="17" y="16" width="6" height="22"></rect><rect x="27" y="8" width="6" height="30"></rect><path d="M4 14l8-6 8 4 12-8"></path><path d="M28 4h4v4"></path></svg></div>
+        <div class="head-row"><span class="num">04</span><span class="pill">Market</span></div>
+        <div class="stat-row">
+          <div class="stat">6–8</div>
+          <div class="stat-meta">
+            <div class="label">Emerging trends</div>
+            <div class="title">Sized, dated, and pressure-tested.</div>
+          </div>
+        </div>
+        <ul class="bullets">
           <li>Market sizing, industry drivers</li>
           <li>Macroeconomic factors</li>
           <li>Forward-looking trend read</li>
         </ul>
       </div>
 
-      <div class="card purple">
-        <div class="top-row"><span class="ch-num">05</span><span class="ch-cat">Strategy</span></div>
-        <div class="big-num">4 <span class="num-sub">STRATEGY PILLARS</span></div>
-        <div class="ch-title">Named, defensible, ready to brief.</div>
-        <ul>
+      <!-- 05 STRATEGY -->
+      <div class="chap c5">
+        <div class="chap-ic"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4v36"></path><path d="M10 6h22l-5 8 5 8H10"></path></svg></div>
+        <div class="head-row"><span class="num">05</span><span class="pill">Strategy</span></div>
+        <div class="stat-row">
+          <div class="stat">4</div>
+          <div class="stat-meta">
+            <div class="label">Strategy pillars</div>
+            <div class="title">Named, defensible, ready to brief.</div>
+          </div>
+        </div>
+        <ul class="bullets">
           <li>Customer problem themes, value props</li>
           <li>Named brand opportunity ideas</li>
           <li>Five recommended actions</li>
         </ul>
       </div>
 
-      <div class="card">
-        <div class="top-row"><span class="ch-num">06</span><span class="ch-cat">Innovation</span></div>
-        <div class="big-num">10 <span class="num-sub">INNOVATION TYPES</span></div>
-        <div class="ch-title">Deloitte Ten Types, per audience.</div>
-        <ul>
+      <!-- 06 INNOVATION -->
+      <div class="chap c6">
+        <div class="chap-ic"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4c-7 0-12 5-12 12 0 5 3 8 6 10v6h12v-6c3-2 6-5 6-10 0-7-5-12-12-12z"></path><path d="M17 38h10"></path><path d="M19 42h6"></path></svg></div>
+        <div class="head-row"><span class="num">06</span><span class="pill">Innovation</span></div>
+        <div class="stat-row">
+          <div class="stat">10</div>
+          <div class="stat-meta">
+            <div class="label">Innovation types</div>
+            <div class="title">Deloitte Ten Types, per audience.</div>
+          </div>
+        </div>
+        <ul class="bullets">
           <li>Innovation matrix per audience</li>
           <li>Mapped across the three audiences</li>
           <li>Concrete plays, not categories</li>
         </ul>
       </div>
 
-      <div class="card slate">
-        <div class="top-row"><span class="ch-num">07</span><span class="ch-cat">Business Plan</span></div>
-        <div class="big-num">180 <span class="num-sub">DAY ROADMAP</span></div>
-        <div class="ch-title">Goal, KPI tree, initiatives.</div>
-        <ul>
+      <!-- 07 BUSINESS PLAN -->
+      <div class="chap c7">
+        <div class="chap-ic"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 30l8-14 10 8 10-16 8 22"></path><circle cx="4" cy="30" r="2.5" fill="currentColor" stroke="none"></circle><circle cx="12" cy="16" r="2.5" fill="currentColor" stroke="none"></circle><circle cx="22" cy="24" r="2.5" fill="currentColor" stroke="none"></circle><circle cx="32" cy="8" r="2.5" fill="currentColor" stroke="none"></circle><circle cx="40" cy="30" r="2.5" fill="currentColor" stroke="none"></circle></svg></div>
+        <div class="head-row"><span class="num">07</span><span class="pill">Business Plan</span></div>
+        <div class="stat-row">
+          <div class="stat">180</div>
+          <div class="stat-meta">
+            <div class="label">Day roadmap</div>
+            <div class="title">Goal, KPI tree, initiatives.</div>
+          </div>
+        </div>
+        <ul class="bullets">
           <li>Strategic goal and KPI tree</li>
           <li>Three tiers of prioritised initiatives</li>
           <li>Operating cadence, named kill-switches</li>
         </ul>
       </div>
 
-      <div class="card orange">
-        <div class="top-row"><span class="ch-num">08</span><span class="ch-cat">Marketing</span></div>
-        <div class="big-num">7 <span class="num-sub">SECTIONS &times; 3 AUDIENCES</span></div>
-        <div class="ch-title">A real activation plan, not a brief.</div>
-        <ul>
+      <!-- 08 MARKETING ACTIVATION -->
+      <div class="chap c8">
+        <div class="chap-ic"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 26V18l24-8v24L6 26z"></path><path d="M6 26H3v-8h3"></path><path d="M34 16c2 2 2 8 0 12"></path><path d="M10 26v8h4l2-6"></path></svg></div>
+        <div class="head-row"><span class="num">08</span><span class="pill">Marketing</span></div>
+        <div class="stat-row">
+          <div class="stat">7</div>
+          <div class="stat-meta">
+            <div class="label">Sections × 3 audiences</div>
+            <div class="title">A real activation plan, not a brief.</div>
+          </div>
+        </div>
+        <ul class="bullets">
           <li>Channel mix, funnel-stage messaging</li>
           <li>Creative direction, budget allocation</li>
           <li>Measurement framework, tactics</li>
@@ -239,13 +1056,21 @@ White background, MR-blue accents kept (page 1 carries the grey gradient).
       </div>
     </div>
 
-    <div class="footer-band">
-      <div class="fb-hd">Eight chapters. One brief.</div>
-      <div class="fb-body">A <strong>40,000-word boardroom-ready dossier</strong> covering everything a senior strategist would normally spend 60-80 hours producing. Sourced. Confidence-tagged. Defensible at the line-item level.</div>
+    <div class="p0-band" style="gap: 44px; align-items: baseline; padding: 16px 32px; margin: 50px 0px 0px">
+      <div class="lead" style="font-size: 25px;">Eight chapters. One brief.</div>
+      <div class="pipe"></div>
+      <div class="body" style="font-size: 25px">A <strong>40,000-word boardroom-ready dossier</strong> covering everything a senior strategist would normally spend 60–80 hours producing. Sourced. Confidence-tagged. Defensible at the line-item level.</div>
     </div>
 
-  </div>
-</section>
+    <div class="ig-foot">
+      <div class="left"><img class="york" src="../assets/logos/York-Studios-logo-slogan.png" alt="York Studios"></div>
+      <div class="right">
+        <span>© 2026 York Studios. Strategy Cadet is a York Studios product. Melbourne, Australia.</span>
+        <span>02 / 04</span>
+      </div>
+    </div>
+  </section>
+</div>
 </div>
 <script src="_scale.js"></script>
 <script src="_chrome.js" data-page="02" data-of="85"></script>
