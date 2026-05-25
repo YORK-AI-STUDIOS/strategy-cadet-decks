@@ -721,12 +721,16 @@ html, body {
    Locked per Stuart 2026-05-25 23:55 AEST. === */
 .report-divider-band {
   background: #FFD200;
+  cursor: pointer;
+  transition: filter 0.12s, transform 0.12s;
   color: #1A1A1A;
   padding: 16px 14px;
   margin: 10px 0;
   text-align: center;
   border-radius: 2px;
 }
+.report-divider-band:hover { filter: brightness(0.93); }
+.report-divider-band:active { transform: translateY(1px); }
 .report-divider-band .rd-brand {
   font: 700 11px/1 'Open Sans', -apple-system, sans-serif;
   letter-spacing: 0.18em;
@@ -1011,7 +1015,7 @@ function renderIndexView() {
           </div>
         </div>
         ${i === 0 ? `
-          <div class="report-divider-band">
+          <div class="report-divider-band" data-slide="6">
             <div class="rd-brand">Fleetwood</div>
             <div class="rd-main">Discovery Report</div>
           </div>` : ''}
@@ -1046,7 +1050,7 @@ function renderCadetView() {
           </div>
         </div>
         ${i === 0 ? `
-          <div class="report-divider-band">
+          <div class="report-divider-band" data-slide="6">
             <div class="rd-brand">Fleetwood</div>
             <div class="rd-main">Discovery Report</div>
           </div>` : ''}
@@ -1108,7 +1112,7 @@ function renderCadetView() {
 // Wire click handlers on every .index-sub-item that carries a data-slide
 // attribute. Clicking jumps the viewer to that slide and re-renders.
 function wireIndexSubClicks(root) {
-  root.querySelectorAll('.index-sub-item[data-slide]').forEach(el => {
+  root.querySelectorAll('.index-sub-item[data-slide], .report-divider-band[data-slide]').forEach(el => {
     el.addEventListener('click', e => {
       e.stopPropagation();
       const target = parseInt(el.dataset.slide, 10);
