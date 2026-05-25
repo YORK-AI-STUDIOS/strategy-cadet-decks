@@ -39,12 +39,14 @@
   /* ---------------------------------------------------------------------------
      3. CONFIDENCE CHIPS  (data-quality flag on every synthesis claim)
      --------------------------------------------------------------------------- */
-  /* 4-tier confidence system locked 2026-05-24. Red retired from chips —
-     reserved for crisis flags + forbidden callouts only. */
+  /* 4-tier confidence system locked 2026-05-24, palette revised 2026-05-25.
+     PROBABLE + ESTIMATED moved away from amber/orange (read as warnings) to
+     deep-teal + muted-purple (read as confidence/considered/calculated).
+     Red retired from chips — reserved for crisis flags + forbidden callouts only. */
   --chip-verified-bg:     #00D084;   --chip-verified-fg:     #FFFFFF;  /* externally confirmed */
-  --chip-probable-bg:     #FCB900;   --chip-probable-fg:     #1A1A1A;  /* externally sourced, partial */
-  --chip-estimated-bg:    #E68A2D;   --chip-estimated-fg:    #FFFFFF;  /* numeric estimate from available data */
-  --chip-hypothesised-bg: #6B7E96;   --chip-hypothesised-fg: #FFFFFF;  /* AI synthesis, working hypothesis */
+  --chip-probable-bg:     #3B8FA1;   --chip-probable-fg:     #FFFFFF;  /* deep teal, considered, secondary source */
+  --chip-estimated-bg:    #7B5EA8;   --chip-estimated-fg:    #FFFFFF;  /* muted purple, calculated from data */
+  --chip-hypothesised-bg: #6B7E96;   --chip-hypothesised-fg: #FFFFFF;  /* cool slate, AI synthesis */
   /* Legacy alias — UNCERTAIN repointed to HYPOTHESISED slate during slide migration.
      Retire this alias after the audit lands. Do not introduce new UNCERTAIN usage. */
   --chip-uncertain-bg:    #6B7E96;   --chip-uncertain-fg:    #FFFFFF;
