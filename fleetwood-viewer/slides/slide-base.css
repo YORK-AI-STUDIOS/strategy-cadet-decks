@@ -287,4 +287,16 @@ html, body {
   display: block;
 }
 .sc-subject-mark.cover    { top: 80px;  left: 120px; width: 480px; }
-.sc-subject-mark.divider  { top: 100px; right: 120px; width: 220px; }
+/* Divider: bottom-left, under the numeral (per Stuart 2026-05-25 22:36 AEST).
+   Numeral baseline ends ~y=720; logo sits below at bottom:100 to clear chrome. */
+.sc-subject-mark.divider  { bottom: 110px; left: 120px; width: 320px; }
+
+/* ---------- Divider-specific chrome alignment (Stuart 2026-05-25 22:36 AEST) ----
+   On dividers, the Strategy Cadet chrome logo's LEFT edge aligns with the
+   right-side TOC text margin. TOC is `right:120px; width:580px` so its left
+   edge sits at x = 1920 - 120 - 580 = 1220. Override the universal chrome
+   position to align there. */
+.sc-slide.divider .sc-chrome-cadet {
+  right: auto;
+  left: 1220px;
+}
