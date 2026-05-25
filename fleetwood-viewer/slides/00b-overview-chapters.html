@@ -885,6 +885,17 @@ html, body { margin: 0; padding: 0; background: #1a1f2b; font-family: 'Open Sans
 
 
 
+
+/* LABEL-BUMP-FORCE 2026-05-25 23:25 AEST: Stuart not seeing earlier 14px bump.
+   Force chapter labels (DIMENSIONS / NAMED AUDIENCES / etc.) much bigger
+   with !important to defeat any cascade interference. */
+.sc-slide .chap .stat-meta .label,
+.sc-slide section.ig .chap .stat-meta .label,
+.chap .stat-meta .label {
+  font: 800 18px/1.2 var(--font-sans) !important;
+  letter-spacing: 0.12em !important;
+}
+
 </style>
 </head>
 <body>
