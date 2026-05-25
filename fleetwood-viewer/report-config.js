@@ -114,15 +114,13 @@ const indexData = [
     { label: 'How it Works (the engine)', slide: 3 },
     { label: 'Two Moats + 4 Confidence Tags', slide: 4 },
   ]},
-  { title: '01 - The Market', subs: [
-    { label: 'Divider Market', slide: 6 },
+  { title: '01 - The Market', dividerSlide: 6, subs: [
     { label: 'Quick Facts', slide: 7 },
     { label: 'Industry Drivers', slide: 8 },
     { label: 'Macro Influences', slide: 9 },
     { label: 'Market Size', slide: 10 },
   ]},
-  { title: '02 - Brand', subs: [
-    { label: 'Divider Brand', slide: 11 },
+  { title: '02 - Brand', dividerSlide: 11, subs: [
     { label: 'Brand Founders Spirit', slide: 12 },
     { label: 'Brand Expertise Innovation', slide: 13 },
     { label: 'Brand Sustainability Legacy', slide: 14 },
@@ -132,8 +130,7 @@ const indexData = [
     { label: 'Brand Personality Radar', slide: 18 },
     { label: 'Brand Messaging Themes', slide: 19 },
   ]},
-  { title: '03 - Audiences', subs: [
-    { label: 'Divider Audiences', slide: 20 },
+  { title: '03 - Audiences', dividerSlide: 20, subs: [
     { label: 'Audience 1 Profile', slide: 21 },
     { label: 'Audience 2 Profile', slide: 22 },
     { label: 'Audience 3 Profile', slide: 23 },
@@ -142,24 +139,21 @@ const indexData = [
     { label: 'Audience 3 Cultural Signals', slide: 26 },
     { label: 'Audience Summary', slide: 27 },
   ]},
-  { title: '04 - Innovation', subs: [
-    { label: 'Divider Innovation', slide: 28 },
+  { title: '04 - Innovation', dividerSlide: 28, subs: [
     { label: 'Emerging Trends Modular', slide: 29 },
     { label: 'Emerging Trends RV', slide: 30 },
     { label: 'Innovation Builder AUD1', slide: 31 },
     { label: 'Innovation Builder AUD2', slide: 32 },
     { label: 'Innovation Builder AUD3', slide: 33 },
   ]},
-  { title: '05 - Competitive', subs: [
-    { label: 'Divider Competitive', slide: 34 },
+  { title: '05 - Competitive', dividerSlide: 34, subs: [
     { label: 'Competitors Modular', slide: 35 },
     { label: 'Competitors RV', slide: 36 },
     { label: 'Competitor Forensics 5b', slide: 37 },
     { label: 'Brand Corporate Forensics 5c', slide: 38 },
     { label: 'ESOV Positioning', slide: 39 },
   ]},
-  { title: '06 - Brand Strategy', subs: [
-    { label: 'Divider Brand Strategy', slide: 40 },
+  { title: '06 - Brand Strategy', dividerSlide: 40, subs: [
     { label: 'Strategy Pillars', slide: 41 },
     { label: 'Strategic Goal', slide: 42 },
     { label: 'KPI Tree', slide: 43 },
@@ -169,8 +163,7 @@ const indexData = [
     { label: 'Brand Opportunities', slide: 47 },
     { label: 'Five Actions', slide: 48 },
   ]},
-  { title: '07 - Marketing', subs: [
-    { label: 'Divider Marketing', slide: 49 },
+  { title: '07 - Marketing', dividerSlide: 49, subs: [
     { label: 'AUD1 Channel Messaging', slide: 50 },
     { label: 'AUD1 Budget Measurement', slide: 51 },
     { label: 'AUD1 Tactics', slide: 52 },
@@ -181,29 +174,25 @@ const indexData = [
     { label: 'AUD3 Budget Measurement', slide: 57 },
     { label: 'AUD3 Tactics', slide: 58 },
   ]},
-  { title: '08 - Social and Extended Analysis', subs: [
-    { label: 'Divider GEO', slide: 59 },
+  { title: '08 - Social and Extended Analysis', dividerSlide: 59, subs: [
     { label: 'GEO Scorecard', slide: 60 },
     { label: 'News PR', slide: 61 },
     { label: 'Reviews Trust', slide: 62 },
     { label: 'Share Of Search', slide: 63 },
   ]},
-  { title: '09 - Appendix', subs: [
-    { label: 'Divider Appendix', slide: 64 },
+  { title: '09 - Appendix', dividerSlide: 64, subs: [
     { label: 'CEPS Master', slide: 65 },
     { label: 'Data Gaps', slide: 66 },
     { label: 'Source Coverage', slide: 67 },
   ]},
-  { title: '10 - Extended Market Intelligence', subs: [
-    { label: 'Divider Extended', slide: 68 },
+  { title: '10 - Extended Market Intelligence', dividerSlide: 68, subs: [
     { label: 'Market Size ESOV', slide: 69 },
     { label: 'Industry Drivers', slide: 70 },
     { label: 'Macro Influences', slide: 71 },
     { label: 'Customer Problem', slide: 72 },
     { label: 'Value Proposition', slide: 73 },
   ]},
-  { title: '11 - Methodology and Citations', subs: [
-    { label: 'Divider Methodology', slide: 74 },
+  { title: '11 - Methodology and Citations', dividerSlide: 74, subs: [
     { label: 'Methodology', slide: 75 },
     { label: 'Citations 1', slide: 76 },
     { label: 'Citations 2', slide: 77 },

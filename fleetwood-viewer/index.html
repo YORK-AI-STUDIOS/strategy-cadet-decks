@@ -347,6 +347,8 @@ html, body {
   user-select: none;
 }
 .index-header:hover { background: var(--surface-hover); }
+.index-header-label[data-slide] { cursor: pointer; flex: 1; }
+.index-header-label[data-slide]:hover { color: var(--accent, #FCB900); }
 .index-header .chev {
   color: var(--text-muted);
   transition: transform 0.15s ease;
@@ -1007,7 +1009,7 @@ function renderIndexView() {
       ${indexData.map((sec, i) => `
         <div class="index-section ${i === 0 ? 'open' : ''}">
           <div class="index-header">
-            <span>${sec.title}</span>
+            <span class="index-header-label"${sec.dividerSlide ? ` data-slide="${sec.dividerSlide}"` : ''}>${sec.title}</span>
             <span class="chev">▶</span>
           </div>
           <div class="index-sub">
@@ -1042,7 +1044,7 @@ function renderCadetView() {
       ${indexData.map((sec, i) => `
         <div class="index-section ${i === 0 ? 'open' : ''}">
           <div class="index-header">
-            <span>${sec.title}</span>
+            <span class="index-header-label"${sec.dividerSlide ? ` data-slide="${sec.dividerSlide}"` : ''}>${sec.title}</span>
             <span class="chev">▶</span>
           </div>
           <div class="index-sub">
@@ -1112,7 +1114,7 @@ function renderCadetView() {
 // Wire click handlers on every .index-sub-item that carries a data-slide
 // attribute. Clicking jumps the viewer to that slide and re-renders.
 function wireIndexSubClicks(root) {
-  root.querySelectorAll('.index-sub-item[data-slide], .report-divider-band[data-slide]').forEach(el => {
+  root.querySelectorAll('.index-sub-item[data-slide], .report-divider-band[data-slide], .index-header-label[data-slide]').forEach(el => {
     el.addEventListener('click', e => {
       e.stopPropagation();
       const target = parseInt(el.dataset.slide, 10);
