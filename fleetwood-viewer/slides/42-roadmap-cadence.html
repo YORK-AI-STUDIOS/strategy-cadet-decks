@@ -6,7 +6,9 @@
 <link rel="stylesheet" href="slide-base.css">
 <link rel="stylesheet" href="palette-fleetwood.css">
 <style>
-  .road-layout { margin-top: 14px; display: grid; grid-template-columns: minmax(0, 880px) 340px; gap: 24px; align-items: start; }
+  /* Comp-pass 2026-05-26: close top space, enlarge gantt, lift dep-note to full-width */
+  .sc-slide .sc-body-frame { inset: 60px var(--slide-margin-x) 80px; }
+  .road-layout { margin-top: 10px; display: grid; grid-template-columns: minmax(0, 1140px) 360px; gap: 32px; align-items: start; }
 
   .gantt-title { font: 700 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 5px; }
   .gantt-sub { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); margin-bottom: 8px; }
@@ -40,7 +42,7 @@
       <div class="gantt-title">180-day Gantt timeline, 9 initiatives across 3 phases</div>
       <div class="gantt-sub">Horizontal bars per initiative. D60 gate marker shown. Tier colours: Tier 1 dark blue, Tier 2 mid blue, Tier 3 green. Dashed bars indicate tracking-only periods (KPI monitoring, no active delivery).</div>
 
-      <svg viewBox="0 0 820 400" preserveAspectRatio="xMidYMid meet" aria-label="Gantt timeline chart" style="width:100%; max-height:390px; display:block;">
+      <svg viewBox="0 0 820 400" preserveAspectRatio="xMidYMid meet" aria-label="Gantt timeline chart" style="width:100%; max-height:520px; display:block;">
 
         <!-- Phase header bands -->
         <!-- Phase 1: Days 0-30. Track x: 200 to 820. 180 days = 620px. 1 day = 3.44px. 30 days = 103px. x_0=200, x_30=303, x_90=509, x_180=820 -->
@@ -158,11 +160,6 @@
         <text x="268" y="368" font-family="Open Sans" font-size="8" fill="#6B7E96">Tracking only (dashed)</text>
       </svg>
 
-      <div class="dep-note"><strong>External dependencies flagged:</strong> (1) Third-party assurer availability for Wellbeing Spec inside 60 days, acoustic, lighting and occupational-psychology market is small in AU. (2) Defence Industry Capability Advisor availability for T2.3 briefings inside 120 days. Both outside Fleetwood control. If either trips, respective kill-switch activates.</div>
-
-      <div style="margin-top:6px; padding-top:6px; border-top:1px solid var(--bg-rule);">
-        <p style="margin:0; font:400 italic var(--t-caption)/1.4 var(--font-sans); color:var(--fg-muted);">Source: Business Planning Sections 5 (Roadmap) and 6 (Operating Cadence); initiative dependencies named in Section 5; Searipple Village occupancy target L3 [2][83]; AASB S2 Sep 2026 event [2] p.26</p>
-      </div>
     </div>
 
     <!-- RIGHT: Operating cadence -->
@@ -196,6 +193,9 @@
     </div>
 
   </div>
+
+  <!-- dep-note lifted out of left col to span full body-frame width (composition rule e) -->
+  <div class="dep-note" style="margin-top:14px;"><strong>External dependencies flagged:</strong> (1) Third-party assurer availability for Wellbeing Spec inside 60 days, acoustic, lighting and occupational-psychology market is small in AU. (2) Defence Industry Capability Advisor availability for T2.3 briefings inside 120 days. Both outside Fleetwood control. If either trips, respective kill-switch activates.</div>
 
   <div class="sc-source-line"><span class="sc-source">p. 42 · Part 06 · Source: Business Planning Sections 5 (Roadmap) and 6 (Operating Cadence); initiative dependencies named in Section 5; Searipple Village occupancy target L3 [2][83]; AASB S2 Sep 2026 event [2] p.26</span></div>
   </div>
