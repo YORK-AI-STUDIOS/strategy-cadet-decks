@@ -6,14 +6,16 @@
 <link rel="stylesheet" href="slide-base.css">
 <link rel="stylesheet" href="palette-fleetwood.css">
 <style>
- .rev-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 14px; }
+ /* Comp-pass 2026-05-26: 2-col was 2x imbalanced (right col 2x taller than left). Now 3-col: source-table | complaints | praises */
+ .sc-slide .sc-body-frame { inset: 60px var(--slide-margin-x) 80px; }
+ .rev-layout { display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 18px; margin-top: 10px; align-items: start; }
  .panel-hd { font: 700 10px/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--mr-blue-dark); border-bottom: 2px solid var(--mr-blue-dark); padding-bottom: 5px; margin-bottom: 8px; }
  .source-table { width: 100%; border-collapse: collapse; }
  .source-table th { font: 700 9px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 8px; background: #EEF2F7; color: var(--fg-muted); text-align: left; }
  .source-table td { font: 400 11px/1.35 var(--font-sans); color: var(--fg-body); padding: 6px 8px; border-bottom: 1px solid #E8EEF6; vertical-align: top; }
  .source-table tr:last-child td { border-bottom: none; }
  .stars { color: var(--mr-blue-dark); font-weight: 700; }
- .complaint-card { padding: 10px 12px; background: #F4F7FB; border-left: 4px solid #8A2020; margin-bottom: 8px; }
+ .complaint-card { padding: 8px 12px; background: #F4F7FB; border-left: 4px solid #8A2020; margin-bottom: 6px; }
  .complaint-card.amber { border-left-color: #8A6030; }
  .complaint-card.slate { border-left-color: #6B7E96; }
  .cc-label { font: 700 10px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: #8A2020; margin-bottom: 4px; }
@@ -21,7 +23,7 @@
  .complaint-card.slate .cc-label { color: #6B7E96; }
  .cc-text { font: 400 11px/1.4 var(--font-sans); color: var(--fg-body); }
  .cc-verbatim { margin-top: 4px; padding: 4px 8px; background: rgba(0,0,0,0.04); font: 400 10px/1.3 var(--font-sans); color: var(--fg-muted); font-style: italic; }
- .praise-card { padding: 10px 12px; background: #F4F7FB; border-left: 4px solid #3A6B4A; margin-bottom: 8px; }
+ .praise-card { padding: 8px 12px; background: #F4F7FB; border-left: 4px solid #3A6B4A; margin-bottom: 6px; }
  .pc-label { font: 700 10px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: #3A6B4A; margin-bottom: 4px; }
  .pc-text { font: 400 11px/1.4 var(--font-sans); color: var(--fg-body); }
  .pc-verbatim { margin-top: 4px; padding: 4px 8px; background: rgba(0,0,0,0.04); font: 400 10px/1.3 var(--font-sans); color: var(--fg-muted); font-style: italic; }
@@ -114,8 +116,10 @@
  <div class="cc-verbatim">"All east coast operations managed out of Melbourne, inefficient processes" (Designer, 2019, 1-star)</div>
  <div class="cc-verbatim">"no career opportunities if you do not report to a general manager" (Business Partner, Apr 2024, 2-star)</div>
  </div>
+ </div>
 
- <div class="panel-hd" style="margin-top: 10px;">Top 3 praise themes</div>
+ <div>
+ <div class="panel-hd">Top 3 praise themes</div>
 
  <div class="praise-card">
  <div class="pc-label">1. "The people" (culture as the durable asset)</div>
