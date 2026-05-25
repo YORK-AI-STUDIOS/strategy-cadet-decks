@@ -540,6 +540,30 @@ html, body {
   color: var(--text);
   font-weight: 500;
 }
+.jump-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.2px;
+  margin-left: 12px;
+}
+.jump-input {
+  background: var(--surface-2);
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  width: 56px;
+  height: 32px;
+  border-radius: 6px;
+  padding: 0 8px;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+  outline: none;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+}
+.jump-input:focus { border-color: #FCB900; }
+.jump-input::-webkit-outer-spin-button,
+.jump-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.jump-input[type=number] { -moz-appearance: textfield; }
 
 .right-cluster {
   display: flex;
@@ -833,6 +857,8 @@ html, body {
       <button class="nav-btn" id="prev" title="Previous (←)">‹</button>
       <span class="slide-counter"><span class="current" id="current">1</span> / <span id="total">24</span></span>
       <button class="nav-btn" id="next" title="Next (→)">›</button>
+      <span class="jump-label">Jump to page:</span>
+      <input type="number" class="jump-input" id="jump-input" min="1" placeholder="#" aria-label="Jump to page number" title="Type a page number and press Enter">
     </div>
 
     <div class="right-cluster">
@@ -889,7 +915,7 @@ html, body {
 
 </div>
 
-<script src="report-config.js?v=2651"></script>
+<script src="report-config.js?v=2652"></script>
 <script>
 // REPORT, slideData, indexData are loaded from report-config.js above.
 // Edit that file (not this one) to swap clients.
@@ -1212,6 +1238,18 @@ document.getElementById('prev').addEventListener('click', () => {
 });
 document.getElementById('next').addEventListener('click', () => {
   if (state.currentSlide < slideData.length - 1) { state.currentSlide++; render(); }
+});
+
+const jumpInput = document.getElementById('jump-input');
+jumpInput.max = slideData.length;
+jumpInput.addEventListener('keydown', e => {
+  if (e.key !== 'Enter') return;
+  const n = parseInt(jumpInput.value, 10);
+  if (Number.isFinite(n) && n >= 1 && n <= slideData.length) {
+    state.currentSlide = n - 1;
+    render();
+    jumpInput.blur();
+  }
 });
 
 document.addEventListener('keydown', e => {
