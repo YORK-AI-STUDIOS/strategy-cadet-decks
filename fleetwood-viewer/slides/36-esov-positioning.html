@@ -6,8 +6,9 @@
 <link rel="stylesheet" href="slide-base.css">
 <link rel="stylesheet" href="palette-fleetwood.css">
 <style>
-  /* Chart bigger than original, classification panel widened so 5 rows fit without rationale text spilling off the bottom */
-  .esov-layout { margin-top: 14px; display: grid; grid-template-columns: minmax(0, 1020px) 620px; gap: 40px; align-items: start; }
+  /* Slide-specific shift: pull all content up so vacuum-box + source-line have room at bottom */
+  .sc-slide .sc-body-frame { inset: 60px var(--slide-margin-x) 80px; }
+  .esov-layout { margin-top: 10px; display: grid; grid-template-columns: minmax(0, 1020px) 620px; gap: 40px; align-items: start; }
 
   .scatter-title { font: 700 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 5px; }
   .scatter-sub { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); margin-bottom: 8px; }
