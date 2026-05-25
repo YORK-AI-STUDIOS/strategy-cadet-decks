@@ -8,11 +8,11 @@
 
 :root {
   /* ---------------------------------------------------------------------------
-     1. CLIENT PRIMARY PALETTE  ↓  (swap this block per-client)
+     1. CLIENT PRIMARY PALETTE  ↓  (swap this block per-client via _palettes/palette-*.css per Pattern K.13)
      --------------------------------------------------------------------------- */
   --mr-blue-light:  #5A9BD5;   /* gradient start, top-left */
   --mr-blue-dark:   #4971B7;   /* gradient end, bottom-right */
-  --mr-red:         #EF434E;   /* secondary brand colour + functional accent */
+  --mr-red:         #EF434E;   /* secondary brand colour (legacy alias, see --functional-red below) */
   --mr-red-dark:    #ED2126;
   --mr-red-deeper:  #C81621;   /* deeper red for gradient end */
 
@@ -21,6 +21,16 @@
      (back cover, key CTAs) — matches MR's website pattern. */
   --brand-gradient:     linear-gradient(135deg, var(--mr-blue-light) 0%, var(--mr-blue-dark) 100%);
   --brand-gradient-red: linear-gradient(135deg, var(--mr-red) 0%, var(--mr-red-deeper) 100%);
+
+  /* ---------------------------------------------------------------------------
+     1b. FUNCTIONAL RED (universal across ALL palettes per Pattern K.13)
+         Used for crisis flags, negative deltas, forbidden callouts.
+         Stays #EF434E regardless of agency palette swap. The --mr-red token
+         above may rotate per agency (e.g. Fleetwood orange, TRP orange);
+         this token does NOT.
+     --------------------------------------------------------------------------- */
+  --functional-red:      #EF434E;
+  --functional-red-dark: #C81621;
 
   /* ---------------------------------------------------------------------------
      2. SEMANTIC COLOUR  ↓  (structural — shared across all clients)
@@ -39,24 +49,28 @@
   /* ---------------------------------------------------------------------------
      3. CONFIDENCE CHIPS  (data-quality flag on every synthesis claim)
      --------------------------------------------------------------------------- */
-  /* 4-tier confidence system locked 2026-05-24. Red retired from chips —
-     reserved for crisis flags + forbidden callouts only. */
+  /* 4-tier confidence system locked 2026-05-24, palette revised 2026-05-25.
+     PROBABLE + ESTIMATED moved away from amber/orange (read as warnings) to
+     deep-teal + muted-purple (read as confidence/considered/calculated).
+     Red retired from chips — reserved for crisis flags + forbidden callouts only. */
   --chip-verified-bg:     #00D084;   --chip-verified-fg:     #FFFFFF;  /* externally confirmed */
-  --chip-probable-bg:     #FCB900;   --chip-probable-fg:     #1A1A1A;  /* externally sourced, partial */
-  --chip-estimated-bg:    #E68A2D;   --chip-estimated-fg:    #FFFFFF;  /* numeric estimate from available data */
-  --chip-hypothesised-bg: #6B7E96;   --chip-hypothesised-fg: #FFFFFF;  /* AI synthesis, working hypothesis */
+  --chip-probable-bg:     #3B8FA1;   --chip-probable-fg:     #FFFFFF;  /* deep teal, considered, secondary source */
+  --chip-estimated-bg:    #7B5EA8;   --chip-estimated-fg:    #FFFFFF;  /* muted purple, calculated from data */
+  --chip-hypothesised-bg: #6B7E96;   --chip-hypothesised-fg: #FFFFFF;  /* cool slate, AI synthesis */
   /* Legacy alias — UNCERTAIN repointed to HYPOTHESISED slate during slide migration.
      Retire this alias after the audit lands. Do not introduce new UNCERTAIN usage. */
   --chip-uncertain-bg:    #6B7E96;   --chip-uncertain-fg:    #FFFFFF;
 
   /* ---------------------------------------------------------------------------
-     4. CHART SERIES PALETTE  (locked order)
+     4. CHART SERIES PALETTE  (universal across ALL agency palettes per K.13)
+        These tokens are Cadet's data-viz authority and do NOT swap per-agency.
+        Per-deck palette-*.css files MUST NOT override these.
      --------------------------------------------------------------------------- */
-  --series-primary:    #4971B7;   /* MR dark blue */
-  --series-secondary:  #5A9BD5;   /* MR light blue */
+  --series-primary:    #4971B7;   /* deep blue (universal, NOT brand-primary) */
+  --series-secondary:  #5A9BD5;   /* light blue */
   --series-tertiary:   #2E4A63;   /* slate */
   --series-neutral:    #767676;   /* category / "other" */
-  --series-negative:   #EF434E;   /* declines, crisis */
+  --series-negative:   #EF434E;   /* declines, crisis (= --functional-red, kept literal so palette override cannot break) */
   --series-highlight:  #FCB900;   /* hero metric, "this is the one" */
 
   /* ---------------------------------------------------------------------------

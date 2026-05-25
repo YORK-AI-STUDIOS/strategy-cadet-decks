@@ -1,0 +1,53 @@
+/* =============================================================================
+   palette-fleetwood.css
+   SUBJECT-BRAND palette for Strategy Cadet decks on Fleetwood Limited (ASX:FWD).
+   Loaded AFTER colors_and_type.css per Pattern K.13 (Kantar Register Guide).
+
+   FLEETWOOD BRAND READ (Stuart confirms / corrects as needed):
+   - Primary identity colour: Fleetwood yellow (logo + industrial signage)
+   - Secondary: charcoal / industrial dark grey (matches modular construction +
+     RV manufacturing register)
+   - Brand reads as "industrial professional" not "consumer / lifestyle"
+
+   PALETTE STRATEGY:
+   Pure yellow gradient slides fail legibility (white text on yellow = poor
+   contrast). So we use DARK INDUSTRIAL CHARCOAL as the gradient primary (--mr-blue-*)
+   and FLEETWOOD YELLOW as the secondary accent (--mr-red-*). This keeps:
+   - Brand identity present (yellow accent stripes, page numbers, hero data)
+   - Legibility intact (white text on dark charcoal gradient)
+   - Industrial register (matches Fleetwood's modular construction category)
+
+   If Stuart wants pure-yellow gradient slides instead, override this file —
+   but legibility testing required first.
+
+   Built 2026-05-25 22:05 AEST. Subject to Stuart review + corporate brand-guide
+   verification.
+   ============================================================================= */
+
+:root {
+  /* Primary pair (drives gradient slides — covers, dividers, back cover, hero KPI slides)
+     Dark industrial charcoal — confident, professional, legible with white text. */
+  --mr-blue-light:  #5C6B7A;   /* gradient start, mid charcoal */
+  --mr-blue-dark:   #2A3441;   /* gradient end, deep industrial charcoal */
+
+  /* Secondary accent pair — Fleetwood yellow.
+     Used on accent stripes, hero KPI numbers on dark slides, action callouts. */
+  --mr-red:         #FFD200;   /* Fleetwood yellow (industrial signage tone) */
+  --mr-red-dark:    #E8B900;   /* deeper yellow for emphasis */
+  --mr-red-deeper:  #C49C00;   /* deepest yellow, for gradient end if used */
+
+  /* Brand gradients re-computed from new primary/secondary pairs */
+  --brand-gradient:     linear-gradient(135deg, var(--mr-blue-light) 0%, var(--mr-blue-dark) 100%);
+  --brand-gradient-red: linear-gradient(135deg, var(--mr-red) 0%, var(--mr-red-deeper) 100%);
+}
+
+/*
+  WHAT STAYS UNIVERSAL (NOT overridden by this file, per Pattern K.13):
+  - Confidence chip palette (V/P/E/H) — Cadet identity
+  - Chart series palette (--series-*) — Cadet data-viz authority
+  - Functional red (--functional-red #EF434E) — crisis flags, negative deltas
+  - Structural neutrals (--fg-*, --bg-*, --bg-rule)
+  - Typography (--t-*, --font-sans)
+
+  All of those continue to read from colors_and_type.css unchanged.
+*/
