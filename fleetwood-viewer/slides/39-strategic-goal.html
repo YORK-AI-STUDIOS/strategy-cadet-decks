@@ -6,19 +6,20 @@
 <link rel="stylesheet" href="slide-base.css">
 <link rel="stylesheet" href="palette-fleetwood.css">
 <style>
- .goal-layout { display: grid; grid-template-columns: 1fr 380px; gap: 20px; margin-top: 14px; align-items: start; }
- .goal-hero { padding: 18px 20px; background: var(--mr-blue-dark); margin-bottom: 12px; }
+ /* Restructured 2026-05-26: hero goal box full-width, then 3-up row of sanity checks, then 3-up row of rationale/alt-goals */
+ .sc-slide .sc-body-frame { inset: 60px var(--slide-margin-x) 80px; }
+ .goal-hero { padding: 18px 24px; background: var(--mr-blue-dark); margin-top: 14px; }
  .gh-label { font: 700 10px/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 8px; }
- .gh-text { font: 700 20px/1.3 var(--font-sans); color: rgba(255,255,255,0.95); }
+ .gh-text { font: 700 22px/1.3 var(--font-sans); color: rgba(255,255,255,0.95); }
  .gh-verdict { margin-top: 10px; display: flex; align-items: center; gap: 8px; }
  .verdict-badge { font: 700 11px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px; background: #3A8A5A; color: #fff; border-radius: 2px; }
  .gh-note { font: 400 11px/1.4 var(--font-sans); color: rgba(255,255,255,0.7); margin-top: 8px; }
- .sanity-checks { display: flex; flex-direction: column; gap: 10px; margin-bottom: 12px; }
- .sc-check { padding: 11px 14px; background: #F4F7FB; border-left: 4px solid #3A8A5A; }
- .sc-check-label { font: 700 10px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: #3A8A5A; margin-bottom: 5px; display: flex; align-items: center; gap: 8px; }
- .pass-tag { font: 700 9px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 6px; background: #3A8A5A; color: #fff; border-radius: 2px; }
+ .sanity-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 16px; align-items: stretch; }
+ .sc-check { padding: 12px 14px; background: #F4F7FB; border-left: 4px solid #3A8A5A; }
+ .sc-check-label { font: 700 10px/1.2 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: #3A8A5A; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px; }
+ .pass-tag { font: 700 9px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 6px; background: #3A8A5A; color: #fff; border-radius: 2px; flex-shrink: 0; }
  .sc-check-body { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); }
- .rationale-col { display: flex; flex-direction: column; gap: 10px; }
+ .rationale-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 12px; align-items: stretch; }
  .rat-card { padding: 12px 14px; background: #F4F7FB; border-left: 4px solid var(--mr-blue-dark); }
  .rat-label { font: 700 10px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 5px; }
  .rat-body { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); }
@@ -35,8 +36,7 @@
   <div class="sc-body-frame">
  <h2 class="sc-h2">Recommended goal targets the Modular Voice Vacuum on the 83% voltage where capital is being committed, not the 17% voltage the macro is actively suppressing.</h2>
 
- <div class="goal-layout">
- <div>
+ <!-- 1. Hero goal box full-width -->
  <div class="goal-hero">
  <div class="gh-label">Recommended Strategic Goal</div>
  <div class="gh-text">Expand into Australian public-sector and resources modular category leadership via a packaged "Scheduled-Outcome Contract plus Workforce Wellbeing Specification" offer over 180 days.</div>
@@ -47,7 +47,8 @@
  <div class="gh-note">Note 1: Share of Search extension not run; ESOV classifications rest on editorial evidence only. Note 2: Audience 3 (Grey Nomads) under-served by design and parked under Alternative Goal 1.</div>
  </div>
 
- <div class="sanity-checks">
+ <!-- 2. Three sanity-check cards in a single horizontal row -->
+ <div class="sanity-row">
  <div class="sc-check">
  <div class="sc-check-label"><span class="pass-tag">Pass</span> Sanity Check 1, Is "AU public-sector and resources modular" a meaningful category?</div>
  <div class="sc-check-body">AUD 14.44B Australian prefabricated buildings market, growing 6.2% CAGR to 2034. Fleetwood named by Mordor Intelligence as a major operating company alongside Ausco, Modscape, Hickory and Archiblox. Open white-space at the voice layer: Ausco is silent, Hickory and Modscape claim via editorial, Decmil is in bid-room mode. Fleetwood at ~3.5% estimated share has room to expand voice and share simultaneously. <span class="sc-chip sc-chip--verified">Verified</span> [40][2]</div>
@@ -61,9 +62,9 @@
  <div class="sc-check-body">Maps to Brand Opportunities 1 and 2 directly (both PROBABLE). Reinforced by Emerging Trends A1 (Outcome-Defended Contracting) and C2 (Wellbeing-Integrated Module). Does not require new product development: productisation of capabilities Fleetwood already operates. Searipple Village (1,300 rooms, FY25 named earnings uplift driver) provides the operating laboratory. No mechanism gap flagged. <span class="sc-chip sc-chip--probable">Probable</span></div>
  </div>
  </div>
- </div>
 
- <div class="rationale-col">
+ <!-- 3. Three rationale cards in a second horizontal row -->
+ <div class="rationale-row">
  <div class="rat-card">
  <div class="rat-label">Why this goal, not another</div>
  <div class="rat-body">Three forces line up: (1) Federal 2025-26 Budget AUD 54M direct + AUD 120M via National Productivity Fund for modular uptake. (2) "The Modular Voice Vacuum", no incumbent voicing the category at scale. (3) Agents C and D converge on a single high-conviction value proposition that maps directly onto Audience 1 and 2 purchase drivers scoring 5/5. The 180-day horizon is chosen so the September 2026 AASB S2 disclosure-shock event lands inside the plan window rather than after it. <span class="sc-chip sc-chip--probable">Probable</span> [105][40]</div>
@@ -76,7 +77,6 @@
  <div class="alt-label">Alternative goals considered (parked)</div>
  <div class="alt-item">Defend squeezed-middle caravan position via "Built For Life" warranty-plus-service bundle over 365 days. Better sequenced as a Tier 3 or Q3 initiative once modular leadership move is underway. <span class="sc-chip sc-chip--probable">Probable</span></div>
  <div class="alt-item">Acquire defence-estate modular share at Henderson and Tindal via Sovereign-Capable Modular product line. Defence procurement cycle is long and not winnable inside 180 days; rolls in as Tier 3. <span class="sc-chip sc-chip--probable">Probable</span></div>
- </div>
  </div>
  </div>
 
