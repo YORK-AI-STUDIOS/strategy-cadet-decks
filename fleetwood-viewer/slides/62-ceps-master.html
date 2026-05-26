@@ -6,13 +6,15 @@
 <link rel="stylesheet" href="slide-base.css">
 <link rel="stylesheet" href="palette-fleetwood.css">
 <style>
- .cep-layout { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 14px; }
+ /* Comp-pass 2026-05-26: close top space + light density tighten so 21 CEPs + full-width summary band fit with rule-f bottom clearance */
+ .sc-slide .sc-body-frame { inset: 60px var(--slide-margin-x) 80px; }
+ .cep-layout { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 10px; }
  .cep-col { }
- .cep-hd { padding: 8px 12px; font: 700 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: #fff; margin-bottom: 8px; }
+ .cep-hd { padding: 8px 12px; font: 700 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: #fff; margin-bottom: 6px; }
  .hd-a1 { background: var(--mr-blue-dark); }
  .hd-a2 { background: #2E5F8A; }
  .hd-a3 { background: #3A6B4A; }
- .cep-item { padding: 9px 12px; background: #F4F7FB; margin-bottom: 6px; border-left: 3px solid; }
+ .cep-item { padding: 7px 12px; background: #F4F7FB; margin-bottom: 5px; border-left: 3px solid; }
  .ci-a1 { border-left-color: var(--mr-blue-dark); }
  .ci-a2 { border-left-color: #2E5F8A; }
  .ci-a3 { border-left-color: #3A6B4A; }
