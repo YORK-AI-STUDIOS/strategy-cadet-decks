@@ -6,7 +6,10 @@
 <link rel="stylesheet" href="slide-base.css">
 <link rel="stylesheet" href="palette-fleetwood.css">
 <style>
-  .gaps-layout { margin-top: 14px; display: grid; grid-template-columns: minmax(0, 880px) 340px; gap: 24px; align-items: start; }
+  /* Comp-pass 2026-05-26: restructure - donut full-width above, then 2-col gap-table + upgrade-paths */
+  .sc-slide .sc-body-frame { inset: 60px var(--slide-margin-x) 80px; }
+  .donut-row { margin-top: 10px; width: 100%; }
+  .gaps-layout { margin-top: 14px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 28px; align-items: start; }
 
   .chart-title { font: 700 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 5px; }
 
@@ -32,10 +35,8 @@
   <div class="sc-body-frame">
   <h2 class="sc-h2">Twelve named data gaps, three severity tiers, four upgrade paths. Transparency on what is VERIFIED, what is ESTIMATED, and what is HYPOTHESISED. The strategist should not proceed on HIGH-severity gaps without independent verification.</h2>
 
-  <div class="gaps-layout">
-
-    <!-- LEFT: donut chart + gap table -->
-    <div>
+  <!-- Donut chart full-width above grid -->
+  <div class="donut-row">
       <div class="chart-title">Confidence chip distribution across full deck (368 total chips)</div>
 
       <!--
@@ -103,12 +104,11 @@
         <line x1="290" y1="232" x2="820" y2="232" stroke="#E8EEF6" stroke-width="1"/>
       </svg>
 
-      <div style="margin-top:4px; padding-top:4px; border-top:1px solid var(--bg-rule);">
-        <p style="margin:0; font:400 italic var(--t-caption)/1.4 var(--font-sans); color:var(--fg-muted);">Source: chip counts aggregated across all 81 slides. VERIFIED=84, PROBABLE=170, ESTIMATED=21, HYPOTHESISED=93. Total=368. Chip routing: numeric estimate with stated assumptions = ESTIMATED; qualitative AI synthesis = HYPOTHESISED.</p>
-      </div>
-    </div>
+  </div>
 
-    <!-- RIGHT: gap table + upgrade paths -->
+  <div class="gaps-layout">
+
+    <!-- LEFT: gap table -->
     <div>
       <div class="panel-hd">Priority data gaps (4 HIGH severity)</div>
       <table class="gap-table">
@@ -151,7 +151,10 @@
         </tbody>
       </table>
 
-      <div style="margin-top:10px;">
+    </div>
+
+    <!-- RIGHT: upgrade paths -->
+    <div>
         <div class="panel-hd">Upgrade paths (4 named)</div>
         <div class="upgrade-card">
           <div class="uc-label">Path 1: Run SoS extension</div>
@@ -169,7 +172,6 @@
           <div class="uc-label">Path 4: Establish tender win rate baseline (week 1)</div>
           <div class="uc-text">Internal tender register cross-referenced to AusTender. Closes HIGH gap 4. Required before the 180-day plan goes live.</div>
         </div>
-      </div>
     </div>
 
   </div>

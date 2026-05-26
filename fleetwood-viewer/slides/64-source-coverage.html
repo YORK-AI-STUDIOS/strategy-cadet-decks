@@ -6,7 +6,10 @@
 <link rel="stylesheet" href="slide-base.css">
 <link rel="stylesheet" href="palette-fleetwood.css">
 <style>
-  .src-layout { margin-top: 14px; display: grid; grid-template-columns: minmax(0, 880px) 340px; gap: 24px; align-items: start; }
+  /* Comp-pass 2026-05-26: restructure - pie full-width above, then 2-col stats+agents | phase3 */
+  .sc-slide .sc-body-frame { inset: 60px var(--slide-margin-x) 80px; }
+  .pie-row { margin-top: 10px; width: 100%; }
+  .src-layout { margin-top: 14px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px; align-items: start; }
 
   .chart-title { font: 700 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 5px; }
 
@@ -36,10 +39,8 @@
   <div class="sc-body-frame">
   <h2 class="sc-h2">Six specialist agents, seven extension modules, approximately 191 numbered citations, three discovery phases. Phase 3 cross-reference resolved one critical auditor correction (PwC to Ernst and Young Australia) before this deck was built.</h2>
 
-  <div class="src-layout">
-
-    <!-- LEFT: pie chart + agent summary -->
-    <div>
+  <!-- Pie chart full-width above grid -->
+  <div class="pie-row">
       <div class="chart-title">Source-type breakdown, 191 citations across 7 categories</div>
 
       <!--
@@ -131,12 +132,11 @@
         <text x="307" y="244" font-family="Open Sans" font-size="9" fill="#6B7E96">~12 citations  ·  6.3%  ·  [Section 8]</text>
       </svg>
 
-      <div style="margin-top:6px; padding-top:6px; border-top:1px solid var(--bg-rule);">
-        <p style="margin:0; font:400 italic var(--t-caption)/1.4 var(--font-sans); color:var(--fg-muted);">Source registry compiled across all modules and extensions, 2026-05-25. Citation counts approximate; source report carries numbered footnotes [1]-[191+]. Full citation list in Citations appendix (pp. 73-75).</p>
-      </div>
-    </div>
+  </div>
 
-    <!-- RIGHT: agent summary + phase 3 box -->
+  <div class="src-layout">
+
+    <!-- LEFT: agent summary stats + table -->
     <div>
       <div class="src-stat-grid">
         <div class="stat-item"><div class="stat-num">~191</div><div class="stat-label">Numbered citations</div></div>
@@ -188,6 +188,10 @@
         <div class="agent-conf">VERIFIED / PROBABLE</div>
       </div>
 
+    </div>
+
+    <!-- RIGHT: Phase 3 callout -->
+    <div>
       <div class="phase3-box">
         <div class="p3-label">Phase 3 cross-reference finding (resolved)</div>
         <div class="p3-text">Phase 3 flagged a critical discrepancy: the discovery source named PwC as Fleetwood's auditor. Phase 3 cross-reference against Fleetwood FY25 Annual Report [2] confirmed the actual auditor is <strong>Ernst and Young Australia</strong>, signing partner <strong>Fiona Drummond</strong>, Perth. The correction was applied to the source report before this deck was built. This is one of two structural moats Strategy Cadet has over generic brand-intelligence tools. <span class="sc-chip sc-chip--verified">Verified</span></div>
