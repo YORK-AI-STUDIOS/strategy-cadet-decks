@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <title>Strategy Cadet</title>
   <style>
     :root { color-scheme: dark; }
@@ -19,267 +22,243 @@
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
-    main.entry {
+    main.reports {
       max-width: 640px;
       margin: 0 auto;
-      padding: 16px 32px 16px;
+      padding: 80px 32px 60px;
       text-align: center;
       position: relative;
-      min-height: 880px;
+      min-height: 100vh;
     }
-    .brand-logo {
-      position: absolute;
-      top: 792px;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      display: block;
-      width: 100px;
+    .brand-mark {
+      width: 80px;
       height: auto;
+      margin: 0 auto 24px;
+      display: block;
       opacity: 0.92;
-    }
-    .brand-copy {
-      position: absolute;
-      top: 850px;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      width: 240px;
-      font-size: 10px;
-      letter-spacing: 0.04em;
-      color: #6a6660;
-      text-align: center;
-      white-space: nowrap;
-    }
-    .brand-version {
-      position: absolute;
-      top: 868px;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      width: 240px;
-      font-size: 10px;
-      letter-spacing: 0.08em;
-      color: #5a5650;
-      text-align: center;
     }
     .eyebrow {
       font-size: 11px;
       letter-spacing: 0.32em;
       color: #8a8680;
       text-transform: uppercase;
-      margin: 0 0 8px;
+      margin: 0 0 10px;
     }
     h1.title {
-      font-size: 28px;
+      font-size: 26px;
       font-weight: 700;
-      line-height: 1.05;
+      line-height: 1.1;
       color: #f0eae0;
-      margin: 0 0 8px;
+      margin: 0 0 10px;
       letter-spacing: -0.015em;
     }
     .title-rule {
       width: 48px;
       height: 1px;
       background: #6a6660;
-      margin: 0 auto 16px;
+      margin: 0 auto 22px;
       border: 0;
     }
-    .def {
-      text-align: left;
-      margin: 0 0 10px;
-    }
-    .def .hw-line {
+    .greeting {
       font-size: 14px;
-      color: #d8d4cc;
-      margin: 0 0 5px;
-    }
-    .def .hw-line .hw {
-      font-weight: 700;
-      color: #f0eae0;
-    }
-    .def .hw-line .pron {
       color: #b0aca4;
-      margin-left: 8px;
+      margin: 0 0 32px;
       font-style: italic;
     }
-    .def .hw-line .pos {
-      color: #b0aca4;
-      font-style: italic;
-      margin-left: 8px;
-    }
-    .def p {
-      margin: 0;
-      font-size: 13.5px;
-      line-height: 1.45;
-      color: #d8d4cc;
-    }
-    .def p em { font-style: italic; color: #e6e0d4; }
-    .entry-rule {
-      border: 0;
-      border-top: 1px solid #3a3631;
-      margin: 10px 0;
-    }
-    .tagline {
-      font-size: 13px;
-      color: #9a9590;
-      font-style: italic;
-      margin: 12px 0 0;
-    }
-    .hosting-note {
-      margin: 16px 0 0;
-      padding-top: 12px;
-      border-top: 1px solid #2a2722;
-      text-align: center;
-    }
-    .hosting-note .hosting-tag {
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: -0.005em;
-      color: #4a7fb8;
-      margin: 0 0 6px;
-    }
-    .hosting-note p {
-      font-size: 13px;
-      line-height: 1.5;
-      color: #9a9590;
-      margin: 0 auto;
-      max-width: 480px;
-    }
-    .decks-nav {
-      margin: 14px 0 0;
-      text-align: center;
-    }
-    .decks-nav .decks-label {
+    .decks-label {
       font-size: 10px;
       letter-spacing: 0.28em;
       text-transform: uppercase;
       color: #6a6660;
-      margin: 0 0 8px;
+      margin: 0 0 14px;
     }
-    .decks-nav ul {
+    .decks-list {
       list-style: none;
       padding: 0;
-      margin: 0;
+      margin: 0 0 40px;
       display: flex;
       flex-direction: column;
-      gap: 4px;
-      align-items: center;
+      gap: 14px;
+      align-items: stretch;
+      text-align: left;
     }
-    .decks-nav a {
-      color: #c8c2b6;
+    .decks-list a {
+      display: block;
+      padding: 16px 18px;
+      background: #252220;
+      border: 1px solid #3a3631;
+      border-radius: 8px;
+      color: #d8d4cc;
       text-decoration: none;
-      font-size: 13px;
-      border-bottom: 1px solid #4a4641;
-      padding-bottom: 2px;
-      transition: color 0.15s, border-color 0.15s;
+      font-size: 14px;
+      transition: border-color 0.15s, background 0.15s, color 0.15s;
     }
-    .decks-nav a:hover {
+    .decks-list a:hover {
+      background: #2a2722;
+      border-color: #8a8680;
       color: #f0eae0;
-      border-bottom-color: #8a8680;
     }
+    .decks-list .deck-title {
+      font-weight: 600;
+      color: #f0eae0;
+      margin: 0 0 4px;
+      font-size: 15px;
+    }
+    .decks-list .deck-meta {
+      font-size: 12px;
+      color: #9a9590;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid #2a2722;
+      font-size: 11px;
+      color: #6a6660;
+      letter-spacing: 0.04em;
+    }
+    .footer .signed-in {
+      font-size: 10px;
+      color: #5a5650;
+      letter-spacing: 0.06em;
+      margin-top: 6px;
+    }
+
+    /* GATE */
+    #pw-gate{position:fixed;inset:0;z-index:99999;background:#1a1a1a;display:flex;align-items:center;justify-content:center;font-family:inherit;}
+    #pw-gate .pw-box{text-align:center;padding:48px;max-width:380px;width:100%;box-sizing:border-box;}
+    #pw-gate .pw-logo{color:#f0eae0;font-size:24px;font-weight:700;letter-spacing:-0.01em;margin-bottom:6px;}
+    #pw-gate .pw-sub{color:#8a8680;font-size:13px;margin-bottom:28px;line-height:1.45;}
+    #pw-gate input{width:100%;box-sizing:border-box;padding:12px 14px;border-radius:8px;border:1px solid #3a3631;background:#252220;color:#f0eae0;font-size:15px;outline:none;margin-bottom:10px;}
+    #pw-gate input:focus{border-color:#9a9590;}
+    #pw-gate button{margin-top:6px;width:100%;padding:12px;border-radius:8px;border:none;background:#9a9590;color:#1a1a1a;font-size:15px;font-weight:600;cursor:pointer;}
+    #pw-gate button:hover{background:#b8b4ac;}
+    #pw-gate button:disabled{background:#4a4641;color:#8a8680;cursor:not-allowed;}
+    #pw-gate #pw-err{color:#d4624a;font-size:13px;margin-top:12px;min-height:18px;}
+
+    /* hide reports until unlocked */
+    body.locked main.reports { display: none; }
+
     @media (max-width: 520px) {
-      main.entry { padding: 20px 20px; }
-      h1.title { font-size: 26px; }
+      main.reports { padding: 50px 18px 40px; }
+      h1.title { font-size: 22px; }
     }
   </style>
 </head>
-<body>
-  <!-- password gate -->
+<body class="locked">
+
+  <!-- email + password gate -->
   <div id="pw-gate">
     <div class="pw-box">
       <div class="pw-logo">Strategy Cadet</div>
-      <div class="pw-sub">This site is password protected</div>
-      <input type="password" id="pw-input" placeholder="Password" autocomplete="off" autofocus>
-      <button id="pw-go">Unlock</button>
+      <div class="pw-sub">Collaborator access. Enter your email and the access password to view current reports.</div>
+      <input type="email" id="email-input" placeholder="Email address" autocomplete="email" autofocus>
+      <input type="password" id="pw-input" placeholder="Password" autocomplete="off">
+      <button id="pw-go">Enter</button>
       <div id="pw-err"></div>
     </div>
   </div>
-  <style>
-  #pw-gate{position:fixed;inset:0;z-index:99999;background:#1a1a1a;display:flex;align-items:center;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;}
-  #pw-gate .pw-box{text-align:center;padding:48px;max-width:380px;width:100%;box-sizing:border-box;}
-  #pw-gate .pw-logo{color:#f0eae0;font-size:24px;font-weight:700;letter-spacing:-0.01em;margin-bottom:8px;}
-  #pw-gate .pw-sub{color:#8a8680;font-size:14px;margin-bottom:28px;}
-  #pw-gate input{width:100%;box-sizing:border-box;padding:12px 14px;border-radius:8px;border:1px solid #3a3631;background:#252220;color:#f0eae0;font-size:15px;outline:none;}
-  #pw-gate input:focus{border-color:#9a9590;}
-  #pw-gate button{margin-top:12px;width:100%;padding:12px;border-radius:8px;border:none;background:#9a9590;color:#1a1a1a;font-size:15px;font-weight:600;cursor:pointer;}
-  #pw-gate button:hover{background:#b8b4ac;}
-  #pw-gate #pw-err{color:#d4624a;font-size:13px;margin-top:12px;min-height:18px;}
-  </style>
+
+  <main class="reports">
+    <img class="brand-mark" src="logo.png?v=cropped" alt="Strategy Cadet">
+    <div class="eyebrow">Collaborator Access</div>
+    <h1 class="title">Your Current Strategy Cadet Reports</h1>
+    <hr class="title-rule">
+    <p class="greeting">Brand discovery reports available for review during the testing phase.</p>
+
+    <div class="decks-label">Available Reports</div>
+    <ul class="decks-list">
+      <li>
+        <a href="fleetwood-viewer/">
+          <div class="deck-title">Fleetwood Limited (ASX: FWD)</div>
+          <div class="deck-meta">Brand Discovery Report &middot; Build 02 &middot; 84 slides</div>
+        </a>
+      </li>
+      <li>
+        <a href="nothing-viewer/">
+          <div class="deck-title">Nothing Technology</div>
+          <div class="deck-meta">Brand Discovery Report &middot; Run J Mk2 v6 &middot; 90 slides</div>
+        </a>
+      </li>
+    </ul>
+
+    <div class="footer">
+      &copy; 2026 York Studios Pty. Ltd. &middot; Strategy Cadet V2.3
+      <div class="signed-in" id="signed-in-as"></div>
+    </div>
+  </main>
+
   <script>
   (function(){
+    // SHA-256 of "Electrons"
     var HASH='2b8d70ae423705ba45b06aa80ad1c4996ebb358053f7678e91fe15eaba05af38';
-    var KEY='sc-deck-unlocked-v1';
+    var KEY='sc-deck-unlocked-v2';
+    var EMAIL_KEY='sc-deck-email-v2';
+    // Google Forms submit endpoint + field IDs (Strategy Cadet Access Log)
+    var LOG_URL='https://docs.google.com/forms/d/e/1FAIpQLScwYCmHp_6CnmsnucZHXVjaoVqXBPrzQgrHcjnsZY_BEZTN_g/formResponse';
+    var FIELDS={email:'entry.131814768',timestamp:'entry.271968555',userAgent:'entry.1228102811',referrer:'entry.829402929'};
+
     var gate=document.getElementById('pw-gate');
-    if(localStorage.getItem(KEY)==='yes'){gate.parentNode.removeChild(gate);return;}
-    async function check(){
-      var v=document.getElementById('pw-input').value;
-      var buf=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(v));
-      var hex=Array.from(new Uint8Array(buf)).map(function(b){return b.toString(16).padStart(2,'0');}).join('');
-      if(hex===HASH){localStorage.setItem(KEY,'yes');gate.parentNode.removeChild(gate);}
-      else{document.getElementById('pw-err').textContent='Incorrect password';document.getElementById('pw-input').value='';document.getElementById('pw-input').focus();}
+    var body=document.body;
+
+    function unlock(email){
+      body.classList.remove('locked');
+      gate.parentNode.removeChild(gate);
+      if(email){
+        var el=document.getElementById('signed-in-as');
+        if(el) el.textContent='Signed in as '+email;
+      }
     }
+
+    function logAccess(email){
+      if(!LOG_URL) return;
+      try{
+        var body=new URLSearchParams();
+        body.append(FIELDS.email, email);
+        body.append(FIELDS.timestamp, new Date().toISOString());
+        body.append(FIELDS.userAgent, navigator.userAgent);
+        body.append(FIELDS.referrer, document.referrer || '');
+        fetch(LOG_URL, {method:'POST', mode:'no-cors', body: body});
+      }catch(e){/* silent */}
+    }
+
+    var prior=localStorage.getItem(KEY);
+    if(prior==='yes'){
+      var priorEmail=localStorage.getItem(EMAIL_KEY)||'';
+      unlock(priorEmail);
+      return;
+    }
+
+    function validEmail(s){
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s);
+    }
+
+    async function check(){
+      var email=document.getElementById('email-input').value.trim().toLowerCase();
+      var pw=document.getElementById('pw-input').value;
+      var errEl=document.getElementById('pw-err');
+      if(!validEmail(email)){
+        errEl.textContent='Enter a valid email address';
+        return;
+      }
+      var buf=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(pw));
+      var hex=Array.from(new Uint8Array(buf)).map(function(b){return b.toString(16).padStart(2,'0');}).join('');
+      if(hex===HASH){
+        localStorage.setItem(KEY,'yes');
+        localStorage.setItem(EMAIL_KEY,email);
+        logAccess(email);
+        unlock(email);
+      } else {
+        errEl.textContent='Incorrect password';
+        document.getElementById('pw-input').value='';
+        document.getElementById('pw-input').focus();
+      }
+    }
+
     document.getElementById('pw-go').addEventListener('click',check);
     document.getElementById('pw-input').addEventListener('keydown',function(e){if(e.key==='Enter')check();});
+    document.getElementById('email-input').addEventListener('keydown',function(e){if(e.key==='Enter')document.getElementById('pw-input').focus();});
   })();
   </script>
-  <!-- /password gate -->
 
-  <main class="entry">
-    <div class="eyebrow">A New Entry</div>
-    <h1 class="title">Strategy Cadet</h1>
-    <hr class="title-rule">
-
-    <article class="def">
-      <div class="hw-line">
-        <span class="hw">strat&middot;e&middot;gy</span>
-        <span class="pron">/&#712;str&aelig;t&#601;d&#658;i/</span>
-        <span class="pos">noun.</span>
-      </div>
-      <p>The disciplined business of analysing markets, audiences and competitors to decide where to play and how to win. Strategy turns evidence into direction.</p>
-    </article>
-
-    <hr class="entry-rule">
-
-    <article class="def">
-      <div class="hw-line">
-        <span class="hw">ca&middot;det</span>
-        <span class="pron">/k&#601;&#712;d&#603;t/</span>
-        <span class="pos">noun.</span>
-      </div>
-      <p>From French <em>cadet</em>, Gascon <em>capdet</em> (little head), via Latin <em>caput</em>. A trainee attached to a senior officer. Disciplined, methodical, willing to do the legwork. Never the author of the decision.</p>
-    </article>
-
-    <hr class="entry-rule">
-
-    <article class="def">
-      <div class="hw-line">
-        <span class="hw">Strategy Cadet</span>
-        <span class="pron">/&#712;str&aelig;t&#601;d&#658;i k&#601;&#712;d&#603;t/</span>
-      </div>
-      <p>An AI research and ideation assistant for brand and media strategists. Performs the upfront grind, gathers the data, builds the evidence base, drafts the first cut of strategic and creative thinking. Hands the strategist a briefing, not a verdict. The officer still makes the call.</p>
-    </article>
-
-    <hr class="entry-rule">
-
-    <div class="tagline">Does the grind. Hands you the brief. You make the call.</div>
-
-    <div class="hosting-note">
-      <div class="hosting-tag">Reports hosting &middot; testing phase</div>
-      <p>This site hosts Strategy Cadet reports for collaborator review during the testing phase.</p>
-    </div>
-
-    <nav class="decks-nav">
-      <div class="decks-label">Available Reports</div>
-      <ul>
-        <li><a href="nothing-viewer/">Nothing Technology &mdash; Brand Discovery Report, Run J Mk2 v6, 90 slides</a></li>
-        <li><a href="fleetwood-viewer/">Fleetwood Limited (ASX: FWD) &mdash; Brand Discovery Report, Build 01.2, 84 slides (with Cadet overview intro)</a></li>
-      </ul>
-    </nav>
-
-    <img class="brand-logo" src="logo.png?v=cropped" alt="Strategy Cadet">
-    <div class="brand-copy">&copy; 2026 York Studios Pty. Ltd.</div>
-    <div class="brand-version">V2.3</div>
-  </main>
 </body>
 </html>
