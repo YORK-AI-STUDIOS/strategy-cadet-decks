@@ -13,8 +13,8 @@
   .heatmap-title { font: 700 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 4px; }
   .heatmap-sub { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); margin-bottom: 6px; }
 
-  .cluster-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 6px; }
-  .cluster-card { padding: 8px 10px; border-top: 3px solid var(--mr-blue-dark); background: #F4F7FB; }
+  .cluster-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 4px; }
+  .cluster-card { padding: 6px 10px; border-top: 3px solid var(--mr-blue-dark); background: #F4F7FB; }
   .cluster-card.c2 { border-top-color: #3A6B4A; }
   .cluster-card.c3 { border-top-color: #8A6030; }
   .cc-label { font: 700 9px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--fg-muted); margin-bottom: 3px; }
@@ -44,7 +44,7 @@
         Fleetwood col tint: overlay rgba(46,74,99,0.08) on all Fleetwood cells
       -->
 
-      <svg viewBox="0 0 820 310" preserveAspectRatio="xMidYMid meet" aria-label="Competitor positioning heatmap" style="width:100%; max-height:305px; display:block;">
+      <svg viewBox="0 0 820 310" preserveAspectRatio="xMidYMid meet" aria-label="Competitor positioning heatmap" style="width:100%; max-height:480px; display:block;">
 
         <!-- Column positions: label=0-130, then 7 cols each ~98.6px
              Fleetwood=col0(x=130), Ausco=col1(x=228.6), Hickory=col2(x=327.1), Modscape=col3(x=425.7), Decmil=col4(x=524.3), Jayco=col5(x=622.9), THL=col6(x=721.4) -->
@@ -286,9 +286,6 @@
         <line x1="0" y1="296" x2="820" y2="296" stroke="#E8EEF6" stroke-width="1"/>
       </svg>
 
-      <div style="margin-top:4px; padding-top:4px; border-top:1px solid var(--bg-rule);">
-        <p style="margin:0; font:400 italic var(--t-caption)/1.4 var(--font-sans); color:var(--fg-muted);">Source: Section 9b Positioning Comparison Matrix. All seven entities VERIFIED per matrix confidence note in source. Jayco AU = Jayco Corporation Pty Ltd, Dandenong South VIC; entirely separate from US Jayco Inc. (Thor Industries, Indiana). VERIFIED [73][74].</p>
-      </div>
     </div>
 
     <!-- Cluster analysis row -->
