@@ -10,7 +10,7 @@
 const REPORT = {
   client:    'Fleetwood Limited',
   agency:    'Anthony Charles',
-  subtitle:  'Brand and Media Analysis, Modular Construction and Recreational Vehicles',
+  subtitle:  'Brand and Media Analysis',
   version:   'Build 01.1',
   date:      '25 May 2026',
   copyright: '© 2026 York Studios Pty Ltd',
