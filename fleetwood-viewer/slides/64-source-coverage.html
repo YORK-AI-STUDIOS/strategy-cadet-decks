@@ -6,37 +6,25 @@
 <link rel="stylesheet" href="slide-base.css">
 <link rel="stylesheet" href="palette-fleetwood.css">
 <style>
-  /* Comp-pass 2026-05-26 v3: single-column stack + source-line lifted to slide-anchor */
-  .sc-slide .sc-body-frame { inset: 56px var(--slide-margin-x) 86px; }
-  .pie-row { margin-top: 8px; width: 100%; }
-  .src-stack { margin-top: 10px; display: flex; flex-direction: column; gap: 8px; }
-  .src-layout { display: contents; }
-  /* Source-line pinned to slide bottom (not body-frame). bottom:60px clears the chrome page-number (which sits at bottom:28px ~13px tall) plus ≥12px visual gap above chrome and ≥60px below to slide edge (per rule f). */
-  .sc-slide > .sc-source-line {
-    position: absolute;
-    left: var(--slide-margin-x);
-    right: var(--slide-margin-x);
-    bottom: 60px;
-    margin: 0;
-  }
+  .src-layout { margin-top: 14px; display: grid; grid-template-columns: minmax(0, 880px) 340px; gap: 24px; align-items: start; }
 
   .chart-title { font: 700 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 5px; }
 
   .panel-hd { font: 700 10px/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--mr-blue-dark); border-bottom: 2px solid var(--mr-blue-dark); padding-bottom: 5px; margin-bottom: 8px; }
 
-  .agent-row { display: grid; grid-template-columns: 76px 1fr 52px 90px; gap: 8px; padding: 4px 0; border-bottom: 1px solid #E8EEF6; align-items: start; }
+  .agent-row { display: grid; grid-template-columns: 76px 1fr 52px 90px; gap: 8px; padding: 6px 0; border-bottom: 1px solid #E8EEF6; align-items: start; }
   .agent-row:last-child { border-bottom: none; }
   .agent-id { font: 700 var(--t-caption)/1 var(--font-sans); color: var(--mr-blue-dark); padding-top: 1px; }
   .agent-desc { font: 400 var(--t-caption)/1.35 var(--font-sans); color: var(--fg-body); }
   .agent-cites { font: 700 var(--t-caption)/1 var(--font-sans); color: var(--fg-heading); text-align: right; padding-top: 1px; }
   .agent-conf { font: 400 10px/1.2 var(--font-sans); color: var(--fg-muted); text-align: right; }
 
-  .src-stat-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 0; }
-  .stat-item { padding: 7px 12px; background: var(--mr-blue-dark); text-align: center; }
+  .src-stat-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 12px; }
+  .stat-item { padding: 10px 12px; background: var(--mr-blue-dark); text-align: center; }
   .stat-num { font: 700 22px/1 var(--font-sans); color: #fff; }
   .stat-label { font: 400 9px/1.2 var(--font-sans); color: rgba(255,255,255,0.65); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.06em; }
 
-  .phase3-box { padding: 8px 12px; background: #E6F4EC; border-left: 4px solid #3A6B4A; margin-top: 0; }
+  .phase3-box { padding: 10px 12px; background: #E6F4EC; border-left: 4px solid #3A6B4A; margin-top: 8px; }
   .p3-label { font: 700 9px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: #3A6B4A; margin-bottom: 4px; }
   .p3-text { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); }
 </style>
@@ -48,8 +36,10 @@
   <div class="sc-body-frame">
   <h2 class="sc-h2">Six specialist agents, seven extension modules, approximately 191 numbered citations, three discovery phases. Phase 3 cross-reference resolved one critical auditor correction (PwC to Ernst and Young Australia) before this deck was built.</h2>
 
-  <!-- Pie chart full-width above grid -->
-  <div class="pie-row">
+  <div class="src-layout">
+
+    <!-- LEFT: pie chart + agent summary -->
+    <div>
       <div class="chart-title">Source-type breakdown, 191 citations across 7 categories</div>
 
       <!--
@@ -76,7 +66,7 @@
         7. Registry: 6.3% = 35.6px. cumul: 170.3+21.5*3.6=170.3+77.4=247.7 -> rotate(247.7)
       -->
 
-      <svg viewBox="0 0 820 260" preserveAspectRatio="xMidYMid meet" aria-label="Source type pie chart" style="width:100%; max-height:220px; display:block;">
+      <svg viewBox="0 0 820 260" preserveAspectRatio="xMidYMid meet" aria-label="Source type pie chart" style="width:100%; max-height:255px; display:block;">
 
         <!-- Segment 1: ASX filings (dark blue) -->
         <circle cx="140" cy="130" r="90" stroke="#1B3A5C" stroke-width="52" fill="none"
@@ -141,11 +131,12 @@
         <text x="307" y="244" font-family="Open Sans" font-size="9" fill="#6B7E96">~12 citations  ·  6.3%  ·  [Section 8]</text>
       </svg>
 
-  </div>
+      <div style="margin-top:6px; padding-top:6px; border-top:1px solid var(--bg-rule);">
+        <p style="margin:0; font:400 italic var(--t-caption)/1.4 var(--font-sans); color:var(--fg-muted);">Source registry compiled across all modules and extensions, 2026-05-25. Citation counts approximate; source report carries numbered footnotes [1]-[191+]. Full citation list in Citations appendix (pp. 73-75).</p>
+      </div>
+    </div>
 
-  <div class="src-stack">
-
-    <!-- Full-width stats band -->
+    <!-- RIGHT: agent summary + phase 3 box -->
     <div>
       <div class="src-stat-grid">
         <div class="stat-item"><div class="stat-num">~191</div><div class="stat-label">Numbered citations</div></div>
@@ -153,10 +144,6 @@
         <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">Discovery phases</div></div>
       </div>
 
-    </div>
-
-    <!-- Full-width agent table -->
-    <div>
       <div class="panel-hd">Agent output summary</div>
       <div class="agent-row">
         <div class="agent-id">Module 01</div>
@@ -200,10 +187,7 @@
         <div class="agent-cites">~30</div>
         <div class="agent-conf">VERIFIED / PROBABLE</div>
       </div>
-    </div>
 
-    <!-- Full-width Phase 3 callout -->
-    <div>
       <div class="phase3-box">
         <div class="p3-label">Phase 3 cross-reference finding (resolved)</div>
         <div class="p3-text">Phase 3 flagged a critical discrepancy: the discovery source named PwC as Fleetwood's auditor. Phase 3 cross-reference against Fleetwood FY25 Annual Report [2] confirmed the actual auditor is <strong>Ernst and Young Australia</strong>, signing partner <strong>Fiona Drummond</strong>, Perth. The correction was applied to the source report before this deck was built. This is one of two structural moats Strategy Cadet has over generic brand-intelligence tools. <span class="sc-chip sc-chip--verified">Verified</span></div>
@@ -211,10 +195,9 @@
     </div>
 
   </div>
-  </div>
 
-  <!-- Source-line lifted out of body-frame so it anchors to slide, not the flex container -->
   <div class="sc-source-line"><span class="sc-source">p. 64 · Part 09 · Source registry compiled across all agents and extensions, 2026-05-25. Exact citation counts are approximate; the source report carries numbered footnotes [1]-[191+] throughout. The Phase 3 cross-reference log is held separately. Full citation list appears in the Citations appendix (pp. 73-75).</span></div>
+  </div>
 </section>
 </div>
 <script src="_scale.js"></script>
