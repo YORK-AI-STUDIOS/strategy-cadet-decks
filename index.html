@@ -22,168 +22,375 @@
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
-    main.reports {
+
+    /* Screen visibility — body class controls which screen is on */
+    body.screen-splash  #gate, body.screen-splash  #reports { display: none; }
+    body.screen-gate    #splash, body.screen-gate    #reports { display: none; }
+    body.screen-reports #splash, body.screen-reports #gate    { display: none; }
+
+    /* === SPLASH (screen 1) === */
+    main.entry {
       max-width: 640px;
       margin: 0 auto;
-      padding: 80px 32px 60px;
+      padding: 56px 32px 40px;
       text-align: center;
-      position: relative;
-      min-height: 100vh;
     }
-    .brand-mark {
-      width: 80px;
+    .brand-logo-top {
+      width: 110px;
       height: auto;
-      margin: 0 auto 24px;
       display: block;
-      opacity: 0.92;
+      margin: 0 auto 28px;
+      opacity: 0.95;
     }
     .eyebrow {
       font-size: 11px;
       letter-spacing: 0.32em;
       color: #8a8680;
       text-transform: uppercase;
-      margin: 0 0 10px;
+      margin: 0 0 8px;
     }
     h1.title {
-      font-size: 26px;
+      font-size: 28px;
       font-weight: 700;
-      line-height: 1.1;
+      line-height: 1.05;
       color: #f0eae0;
-      margin: 0 0 10px;
+      margin: 0 0 8px;
       letter-spacing: -0.015em;
     }
     .title-rule {
       width: 48px;
       height: 1px;
       background: #6a6660;
-      margin: 0 auto 22px;
+      margin: 0 auto 18px;
       border: 0;
     }
-    .greeting {
-      font-size: 14px;
-      color: #b0aca4;
-      margin: 0 0 32px;
-      font-style: italic;
-    }
-    .decks-label {
-      font-size: 10px;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: #6a6660;
-      margin: 0 0 14px;
-    }
-    .decks-list {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 40px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      align-items: stretch;
+    .def {
       text-align: left;
+      margin: 0 0 12px;
     }
-    .decks-list a {
-      display: block;
-      padding: 16px 18px;
-      background: #252220;
-      border: 1px solid #3a3631;
-      border-radius: 8px;
+    .def .hw-line {
+      font-size: 14px;
       color: #d8d4cc;
+      margin: 0 0 5px;
+    }
+    .def .hw-line .hw { font-weight: 700; color: #f0eae0; }
+    .def .hw-line .pron { color: #b0aca4; margin-left: 8px; font-style: italic; }
+    .def .hw-line .pos { color: #b0aca4; font-style: italic; margin-left: 8px; }
+    .def p {
+      margin: 0;
+      font-size: 13.5px;
+      line-height: 1.45;
+      color: #d8d4cc;
+    }
+    .def p em { font-style: italic; color: #e6e0d4; }
+    .entry-rule { border: 0; border-top: 1px solid #3a3631; margin: 12px 0; }
+    .tagline {
+      font-size: 13px;
+      color: #9a9590;
+      font-style: italic;
+      margin: 16px 0 28px;
+    }
+    .login-cta {
+      display: inline-block;
+      padding: 12px 36px;
+      background: #9a9590;
+      color: #1a1a1a;
       text-decoration: none;
       font-size: 14px;
-      transition: border-color 0.15s, background 0.15s, color 0.15s;
-    }
-    .decks-list a:hover {
-      background: #2a2722;
-      border-color: #8a8680;
-      color: #f0eae0;
-    }
-    .decks-list .deck-title {
       font-weight: 600;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.04em;
+      transition: background 0.15s;
+    }
+    .login-cta:hover { background: #b8b4ac; }
+    .splash-footer {
+      margin-top: 56px;
+      padding-top: 14px;
+      border-top: 1px solid #2a2722;
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      color: #5a5650;
+    }
+
+    /* === GATE (screen 2) === */
+    #gate{position:fixed;inset:0;z-index:99999;background:#1a1a1a;display:flex;align-items:center;justify-content:center;font-family:inherit;}
+    #gate .pw-box{text-align:center;padding:48px;max-width:380px;width:100%;box-sizing:border-box;}
+    #gate .pw-logo{color:#f0eae0;font-size:24px;font-weight:700;letter-spacing:-0.01em;margin-bottom:6px;}
+    #gate .pw-sub{color:#8a8680;font-size:13px;margin-bottom:28px;line-height:1.45;}
+    #gate input{width:100%;box-sizing:border-box;padding:12px 14px;border-radius:8px;border:1px solid #3a3631;background:#252220;color:#f0eae0;font-size:15px;outline:none;margin-bottom:10px;}
+    #gate input:focus{border-color:#9a9590;}
+    #gate button.gate-go{margin-top:6px;width:100%;padding:12px;border-radius:8px;border:none;background:#9a9590;color:#1a1a1a;font-size:15px;font-weight:600;cursor:pointer;}
+    #gate button.gate-go:hover{background:#b8b4ac;}
+    #gate #pw-err{color:#d4624a;font-size:13px;margin-top:12px;min-height:18px;}
+    #gate .gate-back{margin-top:18px;font-size:12px;color:#6a6660;cursor:pointer;background:none;border:none;letter-spacing:0.06em;text-transform:uppercase;}
+    #gate .gate-back:hover{color:#9a9590;}
+
+    /* === REPORTS (screen 3) === */
+    main.reports {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 64px 32px 60px;
+    }
+    .reports-head {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .reports-head .brand-mark {
+      width: 80px;
+      height: auto;
+      display: block;
+      margin: 0 auto 18px;
+      opacity: 0.92;
+    }
+    .reports-head h1 {
+      font-size: 26px;
+      font-weight: 700;
       color: #f0eae0;
-      margin: 0 0 4px;
-      font-size: 15px;
+      margin: 0 0 8px;
+      letter-spacing: -0.015em;
     }
-    .decks-list .deck-meta {
-      font-size: 12px;
+    .reports-head .reports-rule {
+      width: 48px;
+      height: 1px;
+      background: #6a6660;
+      margin: 14px auto 16px;
+      border: 0;
+    }
+    .reports-head .greeting {
+      font-size: 13px;
+      color: #b0aca4;
+      font-style: italic;
+      margin: 0;
+    }
+    .table-wrap {
+      margin-top: 32px;
+      border: 1px solid #3a3631;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #1f1d1b;
+    }
+    table.reports-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    table.reports-table thead th {
+      background: #252220;
       color: #9a9590;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 600;
+      text-align: left;
+      padding: 12px 16px;
+      border-bottom: 1px solid #3a3631;
     }
-    .footer {
-      margin-top: 60px;
+    table.reports-table tbody td {
+      padding: 14px 16px;
+      border-bottom: 1px solid #2a2722;
+      color: #d8d4cc;
+      vertical-align: middle;
+    }
+    table.reports-table tbody tr:last-child td { border-bottom: 0; }
+    table.reports-table tbody tr.live:hover { background: #252220; }
+    table.reports-table tbody tr.live td.brand a {
+      color: #f0eae0;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    table.reports-table tbody tr.live td.brand a:hover {
+      color: #c8c2b6;
+      text-decoration: underline;
+    }
+    table.reports-table tbody tr.placeholder td {
+      color: #4a4641;
+      font-style: italic;
+    }
+    table.reports-table td.status .pill {
+      display: inline-block;
+      padding: 3px 9px;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+    table.reports-table td.status .pill.live {
+      background: #2d3d2a;
+      color: #9bc985;
+      border: 1px solid #3d5235;
+    }
+    table.reports-table td.status .pill.pending {
+      background: #2a2722;
+      color: #5a5650;
+      border: 1px solid #3a3631;
+    }
+    .reports-footer {
+      margin-top: 36px;
       padding-top: 20px;
       border-top: 1px solid #2a2722;
-      font-size: 11px;
+      text-align: center;
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      color: #5a5650;
+    }
+    .reports-footer .signed-in {
+      font-size: 10px;
       color: #6a6660;
+      margin-top: 6px;
+      font-style: italic;
       letter-spacing: 0.04em;
     }
-    .footer .signed-in {
+    .reports-footer .signout {
+      display: inline-block;
+      margin-top: 10px;
       font-size: 10px;
-      color: #5a5650;
-      letter-spacing: 0.06em;
-      margin-top: 6px;
+      color: #6a6660;
+      cursor: pointer;
+      background: none;
+      border: none;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 8px;
     }
-
-    /* GATE */
-    #pw-gate{position:fixed;inset:0;z-index:99999;background:#1a1a1a;display:flex;align-items:center;justify-content:center;font-family:inherit;}
-    #pw-gate .pw-box{text-align:center;padding:48px;max-width:380px;width:100%;box-sizing:border-box;}
-    #pw-gate .pw-logo{color:#f0eae0;font-size:24px;font-weight:700;letter-spacing:-0.01em;margin-bottom:6px;}
-    #pw-gate .pw-sub{color:#8a8680;font-size:13px;margin-bottom:28px;line-height:1.45;}
-    #pw-gate input{width:100%;box-sizing:border-box;padding:12px 14px;border-radius:8px;border:1px solid #3a3631;background:#252220;color:#f0eae0;font-size:15px;outline:none;margin-bottom:10px;}
-    #pw-gate input:focus{border-color:#9a9590;}
-    #pw-gate button{margin-top:6px;width:100%;padding:12px;border-radius:8px;border:none;background:#9a9590;color:#1a1a1a;font-size:15px;font-weight:600;cursor:pointer;}
-    #pw-gate button:hover{background:#b8b4ac;}
-    #pw-gate button:disabled{background:#4a4641;color:#8a8680;cursor:not-allowed;}
-    #pw-gate #pw-err{color:#d4624a;font-size:13px;margin-top:12px;min-height:18px;}
-
-    /* hide reports until unlocked */
-    body.locked main.reports { display: none; }
+    .reports-footer .signout:hover { color: #9a9590; }
 
     @media (max-width: 520px) {
-      main.reports { padding: 50px 18px 40px; }
-      h1.title { font-size: 22px; }
+      main.entry { padding: 32px 18px 24px; }
+      main.reports { padding: 40px 18px 40px; }
+      h1.title { font-size: 24px; }
+      table.reports-table { font-size: 12px; }
+      table.reports-table thead th, table.reports-table tbody td { padding: 10px 10px; }
     }
   </style>
 </head>
-<body class="locked">
+<body class="screen-splash">
 
-  <!-- email + password gate -->
-  <div id="pw-gate">
+  <!-- ============= SCREEN 1: SPLASH ============= -->
+  <main id="splash" class="entry">
+    <img class="brand-logo-top" src="logo.png?v=cropped" alt="Strategy Cadet">
+    <div class="eyebrow">A New Entry</div>
+    <h1 class="title">Strategy Cadet</h1>
+    <hr class="title-rule">
+
+    <article class="def">
+      <div class="hw-line">
+        <span class="hw">strat&middot;e&middot;gy</span>
+        <span class="pron">/&#712;str&aelig;t&#601;d&#658;i/</span>
+        <span class="pos">noun.</span>
+      </div>
+      <p>The disciplined business of analysing markets, audiences and competitors to decide where to play and how to win. Strategy turns evidence into direction.</p>
+    </article>
+
+    <hr class="entry-rule">
+
+    <article class="def">
+      <div class="hw-line">
+        <span class="hw">ca&middot;det</span>
+        <span class="pron">/k&#601;&#712;d&#603;t/</span>
+        <span class="pos">noun.</span>
+      </div>
+      <p>From French <em>cadet</em>, Gascon <em>capdet</em> (little head), via Latin <em>caput</em>. A trainee attached to a senior officer. Disciplined, methodical, willing to do the legwork. Never the author of the decision.</p>
+    </article>
+
+    <hr class="entry-rule">
+
+    <article class="def">
+      <div class="hw-line">
+        <span class="hw">Strategy Cadet</span>
+        <span class="pron">/&#712;str&aelig;t&#601;d&#658;i k&#601;&#712;d&#603;t/</span>
+      </div>
+      <p>An AI research and ideation assistant for brand and media strategists. Performs the upfront grind, gathers the data, builds the evidence base, drafts the first cut of strategic and creative thinking. Hands the strategist a briefing, not a verdict. The officer still makes the call.</p>
+    </article>
+
+    <hr class="entry-rule">
+
+    <div class="tagline">Does the grind. Hands you the brief. You make the call.</div>
+
+    <button id="login-cta" class="login-cta">Log in</button>
+
+    <div class="splash-footer">&copy; 2026 York Studios Pty. Ltd. &middot; Strategy Cadet V2.3</div>
+  </main>
+
+  <!-- ============= SCREEN 2: GATE ============= -->
+  <div id="gate">
     <div class="pw-box">
       <div class="pw-logo">Strategy Cadet</div>
       <div class="pw-sub">Collaborator access. Enter your email and the access password to view reports that have been created for you.</div>
-      <input type="email" id="email-input" placeholder="Email address" autocomplete="email" autofocus>
+      <input type="email" id="email-input" placeholder="Email address" autocomplete="email">
       <input type="password" id="pw-input" placeholder="Password" autocomplete="off">
-      <button id="pw-go">Enter</button>
+      <button id="pw-go" class="gate-go">Enter</button>
       <div id="pw-err"></div>
+      <button id="gate-back" class="gate-back">&larr; Back</button>
     </div>
   </div>
 
-  <main class="reports">
-    <img class="brand-mark" src="logo.png?v=cropped" alt="Strategy Cadet">
-    <div class="eyebrow">Collaborator Access</div>
-    <h1 class="title">Your Current Strategy Cadet Reports</h1>
-    <hr class="title-rule">
-    <p class="greeting">Brand discovery reports available for review during the testing phase.</p>
+  <!-- ============= SCREEN 3: REPORTS ============= -->
+  <main id="reports" class="reports">
+    <div class="reports-head">
+      <img class="brand-mark" src="logo.png?v=cropped" alt="Strategy Cadet">
+      <h1>Discovery Reports</h1>
+      <hr class="reports-rule">
+      <p class="greeting">Brand Discovery reports prepared for collaborator review.</p>
+    </div>
 
-    <div class="decks-label">Available Reports</div>
-    <ul class="decks-list">
-      <li>
-        <a href="fleetwood-viewer/">
-          <div class="deck-title">Fleetwood Limited (ASX: FWD)</div>
-          <div class="deck-meta">Brand Discovery Report &middot; Build 02 &middot; 84 slides</div>
-        </a>
-      </li>
-      <li>
-        <a href="nothing-viewer/">
-          <div class="deck-title">Nothing Technology</div>
-          <div class="deck-meta">Brand Discovery Report &middot; Run J Mk2 v6 &middot; 90 slides</div>
-        </a>
-      </li>
-    </ul>
+    <div class="table-wrap">
+      <table class="reports-table">
+        <thead>
+          <tr>
+            <th style="width: 38%;">Brand</th>
+            <th>Report Type</th>
+            <th>Version</th>
+            <th>Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="live">
+            <td class="brand"><a href="fleetwood-viewer/">Fleetwood Limited (ASX: FWD)</a></td>
+            <td>Brand Discovery</td>
+            <td>Build 02 &middot; 84 slides</td>
+            <td>2026-05-26</td>
+            <td class="status"><span class="pill live">Live</span></td>
+          </tr>
+          <tr class="live">
+            <td class="brand"><a href="nothing-viewer/">Nothing Technology</a></td>
+            <td>Brand Discovery</td>
+            <td>Run J Mk2 v6 &middot; 90 slides</td>
+            <td>2026-05-24</td>
+            <td class="status"><span class="pill live">Live</span></td>
+          </tr>
+          <tr class="placeholder">
+            <td class="brand">Reserved</td>
+            <td>Brand Discovery</td>
+            <td>&mdash;</td>
+            <td>&mdash;</td>
+            <td class="status"><span class="pill pending">Pending</span></td>
+          </tr>
+          <tr class="placeholder">
+            <td class="brand">Reserved</td>
+            <td>Brand Discovery</td>
+            <td>&mdash;</td>
+            <td>&mdash;</td>
+            <td class="status"><span class="pill pending">Pending</span></td>
+          </tr>
+          <tr class="placeholder">
+            <td class="brand">Reserved</td>
+            <td>Brand Discovery</td>
+            <td>&mdash;</td>
+            <td>&mdash;</td>
+            <td class="status"><span class="pill pending">Pending</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-    <div class="footer">
+    <div class="reports-footer">
       &copy; 2026 York Studios Pty. Ltd. &middot; Strategy Cadet V2.3
       <div class="signed-in" id="signed-in-as"></div>
+      <button class="signout" id="signout">Sign out</button>
     </div>
   </main>
 
@@ -198,39 +405,36 @@
     ];
     var KEY='sc-deck-unlocked-v3';
     var EMAIL_KEY='sc-deck-email-v3';
+
     // Google Forms submit endpoint + field IDs (Strategy Cadet Access Log)
     var LOG_URL='https://docs.google.com/forms/d/e/1FAIpQLScwYCmHp_6CnmsnucZHXVjaoVqXBPrzQgrHcjnsZY_BEZTN_g/formResponse';
     var FIELDS={email:'entry.131814768',timestamp:'entry.271968555',userAgent:'entry.1228102811',referrer:'entry.829402929'};
 
-    var gate=document.getElementById('pw-gate');
     var body=document.body;
 
-    function unlock(email){
-      body.classList.remove('locked');
-      gate.parentNode.removeChild(gate);
-      if(email){
-        var el=document.getElementById('signed-in-as');
-        if(el) el.textContent='Signed in as '+email;
+    function show(screen){
+      body.classList.remove('screen-splash','screen-gate','screen-reports');
+      body.classList.add('screen-'+screen);
+      if(screen==='gate'){
+        setTimeout(function(){ var e=document.getElementById('email-input'); if(e) e.focus(); }, 30);
       }
+    }
+
+    function setSignedIn(email){
+      var el=document.getElementById('signed-in-as');
+      if(el) el.textContent= email ? 'Signed in as '+email : '';
     }
 
     function logAccess(email){
       if(!LOG_URL) return;
       try{
-        var body=new URLSearchParams();
-        body.append(FIELDS.email, email);
-        body.append(FIELDS.timestamp, new Date().toISOString());
-        body.append(FIELDS.userAgent, navigator.userAgent);
-        body.append(FIELDS.referrer, document.referrer || '');
-        fetch(LOG_URL, {method:'POST', mode:'no-cors', body: body});
+        var b=new URLSearchParams();
+        b.append(FIELDS.email, email);
+        b.append(FIELDS.timestamp, new Date().toISOString());
+        b.append(FIELDS.userAgent, navigator.userAgent);
+        b.append(FIELDS.referrer, document.referrer || '');
+        fetch(LOG_URL, {method:'POST', mode:'no-cors', body: b});
       }catch(e){/* silent */}
-    }
-
-    var prior=localStorage.getItem(KEY);
-    if(prior==='yes'){
-      var priorEmail=localStorage.getItem(EMAIL_KEY)||'';
-      unlock(priorEmail);
-      return;
     }
 
     function validEmail(s){
@@ -242,10 +446,11 @@
       return Array.from(new Uint8Array(buf)).map(function(b){return b.toString(16).padStart(2,'0');}).join('');
     }
 
-    async function check(){
+    async function attemptLogin(){
       var email=document.getElementById('email-input').value.trim().toLowerCase();
       var pw=document.getElementById('pw-input').value;
       var errEl=document.getElementById('pw-err');
+      errEl.textContent='';
       if(!validEmail(email)){
         errEl.textContent='Enter a valid email address';
         return;
@@ -260,7 +465,8 @@
         localStorage.setItem(KEY,'yes');
         localStorage.setItem(EMAIL_KEY,email);
         logAccess(email);
-        unlock(email);
+        setSignedIn(email);
+        show('reports');
       } else {
         errEl.textContent='Incorrect password';
         document.getElementById('pw-input').value='';
@@ -268,9 +474,34 @@
       }
     }
 
-    document.getElementById('pw-go').addEventListener('click',check);
-    document.getElementById('pw-input').addEventListener('keydown',function(e){if(e.key==='Enter')check();});
-    document.getElementById('email-input').addEventListener('keydown',function(e){if(e.key==='Enter')document.getElementById('pw-input').focus();});
+    // Wire up handlers
+    document.getElementById('login-cta').addEventListener('click', function(){
+      if(localStorage.getItem(KEY)==='yes'){
+        setSignedIn(localStorage.getItem(EMAIL_KEY)||'');
+        show('reports');
+      } else {
+        show('gate');
+      }
+    });
+    document.getElementById('pw-go').addEventListener('click', attemptLogin);
+    document.getElementById('pw-input').addEventListener('keydown', function(e){ if(e.key==='Enter') attemptLogin(); });
+    document.getElementById('email-input').addEventListener('keydown', function(e){ if(e.key==='Enter') document.getElementById('pw-input').focus(); });
+    document.getElementById('gate-back').addEventListener('click', function(){
+      document.getElementById('pw-err').textContent='';
+      show('splash');
+    });
+    document.getElementById('signout').addEventListener('click', function(){
+      localStorage.removeItem(KEY);
+      localStorage.removeItem(EMAIL_KEY);
+      setSignedIn('');
+      show('splash');
+    });
+
+    // Init: always start on splash. Pre-populate signed-in label if returning visitor.
+    if(localStorage.getItem(KEY)==='yes'){
+      setSignedIn(localStorage.getItem(EMAIL_KEY)||'');
+    }
+    show('splash');
   })();
   </script>
 
