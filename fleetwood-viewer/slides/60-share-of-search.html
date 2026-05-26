@@ -6,7 +6,9 @@
 <link rel="stylesheet" href="slide-base.css">
 <link rel="stylesheet" href="palette-fleetwood.css">
 <style>
-  .sos-layout { margin-top: 14px; display: grid; grid-template-columns: minmax(0, 880px) 360px; gap: 28px; align-items: start; }
+  /* Comp-pass 2026-05-26: close top, lift sos-note to full-width, enlarge chart */
+  .sc-slide .sc-body-frame { inset: 60px var(--slide-margin-x) 80px; }
+  .sos-layout { margin-top: 10px; display: grid; grid-template-columns: minmax(0, 1100px) 380px; gap: 28px; align-items: start; }
 
   .chart-title { font: 700 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 5px; }
   .chart-sub { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); margin-bottom: 8px; }
@@ -31,18 +33,19 @@
   <div class="sc-body-frame">
   <h2 class="sc-h2">Share of Search extension not run in this engagement. ESOV classifications rest on editorial evidence only. Fleetwood estimated at approximately 3.5% SoS in the modular category. The Modular Voice Vacuum remains the central strategic finding. <span class="sc-chip sc-chip--estimated">Estimated</span></h2>
 
+  <!-- Data-limitation callout lifted to full-width above grid (rule e) -->
+  <div class="sos-note" style="margin-top:10px;">
+    <strong>Data limitation (Note 1, confirmed):</strong> The Share of Search Glimpse/Google Trends extension was not run in this engagement. All ESOV classifications and estimated SoS figures are derived from editorial evidence, trade-press presence, GEO scan results, and competitive intelligence. They are marked ESTIMATED. Run the SoS extension before committing to budget allocations referencing these figures. KPI Le6: +200 bps SoS gain by Day 180; baseline must be established in week 1. <span class="sc-chip sc-chip--estimated">Estimated</span>
+  </div>
+
   <div class="sos-layout">
 
     <!-- LEFT: Paired-bar trend SVG -->
     <div>
-      <div class="sos-note">
-        <strong>Data limitation (Note 1, confirmed):</strong> The Share of Search Glimpse/Google Trends extension was not run in this engagement. All ESOV classifications and estimated SoS figures are derived from editorial evidence, trade-press presence, GEO scan results, and competitive intelligence. They are marked ESTIMATED. Run the SoS extension before committing to budget allocations referencing these figures. KPI Le6: +200 bps SoS gain by Day 180; baseline must be established in week 1. <span class="sc-chip sc-chip--estimated">Estimated</span>
-      </div>
-
       <div class="chart-title">Estimated SoS snapshot (modular construction category) + 3-month vs 12-month window comparison</div>
       <div class="chart-sub">Left bar = estimated 12-month average SoS. Right bar (lighter) = estimated 3-month recent window. Paired comparison shows trajectory direction. All figures ESTIMATED from editorial evidence.</div>
 
-      <svg viewBox="0 0 820 300" preserveAspectRatio="xMidYMid meet" aria-label="Share of Search paired bar trend chart" style="width:100%; max-height:295px; display:block;">
+      <svg viewBox="0 0 820 300" preserveAspectRatio="xMidYMid meet" aria-label="Share of Search paired bar trend chart" style="width:100%; max-height:440px; display:block;">
 
         <!-- Y axis label -->
         <text x="16" y="155" text-anchor="middle" font-family="Open Sans" font-size="10" fill="#6B7E96" font-weight="600" transform="rotate(-90 16 155)">Estimated SoS (%)</text>
