@@ -740,8 +740,8 @@ html, body { margin: 0; padding: 0; background: #1a1f2b; font-family: 'Open Sans
     color: #fff;
     padding: 56px 88px 64px;
     display: grid;
-    grid-template-columns: 720px 1fr;
-    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 460px 1fr;
+    grid-template-rows: auto auto 1fr auto;
     column-gap: 64px;
     row-gap: 0;
     position: relative;
@@ -749,6 +749,31 @@ html, body { margin: 0; padding: 0; background: #1a1f2b; font-family: 'Open Sans
     box-sizing: border-box;
     width: 1920px;
     height: 1080px;
+  }
+  /* "END OF REPORT" banner spanning both cols at top */
+  .end-of-report-banner {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 0 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.22);
+    margin-bottom: 14px;
+  }
+  .end-of-report-banner .label {
+    font: 800 72px/1 var(--font-sans);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .end-of-report-banner .fleetwood {
+    height: 90px;
+    width: auto;
+    display: block;
+    background: rgba(255,255,255,0.95);
+    padding: 12px 28px;
+    border-radius: 4px;
   }
   /* Decorative blob top-right */
   .title-slide::before {
@@ -793,11 +818,11 @@ html, body { margin: 0; padding: 0; background: #1a1f2b; font-family: 'Open Sans
     gap: 0;
   }
   .title-logo-block .mascot {
-    width: 600px;
-    height: 600px;
+    width: 380px;
+    height: 380px;
     object-fit: contain;
     display: block;
-    margin-left: -40px;
+    margin-left: -20px;
   }
 
   .title-defs {
@@ -816,10 +841,10 @@ html, body { margin: 0; padding: 0; background: #1a1f2b; font-family: 'Open Sans
     padding-top: 14px;
   }
   .t-def .word {
-    font: 800 44px/1 var(--font-sans);
+    font: 800 28px/1 var(--font-sans);
     letter-spacing: -0.015em;
     color: #fff;
-    margin: 0 0 8px;
+    margin: 0 0 6px;
   }
   .t-def.featured .word { color: #3B8FA1; }
   .t-def .word .syl {
@@ -845,7 +870,7 @@ html, body { margin: 0; padding: 0; background: #1a1f2b; font-family: 'Open Sans
     font-style: italic;
   }
   .t-def .body {
-    font: 400 16px/1.45 var(--font-sans);
+    font: 400 13px/1.4 var(--font-sans);
     color: rgba(255,255,255,0.92);
     max-width: 720px;
     text-wrap: pretty;
@@ -901,6 +926,11 @@ html, body { margin: 0; padding: 0; background: #1a1f2b; font-family: 'Open Sans
       <span>A York Studios product</span>
       <span class="sep">·</span>
       <span>Melbourne, Australia</span>
+    </div>
+
+    <div class="end-of-report-banner">
+      <div class="label">End of Report</div>
+      <img class="fleetwood" src="../assets/logos/Fleetwood-logo-yellow-white.png" alt="Fleetwood Limited">
     </div>
 
     <div class="title-logo-block">
