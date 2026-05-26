@@ -11,12 +11,12 @@
   .pie-row { margin-top: 8px; width: 100%; }
   .src-stack { margin-top: 10px; display: flex; flex-direction: column; gap: 8px; }
   .src-layout { display: contents; }
-  /* Source-line pinned to slide bottom (not body-frame) so content overflow can't compress it off-screen */
+  /* Source-line pinned to slide bottom (not body-frame). bottom:60px clears the chrome page-number (which sits at bottom:28px ~13px tall) plus ≥12px visual gap above chrome and ≥60px below to slide edge (per rule f). */
   .sc-slide > .sc-source-line {
     position: absolute;
     left: var(--slide-margin-x);
     right: var(--slide-margin-x);
-    bottom: 38px;
+    bottom: 60px;
     margin: 0;
   }
 
